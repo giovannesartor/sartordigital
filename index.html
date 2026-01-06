@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sartor Digital - Soluções Web & IA | Transformação Digital</title>
+    <meta name="description" content="Especialistas em desenvolvimento web, inteligência artificial e automação. Transformamos ideias em soluções digitais inovadoras para seu negócio.">
+    <meta name="keywords" content="desenvolvimento web, inteligência artificial, automação, sites, sistemas, IA, transformação digital">
+    <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta de cores premium */
+            --acapulco: #79b59b;
+            --william: #39585e;
+            --big-stone: #1a2a40;
+            --vista-blue: #92dab3;
+            --cutty-sark: #56827a;
+            --de-york: #86c8a7;
+            --magic-mint: #a0eec0;
+            --pickled-bluewood: #24384a;
+            
+            /* Tons premium adicionais */
+            --branco: #ffffff;
+            --cinza-claro: #f8fafc;
+            --cinza-medio: #e2e8f0;
+            --cinza-escuro: #64748b;
+            --preto-suave: #0f172a;
+            
+            /* Gradientes premium */
+            --gradient-primary: linear-gradient(135deg, var(--acapulco) 0%, var(--pickled-bluewood) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--vista-blue) 0%, var(--de-york) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--big-stone) 0%, var(--pickled-bluewood) 100%);
+            
+            /* Tipografia sofisticada */
+            --fonte-principal: 'Plus Jakarta Sans', sans-serif;
+            --fonte-secundaria: 'Inter', sans-serif;
+            
+            /* Espaçamentos */
+            --espaco-xs: 0.75rem;
+            --espaco-sm: 1.25rem;
+            --espaco-md: 2rem;
+            --espaco-lg: 3.5rem;
+            --espaco-xl: 6rem;
+            --espaco-xxl: 8rem;
+            
+            /* Bordas e sombras */
+            --raio-borda: 12px;
+            --raio-borda-lg: 20px;
+            --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --sombra-media: 0 10px 40px rgba(0, 0, 0, 0.12);
+            --sombra-intensa: 0 20px 60px rgba(0, 0, 0, 0.15);
+            --sombra-neomorfismo: 8px 8px 16px rgba(0, 0, 0, 0.08), -8px -8px 16px rgba(255, 255, 255, 0.8);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--fonte-principal);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--preto-suave);
+            background-color: var(--branco);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--big-stone);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            width: 80px;
+            height: 5px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-family: var(--fonte-secundaria);
+            margin-bottom: 1.5rem;
+            color: var(--cinza-escuro);
+            font-size: 1.1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--espaco-md);
+        }
+        
+        section {
+            padding: var(--espaco-xxl) 0;
+            position: relative;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 36px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--raio-borda);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--branco);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .btn-secondary {
+            background: var(--gradient-secondary);
+            color: var(--big-stone);
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--branco);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Header Premium - CENTRALIZADO */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        header.scrolled {
+            padding: 1rem 0;
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        
+        .logo img {
+            height: 52px;
+            width: auto;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+        
+        .logo-text {
+            font-family: var(--fonte-principal);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--big-stone);
+            letter-spacing: -0.02em;
+        }
+        
+        .logo-text span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-navigation {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--big-stone);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+            white-space: nowrap;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            left: 0;
+            bottom: 0;
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+        
+        nav a:hover {
+            color: var(--acapulco);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--big-stone);
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.03);
+        }
+        
+        /* Hero Section Premium */
+        .hero {
+            padding-top: 180px;
+            background: var(--cinza-claro);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(121, 181, 155, 0.05) 0%, rgba(26, 42, 64, 0.05) 100%);
+            clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        
+        .hero-decoration {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            opacity: 0.05;
+            top: -250px;
+            right: -250px;
+            z-index: 0;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: var(--raio-borda-lg);
+            box-shadow: var(--sombra-intensa);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        /* Sobre Premium */
+        .sobre {
+            background: var(--branco);
+        }
+        
+        .sobre-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .sobre-content h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .sobre-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--cinza-claro);
+            border-radius: var(--raio-borda);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: var(--gradient-secondary);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-text {
+            font-weight: 600;
+            color: var(--big-stone);
+        }
+        
+        .projetos-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .projeto-item {
+            background: var(--cinza-claro);
+            padding: 2rem;
+            border-radius: var(--raio-borda);
+            transition: all 0.4s ease;
+            border-left: 5px solid transparent;
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .projeto-item:hover {
+            transform: translateX(10px);
+            border-left: 5px solid var(--acapulco);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .projeto-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .projeto-item a {
+            color: var(--acapulco);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .projeto-item a:hover {
+            color: var(--cutty-sark);
+            gap: 12px;
+        }
+        
+        /* Serviços Premium */
+        .servicos {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .servicos-bg {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.03;
+            top: -150px;
+            left: -150px;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+        }
+        
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .servico-card {
+            background: var(--branco);
+            border-radius: var(--raio-borda);
+            padding: 2.5rem;
+            box-shadow: var(--sombra-suave);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+        
+        .servico-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--gradient-primary);
+            transition: height 0.6s ease;
+        }
+        
+        .servico-card:hover:before {
+            height: 100%;
+        }
+        
+        .servico-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .servico-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-secondary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--big-stone);
+            font-size: 2rem;
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .servico-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Portfólio Premium */
+        .portfolio {
+            background: var(--branco);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .portfolio-item {
+            border-radius: var(--raio-borda);
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            transition: all 0.5s ease;
+            position: relative;
+            background: var(--branco);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-img:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img:before {
+            opacity: 0.1;
+        }
+        
+        .portfolio-img i {
+            font-size: 4rem;
+            color: var(--acapulco);
+            z-index: 1;
+        }
+        
+        .portfolio-info {
+            padding: 2rem;
+        }
+        
+        .portfolio-info h3 {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Contato Premium */
+        .contato {
+            background: var(--gradient-dark);
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contato:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M500,97C126,101,0,0,0,0v100l1000,0V0C1000,0,874,93,500,97z" fill="%23ffffff" opacity="0.03"/></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        
+        .contato h2 {
+            color: var(--branco);
+        }
+        
+        .contato h2:after {
+            background: var(--gradient-secondary);
+        }
+        
+        .contato p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contato-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .contato-info h3 {
+            color: var(--branco);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contato-detalhes {
+            margin-top: 2.5rem;
+        }
+        
+        .contato-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.8rem;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--raio-borda);
+            transition: all 0.3s ease;
+        }
+        
+        .contato-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+        
+        .contato-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-secondary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            color: var(--big-stone);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contato-text h4 {
+            color: var(--branco);
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+        
+        .contato-text p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+        }
+        
+        .contato-action {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--raio-borda-lg);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--sombra-intensa);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contato-action h3 {
+            color: var(--branco);
+            margin-bottom: 1rem;
+        }
+        
+        .contato-action p {
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Footer Premium */
+        footer {
+            background: var(--big-stone);
+            color: var(--branco);
+            padding: var(--espaco-xxl) 0 var(--espaco-lg);
+            position: relative;
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231a2a40" opacity="1"/></svg>');
+            background-size: 1000px 100px;
+            background-repeat: repeat-x;
+            top: -99px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-col h3 {
+            color: var(--branco);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-secondary);
+            border-radius: 2px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo .logo-text {
+            font-size: 2rem;
+            color: var(--branco);
+        }
+        
+        .footer-logo .logo-text span {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--gradient-secondary);
+            color: var(--big-stone);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--vista-blue);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: var(--espaco-lg);
+            margin-top: var(--espaco-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .domain {
+            color: var(--vista-blue);
+            font-weight: 600;
+        }
+        
+        .heart {
+            color: #ff6b6b;
+        }
+        
+        /* Animações premium */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Responsividade premium */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                max-width: 1000px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-container,
+            .sobre-container,
+            .contato-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-content p {
+                max-width: 100%;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero-bg {
+                width: 80%;
+                opacity: 0.03;
+            }
+            
+            .hero {
+                padding-top: 150px;
+            }
+            
+            /* Ajuste do header para mobile */
+            .header-navigation {
+                gap: 2rem;
+            }
+            
+            nav ul {
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: var(--espaco-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-navigation {
+                position: fixed;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--branco);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                box-shadow: var(--sombra-intensa);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.4s ease;
+                z-index: 999;
+                border-radius: 0 0 var(--raio-borda) var(--raio-borda);
+                gap: 1.5rem;
+            }
+            
+            .header-navigation.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 1rem 0;
+                font-size: 1.1rem;
+            }
+            
+            .btn-whatsapp.header-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .servicos-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sobre-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 var(--espaco-sm);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .btn {
+                padding: 16px 28px;
+            }
+            
+            .sobre-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contato-action {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Premium - CENTRALIZADO -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital Logo">
+                <div class="logo-text">Sartor<span>Digital</span></div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="header-navigation" id="headerNavigation">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="btn btn-whatsapp header-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Premium -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-decoration"></div>
+        <div class="container hero-container">
+            <div class="hero-content fade-in">
+                <h1>Transformamos ideias em soluções digitais inteligentes</h1>
+                <p>Somos especialistas em desenvolvimento web, inteligência artificial e automação. Criamos experiências digitais que impulsionam o crescimento do seu negócio com tecnologia de ponta e design premium.</p>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Iniciar Projeto
+                    </a>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-comments"></i> Fale Conosco
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div style="width: 100%; height: 450px; background: linear-gradient(135deg, var(--big-stone) 0%, var(--pickled-bluewood) 100%); border-radius: var(--raio-borda-lg); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: var(--sombra-intensa);">
+                    <div style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at 30% 50%, rgba(121, 181, 155, 0.3) 0%, transparent 60%);"></div>
+                    <div style="position: relative; z-index: 2; text-align: center; color: white; padding: 2rem;">
+                        <i class="fas fa-brain" style="font-size: 5rem; margin-bottom: 1rem; opacity: 0.9;"></i>
+                        <h3 style="color: white; margin-bottom: 0.5rem;">Soluções com IA</h3>
+                        <p style="color: rgba(255, 255, 255, 0.9);">Inteligência Artificial & Automação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós Premium -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-container">
+                <div class="sobre-content fade-in">
+                    <h2>Sobre a Sartor Digital</h2>
+                    <p>Somos uma empresa de tecnologia especializada em desenvolvimento web e soluções digitais com foco em inteligência artificial e automação. Combinamos expertise técnica com design inovador para criar experiências que realmente fazem a diferença.</p>
+                    <p>Nossa missão é transformar negócios por meio da tecnologia, oferecendo soluções personalizadas que otimizam processos, aumentam a eficiência e geram resultados tangíveis para nossos clientes.</p>
+                    
+                    <div class="sobre-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-text">Projetos Entregues</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-text">Satisfação do Cliente</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-text">Anos de Experiência</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sobre-projetos fade-in">
+                    <h3>Projetos Destacados</h3>
+                    <div class="projetos-lista">
+                        <div class="projeto-item">
+                            <h3>Buffalo Capital</h3>
+                            <p>Site institucional premium para empresa de investimentos, com dashboard interativo e análise de dados em tempo real.</p>
+                            <a href="https://buffalocapital.com.br" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> buffalocapital.com.br
+                            </a>
+                        </div>
+                        <div class="projeto-item">
+                            <h3>SRT Brasil</h3>
+                            <p>Plataforma completa para serviços técnicos especializados, com sistema de agendamento online e gestão de clientes.</p>
+                            <a href="https://srtbrasil.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> srtbrasil.com
+                            </a>
+                        </div>
+                        <div class="projeto-item">
+                            <h3>Cristiano Eletricista</h3>
+                            <p>Site profissional para eletricista autônomo, com portfólio de serviços, orçamento online e integração com WhatsApp.</p>
+                            <a href="https://cristianoeletricista.com.br" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> cristianoeletricista.com.br
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Premium -->
+    <section class="servicos" id="servicos">
+        <div class="servicos-bg"></div>
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções digitais completas, desde desenvolvimento web tradicional até as mais avançadas tecnologias de inteligência artificial e automação.</p>
+            </div>
+            
+            <div class="servicos-grid">
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Desenvolvimento Full Stack</h3>
+                    <p>Soluções web completas, desde front-end moderno até back-end robusto, garantindo performance, segurança e escalabilidade para seu projeto.</p>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre desenvolvimento Full Stack." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
+                        Saber mais
+                    </a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Sites Institucionais Premium</h3>
+                    <p>Criação de sites empresariais modernos, responsivos e otimizados para SEO, que refletem a identidade e valores da sua marca.</p>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre criação de site institucional." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
+                        Saber mais
+                    </a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h3>Consultoria em Transformação Digital</h3>
+                    <p>Análise e orientação especializada para transformação digital, estratégias online e otimização de processos empresariais.</p>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre consultoria em transformação digital." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
+                        Saber mais
+                    </a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Integração e Automação com IA</h3>
+                    <p>Implementação de soluções de inteligência artificial para automatizar processos, analisar dados e melhorar a tomada de decisões.</p>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre integração e automação com IA." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
+                        Saber mais
+                    </a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Sistemas Inteligentes Personalizados</h3>
+                    <p>Desenvolvimento de sistemas customizados com IA para empresas, otimizando operações e criando vantagens competitivas.</p>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre sistemas inteligentes personalizados." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
+                        Saber mais
+                    </a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Manutenção e Suporte Contínuo</h3>
+                    <p>Serviços de manutenção, atualização e suporte técnico para garantir o funcionamento ideal de suas soluções digitais.</p>
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre manutenção e suporte." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
+                        Saber mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio Premium -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Portfólio de Projetos</h2>
+                <p>Conheça alguns dos nossos trabalhos mais recentes, desenvolvidos com tecnologia de ponta, design premium e foco em resultados.</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Buffalo Capital</h3>
+                        <p>Site institucional para empresa de investimentos, com dashboard interativo, análise de dados e integração com APIs financeiras.</p>
+                        <a href="https://buffalocapital.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SRT Brasil</h3>
+                        <p>Plataforma completa para serviços técnicos, com sistema de agendamento online, gestão de clientes e integração de pagamentos.</p>
+                        <a href="https://srtbrasil.com" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Cristiano Eletricista</h3>
+                        <p>Site profissional para eletricista autônomo, com portfólio de serviços, orçamento online e contato direto via WhatsApp.</p>
+                        <a href="https://cristianoeletricista.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Premium -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Vamos Conversar</h2>
+                <p>Tem um projeto em mente? Entre em contato e vamos transformar suas ideias em soluções digitais inovadoras.</p>
+            </div>
+            
+            <div class="contato-container">
+                <div class="contato-info fade-in">
+                    <h3>Pronto para transformar seu negócio?</h3>
+                    <p>Entre em contato conosco para uma consultoria gratuita e descubra como podemos ajudar sua empresa a alcançar novos patamares com tecnologia e inovação.</p>
+                    
+                    <div class="contato-detalhes">
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contato-text">
+                                <h4>WhatsApp</h4>
+                                <p>+55 54 98133-2271</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contato-text">
+                                <h4>Instagram</h4>
+                                <p>@sartordigital</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contato-text">
+                                <h4>Email</h4>
+                                <p>contato@sartordigital.online</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contato-text">
+                                <h4>Website</h4>
+                                <p>sartordigital.online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-action fade-in float-animation">
+                    <i class="fas fa-comment-dots" style="font-size: 3rem; color: var(--vista-blue); margin-bottom: 1.5rem;"></i>
+                    <h3>Fale diretamente conosco</h3>
+                    <p>Clique no botão abaixo para iniciar uma conversa no WhatsApp e receber informações detalhadas sobre nossos serviços.</p>
+                    
+                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital. Poderia me enviar mais detalhes?" class="btn btn-whatsapp" style="margin-top: 1rem;" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Solicitar Informações
+                    </a>
+                    
+                    <p style="font-size: 0.9rem; margin-top: 1.5rem; opacity: 0.8;">Respondemos em até 15 minutos durante o horário comercial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-text">Sartor<span>Digital</span></div>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Transformando ideias em soluções digitais inovadoras com foco em inteligência artificial e automação.</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/sartordigital" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento Full Stack</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Sites Institucionais</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Consultoria Digital</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Integração com IA</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfólio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/5554981332271" target="_blank"><i class="fab fa-whatsapp"></i> +55 54 98133-2271</a></li>
+                        <li><a href="mailto:contato@sartordigital.online"><i class="fas fa-envelope"></i> contato@sartordigital.online</a></li>
+                        <li><a href="https://instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i> @sartordigital</a></li>
+                        <li><a href="https://sartordigital.online" target="_blank"><i class="fas fa-globe"></i> sartordigital.online</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 <span class="domain">sartordigital.online</span> - Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem;">Desenvolvido com <i class="fas fa-heart heart"></i> por Sartor Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile Premium
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const headerNavigation = document.getElementById('headerNavigation');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            headerNavigation.classList.toggle('active');
+            mobileMenuBtn.innerHTML = headerNavigation.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Fechar menu ao clicar em um link
+        const navLinks = document.querySelectorAll('nav a, .header-btn');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                headerNavigation.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect premium
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Animações de entrada premium
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Verificar elementos na carga inicial
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Verificar elementos durante o scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // Smooth scroll premium para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Botão WhatsApp com mensagem personalizada
+        const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
+        whatsappButtons.forEach(button => {
+            // Já configurado no HTML com a mensagem personalizada
+            // Não é necessário alterar nada aqui
+        });
+        
+        // Efeito de digitação no título (opcional)
+        const heroTitle = document.querySelector('.hero-content h1');
+        if (heroTitle) {
+            const originalText = heroTitle.textContent;
+            heroTitle.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    heroTitle.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            // Iniciar efeito de digitação após um breve delay
+            setTimeout(typeWriter, 500);
+        }
+    </script>
+</body>
+</html>
