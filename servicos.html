@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Detalhados - Sartor Digital | Desenvolvimento Web, IA e Transformação Digital</title>
+    <meta name="description" content="Descubra todos os nossos serviços detalhados: desenvolvimento web full stack, sites institucionais premium, consultoria em transformação digital, integração com IA, sistemas personalizados e suporte técnico.">
+    <meta name="keywords" content="serviços desenvolvimento web detalhados, consultoria transformação digital completa, criação sites empresariais, sistemas inteligentes personalizados, integração IA empresarial, suporte técnico especializado">
+    
+    <!-- Meta tags específicas para páginas de serviços -->
+    <meta property="og:title" content="Serviços Detalhados - Sartor Digital">
+    <meta property="og:description" content="Conheça nossos serviços completos em desenvolvimento web, inteligência artificial, automação e consultoria digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sartordigital.online/servicos.html">
+    
+    <!-- Schema Markup para serviços -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Serviços da Sartor Digital",
+      "description": "Lista completa de serviços de desenvolvimento web, IA e transformação digital",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "position": 1,
+          "name": "Desenvolvimento Full Stack",
+          "description": "Soluções web completas de ponta a ponta com tecnologias modernas"
+        },
+        {
+          "@type": "Service",
+          "position": 2,
+          "name": "Sites Institucionais Premium",
+          "description": "Criação de sites empresariais responsivos e otimizados para SEO"
+        },
+        {
+          "@type": "Service", 
+          "position": 3,
+          "name": "Consultoria em Transformação Digital",
+          "description": "Diagnóstico e implementação de estratégias digitais para empresas"
+        },
+        {
+          "@type": "Service",
+          "position": 4,
+          "name": "Integração e Automação com IA",
+          "description": "Implementação de soluções de inteligência artificial para automação"
+        },
+        {
+          "@type": "Service",
+          "position": 5,
+          "name": "Sistemas Inteligentes Personalizados",
+          "description": "Desenvolvimento de sistemas customizados com IA integrada"
+        },
+        {
+          "@type": "Service",
+          "position": 6,
+          "name": "Manutenção e Suporte Contínuo",
+          "description": "Serviços de suporte técnico e manutenção para soluções digitais"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preconnect para otimização de performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://i.postimg.cc">
+    
+    <style>
+        :root {
+            /* Paleta de cores premium - Mantendo consistência com index.html */
+            --acapulco: #79b59b;
+            --william: #39585e;
+            --big-stone: #1a2a40;
+            --vista-blue: #92dab3;
+            --cutty-sark: #56827a;
+            --de-york: #86c8a7;
+            --magic-mint: #a0eec0;
+            --pickled-bluewood: #24384a;
+            
+            --branco: #ffffff;
+            --cinza-claro: #f8fafc;
+            --cinza-medio: #e2e8f0;
+            --cinza-escuro: #64748b;
+            --preto-suave: #0f172a;
+            
+            --gradient-primary: linear-gradient(135deg, var(--acapulco) 0%, var(--pickled-bluewood) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--vista-blue) 0%, var(--de-york) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--big-stone) 0%, var(--pickled-bluewood) 100%);
+            
+            --fonte-principal: 'Plus Jakarta Sans', sans-serif;
+            --fonte-secundaria: 'Inter', sans-serif;
+            
+            --espaco-xs: 0.75rem;
+            --espaco-sm: 1.25rem;
+            --espaco-md: 2rem;
+            --espaco-lg: 3.5rem;
+            --espaco-xl: 6rem;
+            --espaco-xxl: 8rem;
+            
+            --raio-borda: 12px;
+            --raio-borda-lg: 20px;
+            --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --sombra-media: 0 10px 40px rgba(0, 0, 0, 0.12);
+            --sombra-intensa: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--fonte-principal);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--preto-suave);
+            background-color: var(--branco);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--big-stone);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+            padding-bottom: 5px;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            width: 80px;
+            height: 5px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-family: var(--fonte-secundaria);
+            margin-bottom: 1.5rem;
+            color: var(--cinza-escuro);
+            font-size: 1.1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--espaco-md);
+        }
+        
+        section {
+            padding: var(--espaco-xxl) 0;
+            position: relative;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 36px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--raio-borda);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--branco);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .btn-secondary {
+            background: var(--gradient-secondary);
+            color: var(--big-stone);
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--branco);
+            box-shadow: var(--sombra-media);
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Header Premium - IDÊNTICO AO INDEX */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        header.scrolled {
+            padding: 0.8rem 0;
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+        
+        .logo-text {
+            font-family: var(--fonte-principal);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--big-stone);
+            letter-spacing: -0.02em;
+        }
+        
+        .logo-text span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-navigation {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--big-stone);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+            white-space: nowrap;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            left: 0;
+            bottom: 0;
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+        
+        nav a:hover {
+            color: var(--acapulco);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--big-stone);
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.03);
+        }
+        
+        /* Hero Section para Página de Serviços */
+        .hero-servicos {
+            padding-top: 180px;
+            background: var(--gradient-dark);
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .hero-servicos:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M500,97C126,101,0,0,0,0v100l1000,0V0C1000,0,874,93,500,97z" fill="%23ffffff" opacity="0.03"/></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        
+        .hero-servicos h1 {
+            color: var(--branco);
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-servicos p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        /* Lista de Serviços Completa */
+        .lista-servicos {
+            background: var(--cinza-claro);
+        }
+        
+        .servicos-categoria {
+            margin-bottom: 4rem;
+        }
+        
+        .servicos-categoria h2 {
+            margin-bottom: 3rem;
+        }
+        
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .servico-item {
+            background: var(--branco);
+            border-radius: var(--raio-borda);
+            padding: 2.5rem;
+            box-shadow: var(--sombra-suave);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 520px;
+        }
+        
+        .servico-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--gradient-primary);
+            transition: height 0.6s ease;
+        }
+        
+        .servico-item:hover:before {
+            height: 100%;
+        }
+        
+        .servico-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--sombra-intensa);
+        }
+        
+        .servico-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-secondary);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--big-stone);
+            font-size: 1.8rem;
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .servico-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            min-height: 72px;
+        }
+        
+        .servico-descricao {
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .servico-detalhes {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .servico-detalhes .btn {
+            width: 100%;
+        }
+        
+        /* Processo de Trabalho */
+        .processo {
+            background: var(--branco);
+        }
+        
+        .processo-timeline {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+        
+        .processo-timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-primary);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .processo-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .processo-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .processo-content {
+            flex: 1;
+            padding: 2rem;
+            background: var(--cinza-claro);
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-suave);
+        }
+        
+        .processo-numero {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 2rem;
+            flex-shrink: 0;
+            z-index: 1;
+            box-shadow: var(--sombra-media);
+        }
+        
+        .processo-content h3 {
+            color: var(--big-stone);
+            margin-bottom: 0.8rem;
+        }
+        
+        /* FAQ */
+        .faq {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--branco);
+            border-radius: var(--raio-borda);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--sombra-media);
+        }
+        
+        .faq-pergunta {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: var(--branco);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-pergunta:hover {
+            background: var(--cinza-claro);
+        }
+        
+        .faq-pergunta h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--big-stone);
+        }
+        
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--acapulco);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-resposta {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-resposta {
+            padding: 0 2rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        /* CTA Final */
+        .cta-final {
+            background: var(--gradient-primary);
+            color: var(--branco);
+            text-align: center;
+        }
+        
+        .cta-final h2 {
+            color: var(--branco);
+        }
+        
+        .cta-final h2:after {
+            background: var(--gradient-secondary);
+        }
+        
+        .cta-final p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        /* Footer - IDÊNTICO AO INDEX */
+        footer {
+            background: var(--big-stone);
+            color: var(--branco);
+            padding: var(--espaco-xxl) 0 var(--espaco-lg);
+            position: relative;
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231a2a40" opacity="1"/></svg>');
+            background-size: 1000px 100px;
+            background-repeat: repeat-x;
+            top: -99px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-col h3 {
+            color: var(--branco);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-secondary);
+            border-radius: 2px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo .logo-text {
+            font-size: 2rem;
+            color: var(--branco);
+        }
+        
+        .footer-logo .logo-text span {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--gradient-secondary);
+            color: var(--big-stone);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--vista-blue);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: var(--espaco-lg);
+            margin-top: var(--espaco-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .domain {
+            color: var(--vista-blue);
+            font-weight: 600;
+        }
+        
+        .heart {
+            color: #ff6b6b;
+        }
+        
+        /* Animações */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                max-width: 1000px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .processo-timeline:before {
+                left: 30px;
+            }
+            
+            .processo-item {
+                flex-direction: row !important;
+                align-items: flex-start;
+            }
+            
+            .processo-content {
+                margin-left: 5rem;
+            }
+            
+            .processo-numero {
+                margin: 0;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .servicos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: var(--espaco-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-navigation {
+                position: fixed;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--branco);
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem;
+                box-shadow: var(--sombra-intensa);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.4s ease;
+                z-index: 999;
+                border-radius: 0 0 var(--raio-borda) var(--raio-borda);
+                gap: 1.5rem;
+            }
+            
+            .header-navigation.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.8rem 0;
+                font-size: 1.1rem;
+            }
+            
+            .btn-whatsapp.header-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .servicos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .processo-content {
+                margin-left: 4rem;
+            }
+            
+            .servico-item h3 {
+                min-height: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 var(--espaco-sm);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .btn {
+                padding: 16px 28px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .servico-item {
+                padding: 1.5rem;
+                min-height: auto;
+            }
+            
+            .processo-content {
+                margin-left: 3rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Premium -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital Logo" loading="lazy">
+                <div class="logo-text">Sartor<span>Digital</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="header-navigation" id="headerNavigation">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="servicos.html" class="active">Serviços</a></li>
+                        <li><a href="index.html#portfolio">Portfólio</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="btn btn-whatsapp header-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Serviços -->
+    <section class="hero-servicos">
+        <div class="container">
+            <h1 class="fade-in">Serviços Detalhados</h1>
+            <p class="fade-in">Conheça em detalhes cada um dos nossos serviços especializados. Desenvolvemos soluções completas que atendem desde pequenas empresas até grandes corporações.</p>
+            <a href="#lista-servicos" class="btn btn-secondary fade-in">
+                <i class="fas fa-arrow-down"></i> Explorar Serviços
+            </a>
+        </div>
+    </section>
+
+    <!-- Lista Completa de Serviços -->
+    <section class="lista-servicos" id="lista-servicos">
+        <div class="container">
+            <div class="servicos-categoria fade-in">
+                <h2 class="text-center">Desenvolvimento Web & Sistemas</h2>
+                <div class="servicos-grid">
+                    <div class="servico-item">
+                        <div class="servico-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Desenvolvimento Full Stack Avançado</h3>
+                        <div class="servico-descricao">
+                            <p>Implementamos arquiteturas escaláveis utilizando microsserviços e containers Docker. Especialistas em Node.js, Python Django e React para criar aplicações de alto desempenho.</p>
+                            <p><strong>Recursos incluídos:</strong> CI/CD automatizado, testes unitários e de integração, monitoramento em tempo real, documentação técnica completa.</p>
+                            <p><strong>Tempo médio:</strong> Projetos completos em 6-12 semanas com sprints quinzenais.</p>
+                        </div>
+                        <div class="servico-detalhes">
+                            <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre desenvolvimento Full Stack avançado." class="btn btn-primary" target="_blank">
+                                <i class="fas fa-comments"></i> Solicitar Orçamento
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="servico-item">
+                        <div class="servico-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Sites Institucionais Corporativos</h3>
+                        <div class="servico-descricao">
+                            <p>Sites otimizados para conversão com estrutura de SEO técnica implementada. Incluímos análise de concorrência, pesquisa de palavras-chave e estratégia de conteúdo.</p>
+                            <p><strong>Diferenciais:</strong> Design exclusivo, velocidade de carregamento otimizada, integração com CRM, analytics avançado, certificado SSL empresarial.</p>
+                            <p><strong>Garantia:</strong> 90 dias de suporte pós-lançamento e treinamento completo da equipe.</p>
+                        </div>
+                        <div class="servico-detalhes">
+                            <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre sites institucionais corporativos." class="btn btn-primary" target="_blank">
+                                <i class="fas fa-comments"></i> Solicitar Orçamento
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="servico-item">
+                        <div class="servico-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Sistemas Empresariais Sob Medida</h3>
+                        <div class="servico-descricao">
+                            <p>Desenvolvemos sistemas ERP e CRM personalizados que se integram perfeitamente aos processos existentes da sua empresa. Foco em automação e redução de trabalho manual.</p>
+                            <p><strong>Funcionalidades:</strong> Controle financeiro, gestão de estoque, relatórios customizados, dashboard executivo, integração com APIs de terceiros.</p>
+                            <p><strong>Metodologia:</strong> Desenvolvimento iterativo com demonstrações semanais e feedback contínuo.</p>
+                        </div>
+                        <div class="servico-detalhes">
+                            <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre sistemas empresariais sob medida." class="btn btn-primary" target="_blank">
+                                <i class="fas fa-comments"></i> Solicitar Orçamento
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="servicos-categoria fade-in">
+                <h2 class="text-center">Inteligência Artificial & Transformação Digital</h2>
+                <div class="servicos-grid">
+                    <div class="servico-item">
+                        <div class="servico-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automação Inteligente com IA</h3>
+                        <div class="servico-descricao">
+                            <p>Implementamos soluções de IA que aprendem com seus dados e processos. Chatbots com processamento de linguagem natural, análise preditiva para vendas e automação de workflows complexos.</p>
+                            <p><strong>Tecnologias:</strong> OpenAI API, TensorFlow, Computer Vision, Processamento de Linguagem Natural.</p>
+                            <p><strong>Resultados:</strong> Até 70% de redução em processos manuais, atendimento 24/7, insights preditivos com 85%+ de precisão.</p>
+                        </div>
+                        <div class="servico-detalhes">
+                            <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre automação inteligente com IA." class="btn btn-primary" target="_blank">
+                                <i class="fas fa-comments"></i> Solicitar Demonstração
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="servico-item">
+                        <div class="servico-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Consultoria Estratégica Digital</h3>
+                        <div class="servico-descricao">
+                            <p>Transformamos empresas tradicionais em negócios digitais competitivos. Diagnóstico completo, roadmap de implementação e capacitação de equipes em novas tecnologias.</p>
+                            <p><strong>Entregáveis:</strong> Análise de maturidade digital, plano de transformação em 4 fases, KPIs de acompanhamento, workshops de capacitação.</p>
+                            <p><strong>Duração:</strong> Projetos de 3 a 12 meses com acompanhamento mensal e ajustes estratégicos.</p>
+                        </div>
+                        <div class="servico-detalhes">
+                            <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre consultoria estratégica digital." class="btn btn-primary" target="_blank">
+                                <i class="fas fa-comments"></i> Agendar Consultoria
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="servico-item">
+                        <div class="servico-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Suporte e Evolução Contínua</h3>
+                        <div class="servico-descricao">
+                            <p>Garantimos que suas soluções digitais evoluam junto com seu negócio. Monitoramento proativo, atualizações de segurança, otimização de performance e escalabilidade sob demanda.</p>
+                            <p><strong>Cobertura:</strong> SLA 99.9%, resposta em até 15 minutos para críticos, backups automáticos diários, relatórios mensais de performance.</p>
+                            <p><strong>Planos:</strong> Flexíveis conforme necessidades, desde suporte básico até gestão completa de infraestrutura.</p>
+                        </div>
+                        <div class="servico-detalhes">
+                            <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre planos de suporte e evolução contínua." class="btn btn-primary" target="_blank">
+                                <i class="fas fa-comments"></i> Ver Planos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo de Trabalho -->
+    <section class="processo">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="text-center">Metodologia de Trabalho</h2>
+                <p class="text-center">Trabalhamos com processos claros e transparentes para garantir a excelência em cada projeto.</p>
+            </div>
+            
+            <div class="processo-timeline">
+                <div class="processo-item fade-in">
+                    <div class="processo-numero">1</div>
+                    <div class="processo-content">
+                        <h3>Descoberta e Análise</h3>
+                        <p>Realizamos workshops para entender profundamente seu negócio, desafios e objetivos. Análise de concorrência e definição de KPIs.</p>
+                        <p><strong>Entregáveis:</strong> Documento de requisitos, análise SWOT digital, persona dos usuários, mapa de jornada do cliente.</p>
+                    </div>
+                </div>
+                
+                <div class="processo-item fade-in">
+                    <div class="processo-numero">2</div>
+                    <div class="processo-content">
+                        <h3>Estratégia e Planejamento</h3>
+                        <p>Desenvolvemos a arquitetura da solução, escolha de tecnologias, cronograma detalhado e plano de comunicação.</p>
+                        <p><strong>Entregáveis:</strong> Roadmap do projeto, arquitetura técnica, cronograma com marcos, plano de testes e qualidade.</p>
+                    </div>
+                </div>
+                
+                <div class="processo-item fade-in">
+                    <div class="processo-numero">3</div>
+                    <div class="processo-content">
+                        <h3>Design e Experiência</h3>
+                        <p>Criação de interfaces intuitivas e experiências memoráveis. Prototipagem interativa e testes de usabilidade.</p>
+                        <p><strong>Entregáveis:</strong> Wireframes, protótipos navegáveis, guia de estilo, sistema de design responsivo.</p>
+                    </div>
+                </div>
+                
+                <div class="processo-item fade-in">
+                    <div class="processo-numero">4</div>
+                    <div class="processo-content">
+                        <h3>Desenvolvimento Ágil</h3>
+                        <p>Implementação iterativa com sprints de 2 semanas. Demonstrações regulares e feedback contínuo para ajustes.</p>
+                        <p><strong>Entregáveis:</strong> Versões funcionais quinzenais, documentação técnica, repositório de código versionado.</p>
+                    </div>
+                </div>
+                
+                <div class="processo-item fade-in">
+                    <div class="processo-numero">5</div>
+                    <div class="processo-content">
+                        <h3>Testes e Qualidade</h3>
+                        <p>Testes automatizados e manuais em diferentes dispositivos e cenários. Validação de performance, segurança e usabilidade.</p>
+                        <p><strong>Entregáveis:</strong> Relatório completo de testes, otimizações implementadas, certificado de qualidade.</p>
+                    </div>
+                </div>
+                
+                <div class="processo-item fade-in">
+                    <div class="processo-numero">6</div>
+                    <div class="processo-content">
+                        <h3>Implantação e Evolução</h3>
+                        <p>Lançamento controlado, migração de dados, treinamento da equipe e plano de evolução contínua.</p>
+                        <p><strong>Entregáveis:</strong> Sistema em produção, documentação do usuário, treinamento realizado, plano de manutenção.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="text-center">Perguntas Frequentes sobre Serviços</h2>
+                <p class="text-center">Tire suas dúvidas sobre nossos serviços, prazos, valores e processos.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Como funciona o processo de orçamento?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Realizamos uma reunião de descoberta gratuita para entender suas necessidades. Em seguida, elaboramos uma proposta detalhada com escopo, cronograma e investimento. O orçamento é dividido por fases, permitindo maior controle e flexibilidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Quais são as formas de pagamento aceitas?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Aceitamos diversas formas: parcelamento em cartão de crédito (até 12x), transferência bancária, PIX e boleto. Para projetos maiores, oferecemos condições especiais com pagamento por fases entregues.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Vocês oferecem garantia nos serviços?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Sim, todos os nossos projetos incluem 90 dias de garantia para correção de bugs e ajustes necessários. Para serviços de desenvolvimento, oferecemos ainda 30 dias de suporte gratuito pós-implantação.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Como é feito o acompanhamento dos projetos?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Utilizamos ferramentas profissionais como Trello e Slack para comunicação ágil. Realizamos reuniões semanais de acompanhamento e relatórios quinzenais de progresso. Você tem acesso a um dashboard exclusivo para monitorar o andamento.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Podemos solicitar alterações durante o desenvolvimento?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Sim, trabalhamos com metodologia ágil que permite ajustes durante o desenvolvimento. Alterações dentro do escopo inicial são incluídas. Para mudanças significativas no escopo, avaliamos o impacto no cronograma e orçamento de forma transparente.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Quem será a equipe responsável pelo meu projeto?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Cada projeto tem um gerente dedicado que será seu ponto de contato principal. A equipe técnica é formada por especialistas nas tecnologias necessárias para seu projeto. Todos têm experiência comprovada e passam por treinamentos constantes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="text-center">Pronto para Transformar Seu Negócio?</h2>
+                <p class="text-center">Entre em contato para uma consultoria gratuita e descubra qual solução é ideal para sua empresa.</p>
+            </div>
+            
+            <div class="text-center fade-in">
+                <a href="https://wa.me/5554981332271?text=Olá! Gostaria de agendar uma consultoria sobre os serviços da Sartor Digital." class="btn btn-whatsapp" style="margin-right: 1rem;" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="index.html#contato" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Outras Formas de Contato
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-text">Sartor<span>Digital</span></div>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Transformando ideias em soluções digitais inovadoras com foco em inteligência artificial e automação.</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/sartordigital" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#lista-servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento Full Stack</a></li>
+                        <li><a href="#lista-servicos"><i class="fas fa-chevron-right"></i> Sites Institucionais</a></li>
+                        <li><a href="#lista-servicos"><i class="fas fa-chevron-right"></i> Consultoria Digital</a></li>
+                        <li><a href="#lista-servicos"><i class="fas fa-chevron-right"></i> Integração com IA</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                        <li><a href="servicos.html"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                        <li><a href="index.html#portfolio"><i class="fas fa-chevron-right"></i> Portfólio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/5554981332271" target="_blank"><i class="fab fa-whatsapp"></i> +55 54 98133-2271</a></li>
+                        <li><a href="mailto:contato@sartordigital.online"><i class="fas fa-envelope"></i> contato@sartordigital.online</a></li>
+                        <li><a href="https://instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i> @sartordigital</a></li>
+                        <li><a href="https://sartordigital.online" target="_blank"><i class="fas fa-globe"></i> sartordigital.online</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 <span class="domain">sartordigital.online</span> - Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem;">Desenvolvido com <i class="fas fa-heart heart"></i> por Sartor Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const headerNavigation = document.getElementById('headerNavigation');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            headerNavigation.classList.toggle('active');
+            mobileMenuBtn.innerHTML = headerNavigation.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Fechar menu ao clicar em um link
+        const navLinks = document.querySelectorAll('nav a, .header-btn');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                headerNavigation.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Animações de entrada
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        window.addEventListener('load', fadeInOnScroll);
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const pergunta = item.querySelector('.faq-pergunta');
+            
+            pergunta.addEventListener('click', () => {
+                // Fecha todos os outros itens
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Abre/fecha o item atual
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Marcar link ativo no menu
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinksAll = document.querySelectorAll('nav a');
+        
+        navLinksAll.forEach(link => {
+            const linkHref = link.getAttribute('href');
+            if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -3,12 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sartor Digital - Soluções Web & IA | Transformação Digital</title>
-    <meta name="description" content="Especialistas em desenvolvimento web, inteligência artificial e automação. Transformamos ideias em soluções digitais inovadoras para seu negócio.">
-    <meta name="keywords" content="desenvolvimento web, inteligência artificial, automação, sites, sistemas, IA, transformação digital">
+    <title>Sartor Digital | Especialistas em Desenvolvimento Web, IA & Transformação Digital</title>
+    <meta name="description" content="Especialistas em desenvolvimento web, inteligência artificial, automação e consultoria em transformação digital. Soluções completas para alavancar seu negócio na era digital.">
+    <meta name="keywords" content="desenvolvimento web, inteligência artificial, automação, transformação digital, sites institucionais, sistemas personalizados, consultoria digital, SEO, marketing digital, chatbots, IA empresarial">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Sartor Digital - Transformação Digital com Inteligência Artificial">
+    <meta property="og:description" content="Soluções completas em desenvolvimento web, IA e automação para empresas que buscam inovação e resultados.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sartordigital.online">
+    <meta property="og:image" content="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sartor Digital - Especialistas em IA e Web">
+    <meta name="twitter:description" content="Transforme seu negócio com nossas soluções em desenvolvimento web e inteligência artificial.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sartordigital.online">
+    
+    <!-- Schema Markup para melhor SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Sartor Digital",
+      "url": "https://sartordigital.online",
+      "logo": "https://i.postimg.cc/25tgbP7P/LOGO-ICO.png",
+      "description": "Especialistas em desenvolvimento web, inteligência artificial, automação e consultoria em transformação digital.",
+      "telephone": "+55-54-98133-2271",
+      "email": "contato@sartordigital.online",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "serviceType": [
+        "Desenvolvimento Web",
+        "Inteligência Artificial", 
+        "Automação",
+        "Consultoria em Transformação Digital",
+        "Sites Institucionais"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "description": "Soluções digitais personalizadas para empresas"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sartordigital"
+      ]
+    }
+    </script>
+    
     <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preconnect para otimização de performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://i.postimg.cc">
+    
     <style>
         :root {
             /* Paleta de cores premium */
@@ -87,8 +146,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1.3; /* Ajustado para melhor legibilidade */
-            padding-bottom: 5px; /* Adicionado para evitar corte de letras */
+            line-height: 1.3;
+            padding-bottom: 5px;
         }
         
         h2 {
@@ -198,6 +257,21 @@
             box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
         }
         
+        .btn-leia-mais {
+            background: transparent;
+            color: var(--acapulco);
+            border: 2px solid var(--acapulco);
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .btn-leia-mais:hover {
+            background: var(--acapulco);
+            color: var(--branco);
+            transform: translateY(-3px);
+        }
+        
         .text-center {
             text-align: center;
         }
@@ -217,7 +291,7 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1.2rem 0; /* Corrigido: removido "p" extra antes de padding */
+            padding: 1.2rem 0;
             transition: all 0.4s ease;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
@@ -360,9 +434,9 @@
         .hero-content h1 {
             font-size: 3.8rem;
             margin-bottom: 1.5rem;
-            line-height: 1.25; /* Aumentado para melhor visualização */
-            padding-bottom: 8px; /* Adicionado para evitar corte */
-            min-height: 220px; /* Garantir espaço suficiente para o texto */
+            line-height: 1.25;
+            padding-bottom: 8px;
+            min-height: 220px;
         }
         
         .hero-content p {
@@ -529,6 +603,10 @@
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 520px;
         }
         
         .servico-card:before {
@@ -563,11 +641,34 @@
             color: var(--big-stone);
             font-size: 2rem;
             box-shadow: var(--sombra-suave);
+            flex-shrink: 0;
         }
         
         .servico-card h3 {
             font-size: 1.6rem;
             margin-bottom: 1rem;
+            min-height: 60px;
+        }
+        
+        .servico-texto {
+            flex: 1;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .servico-texto p {
+            margin-bottom: 0.8rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .servico-acoes {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
         }
         
         /* Portfólio Premium */
@@ -744,6 +845,98 @@
             margin-bottom: 2.5rem;
         }
         
+        /* Modal/Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: var(--branco);
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: var(--raio-borda-lg);
+            box-shadow: var(--sombra-intensa);
+            animation: slideUp 0.4s ease;
+            overflow: hidden;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-header {
+            background: var(--gradient-primary);
+            color: var(--branco);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            color: var(--branco);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .modal-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: var(--branco);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 2.5rem;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .modal-body h4 {
+            color: var(--big-stone);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .modal-body ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-body li {
+            margin-bottom: 0.5rem;
+            color: var(--cinza-escuro);
+        }
+        
         /* Footer Premium */
         footer {
             background: var(--big-stone);
@@ -870,6 +1063,16 @@
             color: #ff6b6b;
         }
         
+        /* Otimizações de Performance */
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lazy.loaded {
+            opacity: 1;
+        }
+        
         /* Animações premium */
         .fade-in {
             opacity: 0;
@@ -896,7 +1099,7 @@
         @media (max-width: 1200px) {
             h1 {
                 font-size: 3rem;
-                line-height: 1.25; /* Ajustado para responsivo */
+                line-height: 1.25;
             }
             
             h2 {
@@ -910,6 +1113,10 @@
             .hero-content h1 {
                 font-size: 3.2rem;
                 min-height: 200px;
+            }
+            
+            .servico-card {
+                min-height: 550px;
             }
         }
         
@@ -944,13 +1151,16 @@
                 line-height: 1.3;
             }
             
-            /* Ajuste do header para mobile */
             .header-navigation {
                 gap: 2rem;
             }
             
             nav ul {
                 gap: 1.5rem;
+            }
+            
+            .servico-card {
+                min-height: auto;
             }
         }
         
@@ -1036,6 +1246,14 @@
             .sobre-stats {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .modal-content {
+                margin: 20px auto;
+            }
+            
+            .modal-body {
+                max-height: 80vh;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1069,6 +1287,10 @@
             .contato-action {
                 padding: 2rem;
             }
+            
+            .servico-card {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -1077,7 +1299,7 @@
     <header id="header">
         <div class="container header-container">
             <div class="logo">
-                <img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital Logo">
+                <img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital Logo" loading="lazy">
                 <div class="logo-text">Sartor<span>Digital</span></div>
             </div>
             
@@ -1203,10 +1425,15 @@
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <h3>Desenvolvimento Full Stack</h3>
-                    <p>Soluções web completas, desde front-end moderno até back-end robusto, garantindo performance, segurança e escalabilidade para seu projeto.</p>
-                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre desenvolvimento Full Stack." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
-                        Saber mais
-                    </a>
+                    <div class="servico-texto">
+                        <p>Soluções web completas, desde front-end moderno até back-end robusto, garantindo performance, segurança e escalabilidade para seu projeto.</p>
+                        <p>Desenvolvemos aplicações web personalizadas utilizando as tecnologias mais modernas do mercado.</p>
+                    </div>
+                    <div class="servico-acoes">
+                        <button class="btn btn-leia-mais" data-modal="modal-desenvolvimento">
+                            <i class="fas fa-plus-circle"></i> Ler Mais
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="servico-card fade-in">
@@ -1214,21 +1441,31 @@
                         <i class="fas fa-globe-americas"></i>
                     </div>
                     <h3>Sites Institucionais Premium</h3>
-                    <p>Criação de sites empresariais modernos, responsivos e otimizados para SEO, que refletem a identidade e valores da sua marca.</p>
-                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre criação de site institucional." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
-                        Saber mais
-                    </a>
+                    <div class="servico-texto">
+                        <p>Criação de sites empresariais modernos, responsivos e otimizados para SEO, que refletem a identidade e valores da sua marca.</p>
+                        <p>Sites com design exclusivo, otimizados para conversão e totalmente gerenciáveis.</p>
+                    </div>
+                    <div class="servico-acoes">
+                        <button class="btn btn-leia-mais" data-modal="modal-sites">
+                            <i class="fas fa-plus-circle"></i> Ler Mais
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="servico-card fade-in">
                     <div class="servico-icon">
-                        <i class="fas fa-chart-network"></i>
+                        <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Consultoria em Transformação Digital</h3>
-                    <p>Análise e orientação especializada para transformação digital, estratégias online e otimização de processos empresariais.</p>
-                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre consultoria em transformação digital." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
-                        Saber mais
-                    </a>
+                    <div class="servico-texto">
+                        <p>Oferecemos consultoria especializada em transformação digital para empresas que buscam modernizar operações e otimizar processos.</p>
+                        <p>Análise de processos, estratégias digitais personalizadas e implementação de soluções tecnológicas.</p>
+                    </div>
+                    <div class="servico-acoes">
+                        <button class="btn btn-leia-mais" data-modal="modal-consultoria">
+                            <i class="fas fa-plus-circle"></i> Ler Mais
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="servico-card fade-in">
@@ -1236,10 +1473,15 @@
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>Integração e Automação com IA</h3>
-                    <p>Implementação de soluções de inteligência artificial para automatizar processos, analisar dados e melhorar a tomada de decisões.</p>
-                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre integração e automação com IA." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
-                        Saber mais
-                    </a>
+                    <div class="servico-texto">
+                        <p>Implementação de soluções de inteligência artificial para automatizar processos, analisar dados e melhorar a tomada de decisões.</p>
+                        <p>Chatbots inteligentes, análise preditiva e automação de workflows empresariais.</p>
+                    </div>
+                    <div class="servico-acoes">
+                        <button class="btn btn-leia-mais" data-modal="modal-ia">
+                            <i class="fas fa-plus-circle"></i> Ler Mais
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="servico-card fade-in">
@@ -1247,10 +1489,15 @@
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Sistemas Inteligentes Personalizados</h3>
-                    <p>Desenvolvimento de sistemas customizados com IA para empresas, otimizando operações e criando vantagens competitivas.</p>
-                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre sistemas inteligentes personalizados." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
-                        Saber mais
-                    </a>
+                    <div class="servico-texto">
+                        <p>Desenvolvimento de sistemas customizados com IA para empresas, otimizando operações e criando vantagens competitivas.</p>
+                        <p>Sistemas ERP, CRM e gestão empresarial com inteligência artificial integrada.</p>
+                    </div>
+                    <div class="servico-acoes">
+                        <button class="btn btn-leia-mais" data-modal="modal-sistemas">
+                            <i class="fas fa-plus-circle"></i> Ler Mais
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="servico-card fade-in">
@@ -1258,11 +1505,22 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Manutenção e Suporte Contínuo</h3>
-                    <p>Serviços de manutenção, atualização e suporte técnico para garantir o funcionamento ideal de suas soluções digitais.</p>
-                    <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre manutenção e suporte." class="btn btn-secondary" style="margin-top: 1rem; padding: 12px 24px;" target="_blank">
-                        Saber mais
-                    </a>
+                    <div class="servico-texto">
+                        <p>Serviços de manutenção, atualização e suporte técnico para garantir o funcionamento ideal de suas soluções digitais.</p>
+                        <p>Monitoramento 24/7, backups automáticos e suporte técnico especializado.</p>
+                    </div>
+                    <div class="servico-acoes">
+                        <button class="btn btn-leia-mais" data-modal="modal-suporte">
+                            <i class="fas fa-plus-circle"></i> Ler Mais
+                        </button>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 4rem;">
+                <a href="servicos.html" class="btn btn-primary">
+                    <i class="fas fa-list-alt"></i> Ver Todos os Serviços Detalhados
+                </a>
             </div>
         </div>
     </section>
@@ -1419,20 +1677,20 @@
                 <div class="footer-col">
                     <h3>Serviços</h3>
                     <ul class="footer-links">
-                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento Full Stack</a></li>
-                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Sites Institucionais</a></li>
-                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Consultoria Digital</a></li>
-                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Integração com IA</a></li>
+                        <li><a href="servicos.html"><i class="fas fa-chevron-right"></i> Todos os Serviços</a></li>
+                        <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento Full Stack</a></li>
+                        <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Consultoria Digital</a></li>
+                        <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Integração com IA</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>Links Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
-                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
-                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfólio</a></li>
+                        <li><a href="index.html#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                        <li><a href="index.html#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                        <li><a href="index.html#portfolio"><i class="fas fa-chevron-right"></i> Portfólio</a></li>
                     </ul>
                 </div>
                 
@@ -1453,6 +1711,257 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modais/Popups para os serviços -->
+    <div id="modal-desenvolvimento" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-layer-group"></i> Desenvolvimento Full Stack</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Oferecemos soluções web completas de ponta a ponta, desde o desenvolvimento do front-end (interface do usuário) até a construção de back-end robusto e escalável.</p>
+                
+                <h4>O que incluímos:</h4>
+                <ul>
+                    <li>Desenvolvimento de aplicações web responsivas</li>
+                    <li>Criação de APIs RESTful para integrações</li>
+                    <li>Banco de dados otimizados e seguros</li>
+                    <li>Implementação de sistemas de autenticação</li>
+                    <li>Integração com serviços de terceiros</li>
+                    <li>Otimização de performance e SEO</li>
+                </ul>
+                
+                <h4>Tecnologias utilizadas:</h4>
+                <p>HTML5, CSS3, JavaScript, React, Vue.js, Node.js, Python, PHP, MySQL, MongoDB, Docker, AWS, entre outras.</p>
+                
+                <h4>Benefícios:</h4>
+                <ul>
+                    <li>Soluções personalizadas para suas necessidades</li>
+                    <li>Código limpo e bem documentado</li>
+                    <li>Escalabilidade para crescimento futuro</li>
+                    <li>Segurança de dados implementada</li>
+                    <li>Suporte técnico pós-lançamento</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicos.html#lista-servicos" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Detalhes Completos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-sites" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-globe-americas"></i> Sites Institucionais Premium</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Criamos sites empresariais que não apenas apresentam sua marca, mas também convertem visitantes em clientes. Cada site é desenvolvido com estratégia, design moderno e foco em resultados.</p>
+                
+                <h4>Características dos nossos sites:</h4>
+                <ul>
+                    <li>Design responsivo (adaptável a todos os dispositivos)</li>
+                    <li>Otimização para mecanismos de busca (SEO)</li>
+                    <li>Alta velocidade de carregamento</li>
+                    <li>Sistemas de gerenciamento de conteúdo (CMS)</li>
+                    <li>Integração com redes sociais</li>
+                    <li>Formulários de contato inteligentes</li>
+                    <li>Análise de dados com Google Analytics</li>
+                </ul>
+                
+                <h4>Tipos de sites que desenvolvemos:</h4>
+                <ul>
+                    <li>Sites institucionais corporativos</li>
+                    <li>Landing pages para campanhas</li>
+                    <li>Portfólios profissionais</li>
+                    <li>Catálogos de produtos/serviços</li>
+                    <li>Blogs corporativos</li>
+                </ul>
+                
+                <h4>Processo de desenvolvimento:</h4>
+                <p>1. Briefing e planejamento | 2. Wireframes e protótipos | 3. Design UI/UX | 4. Desenvolvimento | 5. Testes e otimização | 6. Lançamento e treinamento</p>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicos.html#lista-servicos" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Detalhes Completos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-consultoria" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lightbulb"></i> Consultoria em Transformação Digital</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Nossa consultoria em transformação digital ajuda empresas a modernizar operações, implementar tecnologias inovadoras e otimizar processos para maximizar resultados.</p>
+                
+                <h4>Como funciona nossa consultoria:</h4>
+                <ul>
+                    <li><strong>Diagnóstico Digital:</strong> Análise completa dos processos atuais da empresa</li>
+                    <li><strong>Planejamento Estratégico:</strong> Desenvolvimento de roadmap de transformação</li>
+                    <li><strong>Implementação Tecnológica:</strong> Seleção e implementação das melhores soluções</li>
+                    <li><strong>Capacitação de Equipes:</strong> Treinamento para adoção das novas tecnologias</li>
+                    <li><strong>Acompanhamento:</strong> Monitoramento de resultados e ajustes contínuos</li>
+                </ul>
+                
+                <h4>Áreas de atuação:</h4>
+                <ul>
+                    <li>Automatização de processos manuais</li>
+                    <li>Migração para a nuvem (cloud computing)</li>
+                    <li>Implementação de sistemas de gestão</li>
+                    <li>Estratégias de marketing digital</li>
+                    <li>Análise de dados e business intelligence</li>
+                    <li>Segurança da informação e LGPD</li>
+                </ul>
+                
+                <h4>Benefícios para sua empresa:</h4>
+                <ul>
+                    <li>Aumento de eficiência operacional</li>
+                    <li>Redução de custos com otimização de processos</li>
+                    <li>Melhoria na experiência do cliente</li>
+                    <li>Vantagem competitiva no mercado</li>
+                    <li>Preparação para o futuro digital</li>
+                </ul>
+                
+                <h4>Metodologia:</h4>
+                <p>Trabalhamos com metodologias ágeis, garantindo resultados rápidos e mensuráveis. Nossa abordagem é prática, focada em soluções que geram valor real para o seu negócio.</p>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicos.html#lista-servicos" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Detalhes Completos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-ia" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-robot"></i> Integração e Automação com IA</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Implementamos soluções de inteligência artificial que automatizam processos, analisam dados e melhoram a tomada de decisões em sua empresa.</p>
+                
+                <h4>Soluções de IA que oferecemos:</h4>
+                <ul>
+                    <li>Chatbots inteligentes para atendimento ao cliente</li>
+                    <li>Análise preditiva para previsão de tendências</li>
+                    <li>Automação de workflows empresariais</li>
+                    <li>Processamento de linguagem natural (NLP)</li>
+                    <li>Reconhecimento de imagem e vídeo</li>
+                    <li>Sistemas de recomendação personalizados</li>
+                </ul>
+                
+                <h4>Benefícios da automação com IA:</h4>
+                <ul>
+                    <li>Redução de custos operacionais</li>
+                    <li>Atendimento 24/7 sem intervenção humana</li>
+                    <li>Decisões mais precisas baseadas em dados</li>
+                    <li>Escalabilidade ilimitada</li>
+                    <li>Experiências personalizadas para clientes</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicos.html#lista-servicos" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Detalhes Completos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-sistemas" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-cogs"></i> Sistemas Inteligentes Personalizados</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Desenvolvemos sistemas customizados com inteligência artificial integrada para otimizar operações e criar vantagens competitivas para seu negócio.</p>
+                
+                <h4>Tipos de sistemas que desenvolvemos:</h4>
+                <ul>
+                    <li>Sistemas de gestão empresarial (ERP)</li>
+                    <li>Customer Relationship Management (CRM)</li>
+                    <li>Sistemas de controle de estoque</li>
+                    <li>Plataformas de e-commerce</li>
+                    <li>Sistemas de agendamento online</li>
+                    <li>Dashboards analíticos em tempo real</li>
+                </ul>
+                
+                <h4>Características dos nossos sistemas:</h4>
+                <ul>
+                    <li>Totalmente personalizados para suas necessidades</li>
+                    <li>Integração com IA para automação inteligente</li>
+                    <li>Interface intuitiva e fácil de usar</li>
+                    <li>Relatórios e analytics avançados</li>
+                    <li>Segurança de dados garantida</li>
+                    <li>Escaláveis para crescimento futuro</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicos.html#lista-servicos" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Detalhes Completos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-suporte" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shield-alt"></i> Manutenção e Suporte Contínuo</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Oferecemos serviços de manutenção, atualização e suporte técnico para garantir o funcionamento ideal de todas as suas soluções digitais.</p>
+                
+                <h4>O que incluímos no suporte:</h4>
+                <ul>
+                    <li>Monitoramento 24/7 de performance</li>
+                    <li>Backups automáticos e restauração</li>
+                    <li>Atualizações de segurança regulares</li>
+                    <li>Correção de bugs e problemas técnicos</li>
+                    <li>Otimização contínua de performance</li>
+                    <li>Suporte técnico por especialistas</li>
+                    <li>Relatórios mensais de performance</li>
+                </ul>
+                
+                <h4>Planos de suporte disponíveis:</h4>
+                <ul>
+                    <li><strong>Básico:</strong> Suporte durante horário comercial</li>
+                    <li><strong>Profissional:</strong> Suporte estendido + monitoramento</li>
+                    <li><strong>Enterprise:</strong> Suporte 24/7 + atualizações prioritárias</li>
+                </ul>
+                
+                <h4>Benefícios do nosso suporte:</h4>
+                <ul>
+                    <li>Tranquilidade com seus sistemas sempre funcionando</li>
+                    <li>Segurança contra ataques e vulnerabilidades</li>
+                    <li>Atualizações constantes com as últimas tecnologias</li>
+                    <li>Maximização do ROI dos seus sistemas</li>
+                    <li>Foco no seu negócio, não em problemas técnicos</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="servicos.html#lista-servicos" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Ver Detalhes Completos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Menu Mobile Premium
@@ -1485,8 +1994,9 @@
             }
         });
         
-        // Animações de entrada premium
+        // Animações de entrada premium com lazy loading
         const fadeElements = document.querySelectorAll('.fade-in');
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
         
         const fadeInOnScroll = () => {
             fadeElements.forEach(element => {
@@ -1495,6 +2005,13 @@
                 
                 if (elementTop < windowHeight - 100) {
                     element.classList.add('visible');
+                }
+            });
+            
+            // Lazy loading de imagens
+            lazyImages.forEach(img => {
+                if (img.getBoundingClientRect().top < windowHeight + 100) {
+                    img.classList.add('loaded');
                 }
             });
         };
@@ -1523,12 +2040,62 @@
             });
         });
         
-        // Botão WhatsApp com mensagem personalizada
-        const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
-        whatsappButtons.forEach(button => {
-            // Já configurado no HTML com a mensagem personalizada
-            // Não é necessário alterar nada aqui
+        // Sistema de Modais/Popups
+        const modalTriggers = document.querySelectorAll('.btn-leia-mais');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.modal-close');
+        
+        // Abrir modal
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const modalId = trigger.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
         });
+        
+        // Fechar modal com botão X
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Fechar modal clicando fora
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Fechar modal com ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modals.forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+        
+        // Otimização de performance - carregamento inteligente
+        let isScrolling;
+        window.addEventListener('scroll', function() {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(fadeInOnScroll, 66);
+        }, false);
         
         // Efeito de digitação no título (opcional) - 20% MAIS RÁPIDO
         const heroTitle = document.getElementById('hero-title');
@@ -1536,7 +2103,7 @@
             const originalText = heroTitle.textContent;
             heroTitle.textContent = '';
             let i = 0;
-            const typingSpeed = 40; // Alterado de 50ms para 40ms (20% mais rápido)
+            const typingSpeed = 40;
             
             function typeWriter() {
                 if (i < originalText.length) {
@@ -1550,7 +2117,23 @@
             setTimeout(typeWriter, 500);
         }
         
-        // Corrigido: também corrigi um erro de digitação no CSS (havia "ppadding" no header)
+        // Preload de recursos críticos
+        window.addEventListener('load', function() {
+            // Adicionar classe para indicar que a página está completamente carregada
+            document.body.classList.add('page-loaded');
+            
+            // Otimização adicional após carregamento completo
+            setTimeout(() => {
+                // Pré-carregar links importantes
+                const importantLinks = document.querySelectorAll('a[href="servicos.html"]');
+                importantLinks.forEach(link => {
+                    const prefetchLink = document.createElement('link');
+                    prefetchLink.rel = 'prefetch';
+                    prefetchLink.href = link.href;
+                    document.head.appendChild(prefetchLink);
+                });
+            }, 1000);
+        });
     </script>
 </body>
 </html>
