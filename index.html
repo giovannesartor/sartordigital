@@ -41,7 +41,7 @@
         "Desenvolvimento Web",
         "Inteligência Artificial", 
         "Automação",
-        "Consultoria em Transformação Digital",
+        "Criação de Ebooks",
         "Sites Institucionais"
       ],
       "offers": {
@@ -671,15 +671,15 @@
             justify-content: center;
         }
         
-        /* Portfólio Premium */
+        /* Portfólio Premium - AJUSTADO PARA 4 CARDS */
         .portfolio {
             background: var(--branco);
         }
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
         }
         
         .portfolio-item {
@@ -689,6 +689,9 @@
             transition: all 0.5s ease;
             position: relative;
             background: var(--branco);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .portfolio-item:hover {
@@ -698,7 +701,7 @@
         
         .portfolio-img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
             display: flex;
             align-items: center;
@@ -724,17 +727,27 @@
         }
         
         .portfolio-img i {
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: var(--acapulco);
             z-index: 1;
         }
         
         .portfolio-info {
-            padding: 2rem;
+            padding: 1.8rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .portfolio-info h3 {
             margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        .portfolio-info p {
+            flex: 1;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
         
         /* Contato Premium */
@@ -1118,6 +1131,10 @@
             .servico-card {
                 min-height: 550px;
             }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
         }
         
         @media (max-width: 992px) {
@@ -1161,6 +1178,10 @@
             
             .servico-card {
                 min-height: auto;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
         }
         
@@ -1291,6 +1312,10 @@
             .servico-card {
                 padding: 1.5rem;
             }
+            
+            .portfolio-img {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -1398,10 +1423,10 @@
                             </a>
                         </div>
                         <div class="projeto-item">
-                            <h3>Cristiano Eletricista</h3>
-                            <p>Site profissional para eletricista autônomo, com portfólio de serviços, orçamento online e integração com WhatsApp.</p>
-                            <a href="https://cristianoeletricista.com.br" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> cristianoeletricista.com.br
+                            <h3>Valsa Digital</h3>
+                            <p>Plataforma digital completa com foco em transformação digital, onde participei ativamente no desenvolvimento frontend (25% do projeto).</p>
+                            <a href="http://valsadigital.com.br" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> valsadigital.com.br
                             </a>
                         </div>
                     </div>
@@ -1454,15 +1479,15 @@
                 
                 <div class="servico-card fade-in">
                     <div class="servico-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-book"></i>
                     </div>
-                    <h3>Consultoria em Transformação Digital</h3>
+                    <h3>Criação de Ebooks Personalizados</h3>
                     <div class="servico-texto">
-                        <p>Oferecemos consultoria especializada em transformação digital para empresas que buscam modernizar operações e otimizar processos.</p>
-                        <p>Análise de processos, estratégias digitais personalizadas e implementação de soluções tecnológicas.</p>
+                        <p>Desenvolvemos ebooks profissionais e personalizados sobre qualquer tema para quem quer começar a vender online ou construir autoridade digital.</p>
+                        <p>Ebooks com design exclusivo, diagramação profissional e otimizados para conversão, prontos para distribuição e venda.</p>
                     </div>
                     <div class="servico-acoes">
-                        <button class="btn btn-leia-mais" data-modal="modal-consultoria">
+                        <button class="btn btn-leia-mais" data-modal="modal-ebooks">
                             <i class="fas fa-plus-circle"></i> Ler Mais
                         </button>
                     </div>
@@ -1568,6 +1593,19 @@
                         <h3>Cristiano Eletricista</h3>
                         <p>Site profissional para eletricista autônomo, com portfólio de serviços, orçamento online e contato direto via WhatsApp.</p>
                         <a href="https://cristianoeletricista.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Valsa Digital</h3>
+                        <p>Plataforma digital completa com foco em transformação digital. Participei ativamente no desenvolvimento frontend, contribuindo com 25% do projeto.</p>
+                        <a href="http://valsadigital.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
                             Ver Projeto
                         </a>
                     </div>
@@ -1679,7 +1717,7 @@
                     <ul class="footer-links">
                         <li><a href="servicos.html"><i class="fas fa-chevron-right"></i> Todos os Serviços</a></li>
                         <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Desenvolvimento Full Stack</a></li>
-                        <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Consultoria Digital</a></li>
+                        <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Criação de Ebooks</a></li>
                         <li><a href="servicos.html#lista-servicos"><i class="fas fa-chevron-right"></i> Integração com IA</a></li>
                     </ul>
                 </div>
@@ -1794,45 +1832,55 @@
         </div>
     </div>
     
-    <div id="modal-consultoria" class="modal">
+    <div id="modal-ebooks" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3><i class="fas fa-lightbulb"></i> Consultoria em Transformação Digital</h3>
+                <h3><i class="fas fa-book"></i> Criação de Ebooks Personalizados</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <p>Nossa consultoria em transformação digital ajuda empresas a modernizar operações, implementar tecnologias inovadoras e otimizar processos para maximizar resultados.</p>
+                <p>Criamos ebooks profissionais e personalizados sobre qualquer tema para empreendedores, coaches, especialistas e qualquer pessoa que queira começar a vender online ou construir autoridade digital.</p>
                 
-                <h4>Como funciona nossa consultoria:</h4>
+                <h4>Para quem é este serviço:</h4>
                 <ul>
-                    <li><strong>Diagnóstico Digital:</strong> Análise completa dos processos atuais da empresa</li>
-                    <li><strong>Planejamento Estratégico:</strong> Desenvolvimento de roadmap de transformação</li>
-                    <li><strong>Implementação Tecnológica:</strong> Seleção e implementação das melhores soluções</li>
-                    <li><strong>Capacitação de Equipes:</strong> Treinamento para adoção das novas tecnologias</li>
-                    <li><strong>Acompanhamento:</strong> Monitoramento de resultados e ajustes contínuos</li>
+                    <li>Empreendedores que querem criar produtos digitais</li>
+                    <li>Coaches e consultores que desejam compartilhar conhecimento</li>
+                    <li>Especialistas que buscam estabelecer autoridade no mercado</li>
+                    <li>Afiliados que precisam de material de qualidade para promover</li>
+                    <li>Empresas que querem criar materiais ricos para captação de leads</li>
                 </ul>
                 
-                <h4>Áreas de atuação:</h4>
+                <h4>O processo de criação inclui:</h4>
                 <ul>
-                    <li>Automatização de processos manuais</li>
-                    <li>Migração para a nuvem (cloud computing)</li>
-                    <li>Implementação de sistemas de gestão</li>
-                    <li>Estratégias de marketing digital</li>
-                    <li>Análise de dados e business intelligence</li>
-                    <li>Segurança da informação e LGPD</li>
+                    <li>Planejamento do conteúdo e estrutura</li>
+                    <li>Revisão e edição de texto (se necessário)</li>
+                    <li>Design de capa personalizado e profissional</li>
+                    <li>Diagramação interna com tipografia de alta qualidade</li>
+                    <li>Ilustrações e elementos visuais (se aplicável)</li>
+                    <li>Formatação para múltiplos formatos (PDF, EPUB, MOBI)</li>
+                    <li>Otimização para leitura em diferentes dispositivos</li>
                 </ul>
                 
-                <h4>Benefícios para sua empresa:</h4>
+                <h4>Formatos entregues:</h4>
                 <ul>
-                    <li>Aumento de eficiência operacional</li>
-                    <li>Redução de custos com otimização de processos</li>
-                    <li>Melhoria na experiência do cliente</li>
-                    <li>Vantagem competitiva no mercado</li>
-                    <li>Preparação para o futuro digital</li>
+                    <li><strong>PDF otimizado:</strong> Para distribuição online, downloads e impressão</li>
+                    <li><strong>EPUB:</strong> Para leitura em e-readers (Kindle, Kobo, etc.)</li>
+                    <li><strong>MOBI:</strong> Especificamente para Kindle</li>
+                    <li><strong>Versão web responsiva:</strong> Para leitura direto no navegador</li>
                 </ul>
                 
-                <h4>Metodologia:</h4>
-                <p>Trabalhamos com metodologias ágeis, garantindo resultados rápidos e mensuráveis. Nossa abordagem é prática, focada em soluções que geram valor real para o seu negócio.</p>
+                <h4>Benefícios de ter um ebook profissional:</h4>
+                <ul>
+                    <li>Estabelece autoridade e credibilidade no seu nicho</li>
+                    <li>Gera leads qualificados para seu negócio</li>
+                    <li>Cria uma fonte de renda passiva</li>
+                    <li>Serve como cartão de visitas digital de alto valor</li>
+                    <li>Aumenta o engajamento com sua audiência</li>
+                    <li>Pode ser usado como brinde valioso em campanhas</li>
+                </ul>
+                
+                <h4>Tempo de entrega e investimento:</h4>
+                <p>O prazo varia conforme a complexidade do projeto (normalmente 7-15 dias úteis). Oferecemos pacotes desde ebooks básicos até produções completas com ilustrações exclusivas. Entre em contato para um orçamento personalizado.</p>
                 
                 <div style="text-align: center; margin-top: 2rem;">
                     <a href="servicos.html#lista-servicos" class="btn btn-primary">
