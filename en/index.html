@@ -1272,20 +1272,29 @@
             
             .mobile-menu-btn {
                 display: block;
+                position: relative;
+                z-index: 1001;
+            }
+            
+            .logo {
+                position: relative;
+                z-index: 1001;
             }
             
             .header-navigation {
                 position: fixed;
-                top: 90px;
+                top: 0;
                 left: 0;
                 width: 100%;
+                height: auto;
                 background: var(--branco);
                 flex-direction: column;
                 align-items: center;
-                padding: 1.5rem;
+                padding: 100px 1.5rem 2rem;
                 box-shadow: var(--sombra-intensa);
-                transform: translateY(-100%);
+                transform: translateY(-110%);
                 opacity: 0;
+                visibility: hidden;
                 transition: all 0.4s ease;
                 z-index: 999;
                 border-radius: 0 0 var(--raio-borda) var(--raio-borda);
@@ -1295,6 +1304,7 @@
             .header-navigation.active {
                 transform: translateY(0);
                 opacity: 1;
+                visibility: visible;
             }
             
             nav ul {
