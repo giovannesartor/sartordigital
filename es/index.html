@@ -802,10 +802,72 @@
         
         .portfolio-info p {
             flex: 1;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.97rem;
         }
-        
+
+        /* Portfolio Tag Badge */
+        .portfolio-tag {
+            display: inline-block;
+            font-size: 0.67rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--acapulco);
+            background: rgba(121, 181, 155, 0.08);
+            border: 1px solid rgba(121, 181, 155, 0.28);
+            border-radius: 20px;
+            padding: 3px 11px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Portfolio Tech Pills */
+        .portfolio-techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid var(--cinza-medio);
+            margin-bottom: 0;
+        }
+
+        .portfolio-tech {
+            font-size: 0.67rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            border: 1px solid var(--cinza-medio);
+            letter-spacing: 0.03em;
+            transition: all 0.2s ease;
+        }
+
+        .portfolio-tech:hover {
+            background: var(--cinza-medio);
+            color: var(--big-stone);
+        }
+
+        /* Portfolio Image Color Variants */
+        .portfolio-img-capital { background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%); }
+        .portfolio-img-capital i { color: #2563eb; }
+        .portfolio-img-services { background: linear-gradient(135deg, #fefce8 0%, #fde68a 100%); }
+        .portfolio-img-services i { color: #d97706; }
+        .portfolio-img-electric { background: linear-gradient(135deg, #fffbeb 0%, #fde68a 100%); }
+        .portfolio-img-electric i { color: #f59e0b; }
+        .portfolio-img-web3 { background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); }
+        .portfolio-img-web3 i { color: #9333ea; }
+        .portfolio-img-insurtech { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
+        .portfolio-img-insurtech i { color: #1d4ed8; }
+        .portfolio-img-fintech { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); }
+        .portfolio-img-fintech i { color: #059669; }
+        .portfolio-img-crypto { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
+        .portfolio-img-crypto i { color: #7c3aed; }
+        .portfolio-img-agro { background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%); }
+        .portfolio-img-agro i { color: #16a34a; }
+        .portfolio-img-martech { background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%); }
+        .portfolio-img-martech i { color: #ea580c; }
+
         /* Contacto Premium */
         .contato {
             background: var(--gradient-dark);
@@ -1651,70 +1713,174 @@
             </div>
             
             <div class="portfolio-grid">
+
+                <!-- Buffalo Capital -->
                 <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">
+                    <div class="portfolio-img portfolio-img-capital">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="portfolio-info">
+                        <span class="portfolio-tag">Fintech · Inversiones</span>
                         <h3>Buffalo Capital</h3>
-                        <p>Sitio institucional para empresa de inversiones, con dashboard interactivo, análisis de datos e integración con APIs financieras.</p>
-                        <a href="https://buffalocapital.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
-                            Ver Proyecto
-                        </a>
+                        <p>Sitio institucional para empresa de inversiones con dashboard interactivo, análisis de datos en tiempo real e integración con APIs financieras.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">Dashboard</span>
+                            <span class="portfolio-tech">APIs Financieras</span>
+                            <span class="portfolio-tech">Chart.js</span>
+                        </div>
+                        <a href="https://buffalocapital.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
                     </div>
                 </div>
-                
+
+                <!-- SRT Brasil -->
                 <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">
+                    <div class="portfolio-img portfolio-img-services">
                         <i class="fas fa-tools"></i>
                     </div>
                     <div class="portfolio-info">
+                        <span class="portfolio-tag">Servicios · CRM · Agendamiento</span>
                         <h3>SRT Brasil</h3>
-                        <p>Plataforma completa para servicios técnicos, con sistema de agendamiento online, gestión de clientes e integración de pagos.</p>
-                        <a href="http://srtbrasil.com" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
-                            Ver Proyecto
-                        </a>
+                        <p>Plataforma completa para servicios técnicos con sistema de agendamiento online, gestión de clientes e integración de pagos.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">CRM</span>
+                            <span class="portfolio-tech">Agendamiento</span>
+                            <span class="portfolio-tech">Pagos</span>
+                        </div>
+                        <a href="http://srtbrasil.com" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
                     </div>
                 </div>
-                
+
+                <!-- Cristiano Eletricista -->
                 <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">
+                    <div class="portfolio-img portfolio-img-electric">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <div class="portfolio-info">
+                        <span class="portfolio-tag">Servicios Locales · Landing Page</span>
                         <h3>Cristiano Eletricista</h3>
-                        <p>Sitio profesional para electricista autónomo, con portafolio de servicios, presupuesto online y contacto directo vía WhatsApp.</p>
-                        <a href="https://cristianoeletricista.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
-                            Ver Proyecto
-                        </a>
+                        <p>Sitio profesional para electricista autónomo con portafolio de servicios, presupuesto online y contacto directo vía WhatsApp.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">WhatsApp API</span>
+                            <span class="portfolio-tech">Presupuesto Online</span>
+                            <span class="portfolio-tech">SEO Local</span>
+                        </div>
+                        <a href="https://cristianoeletricista.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
                     </div>
                 </div>
-                
+
+                <!-- Valsa Digital -->
                 <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="portfolio-img portfolio-img-web3">
+                        <i class="fas fa-cubes"></i>
                     </div>
                     <div class="portfolio-info">
+                        <span class="portfolio-tag">Web3 · Tokenización Digital</span>
                         <h3>Valsa Digital</h3>
-                        <p>Plataforma digital completa con enfoque en tokenización digital. Participé activamente en el desarrollo frontend, contribuyendo con 25% del proyecto.</p>
-                        <a href="http://valsadigital.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
-                            Ver Proyecto
-                        </a>
+                        <p>Plataforma digital completa con enfoque en tokenización digital. Contribuí activamente al desarrollo frontend, representando el 25% del proyecto total.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">Frontend</span>
+                            <span class="portfolio-tech">Web3</span>
+                            <span class="portfolio-tech">Blockchain</span>
+                        </div>
+                        <a href="http://valsadigital.com.br" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
                     </div>
                 </div>
-                
+
+                <!-- AG Digital -->
                 <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">
+                    <div class="portfolio-img portfolio-img-insurtech">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="portfolio-info">
+                        <span class="portfolio-tag">Insurtech · Fintech · SaaS</span>
                         <h3>AG Digital</h3>
-                        <p>Actué como socio y desarrollador en AG Digital, una plataforma premium enfocada en la gestión inteligente de seguros, beneficios, planes financieros y soluciones corporativas, atendiendo tanto a personas físicas como a empresas. Participé activamente en aproximadamente el 25% del desarrollo de la plataforma, contribuyendo desde la concepción del producto hasta la implementación de funcionalidades estratégicas.</p>
-                        <a href="https://agdigital.ag/" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">
-                            Ver Proyecto
-                        </a>
+                        <p>Plataforma premium de gestión inteligente de seguros, beneficios, planes financieros y soluciones corporativas. Actué como socio y desarrollador con ~25% del desarrollo — desde la concepción hasta funcionalidades estratégicas.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">Seguros</span>
+                            <span class="portfolio-tech">Beneficios</span>
+                            <span class="portfolio-tech">API</span>
+                            <span class="portfolio-tech">SaaS</span>
+                        </div>
+                        <a href="https://agdigital.ag/" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
                     </div>
                 </div>
+
+                <!-- Quanto Vale -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img portfolio-img-fintech">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Fintech · Valuation SaaS</span>
+                        <h3>Quanto Vale</h3>
+                        <p>SaaS de valuación profesional con Motor DCF institucional + IA propietaria. Proyecciones de flujo de caja, datos oficiales del IBGE vía SIDRA e informe ejecutivo de hasta 25 páginas — 30× más barato que consultoras tradicionales.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">DCF Engine</span>
+                            <span class="portfolio-tech">IA Generativa</span>
+                            <span class="portfolio-tech">IBGE SIDRA</span>
+                            <span class="portfolio-tech">LGPD</span>
+                        </div>
+                        <a href="https://quantovale.online" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <!-- Vexium -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img portfolio-img-crypto">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">FinTech · Crypto · IA</span>
+                        <h3>Vexium</h3>
+                        <p>Motor VEX propietario de decisión para activos de criptomonedas. Consolida 7+ indicadores técnicos con IA generativa y datos en vivo de Binance — Score de convicción, probabilidad y riesgo en milisegundos.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">Motor VEX</span>
+                            <span class="portfolio-tech">Binance API</span>
+                            <span class="portfolio-tech">IA Híbrida</span>
+                            <span class="portfolio-tech">Real-time</span>
+                        </div>
+                        <a href="https://vexium.pro" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <!-- ConectCampo -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img portfolio-img-agro">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">AgTech · Marketplace · Fintech</span>
+                        <h3>ConectCampo</h3>
+                        <p>Marketplace de crédito rural #1 de Brasil. Conecta productores rurales y empresas del agronegocio a bancos, FIDCs, cooperativas y securitizadoras con score exclusivo, motor de matching por IA y data room de nivel bancario.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">AI Matching</span>
+                            <span class="portfolio-tech">Risk Score</span>
+                            <span class="portfolio-tech">LGPD</span>
+                            <span class="portfolio-tech">API REST</span>
+                        </div>
+                        <a href="https://conectcampo.digital" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <!-- StudyMarketer -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img portfolio-img-martech">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">MarTech · SaaS · IA</span>
+                        <h3>StudyMarketer</h3>
+                        <p>Plataforma de inteligencia de mercado para emprendedores digitales. Monitorea tendencias globales (EE.UU. → Brasil) antes de volverse virales, analiza 15 nichos 2×/día con IA real y rastrea competidores automáticamente.</p>
+                        <div class="portfolio-techs">
+                            <span class="portfolio-tech">Trend Radar</span>
+                            <span class="portfolio-tech">IA Generativa</span>
+                            <span class="portfolio-tech">Web Scraping</span>
+                            <span class="portfolio-tech">Real-time</span>
+                        </div>
+                        <a href="https://studymarketer.digital" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; padding: 10px 20px;">Ver Proyecto</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
