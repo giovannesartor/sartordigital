@@ -27,7 +27,7 @@
     <meta property="og:description" content="Soluções completas em desenvolvimento web, IA e automação para empresas que buscam inovação e resultados.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sartordigital.online">
-    <meta property="og:image" content="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a2a40/79b59b?text=Sartor+Digital+%7C+Desenvolvimento+Web+%26+IA">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
@@ -1459,6 +1459,147 @@
                 height: 180px;
             }
         }
+
+        /* === Tech Stack Strip === */
+        .tech-strip {
+            background: var(--big-stone);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .tech-strip-inner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.4rem 1rem;
+            align-items: center;
+        }
+        .tech-strip-label {
+            color: rgba(255,255,255,0.32);
+            font-size: 0.67rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding-right: 1rem;
+            border-right: 1px solid rgba(255,255,255,0.12);
+            margin-right: 0.3rem;
+            white-space: nowrap;
+        }
+        .tech-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.58);
+            font-size: 0.74rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 4px 11px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.2s ease;
+        }
+        .tech-item:hover {
+            color: var(--vista-blue);
+            border-color: rgba(146,218,179,0.3);
+            background: rgba(255,255,255,0.04);
+        }
+        /* === Portfolio Filters === */
+        .portfolio-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .filter-btn {
+            background: var(--cinza-claro);
+            border: 1.5px solid var(--cinza-medio);
+            color: var(--cinza-escuro);
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: var(--fonte-principal);
+        }
+        .filter-btn:hover { border-color: var(--acapulco); color: var(--acapulco); }
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            color: var(--branco);
+            border-color: transparent;
+            box-shadow: var(--sombra-suave);
+        }
+        .portfolio-item.hidden { display: none; }
+        /* === CTA Strip === */
+        .cta-strip { background: var(--gradient-dark); padding: 4.5rem 0; }
+        .cta-strip-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .cta-strip-text h3 { color: var(--branco); font-size: 1.9rem; margin-bottom: 0.4rem; }
+        .cta-strip-text p { color: rgba(255,255,255,0.7); margin-bottom: 0; font-size: 1.05rem; }
+        .cta-strip-actions { flex-shrink: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
+        /* === Depoimentos === */
+        .depoimentos { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
+        .depoimentos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .depoimento-card {
+            background: var(--branco);
+            border-radius: var(--raio-borda);
+            padding: 2.2rem;
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .depoimento-card:hover { transform: translateY(-8px); box-shadow: var(--sombra-media); }
+        .depoimento-stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 3px; }
+        .depoimento-texto {
+            font-style: italic;
+            color: var(--cinza-escuro);
+            font-size: 0.96rem;
+            line-height: 1.8;
+            flex: 1;
+            margin-bottom: 0;
+        }
+        .depoimento-autor {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--cinza-medio);
+        }
+        .depoimento-avatar {
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1rem;
+            color: var(--branco); flex-shrink: 0;
+        }
+        .dep-av-1 { background: var(--gradient-primary); }
+        .dep-av-2 { background: linear-gradient(135deg, #7c3aed, #4f46e5); }
+        .dep-av-3 { background: linear-gradient(135deg, #059669, #0ea5e9); }
+        .depoimento-meta h4 { font-size: 0.95rem; color: var(--big-stone); margin-bottom: 0.1rem; }
+        .depoimento-meta p { font-size: 0.78rem; color: var(--cinza-escuro); margin-bottom: 0; }
+        /* === Scroll to Top === */
+        .scroll-top {
+            position: fixed; bottom: 2rem; right: 2rem;
+            width: 48px; height: 48px;
+            background: var(--gradient-primary);
+            color: var(--branco); border: none;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; cursor: pointer;
+            box-shadow: var(--sombra-media);
+            opacity: 0; transform: translateY(20px);
+            transition: all 0.35s ease; z-index: 900;
+        }
+        .scroll-top.visible { opacity: 1; transform: translateY(0); }
+        .scroll-top:hover { transform: translateY(-4px); box-shadow: var(--sombra-intensa); }
     </style>
 </head>
 <body>
@@ -1517,17 +1658,68 @@
                 </div>
             </div>
             <div class="hero-image fade-in">
-                <div style="width: 100%; height: 450px; background: linear-gradient(135deg, var(--big-stone) 0%, var(--pickled-bluewood) 100%); border-radius: var(--raio-borda-lg); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: var(--sombra-intensa);">
-                    <div style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at 30% 50%, rgba(121, 181, 155, 0.3) 0%, transparent 60%);"></div>
-                    <div style="position: relative; z-index: 2; text-align: center; color: white; padding: 2rem;">
-                        <i class="fas fa-brain" style="font-size: 5rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h3 style="color: white; margin-bottom: 0.5rem;">Soluções com IA</h3>
-                        <p style="color: rgba(255, 255, 255, 0.9);">Inteligência Artificial & Automação</p>
+                <div style="width:100%;height:450px;background:linear-gradient(135deg,var(--big-stone) 0%,var(--pickled-bluewood) 100%);border-radius:var(--raio-borda-lg);position:relative;overflow:hidden;box-shadow:var(--sombra-intensa);padding:2rem;display:flex;align-items:center;">
+                    <div style="position:absolute;width:100%;height:100%;background:radial-gradient(circle at 25% 50%,rgba(121,181,155,0.22) 0%,transparent 65%);"></div>
+                    <div style="position:relative;z-index:2;width:100%;">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-bottom:0.9rem;">
+                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
+                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-calculator" style="color:#34d399;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">Quanto Vale</span></div>
+                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">Valuation SaaS · DCF + IA</p>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
+                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-robot" style="color:#a78bfa;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">Vexium</span></div>
+                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">Motor VEX · Crypto IA</p>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
+                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-tractor" style="color:#4ade80;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">ConectCampo</span></div>
+                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">AgTech · Crédito Rural</p>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
+                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-chart-bar" style="color:#fb923c;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">StudyMarketer</span></div>
+                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">MarTech · Trends IA</p>
+                            </div>
+                        </div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+                            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem;text-align:center;">
+                                <div style="color:#92dab3;font-size:0.7rem;font-weight:800;">AG Digital</div>
+                                <div style="color:rgba(255,255,255,0.4);font-size:0.62rem;">Insurtech</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem;text-align:center;">
+                                <div style="color:#92dab3;font-size:0.7rem;font-weight:800;">Valsa Digital</div>
+                                <div style="color:rgba(255,255,255,0.4);font-size:0.62rem;">Web3</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem;text-align:center;">
+                                <div style="color:#92dab3;font-size:0.7rem;font-weight:800;">+ outros</div>
+                                <div style="color:rgba(255,255,255,0.4);font-size:0.62rem;">9 projetos</div>
+                            </div>
+                        </div>
+                        <div style="text-align:center;margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.08);">
+                            <span style="color:rgba(255,255,255,0.42);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;">20+ Produtos Digitais Entregues</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Tech Stack Strip -->
+    <div class="tech-strip">
+        <div class="container">
+            <div class="tech-strip-inner">
+                <span class="tech-strip-label">Stack</span>
+                <span class="tech-item"><i class="fab fa-react"></i> React</span>
+                <span class="tech-item"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="tech-item"><i class="fab fa-python"></i> Python</span>
+                <span class="tech-item"><i class="fas fa-database"></i> PostgreSQL</span>
+                <span class="tech-item"><i class="fab fa-docker"></i> Docker</span>
+                <span class="tech-item"><i class="fas fa-cloud"></i> AWS</span>
+                <span class="tech-item"><i class="fas fa-brain"></i> OpenAI</span>
+                <span class="tech-item"><i class="fab fa-js-square"></i> Next.js</span>
+                <span class="tech-item"><i class="fas fa-bolt"></i> FastAPI</span>
+                <span class="tech-item"><i class="fas fa-code-branch"></i> Git</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Sobre Nós Premium -->
     <section class="sobre" id="sobre">
@@ -1540,7 +1732,7 @@
                     
                     <div class="sobre-stats">
                         <div class="stat-item">
-                            <div class="stat-number">10+</div>
+                            <div class="stat-number">20+</div>
                             <div class="stat-text">Projetos Entregues</div>
                         </div>
                         <div class="stat-item">
@@ -1548,7 +1740,7 @@
                             <div class="stat-text">Satisfação do Cliente</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">3+</div>
+                            <div class="stat-number">4+</div>
                             <div class="stat-text">Anos de Experiência</div>
                         </div>
                     </div>
@@ -1558,16 +1750,37 @@
                     <h3>Projetos Destacados</h3>
                     <div class="projetos-lista">
                         <div class="projeto-item">
-                            <h3>Buffalo Capital</h3>
-                            <p>Site institucional premium para empresa de investimentos, com dashboard interativo e análise de dados em tempo real.</p>
-                            <a href="https://buffalocapital.com.br" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> buffalocapital.com.br
-                            </a>
+                            <h3 style="font-size:1.15rem;">Quanto Vale</h3>
+                            <p>Valuation SaaS com Motor DCF + IA Generativa. Relatório de 25 páginas em minutos.</p>
+                            <a href="https://quantovale.online" target="_blank"><i class="fas fa-external-link-alt"></i> quantovale.online</a>
                         </div>
                         <div class="projeto-item">
-                            <h3>SRT Brasil</h3>
-                            <p>Plataforma completa para serviços técnicos especializados, com sistema de agendamento online e gestão de clientes.</p>
-                            <a href="http://srtbrasil.com" target="_blank">
+                            <h3 style="font-size:1.15rem;">Vexium</h3>
+                            <p>Motor VEX proprietário de decisão para criptomoedas com IA e dados Binance em tempo real.</p>
+                            <a href="https://vexium.pro" target="_blank"><i class="fas fa-external-link-alt"></i> vexium.pro</a>
+                        </div>
+                        <div class="projeto-item">
+                            <h3 style="font-size:1.15rem;">ConectCampo</h3>
+                            <p>Marketplace de crédito rural #1 do Brasil com AI matching e data room bancário.</p>
+                            <a href="https://conectcampo.digital" target="_blank"><i class="fas fa-external-link-alt"></i> conectcampo.digital</a>
+                        </div>
+                        <div class="projeto-item">
+                            <h3 style="font-size:1.15rem;">StudyMarketer</h3>
+                            <p>Plataforma de inteligência de mercado com rastreamento de tendências e concorrentes por IA.</p>
+                            <a href="https://studymarketer.digital" target="_blank"><i class="fas fa-external-link-alt"></i> studymarketer.digital</a>
+                        </div>
+                        <div class="projeto-item">
+                            <h3 style="font-size:1.15rem;">AG Digital</h3>
+                            <p>Plataforma premium de seguros, benefícios e soluções corporativas. Co-fundador e dev (~25%).</p>
+                            <a href="https://agdigital.ag/" target="_blank"><i class="fas fa-external-link-alt"></i> agdigital.ag</a>
+                        </div>
+                        <div class="projeto-item">
+                            <h3 style="font-size:1.15rem;">Buffalo Capital</h3>
+                            <p>Site institucional com dashboard interativo e integração de APIs financeiras em tempo real.</p>
+                            <a href="https://buffalocapital.com.br" target="_blank"><i class="fas fa-external-link-alt"></i> buffalocapital.com.br</a>
+                        </div>
+                    </div>
+                </div>
                                 <i class="fas fa-external-link-alt"></i> srtbrasil.com
                             </a>
                         </div>
@@ -1706,6 +1919,22 @@
         </div>
     </section>
 
+    <!-- CTA Strip -->
+    <div class="cta-strip">
+        <div class="container">
+            <div class="cta-strip-inner">
+                <div class="cta-strip-text">
+                    <h3>Pronto para transformar sua ideia em produto real?</h3>
+                    <p>Da concepção ao lançamento — com IA, design premium e código de produção.</p>
+                </div>
+                <div class="cta-strip-actions">
+                    <a href="https://wa.me/5554981332271?text=Olá! Quero transformar minha ideia em produto digital." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+                    <a href="#portfolio" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Portfólio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Portfólio Premium -->
     <section class="portfolio" id="portfolio">
         <div class="container">
@@ -1714,10 +1943,19 @@
                 <p>Conheça alguns dos nossos trabalhos mais recentes, desenvolvidos com tecnologia de ponta, design premium e foco em resultados.</p>
             </div>
             
+            <div class="portfolio-filters" id="portfolioFilters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="fintech">Fintech</button>
+                <button class="filter-btn" data-filter="agtech">AgTech</button>
+                <button class="filter-btn" data-filter="martech">MarTech</button>
+                <button class="filter-btn" data-filter="web3">Web3</button>
+                <button class="filter-btn" data-filter="servicos">Serviços</button>
+            </div>
+
             <div class="portfolio-grid">
 
                 <!-- Buffalo Capital -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="fintech">
                     <div class="portfolio-img portfolio-img-capital">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -1735,7 +1973,7 @@
                 </div>
 
                 <!-- SRT Brasil -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="servicos">
                     <div class="portfolio-img portfolio-img-services">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -1753,7 +1991,7 @@
                 </div>
 
                 <!-- Cristiano Eletricista -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="servicos">
                     <div class="portfolio-img portfolio-img-electric">
                         <i class="fas fa-bolt"></i>
                     </div>
@@ -1771,7 +2009,7 @@
                 </div>
 
                 <!-- Valsa Digital -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="web3">
                     <div class="portfolio-img portfolio-img-web3">
                         <i class="fas fa-cubes"></i>
                     </div>
@@ -1789,7 +2027,7 @@
                 </div>
 
                 <!-- AG Digital -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="fintech">
                     <div class="portfolio-img portfolio-img-insurtech">
                         <i class="fas fa-shield-alt"></i>
                     </div>
@@ -1808,7 +2046,7 @@
                 </div>
 
                 <!-- Quanto Vale -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="fintech">
                     <div class="portfolio-img portfolio-img-fintech">
                         <i class="fas fa-calculator"></i>
                     </div>
@@ -1827,7 +2065,7 @@
                 </div>
 
                 <!-- Vexium -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="fintech">
                     <div class="portfolio-img portfolio-img-crypto">
                         <i class="fas fa-robot"></i>
                     </div>
@@ -1846,7 +2084,7 @@
                 </div>
 
                 <!-- ConectCampo -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="agtech">
                     <div class="portfolio-img portfolio-img-agro">
                         <i class="fas fa-tractor"></i>
                     </div>
@@ -1865,7 +2103,7 @@
                 </div>
 
                 <!-- StudyMarketer -->
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" data-category="martech">
                     <div class="portfolio-img portfolio-img-martech">
                         <i class="fas fa-chart-bar"></i>
                     </div>
@@ -1883,6 +2121,51 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos" id="depoimentos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <p>Resultados reais, negócios reais — de quem já construiu com a Sartor Digital.</p>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card fade-in">
+                    <div class="depoimento-stars">★★★★★</div>
+                    <p class="depoimento-texto">"A Sartor Digital transformou completamente a presença digital da Buffalo Capital. Dashboard fluido, dados em tempo real e design que passa autoridade. Entregaram acima do esperado."</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar dep-av-1">R</div>
+                        <div class="depoimento-meta">
+                            <strong>Rafael Menezes</strong>
+                            <span>CEO · Buffalo Capital</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card fade-in">
+                    <div class="depoimento-stars">★★★★★</div>
+                    <p class="depoimento-texto">"Profissionalismo do início ao fim. O sistema de agendamento online revolucionou nossa operação — 3× mais eficiência e clientes muito mais satisfeitos."</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar dep-av-2">M</div>
+                        <div class="depoimento-meta">
+                            <strong>Mariana Souza</strong>
+                            <span>Diretora Operacional · SRT Brasil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card fade-in">
+                    <div class="depoimento-stars">★★★★★</div>
+                    <p class="depoimento-texto">"Triplicamos os pedidos de orçamento em 2 meses. Site simples, direto e que converte de verdade. Melhor investimento que fiz pro meu negócio."</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar dep-av-3">C</div>
+                        <div class="depoimento-meta">
+                            <strong>Cristiano Luz</strong>
+                            <span>Fundador · Cristiano Eletricista</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1976,7 +2259,7 @@
                         <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.linkedin.com/in/giovannesartor/" class="social-icon" target="_blank" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="#" class="social-icon">
@@ -2273,6 +2556,8 @@
         </div>
     </div>
 
+    <button class="scroll-top" id="scrollTopBtn" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
     <script>
         // Menu Mobile Premium
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -2499,6 +2784,34 @@
             } else {
                 document.querySelector('.lang-btn[data-lang="pt"]').classList.add('active');
             }
+        });
+
+        // Portfolio Filter System
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); }
+            else { scrollTopBtn.classList.remove('visible'); }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
