@@ -1015,6 +1015,35 @@
                 padding: 3.5rem 0;
             }
         }
+
+        /* === Dark Mode Toggle === */
+        .dark-mode-toggle { background: none; border: 1px solid var(--cinza-medio); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--cinza-escuro); transition: all 0.3s ease; font-size: 1.1rem; flex-shrink: 0; }
+        .dark-mode-toggle:hover { background: var(--cinza-claro); transform: translateY(-2px); }
+
+        /* === Dark Mode Theme === */
+        body.dark-mode { background-color: #0f172a; color: #e2e8f0; }
+        body.dark-mode header { background-color: rgba(15,23,42,0.95); border-bottom-color: rgba(255,255,255,0.05); }
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 { color: #e2e8f0; }
+        body.dark-mode p { color: #94a3b8; }
+        body.dark-mode nav a { color: #e2e8f0; }
+        body.dark-mode nav a:hover, body.dark-mode nav a.active { color: var(--vista-blue); }
+        body.dark-mode .logo-text { color: #e2e8f0; }
+        body.dark-mode .hero-servicos { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        body.dark-mode .servicos-detalhe { background: #0f172a; }
+        body.dark-mode .servico-card, body.dark-mode .servico-detalhe-card, body.dark-mode .processo-item { background: #1e293b; border-color: rgba(255,255,255,0.06); }
+        body.dark-mode .servico-icon { background: var(--gradient-primary); color: white; }
+        body.dark-mode .faq { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        body.dark-mode .faq-item, body.dark-mode .faq-pergunta { background: #1e293b; }
+        body.dark-mode .faq-pergunta:hover { background: #253349; }
+        body.dark-mode .faq-pergunta h3 { color: #e2e8f0; }
+        body.dark-mode .lang-btn { color: #94a3b8; border-color: #334155; }
+        body.dark-mode .lang-btn:hover { background: #1e293b; }
+        body.dark-mode .dark-mode-toggle { color: #e2e8f0; border-color: #334155; }
+        body.dark-mode .dark-mode-toggle:hover { background: #1e293b; }
+        body.dark-mode .mobile-menu-btn { color: #e2e8f0; background: rgba(255,255,255,0.05); }
+        body.dark-mode .header-navigation { background: #0f172a; }
+        body.dark-mode .processo-content { background: #1e293b; }
+        body.dark-mode .contato-action { background: rgba(255,255,255,0.08); }
     </style>
 </head>
 <body>
@@ -1026,7 +1055,7 @@
                 <div class="logo-text">Sartor<span>Digital</span></div>
             </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação">
                 <i class="fas fa-bars"></i>
             </button>
             
@@ -1037,6 +1066,10 @@
                     <button class="lang-btn" data-lang="en">EN</button>
                     <button class="lang-btn" data-lang="es">ES</button>
                 </div>
+
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
                 
                 <nav>
                     <ul>
@@ -1352,16 +1385,16 @@
                     <p style="color: rgba(255, 255, 255, 0.8);">Transformando ideias em soluções digitais inovadoras com foco em inteligência artificial e automação.</p>
                     
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/sartordigital" class="social-icon" target="_blank">
+                        <a href="https://www.instagram.com/sartordigital" class="social-icon" target="_blank" aria-label="Instagram da Sartor Digital">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank">
+                        <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank" aria-label="WhatsApp da Sartor Digital">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.linkedin.com/in/giovannesartor/" class="social-icon" target="_blank" aria-label="LinkedIn de Giovanne Sartor">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.facebook.com/sartordigital" class="social-icon" target="_blank" aria-label="Facebook da Sartor Digital">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -1522,8 +1555,6 @@
                     }
                 }
                 
-                // Adiciona o parâmetro de idioma para cache busting se necessário
-                newPath += '?lang=' + lang;
                 window.location.href = newPath;
             });
         });
@@ -1545,6 +1576,21 @@
                 document.querySelector('.lang-btn[data-lang="pt"]').classList.add('active');
             }
         });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                localStorage.setItem('darkMode', isDark);
+            });
+        }
     </script>
 </body>
 </html>

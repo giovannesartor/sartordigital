@@ -1556,11 +1556,6 @@
                 margin-bottom: 0.75rem;
             }
 
-            .hero-image > div {
-                height: auto !important;
-                padding: 1.25rem !important;
-                min-height: 0;
-            }
         }
 
         /* === Tech Stack Strip === */
@@ -1743,6 +1738,85 @@
         }
         .scroll-top.visible { opacity: 1; transform: translateY(0); }
         .scroll-top:hover { transform: translateY(-4px); box-shadow: var(--sombra-intensa); }
+
+        /* === Hero Showcase === */
+        .hero-showcase { width:100%; height:450px; background:linear-gradient(135deg,var(--big-stone) 0%,var(--pickled-bluewood) 100%); border-radius:var(--raio-borda-lg); position:relative; overflow:hidden; box-shadow:var(--sombra-intensa); padding:2rem; display:flex; align-items:center; }
+        .hero-showcase-glow { position:absolute; width:100%; height:100%; top:0; left:0; background:radial-gradient(circle at 25% 50%,rgba(121,181,155,0.22) 0%,transparent 65%); pointer-events:none; }
+        .hero-showcase-inner { position:relative; z-index:2; width:100%; }
+        .hero-showcase-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.9rem; margin-bottom:0.9rem; }
+        .hero-showcase-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.1rem; }
+        .hero-showcase-card-header { display:flex; align-items:center; gap:7px; margin-bottom:0.45rem; }
+        .hero-showcase-card-header i { font-size:0.95rem; }
+        .hero-showcase-card-header span { color:white; font-size:0.78rem; font-weight:700; }
+        .hero-showcase-card p { color:rgba(255,255,255,0.55); font-size:0.68rem; margin-bottom:0; line-height:1.4; }
+        .hero-showcase-mini-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.6rem; }
+        .hero-showcase-mini { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:0.7rem; text-align:center; }
+        .hero-showcase-mini-name { color:#92dab3; font-size:0.7rem; font-weight:800; }
+        .hero-showcase-mini-label { color:rgba(255,255,255,0.4); font-size:0.62rem; }
+        .hero-showcase-footer { text-align:center; margin-top:1rem; padding-top:0.9rem; border-top:1px solid rgba(255,255,255,0.08); }
+        .hero-showcase-footer span { color:rgba(255,255,255,0.42); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; }
+        .icon-green { color: #34d399; }
+        .icon-purple { color: #a78bfa; }
+        .icon-lime { color: #4ade80; }
+        .icon-orange { color: #fb923c; }
+        @media (max-width: 576px) { .hero-showcase { height:auto; padding:1.25rem; } }
+
+        /* === FAQ Accordion === */
+        .faq { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--branco); border-radius: var(--raio-borda); margin-bottom: 1.5rem; overflow: hidden; box-shadow: var(--sombra-suave); transition: all 0.3s ease; }
+        .faq-item:hover { box-shadow: var(--sombra-media); }
+        .faq-pergunta { padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: var(--branco); transition: all 0.3s ease; }
+        .faq-pergunta:hover { background: var(--cinza-claro); }
+        .faq-pergunta h3 { margin: 0; font-size: 1.2rem; color: var(--big-stone); }
+        .faq-icon { font-size: 1.2rem; color: var(--acapulco); transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-resposta { padding: 0 2rem; max-height: 0; overflow: hidden; transition: all 0.4s ease; }
+        .faq-item.active .faq-resposta { padding: 0 2rem 1.5rem; max-height: 500px; }
+
+        /* === Dark Mode Toggle === */
+        .dark-mode-toggle { background: none; border: 1px solid var(--cinza-medio); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--cinza-escuro); transition: all 0.3s ease; font-size: 1.1rem; flex-shrink: 0; }
+        .dark-mode-toggle:hover { background: var(--cinza-claro); transform: translateY(-2px); }
+
+        /* === Dark Mode Theme === */
+        body.dark-mode { background-color: #0f172a; color: #e2e8f0; }
+        body.dark-mode header { background-color: rgba(15,23,42,0.95); border-bottom-color: rgba(255,255,255,0.05); }
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 { color: #e2e8f0; }
+        body.dark-mode p { color: #94a3b8; }
+        body.dark-mode nav a { color: #e2e8f0; }
+        body.dark-mode nav a:hover, body.dark-mode nav a.active { color: var(--vista-blue); }
+        body.dark-mode .logo-text { color: #e2e8f0; }
+        body.dark-mode .hero { background: #0f172a; }
+        body.dark-mode .sobre { background: #0f172a; }
+        body.dark-mode .servicos, body.dark-mode .faq { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        body.dark-mode .portfolio { background: #0f172a; }
+        body.dark-mode .servico-card, body.dark-mode .portfolio-item, body.dark-mode .stat-item, body.dark-mode .projeto-item { background: #1e293b; border-color: rgba(255,255,255,0.06); }
+        body.dark-mode .stat-item:hover { background: var(--gradient-primary); }
+        body.dark-mode .faq-item, body.dark-mode .faq-pergunta { background: #1e293b; }
+        body.dark-mode .faq-pergunta:hover { background: #253349; }
+        body.dark-mode .faq-pergunta h3 { color: #e2e8f0; }
+        body.dark-mode .servico-icon { background: var(--gradient-primary); color: white; }
+        body.dark-mode .lang-btn { color: #94a3b8; border-color: #334155; }
+        body.dark-mode .lang-btn:hover { background: #1e293b; }
+        body.dark-mode .dark-mode-toggle { color: #e2e8f0; border-color: #334155; }
+        body.dark-mode .dark-mode-toggle:hover { background: #1e293b; }
+        body.dark-mode .filter-btn { background: #1e293b; border-color: #334155; color: #94a3b8; }
+        body.dark-mode .portfolio-tech { background: #253349; border-color: #334155; color: #94a3b8; }
+        body.dark-mode .portfolio-img { background: linear-gradient(135deg, #1e293b 0%, #253349 100%) !important; }
+        body.dark-mode .mobile-menu-btn { color: #e2e8f0; background: rgba(255,255,255,0.05); }
+        body.dark-mode .header-navigation { background: #0f172a; }
+        body.dark-mode .sobre-projetos h3 { border-bottom-color: #334155; }
+        body.dark-mode .projeto-item h3 { color: #e2e8f0; }
+        body.dark-mode .modal-content, body.dark-mode .modal-body { background: #1e293b; }
+        body.dark-mode .modal-body h4 { color: #e2e8f0; }
+        body.dark-mode .modal-body li { color: #94a3b8; }
+        body.dark-mode .portfolio-tag { background: rgba(121,181,155,0.15); }
+        body.dark-mode .contato-action { background: rgba(255,255,255,0.08); }
+        body.dark-mode .servico-card h3, body.dark-mode .portfolio-info h3 { color: #e2e8f0; }
+
+        /* Parallax */
+        .hero-decoration { will-change: transform; }
+        .hero-bg { will-change: transform; }
     </style>
 </head>
 <body>
@@ -1754,7 +1828,7 @@
                 <div class="logo-text">Sartor<span>Digital</span></div>
             </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação">
                 <i class="fas fa-bars"></i>
             </button>
             
@@ -1765,6 +1839,10 @@
                     <button class="lang-btn" data-lang="en">EN</button>
                     <button class="lang-btn" data-lang="es">ES</button>
                 </div>
+
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
                 
                 <nav>
                     <ul>
@@ -1801,43 +1879,43 @@
                 </div>
             </div>
             <div class="hero-image fade-in">
-                <div style="width:100%;height:450px;background:linear-gradient(135deg,var(--big-stone) 0%,var(--pickled-bluewood) 100%);border-radius:var(--raio-borda-lg);position:relative;overflow:hidden;box-shadow:var(--sombra-intensa);padding:2rem;display:flex;align-items:center;">
-                    <div style="position:absolute;width:100%;height:100%;background:radial-gradient(circle at 25% 50%,rgba(121,181,155,0.22) 0%,transparent 65%);"></div>
-                    <div style="position:relative;z-index:2;width:100%;">
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-bottom:0.9rem;">
-                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
-                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-calculator" style="color:#34d399;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">Quanto Vale</span></div>
-                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">Valuation SaaS · DCF + IA</p>
+                <div class="hero-showcase">
+                    <div class="hero-showcase-glow"></div>
+                    <div class="hero-showcase-inner">
+                        <div class="hero-showcase-grid">
+                            <div class="hero-showcase-card">
+                                <div class="hero-showcase-card-header"><i class="fas fa-calculator icon-green"></i><span>Quanto Vale</span></div>
+                                <p>Valuation SaaS · DCF + IA</p>
                             </div>
-                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
-                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-robot" style="color:#a78bfa;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">Vexium</span></div>
-                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">Motor VEX · Crypto IA</p>
+                            <div class="hero-showcase-card">
+                                <div class="hero-showcase-card-header"><i class="fas fa-robot icon-purple"></i><span>Vexium</span></div>
+                                <p>Motor VEX · Crypto IA</p>
                             </div>
-                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
-                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-tractor" style="color:#4ade80;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">ConectCampo</span></div>
-                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">AgTech · Crédito Rural</p>
+                            <div class="hero-showcase-card">
+                                <div class="hero-showcase-card-header"><i class="fas fa-tractor icon-lime"></i><span>ConectCampo</span></div>
+                                <p>AgTech · Crédito Rural</p>
                             </div>
-                            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.1rem;">
-                                <div style="display:flex;align-items:center;gap:7px;margin-bottom:0.45rem;"><i class="fas fa-chart-bar" style="color:#fb923c;font-size:0.95rem;"></i><span style="color:white;font-size:0.78rem;font-weight:700;">StudyMarketer</span></div>
-                                <p style="color:rgba(255,255,255,0.55);font-size:0.68rem;margin-bottom:0;line-height:1.4;">MarTech · Trends IA</p>
-                            </div>
-                        </div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
-                            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem;text-align:center;">
-                                <div style="color:#92dab3;font-size:0.7rem;font-weight:800;">AG Digital</div>
-                                <div style="color:rgba(255,255,255,0.4);font-size:0.62rem;">Insurtech</div>
-                            </div>
-                            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem;text-align:center;">
-                                <div style="color:#92dab3;font-size:0.7rem;font-weight:800;">Valsa Digital</div>
-                                <div style="color:rgba(255,255,255,0.4);font-size:0.62rem;">Web3</div>
-                            </div>
-                            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem;text-align:center;">
-                                <div style="color:#92dab3;font-size:0.7rem;font-weight:800;">+ outros</div>
-                                <div style="color:rgba(255,255,255,0.4);font-size:0.62rem;">9 projetos</div>
+                            <div class="hero-showcase-card">
+                                <div class="hero-showcase-card-header"><i class="fas fa-chart-bar icon-orange"></i><span>StudyMarketer</span></div>
+                                <p>MarTech · Trends IA</p>
                             </div>
                         </div>
-                        <div style="text-align:center;margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.08);">
-                            <span style="color:rgba(255,255,255,0.42);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;">20+ Produtos Digitais Entregues</span>
+                        <div class="hero-showcase-mini-grid">
+                            <div class="hero-showcase-mini">
+                                <div class="hero-showcase-mini-name">AG Digital</div>
+                                <div class="hero-showcase-mini-label">Insurtech</div>
+                            </div>
+                            <div class="hero-showcase-mini">
+                                <div class="hero-showcase-mini-name">Valsa Digital</div>
+                                <div class="hero-showcase-mini-label">Web3</div>
+                            </div>
+                            <div class="hero-showcase-mini">
+                                <div class="hero-showcase-mini-name">+ outros</div>
+                                <div class="hero-showcase-mini-label">9 projetos</div>
+                            </div>
+                        </div>
+                        <div class="hero-showcase-footer">
+                            <span>20+ Produtos Digitais Entregues</span>
                         </div>
                     </div>
                 </div>
@@ -2297,6 +2375,78 @@
         </div>
     </section>
 
+    <!-- FAQ - Perguntas Frequentes -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre nossos serviços, prazos e processos.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Quanto tempo leva para desenvolver um projeto?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>O prazo varia conforme a complexidade. Sites institucionais levam de 2 a 4 semanas. Sistemas e plataformas mais complexas de 6 a 12 semanas. Trabalhamos com sprints ágeis e demonstrações frequentes para garantir transparência no cronograma.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Vocês trabalham com clientes fora do Brasil?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Sim! Atendemos clientes internacionais com suporte em português, inglês e espanhol. Toda a comunicação e entrega é feita de forma remota com ferramentas profissionais de gestão de projetos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Quais tecnologias vocês utilizam?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Utilizamos as tecnologias mais modernas do mercado: React, Next.js, Node.js, Python, FastAPI, PostgreSQL, Docker, AWS, além de integrações com APIs de IA como OpenAI. Escolhemos a stack ideal para cada projeto.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Como funciona o processo de orçamento?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Realizamos uma reunião de descoberta gratuita para entender suas necessidades. Em seguida, elaboramos uma proposta detalhada com escopo, cronograma e investimento. O orçamento é dividido por fases, permitindo maior controle e flexibilidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>Vocês oferecem suporte após a entrega?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Sim, todos os projetos incluem 90 dias de garantia para correção de bugs. Além disso, oferecemos planos de manutenção e suporte contínuo com monitoramento 24/7, backups automáticos e atualizações de segurança.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-pergunta">
+                        <h3>A inteligência artificial pode realmente ajudar meu negócio?</h3>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Sem dúvida! IA pode automatizar atendimento com chatbots 24/7, analisar dados para decisões mais precisas, reduzir custos operacionais em até 70% e criar experiências personalizadas para seus clientes. Avaliamos gratuitamente como a IA pode impactar seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contato Premium -->
     <section class="contato" id="contato">
         <div class="container">
@@ -2380,16 +2530,16 @@
                     <p style="color: rgba(255, 255, 255, 0.8);">Transformando ideias em soluções digitais inovadoras com foco em inteligência artificial e automação.</p>
                     
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/sartordigital" class="social-icon" target="_blank">
+                        <a href="https://www.instagram.com/sartordigital" class="social-icon" target="_blank" aria-label="Instagram da Sartor Digital">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank">
+                        <a href="https://wa.me/5554981332271?text=Olá! Gostaria de informações sobre os serviços da Sartor Digital." class="social-icon" target="_blank" aria-label="WhatsApp da Sartor Digital">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/giovannesartor/" class="social-icon" target="_blank" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/giovannesartor/" class="social-icon" target="_blank" aria-label="LinkedIn de Giovanne Sartor">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.facebook.com/sartordigital" class="social-icon" target="_blank" aria-label="Facebook da Sartor Digital">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -2683,7 +2833,7 @@
         </div>
     </div>
 
-    <button class="scroll-top" id="scrollTopBtn" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTopBtn" title="Voltar ao topo" aria-label="Voltar ao topo da página"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         // Menu Mobile Premium
@@ -2889,8 +3039,6 @@
                     }
                 }
                 
-                // Adiciona o parâmetro de idioma para cache busting se necessário
-                newPath += '?lang=' + lang;
                 window.location.href = newPath;
             });
         });
@@ -2939,6 +3087,67 @@
         });
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counter Animation
+        const animateCounters = () => {
+            document.querySelectorAll('.stat-number').forEach(stat => {
+                if (stat.dataset.animated) return;
+                if (stat.getBoundingClientRect().top < window.innerHeight - 50) {
+                    stat.dataset.animated = 'true';
+                    const text = stat.textContent;
+                    const hasPlus = text.includes('+');
+                    const hasPercent = text.includes('%');
+                    const target = parseInt(text);
+                    const duration = 2000;
+                    const start = performance.now();
+                    const step = (now) => {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = Math.round(target * eased);
+                        stat.textContent = current + (hasPercent ? '%' : '') + (hasPlus ? '+' : '');
+                        if (progress < 1) requestAnimationFrame(step);
+                    };
+                    requestAnimationFrame(step);
+                }
+            });
+        };
+        window.addEventListener('scroll', animateCounters);
+        window.addEventListener('load', animateCounters);
+
+        // Parallax Effect
+        const heroDecoration = document.querySelector('.hero-decoration');
+        const heroBg = document.querySelector('.hero-bg');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY < 800) {
+                if (heroDecoration) heroDecoration.style.transform = 'translateY(' + (scrollY * 0.15) + 'px)';
+                if (heroBg) heroBg.style.transform = 'translateY(' + (scrollY * 0.08) + 'px)';
+            }
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                localStorage.setItem('darkMode', isDark);
+            });
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-pergunta').addEventListener('click', () => {
+                document.querySelectorAll('.faq-item').forEach(other => { if (other !== item) other.classList.remove('active'); });
+                item.classList.toggle('active');
+            });
         });
     </script>
 </body>
