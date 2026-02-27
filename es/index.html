@@ -1335,6 +1335,12 @@
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
+
+            .processo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            .processo-grid::before { display: none; }
         }
         
         @media (max-width: 768px) {
@@ -1566,49 +1572,89 @@
         .cta-strip-text h3 { color: var(--branco); font-size: 1.9rem; margin-bottom: 0.4rem; }
         .cta-strip-text p { color: rgba(255,255,255,0.7); margin-bottom: 0; font-size: 1.05rem; }
         .cta-strip-actions { flex-shrink: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
-        /* === Testimonials === */
-        .depoimentos { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
-        .depoimentos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
-        .depoimento-card {
-            background: var(--branco);
-            border-radius: var(--raio-borda);
-            padding: 2.2rem;
-            box-shadow: var(--sombra-suave);
-            border: 1px solid rgba(0,0,0,0.04);
-            transition: all 0.4s ease;
+        /* === Proceso de Trabajo === */
+        .processo {
+            background: linear-gradient(135deg, var(--big-stone) 0%, var(--pickled-bluewood) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .processo::before {
+            content: '';
+            position: absolute;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(121,181,155,0.09) 0%, transparent 70%);
+            top: -200px; right: -200px;
+            pointer-events: none;
+        }
+        .processo .section-header h2 { color: var(--branco); }
+        .processo .section-header p { color: rgba(255,255,255,0.6); }
+        .processo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            position: relative;
+        }
+        .processo-grid::before {
+            content: '';
+            position: absolute;
+            top: 39px;
+            left: calc(12.5% + 40px);
+            right: calc(12.5% + 40px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--acapulco), rgba(121,181,155,0.15));
+            z-index: 0;
+        }
+        .processo-step {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-        }
-        .depoimento-card:hover { transform: translateY(-8px); box-shadow: var(--sombra-media); }
-        .depoimento-stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 3px; }
-        .depoimento-texto {
-            font-style: italic;
-            color: var(--cinza-escuro);
-            font-size: 0.96rem;
-            line-height: 1.8;
-            flex: 1;
-            margin-bottom: 0;
-        }
-        .depoimento-autor {
-            display: flex;
             align-items: center;
-            gap: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--cinza-medio);
+            text-align: center;
+            padding: 0 1.5rem 2rem;
+            position: relative;
+            z-index: 1;
         }
-        .depoimento-avatar {
-            width: 46px; height: 46px;
+        .processo-step-top {
+            width: 80px; height: 80px;
             border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(121,181,155,0.3);
             display: flex; align-items: center; justify-content: center;
-            font-weight: 800; font-size: 1rem;
-            color: var(--branco); flex-shrink: 0;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: all 0.35s ease;
         }
-        .dep-av-1 { background: var(--gradient-primary); }
-        .dep-av-2 { background: linear-gradient(135deg, #7c3aed, #4f46e5); }
-        .dep-av-3 { background: linear-gradient(135deg, #059669, #0ea5e9); }
-        .depoimento-meta h4 { font-size: 0.95rem; color: var(--big-stone); margin-bottom: 0.1rem; }
-        .depoimento-meta p { font-size: 0.78rem; color: var(--cinza-escuro); margin-bottom: 0; }
+        .processo-step:hover .processo-step-top {
+            background: rgba(121,181,155,0.12);
+            border-color: var(--acapulco);
+            transform: translateY(-6px);
+            box-shadow: 0 14px 36px rgba(121,181,155,0.18);
+        }
+        .processo-step-top i { font-size: 1.55rem; color: var(--acapulco); }
+        .processo-num {
+            position: absolute;
+            top: -8px; right: -8px;
+            width: 26px; height: 26px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            font-size: 0.72rem; font-weight: 800;
+            color: white;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .processo-step h4 { color: var(--branco); font-size: 1.05rem; margin-bottom: 0.55rem; }
+        .processo-step p { color: rgba(255,255,255,0.55); font-size: 0.87rem; line-height: 1.65; margin-bottom: 0; }
+        .processo-step-badge {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background: rgba(121,181,155,0.15);
+            border: 1px solid rgba(121,181,155,0.25);
+            color: var(--acapulco);
+            font-size: 0.72rem; font-weight: 700;
+            padding: 0.28rem 0.75rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
         /* === Scroll to Top === */
         .scroll-top {
             position: fixed; bottom: 2rem; right: 2rem;
@@ -2130,46 +2176,49 @@
         </div>
     </section>
 
-    <!-- Testimonios -->
-    <section class="depoimentos" id="testimonios">
+    <!-- Proceso de Trabajo -->
+    <section class="processo" id="proceso">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Lo Que Dicen Nuestros Clientes</h2>
-                <p>Resultados reales, negocios reales — de quienes ya construyeron con Sartor Digital.</p>
+                <h2>Cómo Trabajamos</h2>
+                <p>Un proceso claro, rápido y transparente — del briefing al lanzamiento.</p>
             </div>
-            <div class="depoimentos-grid">
-                <div class="depoimento-card fade-in">
-                    <div class="depoimento-stars">★★★★★</div>
-                    <p class="depoimento-texto">"Sartor Digital transformó completamente la presencia digital de Buffalo Capital. Dashboard fluido, datos en tiempo real y diseño que transmite autoridad. Entregaron por encima de lo esperado."</p>
-                    <div class="depoimento-autor">
-                        <div class="depoimento-avatar dep-av-1">R</div>
-                        <div class="depoimento-meta">
-                            <strong>Rafael Menezes</strong>
-                            <span>CEO · Buffalo Capital</span>
-                        </div>
+            <div class="processo-grid">
+                <div class="processo-step fade-in">
+                    <div class="processo-step-top">
+                        <i class="fas fa-comments"></i>
+                        <span class="processo-num">1</span>
                     </div>
+                    <h4>Briefing</h4>
+                    <p>Entendemos su negocio, objetivos, público y expectativas antes de escribir una línea de código.</p>
+                    <span class="processo-step-badge">Día 1</span>
                 </div>
-                <div class="depoimento-card fade-in">
-                    <div class="depoimento-stars">★★★★★</div>
-                    <p class="depoimento-texto">"Profesionalismo de principio a fin. El sistema de citas online revolucionó nuestra operación — 3× más eficiencia y clientes mucho más satisfechos."</p>
-                    <div class="depoimento-autor">
-                        <div class="depoimento-avatar dep-av-2">M</div>
-                        <div class="depoimento-meta">
-                            <strong>Mariana Souza</strong>
-                            <span>Directora de Operaciones · SRT Brasil</span>
-                        </div>
+                <div class="processo-step fade-in">
+                    <div class="processo-step-top">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <span class="processo-num">2</span>
                     </div>
+                    <h4>Prototipado</h4>
+                    <p>Creamos wireframes y prototipos visuales para validar el diseño y el flujo con usted antes del dev.</p>
+                    <span class="processo-step-badge">Días 2–5</span>
                 </div>
-                <div class="depoimento-card fade-in">
-                    <div class="depoimento-stars">★★★★★</div>
-                    <p class="depoimento-texto">"Triplicamos las solicitudes de presupuesto en 2 meses. Sitio sencillo, directo y que convierte de verdad. La mejor inversión que hice para mi negocio."</p>
-                    <div class="depoimento-autor">
-                        <div class="depoimento-avatar dep-av-3">C</div>
-                        <div class="depoimento-meta">
-                            <strong>Cristiano Luz</strong>
-                            <span>Fundador · Cristiano Eletricista</span>
-                        </div>
+                <div class="processo-step fade-in">
+                    <div class="processo-step-top">
+                        <i class="fas fa-code"></i>
+                        <span class="processo-num">3</span>
                     </div>
+                    <h4>Desarrollo</h4>
+                    <p>Código de producción con IA integrada, diseño premium y rendimiento desde la primera línea.</p>
+                    <span class="processo-step-badge">Semanas 1–4</span>
+                </div>
+                <div class="processo-step fade-in">
+                    <div class="processo-step-top">
+                        <i class="fas fa-rocket"></i>
+                        <span class="processo-num">4</span>
+                    </div>
+                    <h4>Entrega & Soporte</h4>
+                    <p>Lanzamiento completo con deploy, pruebas, documentación y soporte técnico post-entrega.</p>
+                    <span class="processo-step-badge">Go-live</span>
                 </div>
             </div>
         </div>
