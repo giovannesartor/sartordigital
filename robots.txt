@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sartordigital.online/sitemap.xml
+
+# Crawl-delay (optional, be polite to bots)
+Crawl-delay: 1

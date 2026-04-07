@@ -67,7 +67,6 @@ const PORTFOLIO = [
   { name: "Quanto Vale", cat: "Fintech", desc: "Valuation SaaS + DCF + IA", tech: ["Next.js","Python","OpenAI"], color: "#22c55e" },
   { name: "Vexium", cat: "Web3", desc: "Crypto Trading com IA", tech: ["React","FastAPI","ML"], color: "#6366f1" },
   { name: "ConectCampo", cat: "AgTech", desc: "Marketplace de Crédito Rural", tech: ["Next.js","PostgreSQL"], color: "#f59e0b" },
-  { name: "StudyMarketer", cat: "MarTech", desc: "Inteligência de Mercado com IA", tech: ["Python","LangChain","React"], color: "#ec4899" },
   { name: "FundFlow", cat: "Fintech", desc: "Captação de Recursos com IA", tech: ["Next.js","OpenAI","Stripe"], color: "#22c55e" },
   { name: "Linkora", cat: "SaaS", desc: "Link-in-Bio SaaS", tech: ["React","Node","PostgreSQL"], color: "#8b5cf6" },
   { name: "AG Digital", cat: "Fintech", desc: "Insurtech / Fintech / SaaS", tech: ["Next.js","FastAPI"], color: "#14b8a6" },

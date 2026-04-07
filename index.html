@@ -44,7 +44,7 @@
       "serviceType": ["Desenvolvimento Web","Inteligência Artificial","Automação","Sistemas de Captação de Leads","Sites Institucionais"],
       "offers": { "@type": "Offer", "description": "Soluções digitais personalizadas para empresas" },
       "areaServed": { "@type": "Country", "name": "Brasil" },
-      "sameAs": ["https://www.instagram.com/sartordigital"]
+      "sameAs": ["https://www.instagram.com/sartordigital","https://www.linkedin.com/in/giovannesartor/"]
     }
     </script>
 
@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
@@ -114,6 +115,31 @@
         --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.30);
         --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.35);
     }
+
+    /* ─── Dark Mode Component Overrides ────────────────────────── */
+    body.dark-mode .btn-primary { background: var(--mint); color: #0F172A; }
+    body.dark-mode .btn-primary:hover { background: var(--mint-mid); color: #0F172A; box-shadow: var(--shadow-glow); }
+    body.dark-mode .btn-nav-cta { background: var(--mint); color: #0F172A; }
+    body.dark-mode .btn-nav-cta:hover { background: var(--mint-mid); color: #0F172A; }
+    body.dark-mode .hb-card.dark { background: #0B1120; border-color: rgba(255,255,255,0.08); }
+    body.dark-mode .bento-card.dark-card { background: #0B1120; border-color: rgba(255,255,255,0.08); }
+    body.dark-mode .cta-strip { background: #0B1120; }
+    body.dark-mode .contato-section { background: #0B1120; }
+    body.dark-mode .scroll-top { background: var(--mint); color: #0F172A; }
+    body.dark-mode .scroll-top:hover { background: var(--mint-mid); color: #0F172A; }
+    body.dark-mode .badge-mint { color: var(--mint); }
+    body.dark-mode .stat-value { color: var(--mint); }
+    body.dark-mode .pf-link { color: var(--mint); }
+    body.dark-mode .btn-ghost { color: var(--mint); border-color: rgba(134,239,172,0.35); }
+    body.dark-mode .btn-ghost:hover { background: rgba(134,239,172,0.1); }
+    body.dark-mode .hero-badge { background: rgba(30,41,59,0.9); border-color: rgba(134,239,172,0.3); }
+    body.dark-mode .filter-pill { background: var(--bg-white); }
+    body.dark-mode .filter-pill.active { background: var(--mint); color: #0F172A; border-color: var(--mint); }
+    body.dark-mode .service-icon { background: rgba(134,239,172,0.12); border-color: rgba(134,239,172,0.25); }
+    body.dark-mode .processo-step-badge { background: rgba(134,239,172,0.12); }
+    body.dark-mode .processo-icon { background: rgba(134,239,172,0.1); border-color: rgba(134,239,172,0.2); }
+    body.dark-mode .modal-header { background: linear-gradient(135deg, rgba(134,239,172,0.08), transparent); }
+    body.dark-mode .sd-meta-item strong { color: var(--mint); }
 
     /* ─── Reset & Base ───────────────────────────────────────────── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -919,11 +945,7 @@
                             <span class="hb-project-name">ConectCampo</span>
                             <span class="hb-project-tag">AgTech · Crédito Rural</span>
                         </div>
-                        <div class="hb-project-item">
-                            <div class="hb-project-dot" style="background:#F472B6;"></div>
-                            <span class="hb-project-name">StudyMarketer</span>
-                            <span class="hb-project-tag">MarTech · Trends IA</span>
-                        </div>
+
                     </div>
                 </div>
 
@@ -1032,7 +1054,6 @@
                     <a href="https://quantovale.online" target="_blank" class="about-featured-item"><div class="af-icon icon-green"><i class="fas fa-calculator"></i></div><div class="af-info"><div class="af-name">Quanto Vale</div><div class="af-desc">Valuation SaaS com Motor DCF + IA Generativa</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
                     <a href="https://vexium.pro" target="_blank" class="about-featured-item"><div class="af-icon icon-purple"><i class="fas fa-robot"></i></div><div class="af-info"><div class="af-name">Vexium</div><div class="af-desc">Motor VEX proprietário para cripto com IA</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
                     <a href="https://conectcampo.digital" target="_blank" class="about-featured-item"><div class="af-icon icon-green"><i class="fas fa-tractor"></i></div><div class="af-info"><div class="af-name">ConectCampo</div><div class="af-desc">Marketplace de crédito rural #1 do Brasil</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                    <a href="https://studymarketer.digital" target="_blank" class="about-featured-item"><div class="af-icon icon-orange"><i class="fas fa-chart-bar"></i></div><div class="af-info"><div class="af-name">StudyMarketer</div><div class="af-desc">Inteligência de mercado com IA</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
                     <a href="https://fundflow.money" target="_blank" class="about-featured-item"><div class="af-icon icon-blue"><i class="fas fa-hand-holding-usd"></i></div><div class="af-info"><div class="af-name">FundFlow</div><div class="af-desc">Captação de recursos com IA · R$ 247M+ captados</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
                     <a href="https://linkora.vip" target="_blank" class="about-featured-item"><div class="af-icon icon-cyan"><i class="fas fa-link"></i></div><div class="af-info"><div class="af-name">Linkora</div><div class="af-desc">Link-in-Bio SaaS para criadores e marcas</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
                     <a href="https://agdigital.ag" target="_blank" class="about-featured-item"><div class="af-icon icon-blue"><i class="fas fa-shield-alt"></i></div><div class="af-info"><div class="af-name">AG Digital</div><div class="af-desc">Insurtech · Fintech · SaaS</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
@@ -1109,6 +1130,39 @@
         </div>
     </div>
 
+    <!-- Por que nos escolher -->
+    <section class="section section-muted" id="diferenciais">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge badge-mint badge-dot">Diferenciais</span>
+                <h2>Por Que Nos Escolher</h2>
+                <p>Motivos reais que fazem nossos clientes confiarem na Sartor Digital para crescer online.</p>
+            </div>
+            <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:48px;">
+                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-robot"></i></div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">IA Proprietária</h3>
+                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Usamos inteligência artificial exclusiva para acelerar entregas e reduzir custos sem perder qualidade.</p>
+                </div>
+                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-shield-halved"></i></div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Garantia de 90 Dias</h3>
+                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Todos os projetos incluem 90 dias de suporte gratuito para correções e ajustes pós-lançamento.</p>
+                </div>
+                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-chart-line"></i></div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">100% de Satisfação</h3>
+                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Taxa de satisfação de 100% entre nossos clientes. Seu sucesso é nossa prioridade número um.</p>
+                </div>
+                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
+                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-bolt"></i></div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Entrega Ágil</h3>
+                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Sprints semanais com entregas parciais. Você acompanha o progresso em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio -->
     <section class="section section-white" id="portfolio">
         <div class="container">
@@ -1135,7 +1189,6 @@
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fintech"><i class="fas fa-calculator"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation SaaS</div><h3>Quanto Vale</h3><p>Plataforma SaaS de valuation com Motor DCF + IA proprietária. Relatório de até 25 páginas — 30x mais barato que consultorias.</p><div class="pf-techs"><span class="pf-tech">DCF Engine</span><span class="pf-tech">IA Generativa</span><span class="pf-tech">LGPD</span></div><a href="https://quantovale.online" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-crypto"><i class="fas fa-robot"></i></div><div class="pf-body"><div class="pf-tag">FinTech · Crypto · IA</div><h3>Vexium</h3><p>Motor VEX proprietário para criptomoedas. Consolida 7+ indicadores técnicos com IA generativa e dados ao vivo da Binance.</p><div class="pf-techs"><span class="pf-tech">Motor VEX</span><span class="pf-tech">Binance API</span><span class="pf-tech">IA Híbrida</span></div><a href="https://vexium.pro" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="agtech"><div class="pf-img c-agro"><i class="fas fa-tractor"></i></div><div class="pf-body"><div class="pf-tag">AgTech · Marketplace · Fintech</div><h3>ConectCampo</h3><p>Marketplace de crédito rural #1 do Brasil. Conecta produtores a bancos, FIDCs e cooperativas com IA e data room bancário.</p><div class="pf-techs"><span class="pf-tech">AI Matching</span><span class="pf-tech">Risk Score</span><span class="pf-tech">LGPD</span></div><a href="https://conectcampo.digital" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="martech"><div class="pf-img c-martech"><i class="fas fa-chart-bar"></i></div><div class="pf-body"><div class="pf-tag">MarTech · SaaS · IA</div><h3>StudyMarketer</h3><p>Plataforma de inteligência de mercado. Monitora tendências globais e analisa 15 nichos 2×/dia com IA real.</p><div class="pf-techs"><span class="pf-tech">Trend Radar</span><span class="pf-tech">IA Generativa</span><span class="pf-tech">Web Scraping</span></div><a href="https://studymarketer.digital" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fundflow"><i class="fas fa-hand-holding-usd"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Captação · IA</div><h3>FundFlow</h3><p>Plataforma de captação de recursos com IA e Método C.A.P.T.A.R. R$ 247M+ captados conectando empresas a investidores.</p><div class="pf-techs"><span class="pf-tech">Método C.A.P.T.A.R.</span><span class="pf-tech">IA Proprietária</span><span class="pf-tech">LGPD</span></div><a href="https://fundflow.money" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="saas"><div class="pf-img c-linkora"><i class="fas fa-link"></i></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio · Creator Economy</div><h3>Linkora</h3><p>Link-in-Bio para criadores, influenciadores e marcas. Links, produtos digitais, conteúdo VIP e analytics em tempo real.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-valuora"><i class="fas fa-balance-scale"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Valuation com Motor DCF v7.1, IA e benchmarks setoriais. Relatório de até 42 páginas com 14+ métodos — padrão M&A por uma fração do custo.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
@@ -1291,6 +1344,7 @@
             </div>
             <div class="footer-bottom">
                 <span>© 2026 sartordigital.online — Todos os direitos reservados.</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:0.8125rem;"><i class="fas fa-shield-halved" style="color:#86EFAC;"></i> Conforme LGPD</span>
                 <span>Desenvolvido com <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#ff6b6b" stroke="none" style="vertical-align:middle;margin:0 2px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> por Sartor Digital</span>
             </div>
         </div>
@@ -1314,6 +1368,13 @@
     <script>
     (function() {
         'use strict';
+
+        // ─── Config: altere apenas este número para atualizar todo o site ───
+        const PROJECT_COUNT = 21;
+
+        // Atualiza automaticamente todos os elementos com contagem de projetos
+        document.querySelectorAll('[data-count="21"]').forEach(el => el.dataset.count = PROJECT_COUNT);
+        document.querySelectorAll('.hb-bg-number').forEach(el => { if(el.textContent.trim()==='21') el.textContent = PROJECT_COUNT; });
 
         // Mobile toggle
         const mobileToggle = document.getElementById('mobileToggle');
