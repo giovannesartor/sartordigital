@@ -628,6 +628,7 @@
     .c-fundflow { background: linear-gradient(135deg, #1e40af, #60a5fa); }
     .c-linkora { background: linear-gradient(135deg, #6d28d9, #a78bfa); }
     .c-valuora { background: linear-gradient(135deg, #0f766e, #2dd4bf); }
+    .c-prosorrir { background: linear-gradient(135deg, #0e7490, #22d3ee); }
     .pf-body { padding: 22px; }
     .pf-tag { font-size: 0.6875rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
     .pf-body h3 { font-family: var(--font-heading); font-size: 1.0625rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
@@ -923,7 +924,7 @@
                     <div class="hb-label">Delivered Projects</div>
                     <div class="hb-number" data-count="21">0+</div>
                     <div class="hb-sublabel">products in production with active users</div>
-                    <div class="hb-bg-number">21</div>
+                    <div class="hb-bg-number">12</div>
                 </div>
 
                 <!-- Featured Projects: 2 cols wide -->
@@ -1031,7 +1032,7 @@
                 <div class="bento-card about-main-card fade-in">
                     <h3>Technology with purpose and measurable results</h3>
                     <p>We are a software engineering company focused on digital products with artificial intelligence. We work from technical architecture to interface design — always focused on performance, scalability and return on investment.</p>
-                    <p>With 21+ products delivered in sectors like fintech, agtech and martech, our differentiator lies in the combination of proprietary AI, agile methodology and product vision — not just code.</p>
+                    <p>With 12+ products delivered in sectors like fintech, agtech, healthcare and martech, our differentiator lies in the combination of proprietary AI, agile methodology and product vision — not just code.</p>
                     <div class="about-stats">
                         <div class="stat-card">
                             <div class="stat-value" data-count="21">0</div>
@@ -1169,7 +1170,7 @@
             <div class="section-header fade-in">
                 <span class="badge badge-mint badge-dot">Our Work</span>
                 <h2>Project Portfolio</h2>
-                <p>Real products, in production, with active users. 21+ projects delivered in Fintech, AgTech, MarTech, Web3 and SaaS.</p>
+                <p>Real products, in production, with active users. 12+ projects delivered in Fintech, AgTech, Healthcare, MarTech, Web3 and SaaS.</p>
             </div>
             <div class="portfolio-filters fade-in">
                 <button class="filter-pill active" data-filter="all">All</button>
@@ -1178,6 +1179,7 @@
                 <button class="filter-pill" data-filter="martech">MarTech</button>
                 <button class="filter-pill" data-filter="web3">Web3</button>
                 <button class="filter-pill" data-filter="servicos">Services</button>
+                <button class="filter-pill" data-filter="saude">Healthcare</button>
                 <button class="filter-pill" data-filter="saas">SaaS</button>
             </div>
             <div class="portfolio-grid">
@@ -1192,6 +1194,7 @@
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fundflow"><i class="fas fa-hand-holding-usd"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Fundraising · AI</div><h3>FundFlow</h3><p>Resource fundraising platform with AI and C.A.P.T.A.R. Method. R$ 247M+ raised connecting companies to investors.</p><div class="pf-techs"><span class="pf-tech">C.A.P.T.A.R. Method</span><span class="pf-tech">Proprietary AI</span><span class="pf-tech">LGPD</span></div><a href="https://fundflow.money" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="saas"><div class="pf-img c-linkora"><i class="fas fa-link"></i></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio · Creator Economy</div><h3>Linkora</h3><p>Link-in-Bio for creators, influencers and brands. Links, digital products, VIP content and real-time analytics.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-valuora"><i class="fas fa-balance-scale"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Valuation with DCF Engine v7.1, AI and sector benchmarks. Reports up to 42 pages with 14+ methods — M&A standard at a fraction of the cost.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="saude"><div class="pf-img c-prosorrir"><i class="fas fa-tooth"></i></div><div class="pf-body"><div class="pf-tag">Healthcare · Dental · Multi-location</div><h3>Pró Sorrir Dental Clinic</h3><p>Modern institutional website for a dental clinic with 19+ years and 2 locations in Serra Gaúcha. WhatsApp scheduling, interactive FAQ, treatment quiz and case gallery.</p><div class="pf-techs"><span class="pf-tech">WhatsApp API</span><span class="pf-tech">Local SEO</span><span class="pf-tech">Interactive Quiz</span></div><a href="https://prosorrirodontologia.com.br" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
             </div>
         </div>
     </section>
@@ -1370,7 +1373,7 @@
         'use strict';
 
         // ─── Config: change only this number to update the entire site ───
-        const PROJECT_COUNT = 21;
+        const PROJECT_COUNT = 12;
 
         // Automatically update all elements with the project count
         document.querySelectorAll('[data-count="21"]').forEach(el => el.dataset.count = PROJECT_COUNT);
