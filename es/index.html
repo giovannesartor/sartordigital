@@ -629,6 +629,7 @@
     .c-linkora { background: linear-gradient(135deg, #6d28d9, #a78bfa); }
     .c-valuora { background: linear-gradient(135deg, #0f766e, #2dd4bf); }
     .c-prosorrir { background: linear-gradient(135deg, #0e7490, #22d3ee); }
+    .c-esg { background: linear-gradient(135deg, #047857, #10b981); }
     .pf-body { padding: 22px; }
     .pf-tag { font-size: 0.6875rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
     .pf-body h3 { font-family: var(--font-heading); font-size: 1.0625rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
@@ -946,6 +947,11 @@
                             <span class="hb-project-name">ConectCampo</span>
                             <span class="hb-project-tag">AgTech · Crédito Rural</span>
                         </div>
+                        <div class="hb-project-item">
+                            <div class="hb-project-dot" style="background:#10B981;"></div>
+                            <span class="hb-project-name">ESG360</span>
+                            <span class="hb-project-tag">ESG · Sostenibilidad + IA</span>
+                        </div>
 
                     </div>
                 </div>
@@ -1184,6 +1190,7 @@
                 <button class="filter-pill" data-filter="servicos">Servicios</button>
                 <button class="filter-pill" data-filter="saude">Salud</button>
                 <button class="filter-pill" data-filter="saas">SaaS</button>
+                <button class="filter-pill" data-filter="esg">ESG</button>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-capital"><i class="fas fa-chart-line"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Inversiones</div><h3>Buffalo Capital</h3><p>Sitio corporativo para empresa de inversiones, con dashboard interactivo e integración con APIs financieras en tiempo real.</p><div class="pf-techs"><span class="pf-tech">Dashboard</span><span class="pf-tech">APIs Financieras</span><span class="pf-tech">Chart.js</span></div><a href="https://buffalocapital.com.br" target="_blank" class="pf-link">Ver Proyecto <i class="fas fa-arrow-right"></i></a></div></div>
@@ -1197,6 +1204,7 @@
                 <div class="portfolio-card fade-in" data-category="saas"><div class="pf-img c-linkora"><i class="fas fa-link"></i></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio · Creator Economy</div><h3>Linkora</h3><p>Link-in-Bio para creadores, influenciadores y marcas. Links, productos digitales, contenido VIP y analytics en tiempo real.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" class="pf-link">Ver Proyecto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-valuora"><i class="fas fa-balance-scale"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Valuation con Motor DCF v7.1, IA y benchmarks sectoriales. Informes de hasta 42 páginas con 14+ métodos — estándar M&A a una fracción del costo.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" class="pf-link">Ver Proyecto <i class="fas fa-arrow-right"></i></a></div></div>
                 <div class="portfolio-card fade-in" data-category="saude"><div class="pf-img c-prosorrir"><i class="fas fa-tooth"></i></div><div class="pf-body"><div class="pf-tag">Salud · Odontología · Multi-sede</div><h3>Pró Sorrir Odontología</h3><p>Sitio institucional moderno para clínica odontológica con 19+ años y 2 sedes en la Serra Gaúcha. Agendamiento por WhatsApp, FAQ interactivo, quiz de tratamientos y galería de casos.</p><div class="pf-techs"><span class="pf-tech">WhatsApp API</span><span class="pf-tech">SEO Local</span><span class="pf-tech">Quiz Interactivo</span></div><a href="https://prosorrirodontologia.com.br" target="_blank" class="pf-link">Ver Proyecto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="esg"><div class="pf-img c-esg"><i class="fas fa-leaf"></i></div><div class="pf-body"><div class="pf-tag">ESG · Sostenibilidad · IA</div><h3>ESG360</h3><p>Plataforma ESG inteligente con IA — lleva tus datos desde cero al informe listo. Score ESG traducido en spread de crédito, WACC e impacto en el enterprise value.</p><div class="pf-techs"><span class="pf-tech">Extracción NLP</span><span class="pf-tech">GRI · SASB · TCFD</span><span class="pf-tech">Financial Score</span></div><a href="https://esg360.digital" target="_blank" class="pf-link">Ver Proyecto <i class="fas fa-arrow-right"></i></a></div></div>
             </div>
         </div>
     </section>
@@ -1375,7 +1383,7 @@
         'use strict';
 
         // ─── Config: cambie solo este número para actualizar todo el sitio ───
-        const PROJECT_COUNT = 11;
+        const PROJECT_COUNT = 12;
 
         // Actualiza automáticamente todos los elementos con el conteo de proyectos
         document.querySelectorAll('[data-count="21"]').forEach(el => el.dataset.count = PROJECT_COUNT);
