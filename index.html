@@ -803,6 +803,58 @@
     .modal-body ul li::before { content: '→'; position: absolute; left: 0; color: var(--mint-dark); font-weight: 700; }
 
     /* ─── Scroll Top ──────────────────────────────────────────────── */
+    /* ─── WhatsApp Float ─────────────────────────────────────────── */
+    .whatsapp-float {
+        position: fixed; bottom: 88px; right: 28px; z-index: 999;
+        width: 56px; height: 56px; border-radius: 50%;
+        background: #25D366; color: #fff;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.5rem; text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+        transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .whatsapp-float:hover { background: #1EBE5E; transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+    .whatsapp-float::before {
+        content: ''; position: absolute; inset: -4px;
+        border-radius: 50%; border: 2px solid rgba(37,211,102,0.4);
+        animation: wa-pulse 2.5s ease-out infinite;
+    }
+    @keyframes wa-pulse { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
+
+    /* ─── Testimonials ───────────────────────────────────────────── */
+    .testimonials-section { background: var(--bg-white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media(max-width:768px) { .testimonials-grid { grid-template-columns: 1fr; } }
+    .testimonial-card {
+        background: var(--bg-muted); border: 1px solid var(--border);
+        border-radius: var(--radius-xl); padding: 28px;
+        display: flex; flex-direction: column; gap: 16px;
+        transition: all var(--transition);
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow-lg); border-color: var(--mint-border); transform: translateY(-2px); }
+    .testimonial-stars { color: #f59e0b; font-size: 0.875rem; letter-spacing: 2px; }
+    .testimonial-quote {
+        font-size: 0.9375rem; color: var(--text-muted); line-height: 1.7;
+        flex: 1; font-style: italic;
+    }
+    .testimonial-quote::before { content: '"'; font-size: 2rem; color: var(--mint-dark); line-height: 0; vertical-align: -0.5rem; margin-right: 4px; font-style: normal; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .testimonial-avatar {
+        width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+        background: var(--mint-bg); border: 2px solid var(--mint-border);
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--font-heading); font-weight: 800; font-size: 0.875rem;
+        color: var(--mint-dark);
+    }
+    .testimonial-name { font-family: var(--font-heading); font-weight: 700; font-size: 0.875rem; color: var(--text); }
+    .testimonial-role { font-size: 0.75rem; color: var(--text-muted); }
+    body.dark-mode .testimonial-card { background: rgba(30,41,59,0.6); }
+
+    /* ─── Portfolio Screenshot ───────────────────────────────────── */
+    .pf-img { position: relative; }
+    .pf-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; z-index: 2; transition: transform 0.4s ease; }
+    .portfolio-card:hover .pf-img img { transform: scale(1.03); }
+
     .scroll-top {
         position: fixed; bottom: 28px; right: 28px; z-index: 99;
         width: 44px; height: 44px; border-radius: var(--radius-md);
@@ -1030,15 +1082,15 @@
     <section class="section section-white" id="sobre">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="badge badge-mint badge-dot">Quem Somos</span>
-                <h2>Sobre a Sartor Digital</h2>
-                <p>Tecnologia, design e inteligência artificial para transformar negócios em produtos digitais de alta performance.</p>
+                <span class="badge badge-mint badge-dot">Quem Sou</span>
+                <h2>Sobre o Giovanne Sartor</h2>
+                <p>Desenvolvedor full-stack e especialista em IA aplicada — construindo produtos digitais de alta performance desde a arquitetura até o design.</p>
             </div>
             <div class="about-grid">
                 <div class="bento-card about-main-card fade-in">
-                    <h3>Tecnologia com propósito e resultado mensurável</h3>
-                    <p>Somos uma empresa de engenharia de software focada em produtos digitais com inteligência artificial. Atuamos desde a arquitetura técnica até o design de interfaces — sempre com foco em performance, escalabilidade e retorno sobre investimento.</p>
-                    <p>Com 11+ produtos entregues em setores como fintech, agtech, saúde e martech, nosso diferencial está na combinação de IA aplicada, metodologia ágil e visão de produto — não apenas código.</p>
+                    <h3>Código com propósito e resultado mensurável</h3>
+                    <p>Sou Giovanne Sartor, desenvolvedor full-stack especializado em produtos digitais com inteligência artificial. Trabalho em tudo — da arquitetura técnica ao design de interfaces — com foco em performance, escalabilidade e retorno real sobre o investimento.</p>
+                    <p>Com 12+ produtos entregues em setores como fintech, agtech, saúde e martech, meu diferencial está na combinação de IA aplicada, metodologia ágil e visão de produto. Não entrego só código — entrego resultado.</p>
                     <div class="about-stats">
                         <div class="stat-card">
                             <div class="stat-value" data-count="21">0</div>
@@ -1190,18 +1242,18 @@
                 <button class="filter-pill" data-filter="esg">ESG</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-capital"><i class="fas fa-chart-line"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Investimentos</div><h3>Buffalo Capital</h3><p>Site institucional para empresa de investimentos, com dashboard interativo e integração com APIs financeiras em tempo real.</p><div class="pf-techs"><span class="pf-tech">Dashboard</span><span class="pf-tech">APIs Financeiras</span><span class="pf-tech">Chart.js</span></div><a href="https://buffalocapital.com.br" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="servicos"><div class="pf-img c-services"><i class="fas fa-tools"></i></div><div class="pf-body"><div class="pf-tag">Serviços · CRM · Agendamento</div><h3>SRT Brasil</h3><p>Plataforma completa para serviços técnicos, com sistema de agendamento online, gestão de clientes e integração de pagamentos.</p><div class="pf-techs"><span class="pf-tech">CRM</span><span class="pf-tech">Agendamento</span><span class="pf-tech">Pagamentos</span></div><a href="http://srtbrasil.com" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="web3"><div class="pf-img c-web3"><i class="fas fa-cubes"></i></div><div class="pf-body"><div class="pf-tag">Web3 · Tokenização Digital</div><h3>Valsa Digital</h3><p>Plataforma digital completa com foco em tokenização digital. Contribuição ativa no desenvolvimento frontend (25%).</p><div class="pf-techs"><span class="pf-tech">Frontend</span><span class="pf-tech">Web3</span><span class="pf-tech">Blockchain</span></div><a href="https://valsadigital.com.br" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-insurtech"><i class="fas fa-shield-alt"></i></div><div class="pf-body"><div class="pf-tag">Insurtech · Fintech · SaaS</div><h3>AG Digital</h3><p>Plataforma premium de gestão inteligente de seguros, benefícios e planos financeiros. Sócio e desenvolvedor (~25%).</p><div class="pf-techs"><span class="pf-tech">Seguros</span><span class="pf-tech">Benefícios</span><span class="pf-tech">SaaS</span></div><a href="https://agdigital.ag" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fintech"><i class="fas fa-calculator"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation SaaS</div><h3>Quanto Vale</h3><p>Plataforma SaaS de valuation com Motor DCF + IA proprietária. Relatório de até 25 páginas — 30x mais barato que consultorias.</p><div class="pf-techs"><span class="pf-tech">DCF Engine</span><span class="pf-tech">IA Generativa</span><span class="pf-tech">LGPD</span></div><a href="https://quantovale.online" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-crypto"><i class="fas fa-robot"></i></div><div class="pf-body"><div class="pf-tag">FinTech · Crypto · IA</div><h3>Vexium</h3><p>Motor VEX proprietário para criptomoedas. Consolida 7+ indicadores técnicos com IA generativa e dados ao vivo da Binance.</p><div class="pf-techs"><span class="pf-tech">Motor VEX</span><span class="pf-tech">Binance API</span><span class="pf-tech">IA Híbrida</span></div><a href="https://vexium.pro" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="agtech"><div class="pf-img c-agro"><i class="fas fa-tractor"></i></div><div class="pf-body"><div class="pf-tag">AgTech · Marketplace · Fintech</div><h3>ConectCampo</h3><p>Marketplace de crédito rural #1 do Brasil. Conecta produtores a bancos, FIDCs e cooperativas com IA e data room bancário.</p><div class="pf-techs"><span class="pf-tech">AI Matching</span><span class="pf-tech">Risk Score</span><span class="pf-tech">LGPD</span></div><a href="https://conectcampo.digital" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fundflow"><i class="fas fa-hand-holding-usd"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Captação · IA</div><h3>FundFlow</h3><p>Plataforma de captação de recursos com IA e Método C.A.P.T.A.R. R$ 247M+ captados conectando empresas a investidores.</p><div class="pf-techs"><span class="pf-tech">Método C.A.P.T.A.R.</span><span class="pf-tech">IA Proprietária</span><span class="pf-tech">LGPD</span></div><a href="https://fundflow.money" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="saas"><div class="pf-img c-linkora"><i class="fas fa-link"></i></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio · Creator Economy</div><h3>Linkora</h3><p>Link-in-Bio para criadores, influenciadores e marcas. Links, produtos digitais, conteúdo VIP e analytics em tempo real.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-valuora"><i class="fas fa-balance-scale"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Valuation com Motor DCF v7.1, IA e benchmarks setoriais. Relatório de até 42 páginas com 14+ métodos — padrão M&A por uma fração do custo.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="saude"><div class="pf-img c-prosorrir"><i class="fas fa-tooth"></i></div><div class="pf-body"><div class="pf-tag">Saúde · Odontologia · Multi-unidade</div><h3>Pró Sorrir Odontologia</h3><p>Site institucional moderno para clínica odontológica com 19+ anos de mercado e 2 unidades na Serra Gaúcha. Agendamento via WhatsApp, FAQ interativo, quiz de tratamentos e galeria de casos.</p><div class="pf-techs"><span class="pf-tech">WhatsApp API</span><span class="pf-tech">SEO Local</span><span class="pf-tech">Quiz Interativo</span></div><a href="https://prosorrirodontologia.com.br" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="esg"><div class="pf-img c-esg"><i class="fas fa-leaf"></i></div><div class="pf-body"><div class="pf-tag">ESG · Sustentabilidade · IA</div><h3>ESG360</h3><p>Plataforma ESG inteligente com IA — leva seus dados do zero ao relatório pronto. Score ESG traduzido em spread de crédito, WACC e impacto no enterprise value.</p><div class="pf-techs"><span class="pf-tech">Extração NLP</span><span class="pf-tech">GRI · SASB · TCFD</span><span class="pf-tech">Financial Score</span></div><a href="https://esg360.digital" target="_blank" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-capital"><i class="fas fa-chart-line"></i><img src="https://image.thum.io/get/width/640/crop/400/https://buffalocapital.com.br" alt="Buffalo Capital" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Investimentos</div><h3>Buffalo Capital</h3><p>Site institucional para empresa de investimentos, com dashboard interativo e integração com APIs financeiras em tempo real.</p><div class="pf-techs"><span class="pf-tech">Dashboard</span><span class="pf-tech">APIs Financeiras</span><span class="pf-tech">Chart.js</span></div><a href="https://buffalocapital.com.br" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="servicos"><div class="pf-img c-services"><i class="fas fa-tools"></i><img src="https://image.thum.io/get/width/640/crop/400/http://srtbrasil.com" alt="SRT Brasil" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Serviços · CRM · Agendamento</div><h3>SRT Brasil</h3><p>Plataforma completa para serviços técnicos, com sistema de agendamento online, gestão de clientes e integração de pagamentos.</p><div class="pf-techs"><span class="pf-tech">CRM</span><span class="pf-tech">Agendamento</span><span class="pf-tech">Pagamentos</span></div><a href="http://srtbrasil.com" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="web3"><div class="pf-img c-web3"><i class="fas fa-cubes"></i><img src="https://image.thum.io/get/width/640/crop/400/https://valsadigital.com.br" alt="Valsa Digital" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Web3 · Tokenização Digital</div><h3>Valsa Digital</h3><p>Plataforma digital completa com foco em tokenização digital. Contribuição ativa no desenvolvimento frontend (25%).</p><div class="pf-techs"><span class="pf-tech">Frontend</span><span class="pf-tech">Web3</span><span class="pf-tech">Blockchain</span></div><a href="https://valsadigital.com.br" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-insurtech"><i class="fas fa-shield-alt"></i><img src="https://image.thum.io/get/width/640/crop/400/https://agdigital.ag" alt="AG Digital" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Insurtech · Fintech · SaaS</div><h3>AG Digital</h3><p>Plataforma premium de gestão inteligente de seguros, benefícios e planos financeiros. Sócio e desenvolvedor (~25%).</p><div class="pf-techs"><span class="pf-tech">Seguros</span><span class="pf-tech">Benefícios</span><span class="pf-tech">SaaS</span></div><a href="https://agdigital.ag" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fintech"><i class="fas fa-calculator"></i><img src="https://image.thum.io/get/width/640/crop/400/https://quantovale.online" alt="Quanto Vale" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation SaaS</div><h3>Quanto Vale</h3><p>Plataforma SaaS de valuation com Motor DCF + IA proprietária. Relatório de até 25 páginas — 30x mais barato que consultorias.</p><div class="pf-techs"><span class="pf-tech">DCF Engine</span><span class="pf-tech">IA Generativa</span><span class="pf-tech">LGPD</span></div><a href="https://quantovale.online" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-crypto"><i class="fas fa-robot"></i><img src="https://image.thum.io/get/width/640/crop/400/https://vexium.pro" alt="Vexium" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">FinTech · Crypto · IA</div><h3>Vexium</h3><p>Motor VEX proprietário para criptomoedas. Consolida 7+ indicadores técnicos com IA generativa e dados ao vivo da Binance.</p><div class="pf-techs"><span class="pf-tech">Motor VEX</span><span class="pf-tech">Binance API</span><span class="pf-tech">IA Híbrida</span></div><a href="https://vexium.pro" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="agtech"><div class="pf-img c-agro"><i class="fas fa-tractor"></i><img src="https://image.thum.io/get/width/640/crop/400/https://conectcampo.digital" alt="ConectCampo" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">AgTech · Marketplace · Fintech</div><h3>ConectCampo</h3><p>Marketplace de crédito rural #1 do Brasil. Conecta produtores a bancos, FIDCs e cooperativas com IA e data room bancário.</p><div class="pf-techs"><span class="pf-tech">AI Matching</span><span class="pf-tech">Risk Score</span><span class="pf-tech">LGPD</span></div><a href="https://conectcampo.digital" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fundflow"><i class="fas fa-hand-holding-usd"></i><img src="https://image.thum.io/get/width/640/crop/400/https://fundflow.money" alt="FundFlow" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Captação · IA</div><h3>FundFlow</h3><p>Plataforma de captação de recursos com IA e Método C.A.P.T.A.R. R$ 247M+ captados conectando empresas a investidores.</p><div class="pf-techs"><span class="pf-tech">Método C.A.P.T.A.R.</span><span class="pf-tech">IA Proprietária</span><span class="pf-tech">LGPD</span></div><a href="https://fundflow.money" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="saas"><div class="pf-img c-linkora"><i class="fas fa-link"></i><img src="https://image.thum.io/get/width/640/crop/400/https://linkora.vip" alt="Linkora" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio · Creator Economy</div><h3>Linkora</h3><p>Link-in-Bio para criadores, influenciadores e marcas. Links, produtos digitais, conteúdo VIP e analytics em tempo real.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-valuora"><i class="fas fa-balance-scale"></i><img src="https://image.thum.io/get/width/640/crop/400/https://valuora.online" alt="Valuora" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Valuation com Motor DCF v7.1, IA e benchmarks setoriais. Relatório de até 42 páginas com 14+ métodos — padrão M&A por uma fração do custo.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="saude"><div class="pf-img c-prosorrir"><i class="fas fa-tooth"></i><img src="https://image.thum.io/get/width/640/crop/400/https://prosorrirodontologia.com.br" alt="Pró Sorrir" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Saúde · Odontologia · Multi-unidade</div><h3>Pró Sorrir Odontologia</h3><p>Site institucional moderno para clínica odontológica com 19+ anos de mercado e 2 unidades na Serra Gaúcha. Agendamento via WhatsApp, FAQ interativo, quiz de tratamentos e galeria de casos.</p><div class="pf-techs"><span class="pf-tech">WhatsApp API</span><span class="pf-tech">SEO Local</span><span class="pf-tech">Quiz Interativo</span></div><a href="https://prosorrirodontologia.com.br" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
+                <div class="portfolio-card fade-in" data-category="esg"><div class="pf-img c-esg"><i class="fas fa-leaf"></i><img src="https://image.thum.io/get/width/640/crop/400/https://esg360.digital" alt="ESG360" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">ESG · Sustentabilidade · IA</div><h3>ESG360</h3><p>Plataforma ESG inteligente com IA — leva seus dados do zero ao relatório pronto. Score ESG traduzido em spread de crédito, WACC e impacto no enterprise value.</p><div class="pf-techs"><span class="pf-tech">Extração NLP</span><span class="pf-tech">GRI · SASB · TCFD</span><span class="pf-tech">Financial Score</span></div><a href="https://esg360.digital" target="_blank" rel="noopener noreferrer" class="pf-link">Ver Projeto <i class="fas fa-arrow-right"></i></a></div></div>
             </div>
         </div>
     </section>
@@ -1323,7 +1375,7 @@
                         <div class="logo-mark"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital"></div>
                         Sartor Digital
                     </a>
-                    <p>Engenharia de software, IA aplicada e produtos digitais de alta performance para empresas que querem crescer.</p>
+                    <p>Desenvolvedor full-stack e especialista em IA. Construo produtos digitais de alta performance para empresas que querem crescer de verdade.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/sartordigital" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://wa.me/5554993031264" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -1373,6 +1425,9 @@
 
     <div class="modal-overlay" id="modal-suporte"><div class="modal-content"><div class="modal-header"><i class="fas fa-shield-alt modal-header-icon"></i><div><h3>Manutenção e Suporte Contínuo</h3><p>Seus sistemas sempre funcionando perfeitamente.</p></div></div><button class="modal-close" aria-label="Fechar"><i class="fas fa-times"></i></button><div class="modal-body"><p>Oferecemos serviços de manutenção, atualização e suporte técnico para garantir o funcionamento ideal de todas as suas soluções digitais.</p><h4>O que incluímos</h4><ul><li>Monitoramento 24/7 de performance</li><li>Backups automáticos e restauração</li><li>Atualizações de segurança regulares</li><li>Correção de bugs e problemas técnicos</li><li>Otimização contínua de performance</li><li>Relatórios mensais de performance</li></ul><h4>Planos</h4><ul><li>Básico — Suporte durante horário comercial</li><li>Profissional — Suporte estendido + monitoramento</li><li>Enterprise — Suporte 24/7 + atualizações prioritárias</li></ul></div></div></div>
 
+    <a href="https://wa.me/5554993031264?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20serviços%20da%20Sartor%20Digital." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
 
     <script>
