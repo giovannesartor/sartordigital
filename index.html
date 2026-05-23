@@ -387,6 +387,12 @@
         margin: 0 auto 32px; line-height: 1.65;
     }
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero-speed-strip { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
+    .hero-speed-item { display: inline-flex; align-items: center; gap: 6px; font-size: .8125rem; font-weight: 600; color: var(--text-muted); }
+    .hero-speed-item i { color: var(--mint-dark); }
+    .hero-speed-sep { color: var(--border-strong); font-size: .75rem; }
+    body.dark-mode .hero-speed-item { color: rgba(255,255,255,.5); }
+    body.dark-mode .hero-speed-sep { color: rgba(255,255,255,.15); }
 
     /* ─── Hero Bento Grid ─────────────────────────────────────────── */
     .hero-bento {
@@ -931,7 +937,7 @@
                     <a href="#sobre">Sobre</a>
                     <a href="#servicos">Serviços</a>
                     <a href="#portfolio">Portfólio</a>
-                    <a href="#processo">Processo</a>
+                    <a href="suporte.html">Suporte</a>
                     <a href="#faq">FAQ</a>
                     <a href="#contato">Contato</a>
                 </nav>
@@ -963,11 +969,18 @@
                         Engenharia Digital · IA Aplicada · <span style="color:var(--mint-dark);font-weight:700;">Disponível para projetos</span>
                     </div>
                 </div>
-                <h1>Engenharia de software<br>e IA aplicada para<br><span class="highlight">escalar seu negócio.</span></h1>
-                <p class="hero-sub">Desenvolvemos plataformas SaaS, sistemas com IA e produtos digitais de alta performance. Do MVP ao produto consolidado — arquitetura sólida, design premium e entrega ágil.</p>
+                <h1>Desenvolvemos com IA.<br>Entregamos em semanas,<br><span class="highlight">não em meses.</span></h1>
+                <p class="hero-sub">Sites em 5 dias. Sistemas em 3 semanas. Velocidade real, sem abrir mão de qualidade.</p>
                 <div class="hero-btns">
                     <a href="#contato" class="btn btn-primary"><i class="fas fa-rocket"></i> Iniciar Projeto</a>
                     <a href="https://wa.me/5554993031264" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+                </div>
+                <div class="hero-speed-strip">
+                    <span class="hero-speed-item"><i class="fas fa-bolt"></i> Sites em 5 dias</span>
+                    <span class="hero-speed-sep">·</span>
+                    <span class="hero-speed-item"><i class="fas fa-code"></i> Sistemas em 3 semanas</span>
+                    <span class="hero-speed-sep">·</span>
+                    <span class="hero-speed-item"><i class="fas fa-wand-magic-sparkles"></i> 3× mais rápido com IA</span>
                 </div>
             </div>
 
@@ -1041,43 +1054,16 @@
                     <div class="hb-desc">Modelos de linguagem, automação inteligente e sistemas que aprendem — integrados no seu produto.</div>
                 </div>
 
-                <!-- Stat: Suporte -->
+                <!-- Stat: Velocidade IA -->
                 <div class="hb-card fade-in" style="border-color: var(--mint-border);">
-                    <div class="hb-label">Suporte Pós-Entrega</div>
-                    <div class="hb-number" style="color:var(--mint-dark);">90</div>
-                    <div style="color:var(--mint-mid); font-weight:800; font-size:1rem; margin-bottom:4px;">dias</div>
-                    <div class="hb-sublabel">de garantia incluídos em todos os projetos</div>
+                    <div class="hb-label">Velocidade com IA</div>
+                    <div class="hb-number" style="color:var(--mint-dark);">3×</div>
+                    <div style="color:var(--mint-mid); font-weight:800; font-size:1rem; margin-bottom:4px;">mais rápido</div>
+                    <div class="hb-sublabel">desenvolvemos com Claude e Cursor — entregamos onde outros ainda estão planejando</div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Tech Strip -->
-    <div class="tech-strip">
-        <div class="tech-strip-inner">
-            <div class="tech-item"><i class="fab fa-react"></i> React</div>
-            <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-            <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
-            <div class="tech-item"><i class="fab fa-docker"></i> Docker</div>
-            <div class="tech-item"><i class="fas fa-cloud"></i> AWS</div>
-            <div class="tech-item"><i class="fas fa-brain"></i> OpenAI</div>
-            <div class="tech-item"><i class="fab fa-js-square"></i> Next.js</div>
-            <div class="tech-item"><i class="fas fa-bolt"></i> FastAPI</div>
-            <div class="tech-item"><i class="fas fa-code-branch"></i> Git</div>
-            <!-- Duplicate for seamless loop -->
-            <div class="tech-item"><i class="fab fa-react"></i> React</div>
-            <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-            <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
-            <div class="tech-item"><i class="fab fa-docker"></i> Docker</div>
-            <div class="tech-item"><i class="fas fa-cloud"></i> AWS</div>
-            <div class="tech-item"><i class="fas fa-brain"></i> OpenAI</div>
-            <div class="tech-item"><i class="fab fa-js-square"></i> Next.js</div>
-            <div class="tech-item"><i class="fas fa-bolt"></i> FastAPI</div>
-            <div class="tech-item"><i class="fas fa-code-branch"></i> Git</div>
-        </div>
-    </div>
 
     <!-- About -->
     <section class="section section-white" id="sobre">
@@ -1215,13 +1201,48 @@
                     <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Mais de 90% dos nossos clientes voltam para novas demandas — produtos em produção, parcerias longas e relação de confiança.</p>
                 </div>
                 <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
-                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-bolt"></i></div>
-                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Entrega Ágil</h3>
-                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Sprints semanais com entregas parciais. Você acompanha o progresso em tempo real.</p>
+                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Desenvolvemos com IA</h3>
+                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Usamos IA no nosso próprio processo de desenvolvimento — Claude, Cursor e ferramentas generativas. Entregas até 3× mais rápidas, sem abrir mão de qualidade. Você paga pelo resultado, não pelas horas.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Dev com IA Strip -->
+    <div style="background:linear-gradient(135deg,#0F172A,#1a2a1a);padding:3.5rem 0;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(134,239,172,0.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;">
+                <div style="flex:1;min-width:280px;">
+                    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(134,239,172,0.12);border:1px solid rgba(134,239,172,0.25);border-radius:9999px;padding:5px 14px;font-size:0.75rem;font-weight:700;color:#86EFAC;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1rem;">
+                        <i class="fas fa-wand-magic-sparkles"></i> Como aceleramos
+                    </div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.75rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:.75rem;">
+                        Desenvolvemos com IA.<br>
+                        <span style="background:linear-gradient(90deg,#86EFAC,#4ADE80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Você recebe mais rápido.</span>
+                    </h3>
+                    <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;line-height:1.7;max-width:520px;">
+                        Usamos Claude, Cursor e ferramentas generativas no nosso próprio workflow — não só entregamos IA como serviço, somos movidos por ela. O resultado: projetos que levariam meses prontos em semanas, com o mesmo padrão de qualidade.
+                    </p>
+                </div>
+                <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+                    <div style="text-align:center;padding:1.25rem 1.75rem;background:rgba(255,255,255,0.05);border:1px solid rgba(134,239,172,0.2);border-radius:16px;min-width:120px;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:#86EFAC;line-height:1;">5 dias</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">Sites institucionais</div>
+                    </div>
+                    <div style="text-align:center;padding:1.25rem 1.75rem;background:rgba(255,255,255,0.05);border:1px solid rgba(134,239,172,0.2);border-radius:16px;min-width:120px;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:#86EFAC;line-height:1;">3 sem.</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">Sistemas completos</div>
+                    </div>
+                    <div style="text-align:center;padding:1.25rem 1.75rem;background:rgba(255,255,255,0.05);border:1px solid rgba(134,239,172,0.2);border-radius:16px;min-width:120px;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:#86EFAC;line-height:1;">3×</div>
+                        <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">Mais rápido que a média</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Portfolio -->
     <section class="section section-white" id="portfolio">
@@ -1288,8 +1309,8 @@
                     <div class="processo-num">3</div>
                     <div class="processo-step-badge">03</div>
                     <div class="processo-icon"><i class="fas fa-code"></i></div>
-                    <h4>Desenvolvimento</h4>
-                    <p>Código de produção, com IA integrada, design premium e performance desde a primeira linha.</p>
+                    <h4>Desenvolvimento com IA</h4>
+                    <p>Usamos Claude, Cursor e ferramentas generativas no nosso workflow — acelerando o desenvolvimento sem sacrificar qualidade. Código limpo, testado e documentado.</p>
                     <div class="processo-badge">Semanas 1–4</div>
                 </div>
                 <div class="processo-card fade-in">
@@ -1300,6 +1321,57 @@
                     <p>Lançamento completo com deploy, testes, documentação e 90 dias de garantia técnica pós-entrega (correções e ajustes).</p>
                     <div class="processo-badge">Go-live</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suporte Mensal -->
+    <section class="section section-white" id="suporte">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="badge badge-mint badge-dot">Suporte Mensal</span>
+                <h2>Seu projeto continua evoluindo</h2>
+                <p>Planos de manutenção, segurança e melhorias contínuas. Quem construiu cuida melhor — sem burocracia, direto no WhatsApp.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:2.5rem;">
+                <div class="card fade-in" style="padding:2rem;border-radius:16px;background:var(--bg-muted);border:1px solid var(--border);">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+                        <div style="width:40px;height:40px;border-radius:10px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;color:var(--mint-dark);font-size:1rem;flex-shrink:0;"><i class="fas fa-seedling"></i></div>
+                        <div><div style="font-family:var(--font-heading);font-weight:700;font-size:1rem;">Essencial</div><div style="font-size:.8rem;color:var(--text-muted);">Sites simples e landing pages</div></div>
+                    </div>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Até 2h de ajustes mensais</li>
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Backups diários + SSL ativo</li>
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Monitoramento de uptime 24/7</li>
+                    </ul>
+                </div>
+                <div class="card fade-in" style="padding:2rem;border-radius:16px;background:var(--bg-white);border:2px solid var(--mint-mid);box-shadow:var(--shadow-glow);position:relative;">
+                    <div style="position:absolute;top:-11px;left:1.5rem;background:var(--mint-mid);color:#0F172A;font-size:.7rem;font-weight:800;padding:3px 12px;border-radius:9999px;text-transform:uppercase;letter-spacing:.5px;">Mais contratado</div>
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+                        <div style="width:40px;height:40px;border-radius:10px;background:rgba(74,222,128,0.2);display:flex;align-items:center;justify-content:center;color:var(--mint-dark);font-size:1rem;flex-shrink:0;"><i class="fas fa-rocket"></i></div>
+                        <div><div style="font-family:var(--font-heading);font-weight:700;font-size:1rem;">Profissional</div><div style="font-size:.8rem;color:var(--text-muted);">Sites institucionais e sistemas</div></div>
+                    </div>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Até 5h de ajustes e melhorias</li>
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Suporte via WhatsApp + relatório mensal</li>
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Resposta em até 24h úteis</li>
+                    </ul>
+                </div>
+                <div class="card fade-in" style="padding:2rem;border-radius:16px;background:var(--bg-muted);border:1px solid var(--border);">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+                        <div style="width:40px;height:40px;border-radius:10px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;color:var(--mint-dark);font-size:1rem;flex-shrink:0;"><i class="fas fa-microchip"></i></div>
+                        <div><div style="font-family:var(--font-heading);font-weight:700;font-size:1rem;">Avançado</div><div style="font-size:.8rem;color:var(--text-muted);">Sistemas complexos e SaaS</div></div>
+                    </div>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Até 12h de desenvolvimento mensal</li>
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Novas funcionalidades incluídas</li>
+                        <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--mint-dark);font-size:.75rem;"></i>Resposta crítica em até 4h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fade-in" style="text-align:center;">
+                <a href="suporte.html" class="btn btn-primary"><i class="fas fa-shield-halved"></i> Ver Planos e Preços</a>
+                <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20planos%20de%20suporte%20mensal." target="_blank" class="btn btn-ghost" style="margin-left:12px;"><i class="fab fa-whatsapp"></i> Tirar Dúvidas</a>
             </div>
         </div>
     </section>
