@@ -1,576 +1,344 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte Mensal - Sartor Digital | Manutenção e Evolução Contínua</title>
-    <meta name="description" content="Planos de suporte mensal para sites e sistemas desenvolvidos pela Sartor Digital. Manutenção, segurança, backups e evoluções com quem conhece o seu projeto de dentro.">
-    <link rel="canonical" href="https://sartordigital.online/suporte.html">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QG5LQDC5L6"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QG5LQDC5L6');</script>
-    <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-    :root {
-        --mint:#86EFAC; --mint-mid:#4ADE80; --mint-dark:#16A34A;
-        --mint-bg:rgba(134,239,172,0.10); --mint-bg-strong:rgba(134,239,172,0.18);
-        --mint-border:rgba(134,239,172,0.30);
-        --bg:#F8FAFB; --bg-white:#FFFFFF; --bg-muted:#F1F5F9; --bg-subtle:#FAFAFA;
-        --text:#0F172A; --text-muted:#64748B; --text-subtle:#94A3B8;
-        --border:#E2E8F0; --border-strong:#CBD5E1;
-        --shadow-xs:0 1px 2px rgba(0,0,0,0.04);
-        --shadow-sm:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
-        --shadow-md:0 4px 6px -1px rgba(0,0,0,0.06),0 2px 4px -2px rgba(0,0,0,0.04);
-        --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.07),0 4px 6px -4px rgba(0,0,0,0.04);
-        --shadow-glow:0 0 20px rgba(134,239,172,0.20);
-        --radius-sm:8px; --radius-md:12px; --radius-lg:16px; --radius-xl:24px; --radius-full:9999px;
-        --font-heading:'Plus Jakarta Sans',sans-serif; --font-body:'Inter',sans-serif;
-        --transition:200ms cubic-bezier(0.4,0,0.2,1);
-    }
-    body.dark-mode {
-        --bg:#0F172A; --bg-white:#1E293B; --bg-muted:#1E293B; --bg-subtle:#0F172A;
-        --text:#F1F5F9; --text-muted:#94A3B8; --text-subtle:#64748B;
-        --border:rgba(255,255,255,0.07); --border-strong:rgba(255,255,255,0.12);
-        --shadow-sm:0 1px 3px rgba(0,0,0,0.25); --shadow-md:0 4px 6px -1px rgba(0,0,0,0.30);
-    }
-    body.dark-mode .btn-primary { background:var(--mint); color:#0F172A; }
-    body.dark-mode .btn-primary:hover { background:var(--mint-mid); color:#0F172A; }
-    body.dark-mode .btn-nav-cta { background:var(--mint); color:#0F172A; }
-    body.dark-mode .plan-card.featured { background:linear-gradient(135deg,#1a2e1a,#1E293B); }
-    body.dark-mode .badge-mint { color:var(--mint); }
-    body.dark-mode .scroll-top { background:var(--mint); color:#0F172A; }
-
-    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { font-family:var(--font-body); background:var(--bg); color:var(--text); line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
-    a { text-decoration:none; color:inherit; }
-    button { font-family:inherit; }
-
-    .scroll-progress { position:fixed; top:0; left:0; height:2.5px; background:var(--mint); z-index:1001; width:0%; transition:width .1s linear; box-shadow:0 0 8px var(--mint); }
-    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-
-    /* Header */
-    .header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(248,250,251,.92); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:all .3s ease; box-shadow:var(--shadow-sm); }
-    body.dark-mode .header { background:rgba(15,23,42,.92); }
-    .header-inner { display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .logo { display:flex; align-items:center; gap:10px; font-family:var(--font-heading); font-weight:800; font-size:1rem; color:var(--text); letter-spacing:-.03em; }
-    .logo img { width:32px; height:32px; border-radius:8px; }
-    .nav-links { display:flex; align-items:center; gap:2px; }
-    .nav-links a { font-size:.875rem; font-weight:500; color:var(--text-muted); padding:6px 14px; border-radius:var(--radius-sm); transition:color var(--transition),background var(--transition); }
-    .nav-links a:hover, .nav-links a.active { color:var(--text); background:var(--bg-muted); }
-    .header-actions { display:flex; align-items:center; gap:8px; }
-    .dark-toggle { width:36px; height:36px; border:1px solid var(--border); background:var(--bg-white); border-radius:var(--radius-md); cursor:pointer; color:var(--text-muted); display:flex; align-items:center; justify-content:center; font-size:.875rem; transition:all var(--transition); }
-    .dark-toggle:hover { border-color:var(--mint); color:var(--mint-dark); }
-    .btn-nav-cta { display:inline-flex; align-items:center; gap:8px; background:var(--text); color:#fff; border:none; cursor:pointer; font-family:var(--font-body); font-size:.8125rem; font-weight:700; padding:8px 18px; border-radius:var(--radius-md); transition:all var(--transition); white-space:nowrap; text-decoration:none; }
-    .btn-nav-cta:hover { background:var(--mint-dark); transform:translateY(-1px); }
-    .mobile-toggle { display:none; background:none; border:1px solid var(--border); width:36px; height:36px; border-radius:var(--radius-md); cursor:pointer; color:var(--text); font-size:.875rem; align-items:center; justify-content:center; }
-    @media(max-width:992px) { .mobile-toggle{display:flex} .btn-nav-cta{display:none} .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg-white);border-bottom:1px solid var(--border);flex-direction:column;padding:1rem;gap:0;box-shadow:var(--shadow-lg);z-index:999} .nav-links.active{display:flex} .nav-links a{padding:12px 16px;width:100%} }
-
-    /* Badges & Buttons */
-    .badge { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:var(--radius-full); font-size:.75rem; font-weight:600; letter-spacing:.5px; text-transform:uppercase; }
-    .badge-mint { background:var(--mint-bg); color:var(--mint-dark); border:1px solid var(--mint-border); }
-    .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:var(--radius-md); font-family:var(--font-body); font-weight:600; font-size:.9375rem; border:none; cursor:pointer; transition:all var(--transition); text-decoration:none; white-space:nowrap; }
-    .btn-primary { background:var(--text); color:#fff; }
-    .btn-primary:hover { background:var(--mint-dark); transform:translateY(-1px); box-shadow:var(--shadow-md); }
-    .btn-whatsapp { background:#25D366; color:#fff; }
-    .btn-whatsapp:hover { background:#1EBE5E; transform:translateY(-1px); }
-    .btn-ghost { background:transparent; color:var(--text); border:1px solid var(--border); }
-    .btn-ghost:hover { border-color:var(--mint); background:var(--mint-bg); }
-
-    /* Hero */
-    .hero { min-height:52vh; display:flex; align-items:center; padding-top:100px; padding-bottom:4rem; background:linear-gradient(135deg,var(--bg),#f0fdf4 30%,#ecfeff 60%,var(--bg)); position:relative; overflow:hidden; text-align:center; }
-    body.dark-mode .hero { background:linear-gradient(135deg,#0f172a,#1a2a40,#0f172a); }
-    .hero-dot { position:absolute; inset:0; background-image:radial-gradient(var(--mint-bg) 1px,transparent 1px); background-size:24px 24px; pointer-events:none; }
-    .hero h1 { font-family:var(--font-heading); font-size:3rem; font-weight:800; line-height:1.1; letter-spacing:-.02em; margin-bottom:1rem; }
-    .hero h1 .hl { background:linear-gradient(135deg,var(--mint-dark),var(--mint),var(--mint-mid)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .hero p { font-size:1.05rem; color:var(--text-muted); max-width:600px; margin:0 auto 2rem; line-height:1.7; }
-    .hero-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-    @media(max-width:768px) { .hero h1 { font-size:2.2rem; } }
-
-    /* Trust bar */
-    .trust-bar { background:var(--bg-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:1.25rem 0; }
-    body.dark-mode .trust-bar { background:#1a2535; }
-    .trust-items { display:flex; align-items:center; justify-content:center; gap:2.5rem; flex-wrap:wrap; }
-    .trust-item { display:flex; align-items:center; gap:8px; font-size:.875rem; font-weight:600; color:var(--text-muted); }
-    .trust-item i { color:var(--mint-dark); font-size:1rem; }
-
-    /* Section */
-    section { padding:5rem 0; }
-    .section-header { text-align:center; max-width:640px; margin:0 auto 3.5rem; }
-    .section-header .badge { margin-bottom:1rem; }
-    .section-header h2 { font-family:var(--font-heading); font-size:2.2rem; font-weight:800; letter-spacing:-.02em; margin-bottom:1rem; }
-    .section-header p { font-size:1.05rem; color:var(--text-muted); line-height:1.7; }
-
-    /* Pricing */
-    .plans-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start; }
-    @media(max-width:992px) { .plans-grid { grid-template-columns:1fr 1fr; } }
-    @media(max-width:640px) { .plans-grid { grid-template-columns:1fr; } }
-
-    .plan-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius-xl); padding:2rem; transition:all var(--transition); position:relative; }
-    .plan-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); }
-    .plan-card.featured { border-color:var(--mint-mid); box-shadow:0 0 0 1px var(--mint-mid), var(--shadow-glow); background:linear-gradient(160deg,#f0fdf4,#fff); }
-    body.dark-mode .plan-card { background:rgba(30,41,59,.6); }
-
-    .plan-badge-popular { position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--mint-mid); color:#0F172A; font-size:.7rem; font-weight:800; padding:4px 16px; border-radius:var(--radius-full); letter-spacing:.5px; text-transform:uppercase; white-space:nowrap; }
-
-    .plan-icon { width:52px; height:52px; border-radius:var(--radius-md); background:var(--mint-bg-strong); display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:var(--mint-dark); margin-bottom:1.25rem; }
-    .plan-name { font-family:var(--font-heading); font-size:1.2rem; font-weight:800; margin-bottom:.35rem; }
-    .plan-desc { font-size:.875rem; color:var(--text-muted); margin-bottom:1.5rem; line-height:1.5; }
-    .plan-price { margin-bottom:1.75rem; padding-bottom:1.75rem; border-bottom:1px solid var(--border); }
-    .plan-price .price-val { font-family:var(--font-heading); font-size:2.5rem; font-weight:800; color:var(--text); line-height:1; }
-    .plan-price .price-val span { font-size:1rem; font-weight:600; color:var(--text-muted); }
-    .plan-price .price-period { font-size:.8rem; color:var(--text-subtle); margin-top:4px; }
-
-    .plan-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:2rem; }
-    .plan-features li { display:flex; align-items:flex-start; gap:10px; font-size:.9rem; color:var(--text-muted); line-height:1.5; }
-    .plan-features li i { color:var(--mint-dark); margin-top:3px; flex-shrink:0; font-size:.8rem; }
-    .plan-features li.muted { color:var(--text-subtle); }
-    .plan-features li.muted i { color:var(--border-strong); }
-
-    /* Compare table */
-    .compare-table { width:100%; border-collapse:collapse; }
-    .compare-table th { font-family:var(--font-heading); font-size:.85rem; font-weight:700; padding:12px 16px; text-align:left; background:var(--bg-muted); border-bottom:2px solid var(--border); }
-    .compare-table th:not(:first-child) { text-align:center; }
-    .compare-table td { padding:12px 16px; border-bottom:1px solid var(--border); font-size:.875rem; color:var(--text-muted); }
-    .compare-table td:not(:first-child) { text-align:center; font-weight:600; }
-    .compare-table tr:hover td { background:var(--bg-subtle); }
-    .compare-table .check { color:var(--mint-dark); }
-    .compare-table .dash { color:var(--border-strong); }
-    .compare-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:var(--radius-lg); }
-    body.dark-mode .compare-table th { background:rgba(255,255,255,.04); }
-    body.dark-mode .compare-table tr:hover td { background:rgba(255,255,255,.02); }
-
-    /* FAQ */
-    .faq-list { max-width:720px; margin:0 auto; }
-    .faq-item { border-bottom:1px solid var(--border); }
-    .faq-question { display:flex; align-items:center; justify-content:space-between; width:100%; padding:1.2rem 0; background:none; border:none; cursor:pointer; font-family:var(--font-heading); font-size:1rem; font-weight:600; color:var(--text); text-align:left; transition:all var(--transition); gap:1rem; }
-    .faq-question:hover { color:var(--mint-dark); }
-    .faq-chevron { font-size:.8rem; color:var(--text-muted); transition:transform var(--transition); flex-shrink:0; }
-    .faq-item.active .faq-chevron { transform:rotate(180deg); }
-    .faq-answer { max-height:0; overflow:hidden; transition:max-height .3s ease; }
-    .faq-answer-inner { padding:0 0 1.2rem; font-size:.9rem; color:var(--text-muted); line-height:1.7; }
-    .faq-item.active .faq-answer { max-height:300px; }
-
-    /* CTA strip */
-    .cta-strip { background:linear-gradient(135deg,#0F172A,#1E293B); padding:4rem 0; position:relative; overflow:hidden; }
-    .cta-strip::before { content:''; position:absolute; inset:0; background-image:radial-gradient(rgba(134,239,172,.08) 1px,transparent 1px); background-size:20px 20px; }
-    .cta-inner { text-align:center; position:relative; z-index:2; }
-    .cta-inner h3 { font-family:var(--font-heading); font-size:1.8rem; font-weight:800; color:#fff; margin-bottom:.8rem; }
-    .cta-inner p { color:rgba(255,255,255,.7); margin-bottom:2rem; }
-    .cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-
-    /* Footer */
-    .footer { background:#0F172A; color:rgba(255,255,255,.6); padding:4rem 0 2rem; }
-    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:2rem; margin-bottom:3rem; }
-    .footer-brand p { font-size:.85rem; line-height:1.6; margin-top:1rem; }
-    .footer-social { display:flex; gap:8px; margin-top:1rem; }
-    .footer-social a { width:36px; height:36px; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.5); transition:all var(--transition); }
-    .footer-social a:hover { background:var(--mint-dark); border-color:var(--mint-dark); color:#fff; }
-    .footer-col h4 { font-family:var(--font-heading); font-weight:700; font-size:.9rem; color:#fff; margin-bottom:1rem; }
-    .footer-col a { display:block; font-size:.85rem; color:rgba(255,255,255,.5); padding:4px 0; transition:color var(--transition); }
-    .footer-col a:hover { color:var(--mint); }
-    .footer-bottom { border-top:1px solid rgba(255,255,255,.08); padding-top:2rem; display:flex; justify-content:space-between; align-items:center; font-size:.8rem; flex-wrap:wrap; gap:1rem; }
-    @media(max-width:768px) { .footer-grid { grid-template-columns:1fr 1fr; } }
-    @media(max-width:576px) { .footer-grid { grid-template-columns:1fr; } }
-
-    /* Scroll top */
-    .scroll-top { position:fixed; bottom:2rem; right:2rem; width:44px; height:44px; border-radius:var(--radius-md); background:var(--text); color:#fff; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:1rem; box-shadow:var(--shadow-md); opacity:0; visibility:hidden; transition:all var(--transition); z-index:900; }
-    .scroll-top.visible { opacity:1; visibility:visible; }
-    .scroll-top:hover { background:var(--mint-dark); transform:translateY(-2px); }
-
-    /* WhatsApp float */
-    .whatsapp-float { position:fixed; bottom:5rem; right:2rem; width:52px; height:52px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; box-shadow:0 4px 20px rgba(37,211,102,.4); z-index:899; transition:all var(--transition); text-decoration:none; }
-    .whatsapp-float:hover { background:#1EBE5E; transform:scale(1.08); box-shadow:0 6px 28px rgba(37,211,102,.55); }
-
-    .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
-    .fade-in.visible { opacity:1; transform:translateY(0); }
-
-    /* Highlight row */
-    .compare-table tr.highlight-row td { background:rgba(134,239,172,.06); font-weight:700; color:var(--text); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte Mensal — Sartor Digital | Manutenção e Evolução Contínua</title>
+  <meta name="description" content="Planos de suporte mensal sem fidelidade. Monitoramento 24/7, backups diários, atualizações de segurança e evolução contínua do seu produto digital.">
+  <link rel="canonical" href="https://sartordigital.online/suporte.html">
+  <meta property="og:title" content="Suporte Mensal — Sartor Digital">
+  <meta property="og:description" content="Planos flexíveis de suporte mensal. Monitoramento 24/7, backups, segurança e evolução contínua. Sem fidelidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sartordigital.online/suporte.html">
+  <meta property="og:image" content="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png">
+  <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+  :root{--bg:#F7F8FA;--bg-2:#FFFFFF;--bg-3:#EFF1F5;--border:rgba(0,0,0,0.08);--border-hi:rgba(5,150,105,0.4);--green:#059669;--green-dim:rgba(5,150,105,0.10);--violet:#7C3AED;--violet-dim:rgba(124,58,237,0.10);--blue:#0284C7;--blue-dim:rgba(2,132,199,0.10);--text:#0A0A14;--text-2:#4B5563;--text-3:#9CA3AF;--shadow-sm:0 1px 3px rgba(0,0,0,0.08);--shadow-md:0 4px 16px rgba(0,0,0,0.08);--shadow-lg:0 12px 40px rgba(0,0,0,0.10);--shadow-green:0 8px 32px rgba(5,150,105,0.25);--radius-sm:8px;--radius:14px;--radius-lg:20px;--radius-xl:28px;--font-head:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--ease:cubic-bezier(0.4,0,0.2,1)}
+  [data-theme="dark"]{--bg:#030308;--bg-2:#0A0A18;--bg-3:#10101F;--border:rgba(255,255,255,0.07);--border-hi:rgba(0,255,135,0.35);--green:#00FF87;--green-dim:rgba(0,255,135,0.12);--violet:#A78BFA;--violet-dim:rgba(167,139,250,0.12);--blue:#38BDF8;--blue-dim:rgba(56,189,248,0.10);--text:#F1F5F9;--text-2:#94A3B8;--text-3:#475569;--shadow-sm:0 1px 3px rgba(0,0,0,0.4);--shadow-md:0 4px 16px rgba(0,0,0,0.5);--shadow-lg:0 12px 40px rgba(0,0,0,0.6);--shadow-green:0 8px 32px rgba(0,255,135,0.20)}
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  a{text-decoration:none;color:inherit}img{max-width:100%}
+  .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.6;transition:opacity .3s}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+  .scroll-bar{position:fixed;top:0;left:0;right:0;height:4px;z-index:9999}
+  .scroll-fill{height:100%;width:0%;background:var(--green);box-shadow:0 0 8px var(--green);transition:width .1s linear}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:all .3s}
+  .nav.scrolled{background:var(--bg-2);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1200px;margin:0 auto;padding:0 24px}
+  .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1rem;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+  .nav-logo img{width:30px;height:30px;border-radius:8px}
+  .logo-dot{color:var(--green)}
+  .nav-links{display:flex;align-items:center;gap:4px}
+  .nav-links a{font-size:.875rem;font-weight:500;color:var(--text-2);padding:6px 14px;border-radius:100px;transition:all .2s}
+  .nav-links a:hover{color:var(--text);background:var(--bg-3)}
+  .nav-links a.active{color:var(--green);background:var(--green-dim)}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .theme-toggle{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-sm);width:36px;height:36px;cursor:pointer;color:var(--text-2);transition:all .2s;display:flex;align-items:center;justify-content:center}
+  .theme-toggle:hover{border-color:var(--border-hi);color:var(--green)}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#000;padding:8px 20px;border-radius:100px;font-weight:700;font-size:.8125rem;transition:all .2s;font-family:var(--font-body)}
+  .nav-cta:hover{opacity:.85;transform:translateY(-1px)}
+  .mob-toggle{display:none;background:var(--bg-2);border:1px solid var(--border);width:36px;height:36px;border-radius:var(--radius-sm);cursor:pointer;color:var(--text);font-size:.875rem;align-items:center;justify-content:center}
+  .nav-open .nav-links{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--border);padding:8px 24px;z-index:100;box-shadow:var(--shadow-md)}
+  .nav-open .nav-links a{padding:12px 8px;border-bottom:1px solid var(--border);font-size:.95rem;color:var(--text)}
+  .nav-open .nav-links a:last-child{border-bottom:none}
+  .section{padding:100px 0;position:relative;z-index:1}
+  .sec-divider{border:none;border-top:1px solid var(--border);margin:0}
+  .section-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:.72rem;font-weight:500;color:var(--green);background:var(--green-dim);border:1px solid rgba(5,150,105,.2);border-radius:100px;padding:4px 14px;margin-bottom:20px;letter-spacing:.06em}
+  [data-theme="dark"] .section-tag{border-color:rgba(0,255,135,.18)}
+  .section-title{font-family:var(--font-head);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;letter-spacing:-.04em;line-height:1.1;color:var(--text);margin-bottom:16px}
+  .section-sub{font-size:1rem;color:var(--text-2);line-height:1.7;max-width:600px}
+  .section-head{margin-bottom:60px}.section-head.center{text-align:center}.section-head.center .section-sub{margin:0 auto}
+  .g-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);transition:all .3s var(--ease);position:relative;overflow:hidden}
+  [data-theme="dark"] .g-card{background:rgba(255,255,255,0.03);box-shadow:none}
+  .g-card:hover{border-color:var(--border-hi);box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+  .page-hero{padding:160px 0 80px;text-align:center;position:relative;z-index:1}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-dim);border:1px solid rgba(5,150,105,.2);border-radius:100px;padding:6px 16px;font-size:.75rem;font-weight:600;color:var(--green);letter-spacing:.04em;margin-bottom:24px;font-family:var(--font-mono)}
+  [data-theme="dark"] .hero-badge{border-color:rgba(0,255,135,.18)}
+  .page-hero h1{font-family:var(--font-head);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;letter-spacing:-.04em;line-height:1.1;color:var(--text);margin-bottom:20px}
+  .page-hero h1 span{color:var(--green)}
+  .page-hero p{font-size:1.1rem;color:var(--text-2);max-width:580px;margin:0 auto 36px;line-height:1.7}
+  .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#000;padding:13px 28px;border-radius:100px;font-weight:700;font-size:.95rem;transition:all .2s}
+  .btn-wa:hover{background:#1EBE5E;transform:translateY(-1px)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);border:1px solid var(--border);padding:13px 28px;border-radius:100px;font-weight:600;font-size:.9rem;transition:all .2s}
+  .btn-ghost:hover{border-color:var(--border-hi);background:var(--bg-3)}
+  .btn-green{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#000;padding:13px 28px;border-radius:100px;font-weight:700;font-size:.95rem;transition:all .2s}
+  .btn-green:hover{opacity:.85;transform:translateY(-1px)}
+  /* Trust bar */
+  .trust-bar{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:40px 0 0}
+  .trust-item{display:flex;align-items:center;gap:8px;background:var(--bg-2);border:1px solid var(--border);border-radius:100px;padding:8px 16px;font-size:.8125rem;color:var(--text-2);font-weight:500}
+  .trust-item i{color:var(--green);font-size:.875rem}
+  /* Plans */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .plan-card{padding:36px 32px}
+  .plan-card.featured{border-color:var(--green);box-shadow:var(--shadow-green)}
+  [data-theme="dark"] .plan-card.featured{box-shadow:var(--shadow-green)}
+  .plan-badge{display:inline-block;background:var(--green);color:#000;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:16px;font-family:var(--font-mono);letter-spacing:.04em}
+  .plan-name{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:8px}
+  .plan-price{font-family:var(--font-head);font-size:2.5rem;font-weight:700;color:var(--text);letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+  .plan-price sup{font-size:1rem;font-weight:600;vertical-align:super;margin-right:2px}
+  .plan-price span{font-size:.875rem;font-weight:400;color:var(--text-3)}
+  .plan-desc{font-size:.875rem;color:var(--text-2);margin-bottom:28px;line-height:1.6}
+  .plan-features{list-style:none;margin-bottom:32px;display:flex;flex-direction:column;gap:10px}
+  .plan-features li{display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--text-2)}
+  .plan-features li i{color:var(--green);flex-shrink:0;margin-top:2px;font-size:.8rem}
+  .plan-features li.off{color:var(--text-3)}
+  .plan-features li.off i{color:var(--text-3)}
+  /* Comparison table */
+  .compare-wrap{overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border);background:var(--bg-2)}
+  [data-theme="dark"] .compare-wrap{background:rgba(255,255,255,0.03)}
+  .compare-table{width:100%;border-collapse:collapse}
+  .compare-table th{font-family:var(--font-head);font-size:.875rem;font-weight:700;padding:20px 24px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2)}
+  .compare-table th:first-child{text-align:left;color:var(--text)}
+  .compare-table th.featured-col{color:var(--green)}
+  .compare-table td{padding:16px 24px;text-align:center;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-2)}
+  .compare-table td:first-child{text-align:left;color:var(--text);font-weight:500}
+  .compare-table tr:last-child td{border-bottom:none}
+  .compare-table .check{color:var(--green);font-size:1rem}
+  .compare-table .cross{color:var(--text-3);font-size:.875rem}
+  .compare-table .featured-col{background:var(--green-dim)}
+  /* FAQ */
+  .faq-list{max-width:720px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--border)}
+  .faq-question{display:flex;align-items:center;justify-content:space-between;width:100%;padding:20px 0;background:none;border:none;cursor:pointer;font-family:var(--font-head);font-size:1rem;font-weight:600;color:var(--text);text-align:left;transition:color .2s;gap:16px}
+  .faq-question:hover{color:var(--green)}
+  .faq-chevron{font-size:.75rem;color:var(--text-3);transition:transform .25s;flex-shrink:0}
+  .faq-item.open .faq-chevron{transform:rotate(180deg)}
+  .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq-answer-inner{padding-bottom:20px;font-size:.925rem;color:var(--text-2);line-height:1.7}
+  .faq-item.open .faq-answer{max-height:300px}
+  /* CTA */
+  .cta-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-xl);padding:72px 56px;text-align:center;position:relative;overflow:hidden}
+  .cta-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--green-dim),transparent 60%,var(--violet-dim));pointer-events:none;opacity:.5}
+  .cta-card h2{font-family:var(--font-head);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-.03em;margin-bottom:16px;position:relative;z-index:1}
+  .cta-card p{font-size:1rem;color:var(--text-2);margin-bottom:36px;line-height:1.6;position:relative;z-index:1}
+  .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+  /* Footer */
+  .footer{background:var(--bg-2);border-top:1px solid var(--border);padding:60px 0 32px}
+  .footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+  .footer-logo{display:flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:700;font-size:.9rem;color:var(--text)}
+  .footer-logo img{width:28px;height:28px;border-radius:6px}
+  .footer-links{display:flex;gap:20px}
+  .footer-links a{font-size:.875rem;color:var(--text-2);transition:color .2s}
+  .footer-links a:hover{color:var(--green)}
+  .footer-socials{display:flex;gap:10px}
+  .f-social{width:36px;height:36px;border-radius:var(--radius-sm);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-2);transition:all .2s;font-size:.875rem}
+  .f-social:hover{border-color:var(--border-hi);color:var(--green)}
+  .footer-copy{font-size:.75rem;color:var(--text-3)}
+  /* WA float */
+  .wa-float{position:fixed;bottom:28px;right:28px;z-index:100;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.5);cursor:pointer;transition:all .2s;animation:floatWA 3s ease-in-out infinite}
+  .wa-float:hover{background:#1EBE5E;transform:scale(1.1);animation:none}
+  @keyframes floatWA{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+  @media(max-width:1024px){.plans-grid{grid-template-columns:1fr}}
+  @media(max-width:768px){.nav-links{display:none}.mob-toggle{display:flex}.nav-cta{display:none}.footer-inner{flex-direction:column;text-align:center}.cta-card{padding:48px 24px}.page-hero{padding:120px 0 60px}.plan-card{padding:24px}}
+  @media(max-width:480px){.page-hero h1{font-size:2rem}}
+  </style>
 </head>
 <body>
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">
-                    <img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">
-                    Sartor Digital
-                </a>
-                <nav class="nav-links" id="navLinks">
-                    <a href="index.html">Início</a>
-                    <a href="index.html#sobre">Sobre</a>
-                    <a href="servicos.html">Serviços</a>
-                    <a href="index.html#portfolio">Portfólio</a>
-                    <a href="suporte.html" class="active">Suporte</a>
-                    <a href="index.html#contato">Contato</a>
-                </nav>
-                <div class="header-actions">
-                    <button class="dark-toggle" id="darkToggle" aria-label="Alternar tema"><i class="fas fa-moon"></i></button>
-                    <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20contratar%20um%20plano%20de%20suporte%20mensal." target="_blank" class="btn-nav-cta">
-                        <i class="fab fa-whatsapp"></i> Contratar Agora
-                    </a>
-                    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-dot"></div>
-        <div class="container">
-            <span class="badge badge-mint fade-in"><i class="fas fa-shield-halved"></i> Suporte Mensal</span>
-            <h1 class="fade-in" style="margin-top:1rem;">Seu site sempre <span class="hl">no ar e evoluindo</span></h1>
-            <p class="fade-in">Planos de manutenção, segurança e evolução contínua para sites e sistemas da Sartor Digital. Quem construiu conhece o projeto de dentro — e cuida melhor.</p>
-            <div class="hero-btns fade-in">
-                <a href="#planos" class="btn btn-primary"><i class="fas fa-arrow-down"></i> Ver Planos</a>
-                <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20planos%20de%20suporte%20mensal." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Tirar Dúvidas</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust bar -->
-    <div class="trust-bar">
-        <div class="container">
-            <div class="trust-items">
-                <div class="trust-item"><i class="fas fa-lock"></i> Segurança proativa</div>
-                <div class="trust-item"><i class="fas fa-database"></i> Backups diários automáticos</div>
-                <div class="trust-item"><i class="fas fa-eye"></i> Monitoramento 24/7</div>
-                <div class="trust-item"><i class="fas fa-headset"></i> Suporte direto via WhatsApp</div>
-                <div class="trust-item"><i class="fas fa-file-contract"></i> Contrato mensal sem fidelidade</div>
-            </div>
-        </div>
+<div class="bg-grid"></div>
+<div class="scroll-bar"><div class="scroll-fill" id="scrollFill"></div></div>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">Sartor Digital<span class="logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="index.html#portfolio">Portfólio</a>
+      <a href="index.html#processo">Processo</a>
+      <a href="suporte.html" class="active">Suporte</a>
+      <a href="index.html#contato">Contato</a>
     </div>
-
-    <!-- Planos -->
-    <section style="background:var(--bg);" id="planos">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint">Planos</span>
-                <h2>Escolha o Suporte Certo</h2>
-                <p>Sem fidelidade. Cancele quando quiser. Valores mensais, cobrados via PIX, boleto ou cartão.</p>
-            </div>
-            <div class="plans-grid">
-
-                <!-- Essencial -->
-                <div class="plan-card fade-in">
-                    <div class="plan-icon"><i class="fas fa-seedling"></i></div>
-                    <div class="plan-name">Essencial</div>
-                    <div class="plan-desc">Para sites simples e landing pages. O básico bem feito, sem surpresas.</div>
-                    <div class="plan-price">
-                        <div class="price-val">R$297<span>/mês</span></div>
-                        <div class="price-period">Sem fidelidade · Cancele quando quiser</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check-circle"></i> Até 2h de ajustes mensais</li>
-                        <li><i class="fas fa-check-circle"></i> Backups automáticos diários</li>
-                        <li><i class="fas fa-check-circle"></i> Atualizações de segurança</li>
-                        <li><i class="fas fa-check-circle"></i> Monitoramento de uptime 24/7</li>
-                        <li><i class="fas fa-check-circle"></i> Resposta em até 48h úteis</li>
-                        <li><i class="fas fa-check-circle"></i> Certificado SSL sempre ativo</li>
-                        <li class="muted"><i class="fas fa-times-circle"></i> Relatório mensal</li>
-                        <li class="muted"><i class="fas fa-times-circle"></i> Suporte via WhatsApp</li>
-                        <li class="muted"><i class="fas fa-times-circle"></i> Novas funcionalidades</li>
-                    </ul>
-                    <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20contratar%20o%20Plano%20Essencial%20de%20suporte%20(R%24297%2Fmês)." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
-                        <i class="fab fa-whatsapp"></i> Contratar Essencial
-                    </a>
-                </div>
-
-                <!-- Profissional -->
-                <div class="plan-card featured fade-in">
-                    <div class="plan-badge-popular">Mais contratado</div>
-                    <div class="plan-icon" style="background:rgba(74,222,128,0.2);"><i class="fas fa-rocket" style="color:var(--mint-dark);"></i></div>
-                    <div class="plan-name">Profissional</div>
-                    <div class="plan-desc">Para sites institucionais e sistemas em produção. Evolução contínua com quem conhece o código.</div>
-                    <div class="plan-price">
-                        <div class="price-val">R$597<span>/mês</span></div>
-                        <div class="price-period">Sem fidelidade · Cancele quando quiser</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check-circle"></i> Até 5h de ajustes e melhorias</li>
-                        <li><i class="fas fa-check-circle"></i> Backups automáticos diários</li>
-                        <li><i class="fas fa-check-circle"></i> Atualizações de segurança</li>
-                        <li><i class="fas fa-check-circle"></i> Monitoramento de uptime 24/7</li>
-                        <li><i class="fas fa-check-circle"></i> Resposta em até 24h úteis</li>
-                        <li><i class="fas fa-check-circle"></i> Certificado SSL sempre ativo</li>
-                        <li><i class="fas fa-check-circle"></i> Relatório mensal de performance</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte direto via WhatsApp</li>
-                        <li class="muted"><i class="fas fa-times-circle"></i> Novas funcionalidades</li>
-                    </ul>
-                    <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20contratar%20o%20Plano%20Profissional%20de%20suporte%20(R%24597%2Fmês)." target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">
-                        <i class="fab fa-whatsapp"></i> Contratar Profissional
-                    </a>
-                </div>
-
-                <!-- Avançado -->
-                <div class="plan-card fade-in">
-                    <div class="plan-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="plan-name">Avançado</div>
-                    <div class="plan-desc">Para sistemas complexos, SaaS e plataformas que precisam de evolução constante.</div>
-                    <div class="plan-price">
-                        <div class="price-val">R$1.197<span>/mês</span></div>
-                        <div class="price-period">Sem fidelidade · Cancele quando quiser</div>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check-circle"></i> Até 12h de desenvolvimento mensal</li>
-                        <li><i class="fas fa-check-circle"></i> Backups automáticos diários</li>
-                        <li><i class="fas fa-check-circle"></i> Atualizações de segurança</li>
-                        <li><i class="fas fa-check-circle"></i> Monitoramento de uptime 24/7</li>
-                        <li><i class="fas fa-check-circle"></i> Resposta crítica em até 4h</li>
-                        <li><i class="fas fa-check-circle"></i> Certificado SSL sempre ativo</li>
-                        <li><i class="fas fa-check-circle"></i> Relatório mensal detalhado</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte direto via WhatsApp</li>
-                        <li><i class="fas fa-check-circle"></i> Novas funcionalidades incluídas</li>
-                    </ul>
-                    <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20contratar%20o%20Plano%20Avançado%20de%20suporte%20(R%241.197%2Fmês)." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
-                        <i class="fab fa-whatsapp"></i> Contratar Avançado
-                    </a>
-                </div>
-            </div>
-
-            <!-- Nota -->
-            <p style="text-align:center;color:var(--text-subtle);font-size:.85rem;margin-top:2rem;">
-                <i class="fas fa-info-circle"></i> Horas não utilizadas no mês não acumulam. Necessidade maior? Basta escalar o plano a qualquer momento.
-            </p>
-        </div>
-    </section>
-
-    <!-- Comparativo -->
-    <section style="background:var(--bg-white);">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint">Comparativo</span>
-                <h2>O que está incluído em cada plano</h2>
-            </div>
-            <div class="compare-wrap fade-in">
-                <table class="compare-table">
-                    <thead>
-                        <tr>
-                            <th style="width:40%">Recurso</th>
-                            <th>Essencial</th>
-                            <th style="color:var(--mint-dark);">Profissional ⭐</th>
-                            <th>Avançado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="highlight-row">
-                            <td>Horas de ajustes / mês</td>
-                            <td>2h</td>
-                            <td>5h</td>
-                            <td>12h</td>
-                        </tr>
-                        <tr>
-                            <td>Backups automáticos diários</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Atualizações de segurança</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Monitoramento de uptime 24/7</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>SSL sempre ativo</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Suporte via WhatsApp</td>
-                            <td><i class="fas fa-minus dash"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Relatório mensal de performance</td>
-                            <td><i class="fas fa-minus dash"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Novas funcionalidades</td>
-                            <td><i class="fas fa-minus dash"></i></td>
-                            <td><i class="fas fa-minus dash"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>Tempo de resposta (críticos)</td>
-                            <td>48h</td>
-                            <td>24h</td>
-                            <td>4h</td>
-                        </tr>
-                        <tr>
-                            <td>Sem fidelidade</td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                            <td><i class="fas fa-check check"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Por que contratar -->
-    <section style="background:var(--bg-muted);">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint">Por que vale</span>
-                <h2>Quem fez sabe como funciona</h2>
-                <p>Qualquer agência pode fazer suporte. Mas só quem construiu seu projeto conhece cada decisão técnica, cada integração e cada detalhe do código.</p>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;" class="fade-in">
-                <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center;">
-                    <div style="width:48px;height:48px;border-radius:12px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.2rem;color:var(--mint-dark);"><i class="fas fa-bolt"></i></div>
-                    <h4 style="font-family:var(--font-heading);font-weight:700;margin-bottom:.5rem;">Resolução mais rápida</h4>
-                    <p style="font-size:.875rem;color:var(--text-muted);line-height:1.6;">Zero tempo perdido entendendo o projeto. Já conhecemos o código, a infraestrutura e as integrações.</p>
-                </div>
-                <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center;">
-                    <div style="width:48px;height:48px;border-radius:12px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.2rem;color:var(--mint-dark);"><i class="fas fa-shield-halved"></i></div>
-                    <h4 style="font-family:var(--font-heading);font-weight:700;margin-bottom:.5rem;">Segurança proativa</h4>
-                    <p style="font-size:.875rem;color:var(--text-muted);line-height:1.6;">Atualizações antes de virar problema. Monitoramos vulnerabilidades antes que afetem seu negócio.</p>
-                </div>
-                <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center;">
-                    <div style="width:48px;height:48px;border-radius:12px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.2rem;color:var(--mint-dark);"><i class="fas fa-arrow-trend-up"></i></div>
-                    <h4 style="font-family:var(--font-heading);font-weight:700;margin-bottom:.5rem;">Evolução planejada</h4>
-                    <p style="font-size:.875rem;color:var(--text-muted);line-height:1.6;">Cada mês com horas disponíveis para melhorias reais — não só apagar incêndio. Seu produto cresce com você.</p>
-                </div>
-                <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center;">
-                    <div style="width:48px;height:48px;border-radius:12px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.2rem;color:var(--mint-dark);"><i class="fas fa-handshake"></i></div>
-                    <h4 style="font-family:var(--font-heading);font-weight:700;margin-bottom:.5rem;">Sem burocracia</h4>
-                    <p style="font-size:.875rem;color:var(--text-muted);line-height:1.6;">Sem ticket, sem fila, sem 3 atendentes antes de chegar no técnico. Direto no WhatsApp com quem resolve.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section style="background:var(--bg-white);">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint">Dúvidas</span>
-                <h2>Perguntas Frequentes</h2>
-            </div>
-            <div class="faq-list fade-in">
-                <div class="faq-item">
-                    <button class="faq-question">Preciso ter o projeto construído pela Sartor Digital? <i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Os planos são focados em projetos que desenvolvemos — assim garantimos qualidade e velocidade no suporte. Para projetos externos, entre em contato para avaliarmos a viabilidade após uma auditoria técnica.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que acontece se eu usar menos que as horas do plano? <i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">As horas não utilizadas não acumulam para o mês seguinte. Se você costuma usar menos, o plano Essencial pode ser mais adequado. Se precisar de mais horas em um mês específico, cobramos a diferença separadamente ou fazemos upgrade pontual.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Posso cancelar a qualquer momento? <i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Sim. Não há fidelidade nem multa de cancelamento. Basta avisar com 15 dias de antecedência antes da próxima cobrança.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que conta como "hora de ajuste"? <i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Qualquer alteração no projeto: atualizar textos, trocar imagens, ajustar layout, corrigir bugs, fazer pequenas integrações. Grandes funcionalidades novas são orçadas separadamente.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Como funciona o monitoramento 24/7? <i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Usamos ferramentas automatizadas que verificam a disponibilidade do seu site a cada 5 minutos. Se cair, somos avisados automaticamente e iniciamos a correção — você recebe um aviso quando voltar ao ar.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Quais são as formas de pagamento? <i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">PIX, boleto bancário ou cartão de crédito (até 3x sem juros). A cobrança é feita mensalmente, sempre no mesmo dia do mês.</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA final -->
-    <div class="cta-strip">
-        <div class="container">
-            <div class="cta-inner">
-                <h3>Pronto para manter seu projeto no ar?</h3>
-                <p>Escolha um plano e fale com a gente agora mesmo. Ativação em até 24h.</p>
-                <div class="cta-btns">
-                    <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20contratar%20um%20plano%20de%20suporte%20mensal%20para%20meu%20projeto." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Contratar via WhatsApp</a>
-                    <a href="#planos" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.2);"><i class="fas fa-list"></i> Ver Planos</a>
-                </div>
-            </div>
-        </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle"><i id="themeIcon" class="fas fa-moon"></i></button>
+      <a href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Quero%20contratar%20um%20plano%20de%20suporte." target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Assinar Plano</a>
+      <button class="mob-toggle" id="mobToggle"><i class="fas fa-bars"></i></button>
     </div>
+  </div>
+</nav>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo" style="color:#fff"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">Sartor Digital</a>
-                    <p>Transformando ideias em soluções digitais inovadoras com foco em IA e automação.</p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/sartordigital" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5554993031264" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/giovannesartor/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Serviços</h4>
-                    <a href="servicos.html">Todos os Serviços</a>
-                    <a href="servicos.html">Desenvolvimento Full Stack</a>
-                    <a href="servicos.html">Captação de Leads</a>
-                    <a href="servicos.html">Integração com IA</a>
-                    <a href="suporte.html">Suporte Mensal</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <a href="index.html">Início</a>
-                    <a href="index.html#sobre">Sobre</a>
-                    <a href="index.html#portfolio">Portfólio</a>
-                    <a href="index.html#contato">Contato</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <a href="https://wa.me/5554993031264">+55 54 99303-1264</a>
-                    <a href="mailto:contato@sartordigital.online">contato@sartordigital.online</a>
-                    <a href="https://www.instagram.com/sartordigital">@sartordigital</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>&copy; 2026 sartordigital.online — Todos os direitos reservados.</span>
-                <span style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.35);font-size:.8rem"><i class="fas fa-shield-halved" style="color:#86EFAC"></i> Conforme LGPD</span>
-                <span>Desenvolvido com <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#ff6b6b" stroke="none" style="vertical-align:middle;margin:0 2px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> por Sartor Digital</span>
-            </div>
-        </div>
-    </footer>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-badge fade-in">// suporte mensal</div>
+    <h1 class="fade-in">Seu produto <span>sempre</span><br>funcionando e evoluindo</h1>
+    <p class="fade-in">Monitoramento proativo, segurança, backups e evolução contínua. Planos flexíveis sem fidelidade mínima.</p>
+    <div class="hero-btns fade-in">
+      <a href="#planos" class="btn-wa"><i class="fas fa-arrow-down"></i> Ver Planos</a>
+      <a href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Quero%20contratar%20um%20plano%20de%20suporte%20mensal." target="_blank" class="btn-ghost"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
+    </div>
+    <div class="trust-bar fade-in">
+      <div class="trust-item"><i class="fas fa-shield-alt"></i> Segurança proativa</div>
+      <div class="trust-item"><i class="fas fa-database"></i> Backups diários</div>
+      <div class="trust-item"><i class="fas fa-eye"></i> Monitoramento 24/7</div>
+      <div class="trust-item"><i class="fab fa-whatsapp"></i> Suporte via WhatsApp</div>
+      <div class="trust-item"><i class="fas fa-lock-open"></i> Sem fidelidade</div>
+    </div>
+  </div>
+</section>
 
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
-    <a href="https://wa.me/5554993031264?text=Olá!%20Quero%20contratar%20um%20plano%20de%20suporte%20mensal." class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<hr class="sec-divider">
+<section class="section" id="planos">
+  <div class="wrap">
+    <div class="section-head center fade-in">
+      <div class="section-tag">// planos</div>
+      <h2 class="section-title">Escolha o plano ideal</h2>
+      <p class="section-sub">Todos os planos incluem 90 dias de garantia técnica nos projetos entregues. Cancele quando quiser.</p>
+    </div>
+    <div class="plans-grid">
 
-    <script>
-    (function(){
-        'use strict';
-        const mt=document.getElementById('mobileToggle'),nl=document.getElementById('navLinks');
-        mt.addEventListener('click',()=>{nl.classList.toggle('active');const i=mt.querySelector('i');i.classList.toggle('fa-bars');i.classList.toggle('fa-times')});
-        nl.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{nl.classList.remove('active');const i=mt.querySelector('i');i.classList.add('fa-bars');i.classList.remove('fa-times')}));
-        const sp=document.getElementById('scrollProgress'),sb=document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll',()=>{sp.style.width=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100+'%';sb.classList.toggle('visible',window.scrollY>400)});
-        sb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-        document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-80,behavior:'smooth'})}}));
-        const dt=document.getElementById('darkToggle');
-        if(localStorage.getItem('darkMode')==='true'){document.body.classList.add('dark-mode');dt.querySelector('i').classList.replace('fa-moon','fa-sun')}
-        dt.addEventListener('click',()=>{document.body.classList.toggle('dark-mode');const i=dt.querySelector('i');i.classList.toggle('fa-moon');i.classList.toggle('fa-sun');localStorage.setItem('darkMode',document.body.classList.contains('dark-mode'))});
-        const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
-        document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
-        document.querySelectorAll('.faq-question').forEach(b=>b.addEventListener('click',function(){const item=this.parentElement,was=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));if(!was)item.classList.add('active')}));
-    })();
-    </script>
+      <div class="g-card plan-card fade-in">
+        <div class="plan-name">Essencial</div>
+        <div class="plan-price"><sup>R$</sup>297<span>/mês</span></div>
+        <p class="plan-desc">Ideal para sites institucionais e landing pages que precisam de estabilidade e segurança.</p>
+        <ul class="plan-features">
+          <li><i class="fas fa-check"></i>Monitoramento de uptime</li>
+          <li><i class="fas fa-check"></i>Backups automáticos diários</li>
+          <li><i class="fas fa-check"></i>Atualizações de segurança</li>
+          <li><i class="fas fa-check"></i>2h de ajustes/mês</li>
+          <li><i class="fas fa-check"></i>Relatório mensal básico</li>
+          <li><i class="fas fa-check"></i>Suporte por e-mail (48h)</li>
+          <li class="off"><i class="fas fa-times"></i>Otimização de performance</li>
+          <li class="off"><i class="fas fa-times"></i>Novas funcionalidades</li>
+        </ul>
+        <a href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Essencial%20de%20suporte%20%28R%24297%2Fm%C3%AAs%29." target="_blank" class="btn-ghost" style="width:100%;justify-content:center"><i class="fab fa-whatsapp"></i> Contratar</a>
+      </div>
+
+      <div class="g-card plan-card featured fade-in">
+        <div class="plan-badge">Mais contratado</div>
+        <div class="plan-name">Profissional</div>
+        <div class="plan-price"><sup>R$</sup>597<span>/mês</span></div>
+        <p class="plan-desc">Para sistemas e plataformas que precisam de evolução contínua e suporte ágil.</p>
+        <ul class="plan-features">
+          <li><i class="fas fa-check"></i>Monitoramento 24/7 avançado</li>
+          <li><i class="fas fa-check"></i>Backups automáticos + offsite</li>
+          <li><i class="fas fa-check"></i>Atualizações de segurança</li>
+          <li><i class="fas fa-check"></i>5h de ajustes/mês</li>
+          <li><i class="fas fa-check"></i>Relatório mensal detalhado</li>
+          <li><i class="fas fa-check"></i>Suporte WhatsApp (4h)</li>
+          <li><i class="fas fa-check"></i>Otimização de performance</li>
+          <li class="off"><i class="fas fa-times"></i>Novas funcionalidades</li>
+        </ul>
+        <a href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Profissional%20de%20suporte%20%28R%24597%2Fm%C3%AAs%29." target="_blank" class="btn-green" style="width:100%;justify-content:center"><i class="fab fa-whatsapp"></i> Contratar</a>
+      </div>
+
+      <div class="g-card plan-card fade-in">
+        <div class="plan-name">Avançado</div>
+        <div class="plan-price"><sup>R$</sup>1.197<span>/mês</span></div>
+        <p class="plan-desc">Para produtos digitais em crescimento que precisam de evolução constante e prioridade máxima.</p>
+        <ul class="plan-features">
+          <li><i class="fas fa-check"></i>Monitoramento 24/7 premium</li>
+          <li><i class="fas fa-check"></i>Backups em múltiplas regiões</li>
+          <li><i class="fas fa-check"></i>Atualizações de segurança</li>
+          <li><i class="fas fa-check"></i>12h de ajustes/mês</li>
+          <li><i class="fas fa-check"></i>Relatório mensal completo</li>
+          <li><i class="fas fa-check"></i>Suporte WhatsApp prioritário (1h)</li>
+          <li><i class="fas fa-check"></i>Otimização de performance</li>
+          <li><i class="fas fa-check"></i>Novas funcionalidades incluídas</li>
+        </ul>
+        <a href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Avan%C3%A7ado%20de%20suporte%20%28R%241.197%2Fm%C3%AAs%29." target="_blank" class="btn-ghost" style="width:100%;justify-content:center"><i class="fab fa-whatsapp"></i> Contratar</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="sec-divider">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center fade-in">
+      <div class="section-tag">// comparativo</div>
+      <h2 class="section-title">O que está incluído em cada plano</h2>
+      <p class="section-sub">Veja a comparação completa de recursos para escolher o que melhor se encaixa no seu momento.</p>
+    </div>
+    <div class="compare-wrap fade-in">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="width:40%">Recurso</th>
+            <th>Essencial</th>
+            <th class="featured-col">Profissional</th>
+            <th>Avançado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monitoramento de uptime</td><td><i class="fas fa-check check"></i></td><td class="featured-col"><i class="fas fa-check check"></i></td><td><i class="fas fa-check check"></i></td></tr>
+          <tr><td>Backups automáticos diários</td><td><i class="fas fa-check check"></i></td><td class="featured-col"><i class="fas fa-check check"></i></td><td><i class="fas fa-check check"></i></td></tr>
+          <tr><td>Atualizações de segurança</td><td><i class="fas fa-check check"></i></td><td class="featured-col"><i class="fas fa-check check"></i></td><td><i class="fas fa-check check"></i></td></tr>
+          <tr><td>Horas de ajustes mensais</td><td>2h</td><td class="featured-col">5h</td><td>12h</td></tr>
+          <tr><td>Relatório mensal</td><td>Básico</td><td class="featured-col">Detalhado</td><td>Completo</td></tr>
+          <tr><td>Canal de suporte</td><td>E-mail (48h)</td><td class="featured-col">WhatsApp (4h)</td><td>WhatsApp (1h)</td></tr>
+          <tr><td>Otimização de performance</td><td><i class="fas fa-times cross"></i></td><td class="featured-col"><i class="fas fa-check check"></i></td><td><i class="fas fa-check check"></i></td></tr>
+          <tr><td>Backup offsite</td><td><i class="fas fa-times cross"></i></td><td class="featured-col"><i class="fas fa-check check"></i></td><td><i class="fas fa-check check"></i></td></tr>
+          <tr><td>Novas funcionalidades</td><td><i class="fas fa-times cross"></i></td><td class="featured-col"><i class="fas fa-times cross"></i></td><td><i class="fas fa-check check"></i></td></tr>
+          <tr><td>Fidelidade mínima</td><td>Nenhuma</td><td class="featured-col">Nenhuma</td><td>Nenhuma</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="sec-divider">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center fade-in">
+      <div class="section-tag">// dúvidas</div>
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <p class="section-sub">Tire suas dúvidas sobre os planos de suporte mensal.</p>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item"><button class="faq-question">Como funciona o cancelamento? <i class="fas fa-chevron-down faq-chevron"></i></button><div class="faq-answer"><div class="faq-answer-inner">Sem fidelidade mínima. Você pode cancelar a qualquer momento com aviso de 30 dias. Não há multas ou taxas de cancelamento.</div></div></div>
+      <div class="faq-item"><button class="faq-question">O que são as "horas de ajustes mensais"? <i class="fas fa-chevron-down faq-chevron"></i></button><div class="faq-answer"><div class="faq-answer-inner">São horas reservadas para pequenas melhorias, ajustes de texto, mudanças de layout, correções pontuais e outras demandas rápidas do dia a dia. Horas não utilizadas não acumulam.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Meu produto foi desenvolvido por outra empresa. Posso contratar suporte? <i class="fas fa-chevron-down faq-chevron"></i></button><div class="faq-answer"><div class="faq-answer-inner">Sim, desde que tenhamos acesso ao código-fonte e documentação. Fazemos uma avaliação técnica gratuita antes de iniciar o plano.</div></div></div>
+      <div class="faq-item"><button class="faq-question">O que acontece se eu precisar de mais horas no mês? <i class="fas fa-chevron-down faq-chevron"></i></button><div class="faq-answer"><div class="faq-answer-inner">Horas excedentes são cobradas separadamente com um valor especial para clientes de plano. Você é avisado antes de qualquer custo adicional.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Os backups ficam guardados por quanto tempo? <i class="fas fa-chevron-down faq-chevron"></i></button><div class="faq-answer"><div class="faq-answer-inner">Os backups diários ficam disponíveis por 30 dias. No plano Avançado, mantemos backups mensais por 12 meses em storage offsite.</div></div></div>
+      <div class="faq-item"><button class="faq-question">Qual é o prazo de resposta para problemas críticos? <i class="fas fa-chevron-down faq-chevron"></i></button><div class="faq-answer"><div class="faq-answer-inner">Essencial: 48h. Profissional: 4h. Avançado: 1h. Para incidentes de downtime total, todos os planos têm resposta máxima de 4h para início de investigação.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="sec-divider">
+<section class="section" id="contato">
+  <div class="wrap">
+    <div class="cta-card fade-in">
+      <div class="section-tag" style="display:inline-flex;margin-bottom:24px">// vamos conversar</div>
+      <h2>Proteja e evolua<br>seu produto digital</h2>
+      <p>Dúvidas sobre qual plano escolher? Fale com a gente e encontramos a melhor solução para o seu caso.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/5554993031264?text=Ol%C3%A1%2C%20Giovanne!%20Quero%20contratar%20um%20plano%20de%20suporte%20mensal." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+        <a href="mailto:contato@sartordigital.online" class="btn-ghost"><i class="fas fa-envelope"></i> contato@sartordigital.online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital"><span>Sartor Digital<span style="color:var(--green)">.</span></span></div>
+      <div class="footer-links"><a href="index.html#servicos">Serviços</a><a href="index.html#portfolio">Portfólio</a><a href="index.html#sobre">Sobre</a><a href="index.html#contato">Contato</a></div>
+      <div class="footer-socials"><a class="f-social" href="https://www.instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i></a><a class="f-social" href="https://www.linkedin.com/in/giovannesartor/" target="_blank"><i class="fab fa-linkedin"></i></a><a class="f-social" href="https://wa.me/5554993031264" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+      <p class="footer-copy">&copy; 2026 Sartor Digital. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Quero%20contratar%20um%20plano%20de%20suporte." target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+  window.addEventListener('scroll',()=>{const pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;document.getElementById('scrollFill').style.width=Math.min(pct,100)+'%';document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);});
+  const html=document.documentElement,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon'),saved=localStorage.getItem('sd-theme')||'light';
+  html.setAttribute('data-theme',saved);icon.className=saved==='dark'?'fas fa-sun':'fas fa-moon';
+  btn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);icon.className=next==='dark'?'fas fa-sun':'fas fa-moon';localStorage.setItem('sd-theme',next);});
+  const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*70);});},{threshold:.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const item=b.parentElement,was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open');});});
+  const mobBtn=document.getElementById('mobToggle');const navEl=document.getElementById('nav');mobBtn.addEventListener('click',()=>navEl.classList.toggle('nav-open'));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navEl.classList.remove('nav-open')));
+</script>
 </body>
 </html>
