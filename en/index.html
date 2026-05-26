@@ -1,1514 +1,338 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sartor Digital | Web Development, AI & Digital Transformation Specialists</title>
-    <meta name="description" content="Specialists in web development, artificial intelligence, automation and digital transformation consulting. Complete solutions to boost your business in the digital era.">
-    <meta name="keywords" content="web development, artificial intelligence, automation, digital transformation, corporate websites, custom systems, digital consulting, SEO, digital marketing, chatbots, enterprise AI">
-
-    <link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/index.html">
-    <link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/index.html">
-    <link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://sartordigital.online/index.html">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QG5LQDC5L6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QG5LQDC5L6');
-    </script>
-
-    <meta property="og:title" content="Sartor Digital - Digital Transformation with Artificial Intelligence">
-    <meta property="og:description" content="Complete solutions in web development, AI and automation for companies seeking innovation and results.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sartordigital.online">
-    <meta property="og:image" content="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sartor Digital - AI & Web Specialists">
-    <meta name="twitter:description" content="Transform your business with our web development and artificial intelligence solutions.">
-    <link rel="canonical" href="https://sartordigital.online/en/index.html">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Sartor Digital",
-      "url": "https://sartordigital.online",
-      "logo": "https://i.postimg.cc/25tgbP7P/LOGO-ICO.png",
-      "description": "Specialists in web development, artificial intelligence, automation and digital transformation consulting.",
-      "telephone": "+55-54-99303-1264",
-      "email": "contato@sartordigital.online",
-      "address": { "@type": "PostalAddress", "addressCountry": "BR" },
-      "serviceType": ["Web Development","Artificial Intelligence","Automation","Lead Capture Systems","Corporate Websites"],
-      "offers": { "@type": "Offer", "description": "Custom digital solutions for businesses" },
-      "areaServed": { "@type": "Country", "name": "Brasil" },
-      "sameAs": ["https://www.instagram.com/sartordigital","https://www.linkedin.com/in/giovannesartor/"]
-    }
-    </script>
-
-    <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-    /* ─── Design Tokens ────────────────────────────────────────── */
-    :root {
-        /* Brand */
-        --mint: #86EFAC;
-        --mint-mid: #4ADE80;
-        --mint-dark: #16A34A;
-        --mint-bg: rgba(134,239,172,0.10);
-        --mint-bg-strong: rgba(134,239,172,0.18);
-        --mint-border: rgba(134,239,172,0.30);
-
-        /* Backgrounds */
-        --bg: #F8FAFB;
-        --bg-white: #FFFFFF;
-        --bg-muted: #F1F5F9;
-        --bg-subtle: #FAFAFA;
-
-        /* Text */
-        --text: #0F172A;
-        --text-muted: #64748B;
-        --text-subtle: #94A3B8;
-
-        /* Borders */
-        --border: #E2E8F0;
-        --border-strong: #CBD5E1;
-
-        /* Shadows */
-        --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
-        --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-        --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.04);
-        --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.04);
-        --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.07), 0 8px 10px -6px rgba(0,0,0,0.04);
-        --shadow-glow: 0 0 20px rgba(134,239,172,0.20);
-
-        /* Misc */
-        --radius-sm: 8px;
-        --radius-md: 12px;
-        --radius-lg: 16px;
-        --radius-xl: 24px;
-        --radius-full: 9999px;
-        --font-heading: 'Plus Jakarta Sans', sans-serif;
-        --font-body: 'Inter', sans-serif;
-        --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ─── Dark Mode ─────────────────────────────────────────────── */
-    body.dark-mode {
-        --bg: #0F172A;
-        --bg-white: #1E293B;
-        --bg-muted: #1E293B;
-        --bg-subtle: #0F172A;
-        --text: #F1F5F9;
-        --text-muted: #94A3B8;
-        --text-subtle: #64748B;
-        --border: rgba(255,255,255,0.07);
-        --border-strong: rgba(255,255,255,0.12);
-        --shadow-sm: 0 1px 3px rgba(0,0,0,0.25);
-        --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.30);
-        --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.35);
-    }
-
-    /* ─── Dark Mode Component Overrides ────────────────────────── */
-    body.dark-mode .btn-primary { background: var(--mint); color: #0F172A; }
-    body.dark-mode .btn-primary:hover { background: var(--mint-mid); color: #0F172A; box-shadow: var(--shadow-glow); }
-    body.dark-mode .btn-nav-cta { background: var(--mint); color: #0F172A; }
-    body.dark-mode .btn-nav-cta:hover { background: var(--mint-mid); color: #0F172A; }
-    body.dark-mode .hb-card.dark { background: #0B1120; border-color: rgba(255,255,255,0.08); }
-    body.dark-mode .bento-card.dark-card { background: #0B1120; border-color: rgba(255,255,255,0.08); }
-    body.dark-mode .cta-strip { background: #0B1120; }
-    body.dark-mode .contato-section { background: #0B1120; }
-    body.dark-mode .scroll-top { background: var(--mint); color: #0F172A; }
-    body.dark-mode .scroll-top:hover { background: var(--mint-mid); color: #0F172A; }
-    body.dark-mode .badge-mint { color: var(--mint); }
-    body.dark-mode .stat-value { color: var(--mint); }
-    body.dark-mode .pf-link { color: var(--mint); }
-    body.dark-mode .btn-ghost { color: var(--mint); border-color: rgba(134,239,172,0.35); }
-    body.dark-mode .btn-ghost:hover { background: rgba(134,239,172,0.1); }
-    body.dark-mode .hero-badge { background: rgba(30,41,59,0.9); border-color: rgba(134,239,172,0.3); }
-    body.dark-mode .filter-pill { background: var(--bg-white); }
-    body.dark-mode .filter-pill.active { background: var(--mint); color: #0F172A; border-color: var(--mint); }
-    body.dark-mode .service-icon { background: rgba(134,239,172,0.12); border-color: rgba(134,239,172,0.25); }
-    body.dark-mode .processo-step-badge { background: rgba(134,239,172,0.12); }
-    body.dark-mode .processo-icon { background: rgba(134,239,172,0.1); border-color: rgba(134,239,172,0.2); }
-    body.dark-mode .modal-header { background: linear-gradient(135deg, rgba(134,239,172,0.08), transparent); }
-    body.dark-mode .sd-meta-item strong { color: var(--mint); }
-
-    /* ─── Reset & Base ───────────────────────────────────────────── */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-        font-family: var(--font-body);
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        overflow-x: hidden;
-        -webkit-font-smoothing: antialiased;
-    }
-    a { text-decoration: none; color: inherit; }
-    button { font-family: inherit; }
-    img { max-width: 100%; }
-
-    /* ─── Scroll Progress ─────────────────────────────────────────── */
-    .scroll-progress-bar {
-        position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
-        height: 2.5px; background: transparent;
-    }
-    .scroll-progress-fill {
-        height: 100%; width: 0%; background: var(--mint);
-        transition: width 0.1s linear;
-        box-shadow: 0 0 8px var(--mint);
-    }
-
-    /* ─── Container ──────────────────────────────────────────────── */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-    /* ─── Header ─────────────────────────────────────────────────── */
-    .header {
-        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-        background: transparent;
-        border-bottom: 1px solid transparent;
-        transition: all 0.3s ease;
-    }
-    .header.scrolled {
-        background: rgba(248,250,251,0.92);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom-color: var(--border);
-        box-shadow: var(--shadow-sm);
-    }
-    body.dark-mode .header.scrolled {
-        background: rgba(15,23,42,0.92);
-        border-bottom-color: var(--border);
-    }
-    .header-inner {
-        display: flex; align-items: center; justify-content: space-between;
-        height: 64px;
-    }
-    .logo {
-        display: flex; align-items: center; gap: 10px; font-family: var(--font-heading);
-        font-weight: 800; font-size: 1rem; color: var(--text); letter-spacing: -0.03em;
-    }
-    .logo img { width: 32px; height: 32px; border-radius: 8px; }
-    .logo-mark {
-        width: 32px; height: 32px; border-radius: 8px;
-        background: #000; display: flex; align-items: center; justify-content: center;
-        flex-shrink: 0;
-    }
-    .logo-mark img { width: 100%; height: 100%; border-radius: 8px; object-fit: cover; }
-    .nav-links { display: flex; align-items: center; gap: 2px; }
-    .nav-links a {
-        font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
-        padding: 6px 14px; border-radius: var(--radius-sm);
-        transition: color var(--transition), background var(--transition);
-    }
-    .nav-links a:hover { color: var(--text); background: var(--bg-muted); }
-    .header-actions { display: flex; align-items: center; gap: 8px; }
-    .lang-switcher {
-        display: flex; align-items: center; gap: 2px;
-        background: var(--bg-muted); border-radius: var(--radius-full);
-        padding: 3px; border: 1px solid var(--border);
-    }
-    .lang-btn {
-        background: none; border: none; cursor: pointer;
-        font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
-        padding: 4px 10px; border-radius: var(--radius-full);
-        transition: all var(--transition);
-    }
-    .lang-btn.active { background: var(--bg-white); color: var(--text); box-shadow: var(--shadow-xs); }
-    .dark-toggle {
-        width: 36px; height: 36px; border: 1px solid var(--border);
-        background: var(--bg-white); border-radius: var(--radius-md);
-        cursor: pointer; color: var(--text-muted);
-        display: flex; align-items: center; justify-content: center;
-        font-size: 0.875rem; transition: all var(--transition);
-    }
-    .dark-toggle:hover { border-color: var(--mint); color: var(--mint-dark); }
-    .btn-nav-cta {
-        display: inline-flex; align-items: center; gap: 8px;
-        background: var(--text); color: #fff;
-        border: none; cursor: pointer;
-        font-family: var(--font-body); font-size: 0.8125rem; font-weight: 700;
-        padding: 8px 18px; border-radius: var(--radius-md);
-        transition: all var(--transition); text-decoration: none;
-        white-space: nowrap;
-    }
-    .btn-nav-cta:hover { background: var(--mint-dark); transform: translateY(-1px); }
-    .mobile-toggle {
-        display: none; background: none; border: 1px solid var(--border);
-        width: 36px; height: 36px; border-radius: var(--radius-md);
-        cursor: pointer; color: var(--text); font-size: 0.875rem;
-        align-items: center; justify-content: center;
-    }
-
-    /* ─── Buttons ─────────────────────────────────────────────────── */
-    .btn {
-        display: inline-flex; align-items: center; gap: 8px;
-        font-family: var(--font-body); font-weight: 600; font-size: 0.9375rem;
-        padding: 12px 24px; border-radius: var(--radius-md);
-        cursor: pointer; border: none; transition: all var(--transition);
-        text-decoration: none; white-space: nowrap;
-    }
-    .btn-primary {
-        background: var(--text); color: #fff;
-    }
-    .btn-primary:hover { background: var(--mint-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-    .btn-secondary {
-        background: var(--bg-white); color: var(--text);
-        border: 1px solid var(--border);
-    }
-    .btn-secondary:hover { border-color: var(--mint); background: var(--mint-bg); transform: translateY(-1px); }
-    .btn-mint {
-        background: var(--mint); color: #0F172A;
-    }
-    .btn-mint:hover { background: var(--mint-mid); transform: translateY(-1px); box-shadow: var(--shadow-glow); }
-    .btn-whatsapp {
-        background: #25D366; color: #fff;
-    }
-    .btn-whatsapp:hover { background: #1EBE5E; transform: translateY(-1px); }
-    .btn-ghost {
-        background: transparent; color: var(--mint-dark);
-        border: 1px solid var(--mint-border); font-size: 0.875rem;
-        padding: 8px 16px;
-    }
-    .btn-ghost:hover { background: var(--mint-bg); }
-
-    /* ─── Badge ───────────────────────────────────────────────────── */
-    .badge {
-        display: inline-flex; align-items: center; gap: 6px;
-        padding: 5px 12px; border-radius: var(--radius-full);
-        font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    }
-    .badge-mint {
-        background: var(--mint-bg); color: var(--mint-dark);
-        border: 1px solid var(--mint-border);
-    }
-    .badge-dot::before {
-        content: ''; width: 6px; height: 6px; border-radius: 50%;
-        background: var(--mint); display: inline-block;
-        box-shadow: 0 0 6px var(--mint);
-    }
-
-    /* ─── Section Header ─────────────────────────────────────────── */
-    .section-header { margin-bottom: 48px; }
-    .section-header.centered { text-align: center; }
-    .section-header.centered p { margin: 0 auto; }
-    .section-header .badge { margin-bottom: 14px; }
-    .section-header h2 {
-        font-family: var(--font-heading); font-size: clamp(1.75rem, 3vw, 2.5rem);
-        font-weight: 900; letter-spacing: -0.04em; line-height: 1.1;
-        color: var(--text); margin-bottom: 12px;
-    }
-    .section-header p {
-        font-size: 1rem; color: var(--text-muted); line-height: 1.65;
-        max-width: 540px;
-    }
-
-    /* ─── Bento Card ──────────────────────────────────────────────── */
-    .bento-card {
-        background: var(--bg-white);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-sm);
-        transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
-        overflow: hidden;
-    }
-    .bento-card:hover {
-        box-shadow: var(--shadow-lg);
-        border-color: var(--border-strong);
-        transform: translateY(-2px);
-    }
-    .bento-card.mint-card {
-        background: var(--mint); border-color: var(--mint);
-    }
-    .bento-card.dark-card {
-        background: var(--text); border-color: var(--text);
-        color: #fff;
-    }
-
-    /* ─── Hero ───────────────────────────────────────────────────── */
-    .hero {
-        padding: 120px 0 64px;
-        background: var(--bg);
-        position: relative;
-        overflow: hidden;
-    }
-    .hero-bg-grid {
-        position: absolute; inset: 0;
-        background-image:
-            linear-gradient(var(--border) 1px, transparent 1px),
-            linear-gradient(90deg, var(--border) 1px, transparent 1px);
-        background-size: 48px 48px;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-    .hero-bg-glow {
-        position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
-        width: 600px; height: 400px;
-        background: radial-gradient(ellipse at center, rgba(134,239,172,0.12) 0%, transparent 70%);
-        pointer-events: none;
-    }
-    .hero-content {
-        position: relative; z-index: 1; text-align: center;
-        max-width: 820px; margin: 0 auto 56px;
-    }
-    .hero-badge-wrap { margin-bottom: 20px; }
-    .hero-badge {
-        display: inline-flex; align-items: center; gap: 8px;
-        background: var(--bg-white); border: 1px solid var(--mint-border);
-        border-radius: var(--radius-full); padding: 6px 16px;
-        font-size: 0.8125rem; font-weight: 600; color: var(--mint-dark);
-        box-shadow: var(--shadow-xs);
-    }
-    .hero-badge .dot {
-        width: 7px; height: 7px; border-radius: 50%;
-        background: var(--mint); flex-shrink: 0;
-        box-shadow: 0 0 6px var(--mint);
-    }
-    .hero h1 {
-        font-family: var(--font-heading);
-        font-size: clamp(2.25rem, 6vw, 4rem);
-        font-weight: 900; letter-spacing: -0.05em; line-height: 1.04;
-        color: var(--text); margin-bottom: 20px;
-    }
-    .hero h1 .highlight {
-        background: linear-gradient(135deg, var(--mint-dark) 0%, var(--mint-mid) 100%);
-        -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .hero-sub {
-        font-size: 1.0625rem; color: var(--text-muted); max-width: 520px;
-        margin: 0 auto 32px; line-height: 1.65;
-    }
-    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    /* ─── Hero Bento Grid ─────────────────────────────────────────── */
-    .hero-bento {
-        position: relative; z-index: 1;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto;
-        gap: 14px;
-        margin-top: 56px;
-    }
-    .hb-card {
-        background: var(--bg-white);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-sm);
-        padding: 28px;
-        transition: all var(--transition);
-        overflow: hidden;
-        position: relative;
-    }
-    .hb-card:hover { box-shadow: var(--shadow-lg); border-color: var(--border-strong); transform: translateY(-2px); }
-    .hb-card.col-2 { grid-column: span 2; }
-    .hb-card.row-2 { grid-row: span 2; }
-    .hb-card.mint { background: var(--mint); border-color: var(--mint); }
-    .hb-card.dark { background: var(--text); border-color: var(--text); color: #fff; }
-    .hb-card.dark:hover { transform: translateY(-2px); box-shadow: var(--shadow-xl); }
-    .hb-card.mint:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
-
-    .hb-label {
-        font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em;
-        text-transform: uppercase; color: var(--text-subtle); margin-bottom: 12px;
-    }
-    .hb-card.mint .hb-label { color: rgba(0,0,0,0.55); }
-    .hb-card.dark .hb-label { color: rgba(255,255,255,0.45); }
-    .hb-number {
-        font-family: var(--font-heading); font-size: 3.5rem;
-        font-weight: 900; letter-spacing: -0.05em; line-height: 1;
-        color: var(--text); margin-bottom: 6px;
-    }
-    .hb-card.mint .hb-number { color: #0F172A; }
-    .hb-card.dark .hb-number { color: #fff; }
-    .hb-sublabel { font-size: 0.8125rem; color: var(--text-muted); }
-    .hb-card.mint .hb-sublabel { color: rgba(0,0,0,0.5); }
-    .hb-card.dark .hb-sublabel { color: rgba(255,255,255,0.55); }
-
-    .hb-title {
-        font-family: var(--font-heading); font-size: 1.25rem;
-        font-weight: 800; letter-spacing: -0.03em; color: var(--text); margin-bottom: 10px;
-    }
-    .hb-card.dark .hb-title { color: #fff; }
-    .hb-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
-    .hb-card.dark .hb-desc { color: rgba(255,255,255,0.6); }
-
-    .hb-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-    .hb-chip {
-        background: var(--bg-muted); color: var(--text-muted);
-        font-size: 0.6875rem; font-weight: 600; padding: 3px 10px;
-        border-radius: var(--radius-full); border: 1px solid var(--border);
-    }
-    .hb-card.dark .hb-chip { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.15); }
-
-    .hb-projects { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
-    .hb-project-item {
-        display: flex; align-items: center; gap: 10px;
-        padding: 8px 10px; border-radius: var(--radius-md);
-        background: var(--bg-muted); border: 1px solid var(--border);
-        font-size: 0.8125rem; transition: all var(--transition);
-    }
-    .hb-project-item:hover { border-color: var(--mint-border); background: var(--mint-bg); }
-    .hb-project-dot {
-        width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-    }
-    .hb-project-name { font-weight: 700; color: var(--text); font-size: 0.8125rem; }
-    .hb-project-tag { color: var(--text-subtle); font-size: 0.75rem; margin-left: auto; }
-    .hb-bg-number {
-        position: absolute; bottom: -20px; right: -10px;
-        font-family: var(--font-heading); font-size: 7rem; font-weight: 900;
-        color: rgba(0,0,0,0.04); line-height: 1; pointer-events: none; user-select: none;
-    }
-    .hb-card.dark .hb-bg-number { color: rgba(255,255,255,0.04); }
-    .hb-card.mint .hb-bg-number { color: rgba(0,0,0,0.06); }
-
-    /* ─── Tech Strip ──────────────────────────────────────────────── */
-    .tech-strip {
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-        background: var(--bg-white);
-        overflow: hidden; padding: 14px 0;
-    }
-    .tech-strip-inner {
-        display: flex; gap: 40px; width: max-content;
-        animation: marquee 28s linear infinite;
-    }
-    .tech-strip-inner:hover { animation-play-state: paused; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .tech-item {
-        display: flex; align-items: center; gap: 8px;
-        font-size: 0.8125rem; font-weight: 600; color: var(--text-muted);
-        white-space: nowrap; padding: 4px 0;
-        transition: color var(--transition);
-    }
-    .tech-item:hover { color: var(--mint-dark); }
-    .tech-item i { font-size: 1rem; color: var(--mint-mid); }
-
-    /* ─── Section Wrapper ─────────────────────────────────────────── */
-    .section { padding: 96px 0; }
-    .section-muted { background: var(--bg-muted); }
-    .section-white { background: var(--bg-white); }
-
-    /* ─── About ───────────────────────────────────────────────────── */
-    .about-grid {
-        display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start;
-    }
-    .about-main-card { padding: 40px; }
-    .about-main-card h3 {
-        font-family: var(--font-heading); font-size: 1.375rem; font-weight: 800;
-        letter-spacing: -0.03em; margin-bottom: 14px; color: var(--text);
-    }
-    .about-main-card p { font-size: 0.9375rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
-    .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
-    .stat-card {
-        background: var(--bg-muted); border: 1px solid var(--border);
-        border-radius: var(--radius-lg); padding: 20px 16px; text-align: center;
-    }
-    .stat-value {
-        font-family: var(--font-heading); font-size: 2rem; font-weight: 900;
-        letter-spacing: -0.04em; color: var(--mint-dark); line-height: 1;
-    }
-    .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
-    .about-featured-card { padding: 0; overflow: hidden; }
-    .about-featured-header { padding: 24px 28px 16px; }
-    .about-featured-header h3 {
-        font-family: var(--font-heading); font-size: 1rem; font-weight: 800;
-        color: var(--text); letter-spacing: -0.02em;
-    }
-    .about-featured-item {
-        display: flex; align-items: center; gap: 14px;
-        padding: 14px 28px; border-bottom: 1px solid var(--border);
-        transition: background var(--transition), padding-left var(--transition);
-        text-decoration: none; color: inherit;
-    }
-    .about-featured-item:last-child { border-bottom: none; }
-    .about-featured-item:hover { background: var(--mint-bg); padding-left: 32px; }
-    .af-icon {
-        width: 36px; height: 36px; border-radius: var(--radius-md);
-        display: flex; align-items: center; justify-content: center;
-        font-size: 0.875rem; flex-shrink: 0;
-    }
-    .af-name { font-weight: 700; font-size: 0.875rem; color: var(--text); }
-    .af-desc { font-size: 0.75rem; color: var(--text-muted); }
-    .af-arrow { color: var(--text-subtle); margin-left: auto; font-size: 0.75rem; transition: transform var(--transition); }
-    .about-featured-item:hover .af-arrow { color: var(--mint-dark); transform: translateX(3px); }
-    .icon-green { background: rgba(134,239,172,0.15); color: var(--mint-dark); }
-    .icon-purple { background: rgba(139,92,246,0.12); color: #7c3aed; }
-    .icon-orange { background: rgba(249,115,22,0.12); color: #ea580c; }
-    .icon-blue { background: rgba(59,130,246,0.12); color: #2563eb; }
-    .icon-cyan { background: rgba(6,182,212,0.12); color: #0891b2; }
-
-    /* ─── Services Bento ──────────────────────────────────────────── */
-    .services-bento {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto;
-        gap: 14px;
-        margin-bottom: 28px;
-    }
-    .service-card {
-        background: var(--bg-white); border: 1px solid var(--border);
-        border-radius: var(--radius-xl); padding: 32px 28px;
-        box-shadow: var(--shadow-sm);
-        transition: all var(--transition); cursor: pointer;
-        display: flex; flex-direction: column;
-    }
-    .service-card:hover { box-shadow: var(--shadow-lg); border-color: var(--mint-border); transform: translateY(-3px); }
-    .service-card.large { grid-column: span 2; }
-    .service-card.tall { grid-row: span 2; }
-    .service-icon {
-        width: 48px; height: 48px; border-radius: var(--radius-md);
-        background: var(--mint-bg); color: var(--mint-dark);
-        display: flex; align-items: center; justify-content: center;
-        font-size: 1.25rem; margin-bottom: 20px;
-        border: 1px solid var(--mint-border);
-        flex-shrink: 0;
-    }
-    .service-card h3 {
-        font-family: var(--font-heading); font-size: 1.0625rem; font-weight: 800;
-        color: var(--text); letter-spacing: -0.02em; margin-bottom: 10px;
-    }
-    .service-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; flex: 1; margin-bottom: 20px; }
-    .services-cta { text-align: center; }
-
-    /* ─── CTA Strip ───────────────────────────────────────────────── */
-    .cta-strip {
-        background: var(--text);
-        padding: 60px 0;
-    }
-    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-    .cta-inner h3 {
-        font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800;
-        letter-spacing: -0.03em; color: #fff; margin-bottom: 6px;
-    }
-    .cta-inner p { font-size: 0.9375rem; color: rgba(255,255,255,0.55); }
-    .cta-btns { display: flex; gap: 10px; flex-wrap: wrap; }
-
-    /* ─── Portfolio ───────────────────────────────────────────────── */
-    .portfolio-filters { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
-    .filter-pill {
-        background: var(--bg-white); color: var(--text-muted);
-        border: 1px solid var(--border); border-radius: var(--radius-full);
-        padding: 6px 18px; font-size: 0.8125rem; font-weight: 600;
-        cursor: pointer; transition: all var(--transition);
-    }
-    .filter-pill:hover { border-color: var(--mint-border); color: var(--mint-dark); background: var(--mint-bg); }
-    .filter-pill.active { background: var(--mint); color: #0F172A; border-color: var(--mint); }
-    .portfolio-grid {
-        display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
-    }
-    .portfolio-card {
-        background: var(--bg-white); border: 1px solid var(--border);
-        border-radius: var(--radius-xl); overflow: hidden;
-        box-shadow: var(--shadow-sm); transition: all var(--transition);
-    }
-    .portfolio-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
-    .portfolio-card.hidden { display: none; }
-    .pf-img {
-        height: 120px; display: flex; align-items: center; justify-content: center;
-        font-size: 2rem; position: relative; overflow: hidden;
-    }
-    .pf-img i { opacity: 0.6; font-size: 2.5rem; color: #fff; position: relative; z-index: 1; }
-    .c-capital { background: linear-gradient(135deg, #1a2a40, #2d4a6b); }
-    .c-services { background: linear-gradient(135deg, #1f2937, #374151); }
-    .c-electric { background: linear-gradient(135deg, #92400e, #d97706); }
-    .c-web3 { background: linear-gradient(135deg, #312e81, #4f46e5); }
-    .c-insurtech { background: linear-gradient(135deg, #065f46, #059669); }
-    .c-fintech { background: linear-gradient(135deg, #16a34a, #86efac); }
-    .c-crypto { background: linear-gradient(135deg, #7c3aed, #c084fc); }
-    .c-agro { background: linear-gradient(135deg, #166534, #4ade80); }
-    .c-martech { background: linear-gradient(135deg, #be185d, #f472b6); }
-    .c-fundflow { background: linear-gradient(135deg, #1e40af, #60a5fa); }
-    .c-linkora { background: linear-gradient(135deg, #6d28d9, #a78bfa); }
-    .c-valuora { background: linear-gradient(135deg, #0f766e, #2dd4bf); }
-    .c-prosorrir { background: linear-gradient(135deg, #0e7490, #22d3ee); }
-    .c-esg { background: linear-gradient(135deg, #047857, #10b981); }
-    .pf-body { padding: 22px; }
-    .pf-tag { font-size: 0.6875rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .pf-body h3 { font-family: var(--font-heading); font-size: 1.0625rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
-    .pf-body p { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 14px; }
-    .pf-techs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
-    .pf-tech { background: var(--bg-muted); color: var(--text-muted); font-size: 0.6875rem; font-weight: 600; padding: 2px 9px; border-radius: var(--radius-full); border: 1px solid var(--border); }
-    .pf-link { font-size: 0.8125rem; font-weight: 700; color: var(--mint-dark); display: inline-flex; align-items: center; gap: 6px; }
-    .pf-link:hover { gap: 9px; }
-
-    /* ─── Process ─────────────────────────────────────────────────── */
-    .processo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .processo-card {
-        background: var(--bg-white); border: 1px solid var(--border);
-        border-radius: var(--radius-xl); padding: 32px 24px;
-        box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
-        transition: all var(--transition);
-    }
-    .processo-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--mint-border); }
-    .processo-num {
-        position: absolute; top: -12px; right: -8px;
-        font-family: var(--font-heading); font-size: 5.5rem; font-weight: 900;
-        color: rgba(0,0,0,0.04); line-height: 1; pointer-events: none; user-select: none;
-    }
-    body.dark-mode .processo-num { color: rgba(255,255,255,0.04); }
-    .processo-step-badge {
-        display: inline-flex; align-items: center; gap: 6px;
-        background: var(--mint-bg); border: 1px solid var(--mint-border);
-        border-radius: var(--radius-full); padding: 4px 12px;
-        font-size: 0.6875rem; font-weight: 800; color: var(--mint-dark);
-        margin-bottom: 16px;
-    }
-    .processo-icon {
-        width: 44px; height: 44px; border-radius: var(--radius-md);
-        background: var(--mint-bg); border: 1px solid var(--mint-border);
-        display: flex; align-items: center; justify-content: center;
-        color: var(--mint-dark); font-size: 1.125rem; margin-bottom: 16px;
-    }
-    .processo-card h4 {
-        font-family: var(--font-heading); font-size: 1.125rem; font-weight: 800;
-        color: var(--text); letter-spacing: -0.02em; margin-bottom: 10px;
-    }
-    .processo-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
-    .processo-badge {
-        display: inline-block; background: var(--bg-muted); border: 1px solid var(--border);
-        color: var(--text-subtle); font-size: 0.75rem; font-weight: 600;
-        padding: 4px 12px; border-radius: var(--radius-full);
-    }
-
-    /* ─── FAQ ─────────────────────────────────────────────────────── */
-    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; }
-    .faq-item {
-        background: var(--bg-white); border: 1px solid var(--border);
-        border-radius: var(--radius-lg); overflow: hidden;
-        box-shadow: var(--shadow-xs); transition: border-color var(--transition);
-    }
-    .faq-item.active { border-color: var(--mint); box-shadow: 0 0 0 3px var(--mint-bg); }
-    .faq-question {
-        width: 100%; display: flex; align-items: center; justify-content: space-between;
-        padding: 20px 24px; background: none; border: none; cursor: pointer;
-        font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600;
-        color: var(--text); text-align: left; gap: 16px;
-        transition: background var(--transition);
-    }
-    .faq-question:hover { background: var(--mint-bg); }
-    .faq-chevron { color: var(--text-subtle); transition: transform var(--transition); flex-shrink: 0; }
-    .faq-item.active .faq-chevron { transform: rotate(180deg); color: var(--mint-dark); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-item.active .faq-answer { max-height: 300px; }
-    .faq-answer-inner { padding: 0 24px 20px; font-size: 0.9375rem; color: var(--text-muted); line-height: 1.7; }
-
-    /* ─── Contact ─────────────────────────────────────────────────── */
-    .contato-section { padding: 96px 0; background: var(--text); }
-    .contato-section .section-header h2 { color: #fff; }
-    .contato-section .section-header p { color: rgba(255,255,255,0.55); }
-    .contato-section .badge-mint { background: rgba(134,239,172,0.12); color: var(--mint); border-color: rgba(134,239,172,0.25); }
-    .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .contato-items { display: flex; flex-direction: column; gap: 12px; }
-    .contato-item {
-        display: flex; align-items: center; gap: 16px;
-        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-        border-radius: var(--radius-xl); padding: 20px 24px;
-        text-decoration: none; transition: all var(--transition);
-    }
-    .contato-item:hover { background: rgba(134,239,172,0.08); border-color: rgba(134,239,172,0.25); transform: translateX(4px); }
-    .contato-item-icon {
-        width: 44px; height: 44px; border-radius: var(--radius-md);
-        background: rgba(134,239,172,0.12); border: 1px solid rgba(134,239,172,0.2);
-        display: flex; align-items: center; justify-content: center;
-        font-size: 1.125rem; color: var(--mint); flex-shrink: 0;
-    }
-    .contato-item-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
-    .contato-item-text { font-size: 0.9375rem; font-weight: 600; color: #fff; }
-    .contato-card {
-        background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-        border-radius: var(--radius-xl); padding: 40px 36px;
-        display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;
-    }
-    .contato-card-icon {
-        width: 56px; height: 56px; border-radius: var(--radius-lg);
-        background: rgba(134,239,172,0.12); border: 1px solid rgba(134,239,172,0.25);
-        display: flex; align-items: center; justify-content: center;
-        font-size: 1.5rem; color: var(--mint);
-    }
-    .contato-card h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
-    .contato-card p { font-size: 0.9375rem; color: rgba(255,255,255,0.5); line-height: 1.65; }
-    .contato-note { font-size: 0.8125rem; color: rgba(255,255,255,0.35); display: flex; align-items: center; gap: 6px; }
-
-    /* ─── Footer ──────────────────────────────────────────────────── */
-    .footer {
-        background: #080D17; padding: 56px 0 32px;
-        border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .footer-grid {
-        display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
-        padding-bottom: 40px; margin-bottom: 32px;
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .footer-brand .logo { color: #fff; margin-bottom: 12px; display: flex; }
-    .footer-brand p { font-size: 0.875rem; color: rgba(255,255,255,0.35); line-height: 1.6; margin-bottom: 20px; }
-    .footer-social { display: flex; gap: 10px; }
-    .footer-social a {
-        width: 36px; height: 36px; border-radius: var(--radius-md);
-        background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
-        display: flex; align-items: center; justify-content: center;
-        color: rgba(255,255,255,0.4); font-size: 0.875rem; transition: all var(--transition);
-        text-decoration: none;
-    }
-    .footer-social a:hover { background: var(--mint-bg); border-color: var(--mint-border); color: var(--mint); }
-    .footer-col h4 { font-size: 0.8125rem; font-weight: 700; color: rgba(255,255,255,0.7); margin-bottom: 14px; letter-spacing: 0.04em; text-transform: uppercase; }
-    .footer-col a { display: block; font-size: 0.875rem; color: rgba(255,255,255,0.35); margin-bottom: 8px; text-decoration: none; transition: color var(--transition); }
-    .footer-col a:hover { color: var(--mint); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-    .footer-bottom span { font-size: 0.8125rem; color: rgba(255,255,255,0.25); }
-    .heart { color: var(--mint); }
-
-    /* ─── Modal ───────────────────────────────────────────────────── */
-    .modal-overlay {
-        display: none; position: fixed; inset: 0; z-index: 1000;
-        background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
-        align-items: center; justify-content: center; padding: 24px;
-    }
-    .modal-overlay.active { display: flex; }
-    .modal-content {
-        background: var(--bg-white); border: 1px solid var(--border);
-        border-radius: var(--radius-xl); max-width: 600px; width: 100%;
-        max-height: 85vh; overflow-y: auto; box-shadow: var(--shadow-xl);
-        position: relative;
-    }
-    .modal-header {
-        display: flex; align-items: flex-start; gap: 16px; padding: 32px;
-        background: linear-gradient(135deg, var(--mint-bg), transparent);
-        border-bottom: 1px solid var(--border);
-    }
-    .modal-header-icon { font-size: 1.5rem; color: var(--mint-dark); margin-top: 2px; }
-    .modal-header h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; margin-bottom: 4px; }
-    .modal-header p { font-size: 0.875rem; color: var(--text-muted); }
-    .modal-close {
-        position: absolute; top: 20px; right: 20px;
-        background: var(--bg-muted); border: 1px solid var(--border);
-        width: 32px; height: 32px; border-radius: var(--radius-md);
-        cursor: pointer; color: var(--text-muted); font-size: 0.875rem;
-        display: flex; align-items: center; justify-content: center;
-        transition: all var(--transition);
-    }
-    .modal-close:hover { background: #fee2e2; border-color: #fca5a5; color: #dc2626; }
-    .modal-body { padding: 28px 32px 32px; }
-    .modal-body p { font-size: 0.9375rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; }
-    .modal-body h4 { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; margin-top: 20px; }
-    .modal-body ul { padding-left: 0; list-style: none; }
-    .modal-body ul li { font-size: 0.875rem; color: var(--text-muted); padding: 5px 0 5px 20px; position: relative; }
-    .modal-body ul li::before { content: '→'; position: absolute; left: 0; color: var(--mint-dark); font-weight: 700; }
-
-    /* ─── Scroll Top ──────────────────────────────────────────────── */
-    .scroll-top {
-        position: fixed; bottom: 28px; right: 28px; z-index: 99;
-        width: 44px; height: 44px; border-radius: var(--radius-md);
-        background: var(--text); color: #fff; border: none;
-        cursor: pointer; font-size: 0.875rem;
-        box-shadow: var(--shadow-lg);
-        display: flex; align-items: center; justify-content: center;
-        opacity: 0; pointer-events: none; transform: translateY(10px);
-        transition: all var(--transition);
-    }
-    .scroll-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
-    .scroll-top:hover { background: var(--mint-dark); transform: translateY(-2px); }
-
-    /* ─── Fade In ─────────────────────────────────────────────────── */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    /* ─── Responsive ─────────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-        .hero-bento { grid-template-columns: repeat(2, 1fr); }
-        .hb-card.col-2 { grid-column: span 2; }
-        .hb-card.row-2 { grid-row: span 1; }
-        .processo-grid { grid-template-columns: repeat(2, 1fr); }
-        .services-bento { grid-template-columns: repeat(2, 1fr); }
-        .service-card.large { grid-column: span 2; }
-    }
-    @media (max-width: 768px) {
-        .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--bg-white); border-bottom: 1px solid var(--border); flex-direction: column; gap: 0; padding: 12px; box-shadow: var(--shadow-lg); }
-        .nav-links.active { display: flex; }
-        .nav-links a { padding: 12px 16px; }
-        .mobile-toggle { display: flex; }
-        .lang-switcher { display: none; }
-        .hero-bento { grid-template-columns: 1fr 1fr; }
-        .hb-card.col-2 { grid-column: span 2; }
-        .hb-card.row-2 { grid-row: span 1; }
-        .about-grid, .contato-grid, .footer-grid { grid-template-columns: 1fr; }
-        .about-stats { grid-template-columns: repeat(3, 1fr); }
-        .services-bento { grid-template-columns: 1fr; }
-        .service-card.large { grid-column: span 1; }
-        .processo-grid { grid-template-columns: 1fr 1fr; }
-        .portfolio-grid { grid-template-columns: 1fr 1fr; }
-        .cta-inner { flex-direction: column; text-align: center; }
-        .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-    }
-    @media (max-width: 480px) {
-        .hero h1 { font-size: 2rem; }
-        .hero-bento { grid-template-columns: 1fr; }
-        .hb-card.col-2 { grid-column: span 1; }
-        .portfolio-grid { grid-template-columns: 1fr; }
-        .processo-grid { grid-template-columns: 1fr; }
-        .about-stats { grid-template-columns: 1fr; }
-        .hero-btns { flex-direction: column; align-items: stretch; }
-        .hero-btns .btn { justify-content: center; }
-    }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sartor Digital | Websites in up to 5 days. Systems in up to 3 weeks. We build with AI.</title>
+  <meta name="description" content="Experts in web development, artificial intelligence, automation and digital transformation. Quote in up to 4h.">
+  <link rel="canonical" href="https://sartordigital.online/en/">
+  <link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/">
+  <link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/">
+  <link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/">
+  <link rel="alternate" hreflang="x-default" href="https://sartordigital.online/">
+  <meta property="og:title" content="Sartor Digital — Websites in up to 5 days. Systems in up to 3 weeks.">
+  <meta property="og:description" content="We build with AI. Quote in up to 4h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sartordigital.online/en/">
+  <meta property="og:image" content="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png">
+  <link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+  :root{--bg:#F7F8FA;--bg-2:#FFFFFF;--bg-3:#EFF1F5;--card:rgba(0,0,0,0.025);--border:rgba(0,0,0,0.08);--border-hi:rgba(5,150,105,0.4);--green:#059669;--green-dim:rgba(5,150,105,0.10);--green-glow:0 0 30px rgba(5,150,105,0.18);--violet:#7C3AED;--violet-dim:rgba(124,58,237,0.10);--blue:#0284C7;--blue-dim:rgba(2,132,199,0.10);--text:#0A0A14;--text-2:#4B5563;--text-3:#9CA3AF;--shadow-sm:0 1px 3px rgba(0,0,0,0.08);--shadow-md:0 4px 16px rgba(0,0,0,0.08);--shadow-lg:0 12px 40px rgba(0,0,0,0.10);--radius-sm:8px;--radius:14px;--radius-lg:20px;--radius-xl:28px;--font-head:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--ease:cubic-bezier(0.4,0,0.2,1)}
+  [data-theme="dark"]{--bg:#030308;--bg-2:#0A0A18;--bg-3:#10101F;--card:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--border-hi:rgba(0,255,135,0.35);--green:#00FF87;--green-dim:rgba(0,255,135,0.12);--green-glow:0 0 40px rgba(0,255,135,0.25);--violet:#A78BFA;--violet-dim:rgba(167,139,250,0.12);--blue:#38BDF8;--blue-dim:rgba(56,189,248,0.10);--text:#F1F5F9;--text-2:#94A3B8;--text-3:#475569;--shadow-sm:0 1px 3px rgba(0,0,0,0.4);--shadow-md:0 4px 16px rgba(0,0,0,0.5);--shadow-lg:0 12px 40px rgba(0,0,0,0.6)}
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  a{text-decoration:none;color:inherit}img{max-width:100%}
+  .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.6}
+  .bg-orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(120px);animation:orbFloat 12s ease-in-out infinite}
+  .orb-1{width:600px;height:600px;background:rgba(5,150,105,0.06);top:-200px;right:-100px}
+  .orb-2{width:500px;height:500px;background:rgba(124,58,237,0.06);bottom:10%;left:-150px;animation-delay:4s}
+  [data-theme="dark"] .orb-1{background:rgba(0,255,135,0.04)}[data-theme="dark"] .orb-2{background:rgba(124,58,237,0.07)}
+  @keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+  .scroll-bar{position:fixed;top:0;left:0;right:0;height:2px;z-index:9999}.scroll-fill{height:100%;width:0%;background:var(--green);box-shadow:0 0 8px var(--green);transition:width .1s linear}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 24px;transition:all .3s}
+  .nav.scrolled{background:rgba(247,248,250,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+  [data-theme="dark"] .nav.scrolled{background:rgba(3,3,8,.88)}
+  .nav-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:1.05rem;letter-spacing:-.02em;color:var(--text)}
+  .nav-logo img{width:30px;height:30px;border-radius:7px}.logo-dot{color:var(--green)}
+  .nav-links{display:flex;align-items:center;gap:2px}
+  .nav-links a{font-size:.875rem;font-weight:500;color:var(--text-2);padding:7px 15px;border-radius:var(--radius-sm);transition:color .2s,background .2s}
+  .nav-links a:hover{color:var(--text);background:var(--bg-3)}
+  .nav-actions{display:flex;align-items:center;gap:8px}
+  .lang-pill{display:flex;align-items:center;gap:1px;background:var(--bg-3);border:1px solid var(--border);border-radius:100px;padding:3px}
+  .lang-btn{background:none;border:none;cursor:pointer;font-family:var(--font-body);font-size:.72rem;font-weight:700;color:var(--text-3);padding:4px 10px;border-radius:100px;transition:all .2s}
+  .lang-btn.active{background:var(--bg-2);color:var(--text);box-shadow:var(--shadow-sm)}.lang-btn:hover:not(.active){color:var(--text-2)}
+  .theme-toggle{width:36px;height:36px;border:1px solid var(--border);background:var(--bg-2);border-radius:var(--radius-sm);cursor:pointer;color:var(--text-2);display:flex;align-items:center;justify-content:center;font-size:.875rem;transition:all .2s}
+  .theme-toggle:hover{border-color:var(--green);color:var(--green)}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-family:var(--font-body);font-weight:700;font-size:.8125rem;padding:9px 20px;border-radius:var(--radius-sm);transition:all .2s;cursor:pointer;border:none;box-shadow:var(--green-glow)}
+  [data-theme="dark"] .nav-cta{color:#030308}.nav-cta:hover{transform:translateY(-1px);filter:brightness(1.1)}
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:100px 0 60px;overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1fr 460px;gap:64px;align-items:center;position:relative;z-index:2}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-dim);border:1px solid rgba(5,150,105,.2);border-radius:100px;padding:6px 14px 6px 6px;font-size:.75rem;font-weight:600;color:var(--green);margin-bottom:28px;letter-spacing:.04em}
+  [data-theme="dark"] .hero-badge{border-color:rgba(0,255,135,.2)}
+  .hero-badge-dot{width:22px;height:22px;border-radius:50%;background:var(--green-dim);display:flex;align-items:center;justify-content:center}
+  .hero-badge-dot::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+  .hero h1{font-family:var(--font-head);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:700;line-height:1.08;letter-spacing:-.04em;color:var(--text);margin-bottom:24px}
+  .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--green) 0%,var(--blue) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero-sub{font-size:1.1rem;color:var(--text-2);line-height:1.7;max-width:480px;margin-bottom:40px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+  .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-weight:700;font-size:.9375rem;padding:14px 28px;border-radius:var(--radius);cursor:pointer;border:none;box-shadow:var(--green-glow);transition:all .2s;font-family:var(--font-body)}
+  [data-theme="dark"] .btn-primary{color:#030308}.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:10px;background:var(--bg-2);color:var(--text-2);font-weight:600;font-size:.9375rem;padding:13px 26px;border-radius:var(--radius);cursor:pointer;border:1px solid var(--border);transition:all .2s;font-family:var(--font-body);box-shadow:var(--shadow-sm)}
+  .btn-ghost:hover{border-color:var(--green);color:var(--green);background:var(--green-dim);transform:translateY(-1px)}
+  .hero-strip{display:flex;flex-wrap:wrap;gap:24px;padding-top:20px;border-top:1px solid var(--border)}
+  .strip-item{display:flex;align-items:center;gap:8px;font-size:.8125rem;color:var(--text-2)}.strip-item i{color:var(--green);font-size:.75rem}
+  .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+  .hero-photo-wrap{position:relative;z-index:2;width:300px;height:390px}
+  .photo-ring{position:absolute;inset:-2px;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--green),var(--violet),var(--blue),transparent);padding:2px}
+  .photo-inner{width:100%;height:100%;background:var(--bg-3);border-radius:var(--radius-xl);overflow:hidden;position:relative}
+  .photo-inner img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block;padding:10px 6px 0}
+  .photo-glow{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:220px;height:50px;background:radial-gradient(ellipse,var(--green-dim),transparent 70%);filter:blur(16px);pointer-events:none}
+  .hero-chip{position:absolute;z-index:10;background:var(--bg-2);border:1px solid var(--border);box-shadow:var(--shadow-md);border-radius:var(--radius-sm);padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:.75rem;font-weight:600;animation:chipFloat 4s ease-in-out infinite;color:var(--text)}
+  .chip-1{top:40px;left:-70px}.chip-2{bottom:100px;left:-80px;animation-delay:1.5s}.chip-3{top:120px;right:-70px;animation-delay:3s}.chip-4{bottom:50px;right:-60px;animation-delay:1s}
+  @keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .chip-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.875rem}
+  .chip-icon.g{background:var(--green-dim);color:var(--green)}.chip-icon.v{background:var(--violet-dim);color:var(--violet)}.chip-icon.b{background:var(--blue-dim);color:var(--blue)}
+  .chip-text span{display:block;font-size:.625rem;font-weight:400;color:var(--text-3);margin-top:1px}
+  .stats-row{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);margin:80px 0;overflow:hidden;box-shadow:var(--shadow-sm)}
+  .stat-box{background:var(--bg-2);padding:32px 24px;text-align:center;position:relative;overflow:hidden;transition:background .3s}
+  .stat-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--green-dim),transparent);opacity:0;transition:opacity .3s}.stat-box:hover::before{opacity:1}
+  .stat-num{font-family:var(--font-head);font-size:2.4rem;font-weight:700;color:var(--green);letter-spacing:-.04em;line-height:1;margin-bottom:6px}
+  .stat-label{font-size:.8125rem;color:var(--text-2)}
+  .section{padding:100px 0;position:relative;z-index:1}.sec-divider{border:none;border-top:1px solid var(--border);margin:0}
+  .section-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:.72rem;font-weight:500;color:var(--green);background:var(--green-dim);border:1px solid rgba(5,150,105,.2);border-radius:100px;padding:4px 14px;margin-bottom:20px;letter-spacing:.06em}
+  [data-theme="dark"] .section-tag{border-color:rgba(0,255,135,.18)}
+  .section-title{font-family:var(--font-head);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;letter-spacing:-.04em;line-height:1.1;color:var(--text);margin-bottom:16px}
+  .section-sub{font-size:1rem;color:var(--text-2);line-height:1.7;max-width:500px}
+  .section-head{margin-bottom:60px}.section-head.center{text-align:center}.section-head.center .section-sub{margin:0 auto}
+  .g-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);transition:all .3s var(--ease);position:relative;overflow:hidden}
+  [data-theme="dark"] .g-card{background:var(--card);box-shadow:none}.g-card:hover{border-color:var(--border-hi);box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .svc-card{padding:32px 28px;cursor:pointer}
+  .svc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.125rem;margin-bottom:20px;transition:all .3s}
+  .svc-icon.g{background:var(--green-dim);color:var(--green)}.svc-icon.v{background:var(--violet-dim);color:var(--violet)}.svc-icon.b{background:var(--blue-dim);color:var(--blue)}
+  .svc-card:hover .svc-icon{transform:scale(1.1) rotate(-5deg)}
+  .svc-card h3{font-family:var(--font-head);font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--text)}
+  .svc-card p{font-size:.875rem;color:var(--text-2);line-height:1.65}
+  .svc-link{display:inline-flex;align-items:center;gap:6px;font-size:.8125rem;font-weight:600;color:var(--green);margin-top:16px;transition:gap .2s}.svc-card:hover .svc-link{gap:10px}
+  .svc-promo{grid-column:span 3;background:linear-gradient(135deg,var(--green-dim),var(--violet-dim));border-color:rgba(5,150,105,.15);padding:40px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+  [data-theme="dark"] .svc-promo{background:linear-gradient(135deg,rgba(0,255,135,.05),rgba(124,58,237,.07));border-color:rgba(0,255,135,.12)}
+  .svc-promo h3{font-family:var(--font-head);font-size:1.5rem;font-weight:700;letter-spacing:-.03em;color:var(--text);max-width:400px}.svc-promo h3 span{color:var(--green)}
+  .about-grid{display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center}
+  .about-text h2{font-family:var(--font-head);font-size:2.2rem;font-weight:700;letter-spacing:-.04em;line-height:1.15;margin-bottom:20px}
+  .about-text p{color:var(--text-2);line-height:1.75;margin-bottom:16px}
+  .about-tags{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}
+  .tech-tag{background:var(--bg-3);border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:.75rem;font-weight:500;color:var(--text-2);font-family:var(--font-mono);transition:all .2s;cursor:default}
+  .tech-tag:hover{border-color:var(--border-hi);color:var(--green);background:var(--green-dim)}
+  .about-photo-col{position:relative}
+  .about-photo-frame{border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border);position:relative;background:var(--bg-3)}
+  .about-photo-frame img{width:100%;height:auto;max-height:460px;object-fit:contain;object-position:center top;display:block;padding:20px 20px 0}
+  .about-name-card{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(255,255,255,.85);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--shadow-md)}
+  [data-theme="dark"] .about-name-card{background:rgba(3,3,8,.85)}
+  .aname{font-family:var(--font-head);font-weight:700;font-size:1rem;color:var(--text)}.arole{font-size:.75rem;color:var(--text-2);margin-top:2px}
+  .asocials{display:flex;gap:10px}
+  .asocial{width:32px;height:32px;border-radius:8px;background:var(--bg-3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.875rem;color:var(--text-2);transition:all .2s}
+  .asocial:hover{background:var(--green-dim);border-color:var(--border-hi);color:var(--green)}
+  .portfolio-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+  .pf-pill{background:var(--bg-2);border:1px solid var(--border);border-radius:100px;padding:7px 18px;font-size:.8125rem;font-weight:500;color:var(--text-2);cursor:pointer;transition:all .2s;box-shadow:var(--shadow-sm)}
+  .pf-pill.active,.pf-pill:hover{background:var(--green);color:#fff;border-color:var(--green);font-weight:700}
+  [data-theme="dark"] .pf-pill.active,[data-theme="dark"] .pf-pill:hover{color:#030308}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.pf-card{padding:0}
+  .pf-img{height:180px;background:var(--bg-3);overflow:hidden;border-radius:var(--radius-lg) var(--radius-lg) 0 0;position:relative}
+  .pf-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .4s}.pf-card:hover .pf-img img{transform:scale(1.04)}
+  .pf-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--green);opacity:.2}
+  .pf-body{padding:20px 22px 22px}.pf-tag{font-size:.7rem;font-weight:700;color:var(--green);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  .pf-body h3{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+  .pf-body p{font-size:.8125rem;color:var(--text-2);line-height:1.6;margin-bottom:14px}
+  .pf-techs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .pf-tech{font-family:var(--font-mono);font-size:.65rem;background:var(--bg-3);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text-3)}
+  .pf-link{display:inline-flex;align-items:center;gap:6px;font-size:.8125rem;font-weight:600;color:var(--green);transition:gap .2s}.pf-card:hover .pf-link{gap:10px}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.proc-card{padding:32px 24px}
+  .proc-num{font-family:var(--font-mono);font-size:.75rem;font-weight:700;color:var(--green);background:var(--green-dim);border-radius:6px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .proc-card h3{font-family:var(--font-head);font-size:1rem;font-weight:600;margin-bottom:10px;color:var(--text)}.proc-card p{font-size:.875rem;color:var(--text-2);line-height:1.65}
+  .proc-time{display:inline-block;margin-top:14px;font-size:.7rem;font-weight:700;color:var(--green);font-family:var(--font-mono);background:var(--green-dim);border-radius:4px;padding:3px 8px}
+  .diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.diff-card{padding:32px;display:flex;align-items:flex-start;gap:20px}
+  .diff-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}.diff-card h3{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}.diff-card p{font-size:.875rem;color:var(--text-2);line-height:1.65}
+  .cta-card{background:linear-gradient(135deg,var(--green-dim),var(--violet-dim));border:1px solid rgba(5,150,105,.2);border-radius:var(--radius-xl);padding:80px 60px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+  [data-theme="dark"] .cta-card{background:linear-gradient(135deg,rgba(0,255,135,.05),rgba(124,58,237,.08));border-color:rgba(0,255,135,.2)}
+  .cta-card::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,var(--green-dim),transparent 70%);pointer-events:none}
+  .cta-card h2{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.04em;margin-bottom:16px;color:var(--text)}.cta-card p{color:var(--text-2);max-width:480px;margin:0 auto 40px;line-height:1.7}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:700;font-size:.9375rem;padding:14px 28px;border-radius:var(--radius);cursor:pointer;border:none;transition:all .2s;font-family:var(--font-body);box-shadow:0 0 24px rgba(37,211,102,.3)}
+  .btn-wa:hover{background:#1EBE5E;transform:translateY(-2px)}
+  .footer{border-top:1px solid var(--border);padding:48px 0;position:relative;z-index:1;background:var(--bg-2)}
+  .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  .footer-logo{display:flex;align-items:center;gap:10px}.footer-logo img{width:28px;height:28px;border-radius:6px}.footer-logo span{font-family:var(--font-head);font-weight:700;font-size:.9rem;color:var(--text)}
+  .footer-links{display:flex;gap:24px}.footer-links a{font-size:.8125rem;color:var(--text-3);transition:color .2s}.footer-links a:hover{color:var(--green)}
+  .footer-copy{font-size:.75rem;color:var(--text-3)}.footer-socials{display:flex;gap:10px}
+  .f-social{width:36px;height:36px;border-radius:var(--radius-sm);background:var(--bg-3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-2);transition:all .2s;font-size:.875rem}
+  .f-social:hover{background:var(--green-dim);border-color:var(--border-hi);color:var(--green)}
+  .wa-float{position:fixed;bottom:28px;right:28px;z-index:100;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.5);cursor:pointer;transition:all .2s;animation:floatWA 3s ease-in-out infinite}
+  .wa-float:hover{background:#1EBE5E;transform:scale(1.1);animation:none}@keyframes floatWA{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}.fade-in.visible{opacity:1;transform:translateY(0)}
+  .mob-toggle{display:none;background:var(--bg-2);border:1px solid var(--border);width:36px;height:36px;border-radius:var(--radius-sm);cursor:pointer;color:var(--text);font-size:.875rem;align-items:center;justify-content:center}
+  @media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.about-grid{grid-template-columns:1fr}}
+  @media(max-width:768px){.services-grid{grid-template-columns:1fr}.svc-promo{grid-column:span 1;flex-direction:column}.portfolio-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.diff-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.mob-toggle{display:flex}.footer-inner{flex-direction:column;text-align:center}.cta-card{padding:48px 24px}.hero h1{font-size:2.2rem}}
+  .avail-tag{display:inline-flex;align-items:center;gap:6px;background:var(--green-dim);border:1px solid rgba(5,150,105,.25);border-radius:100px;padding:5px 12px;font-size:.72rem;font-weight:600;color:var(--green);margin-bottom:12px;letter-spacing:.04em}
+  .avail-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:availPulse 1.8s ease-out infinite}
+  @keyframes availPulse{0%{box-shadow:0 0 0 0 rgba(5,150,105,.6)}70%{box-shadow:0 0 0 8px rgba(5,150,105,0)}100%{box-shadow:0 0 0 0 rgba(5,150,105,0)}}
+  </style>
 </head>
 <body>
-
-    <!-- Scroll Progress -->
-    <div class="scroll-progress-bar"><div class="scroll-progress-fill" id="scrollProgress"></div></div>
-
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="#home" class="logo">
-                    <div class="logo-mark">
-                        <img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">
-                    </div>
-                    Sartor Digital
-                </a>
-                <nav class="nav-links" id="navLinks">
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#process">Process</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-                <div class="header-actions">
-                    <div class="lang-switcher">
-                        <button class="lang-btn" data-lang="pt">PT</button>
-                        <button class="lang-btn active" data-lang="en">EN</button>
-                        <button class="lang-btn" data-lang="es">ES</button>
-                    </div>
-                    <button class="dark-toggle" id="darkToggle" aria-label="Toggle mode"><i class="fas fa-moon"></i></button>
-                    <a href="https://wa.me/5554993031264?text=Hello!%20I'd%20like%20information%20about%20Sartor%20Digital%20services." target="_blank" class="btn-nav-cta">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-bg-glow"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <div class="hero-badge-wrap">
-                    <div class="hero-badge">
-                        <div class="dot"></div>
-                        Digital Engineering · Applied AI · Available for projects
-                    </div>
-                </div>
-                <h1>Software engineering<br>and applied AI to<br><span class="highlight">scale your business.</span></h1>
-                <p class="hero-sub">We develop SaaS platforms, AI-powered systems and high-performance digital products. From MVP to consolidated product — solid architecture, premium design and agile delivery.</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Start Project</a>
-                    <a href="https://wa.me/5554993031264" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Talk to Us</a>
-                </div>
-            </div>
-
-            <!-- Bento Grid -->
-            <div class="hero-bento">
-                <!-- Stat: Projetos -->
-                <div class="hb-card mint fade-in">
-                    <div class="hb-label">Delivered Projects</div>
-                    <div class="hb-number" data-count="21">0+</div>
-                    <div class="hb-sublabel">products in production with active users</div>
-                    <div class="hb-bg-number">11</div>
-                </div>
-
-                <!-- Featured Projects: 2 cols wide -->
-                <div class="hb-card col-2 fade-in">
-                    <div class="hb-label" style="margin-bottom:16px;">Featured Projects</div>
-                    <div class="hb-projects">
-                        <div class="hb-project-item">
-                            <div class="hb-project-dot" style="background:#86EFAC;"></div>
-                            <span class="hb-project-name">Quanto Vale</span>
-                            <span class="hb-project-tag">Fintech · Valuation SaaS</span>
-                        </div>
-                        <div class="hb-project-item">
-                            <div class="hb-project-dot" style="background:#818CF8;"></div>
-                            <span class="hb-project-name">Vexium</span>
-                            <span class="hb-project-tag">Web3 · Motor VEX + IA</span>
-                        </div>
-                        <div class="hb-project-item">
-                            <div class="hb-project-dot" style="background:#34D399;"></div>
-                            <span class="hb-project-name">ConectCampo</span>
-                            <span class="hb-project-tag">AgTech · Crédito Rural</span>
-                        </div>
-                        <div class="hb-project-item">
-                            <div class="hb-project-dot" style="background:#10B981;"></div>
-                            <span class="hb-project-name">ESG360</span>
-                            <span class="hb-project-tag">ESG · Sustainability + AI</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Stat: Repeat Clients -->
-                <div class="hb-card dark fade-in">
-                    <div class="hb-label">Repeat Clients</div>
-                    <div class="hb-number" style="color:#86EFAC;">90%+</div>
-                    <div class="hb-sublabel">come back for new demands</div>
-                    <div class="hb-bg-number">↻</div>
-                </div>
-                    <div class="hb-sublabel">of clients recommend us</div>
-                    <div class="hb-bg-number">✓</div>
-                </div>
-
-                <!-- Stack: 2 cols wide -->
-                <div class="hb-card col-2 fade-in">
-                    <div class="hb-label">Tech Stack</div>
-                    <div class="hb-title">Modern stack, clean code, products that scale.</div>
-                    <div class="hb-desc">React, Next.js, Python, FastAPI, PostgreSQL, Docker, AWS and the best of each ecosystem for your project.</div>
-                    <div class="hb-chips">
-                        <span class="hb-chip"><i class="fab fa-react"></i> React</span>
-                        <span class="hb-chip">Next.js</span>
-                        <span class="hb-chip"><i class="fab fa-python"></i> Python</span>
-                        <span class="hb-chip">FastAPI</span>
-                        <span class="hb-chip">PostgreSQL</span>
-                        <span class="hb-chip"><i class="fab fa-docker"></i> Docker</span>
-                        <span class="hb-chip"><i class="fas fa-cloud"></i> AWS</span>
-                        <span class="hb-chip">OpenAI</span>
-                    </div>
-                </div>
-
-                <!-- IA Card -->
-                <div class="hb-card fade-in" style="background: var(--bg-white);">
-                    <div style="margin-bottom:14px; color: var(--mint-dark);"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2H8V6a4 4 0 0 1 4-4z"/><rect x="4" y="8" width="16" height="12" rx="3"/><circle cx="9" cy="14" r="1.5" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r="1.5" fill="currentColor" stroke="none"/><path d="M2 12h2M20 12h2M9 18h6"/></svg></div>
-                    <div class="hb-title">Applied AI</div>
-                    <div class="hb-desc">Language models, intelligent automation and systems that learn — integrated into your product.</div>
-                </div>
-
-                <!-- Stat: Suporte -->
-                <div class="hb-card fade-in" style="border-color: var(--mint-border);">
-                    <div class="hb-label">Post-Delivery Support</div>
-                    <div class="hb-number" style="color:var(--mint-dark);">90</div>
-                    <div style="color:var(--mint-mid); font-weight:800; font-size:1rem; margin-bottom:4px;">days</div>
-                    <div class="hb-sublabel">of warranty included in all projects</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Strip -->
-    <div class="tech-strip">
-        <div class="tech-strip-inner">
-            <div class="tech-item"><i class="fab fa-react"></i> React</div>
-            <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-            <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
-            <div class="tech-item"><i class="fab fa-docker"></i> Docker</div>
-            <div class="tech-item"><i class="fas fa-cloud"></i> AWS</div>
-            <div class="tech-item"><i class="fas fa-brain"></i> OpenAI</div>
-            <div class="tech-item"><i class="fab fa-js-square"></i> Next.js</div>
-            <div class="tech-item"><i class="fas fa-bolt"></i> FastAPI</div>
-            <div class="tech-item"><i class="fas fa-code-branch"></i> Git</div>
-            <!-- Duplicate for seamless loop -->
-            <div class="tech-item"><i class="fab fa-react"></i> React</div>
-            <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-            <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
-            <div class="tech-item"><i class="fab fa-docker"></i> Docker</div>
-            <div class="tech-item"><i class="fas fa-cloud"></i> AWS</div>
-            <div class="tech-item"><i class="fas fa-brain"></i> OpenAI</div>
-            <div class="tech-item"><i class="fab fa-js-square"></i> Next.js</div>
-            <div class="tech-item"><i class="fas fa-bolt"></i> FastAPI</div>
-            <div class="tech-item"><i class="fas fa-code-branch"></i> Git</div>
-        </div>
+<div class="bg-grid"></div><div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
+<div class="scroll-bar"><div class="scroll-fill" id="scrollFill"></div></div>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/en/" class="nav-logo"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">Sartor Digital<span class="logo-dot">.</span></a>
+    <div class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+    <div class="nav-actions">
+      <div class="lang-pill"><button class="lang-btn" onclick="location.href='/'">PT</button><button class="lang-btn active" onclick="location.href='/en/'">EN</button><button class="lang-btn" onclick="location.href='/es/'">ES</button></div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <a href="https://wa.me/5554993031264?text=Hi%20Giovanne!%20I%20saw%20your%20portfolio%20and%20I'd%20like%20a%20quote." target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Get a Quote ≤4h</a>
     </div>
-
-    <!-- About -->
-    <section class="section section-white" id="about">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint badge-dot">Who We Are</span>
-                <h2>About Sartor Digital</h2>
-                <p>Technology, design and artificial intelligence to transform businesses into high-performance digital products.</p>
-            </div>
-            <div class="about-grid">
-                <div class="bento-card about-main-card fade-in">
-                    <h3>Technology with purpose and measurable results</h3>
-                    <p>We are a software engineering company focused on digital products with artificial intelligence. We work from technical architecture to interface design — always focused on performance, scalability and return on investment.</p>
-                    <p>With 11+ products delivered in sectors like fintech, agtech, healthcare and martech, our differentiator lies in the combination of applied AI, agile methodology and product vision — not just code.</p>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <div class="stat-value" data-count="21">0</div>
-                            <div class="stat-label">Delivered Projects</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">90%+</div>
-                            <div class="stat-label">Repeat Clients</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" data-count="4">0</div>
-                            <div class="stat-label">Years of Experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-card about-featured-card fade-in">
-                    <div class="about-featured-header">
-                        <h3>Featured Projects</h3>
-                    </div>
-                    <a href="https://quantovale.online" target="_blank" class="about-featured-item"><div class="af-icon icon-green"><i class="fas fa-calculator"></i></div><div class="af-info"><div class="af-name">Quanto Vale</div><div class="af-desc">Valuation SaaS with DCF Engine + Generative AI</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                    <a href="https://vexium.pro" target="_blank" class="about-featured-item"><div class="af-icon icon-purple"><i class="fas fa-robot"></i></div><div class="af-info"><div class="af-name">Vexium</div><div class="af-desc">Proprietary VEX Engine for crypto with AI</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                    <a href="https://conectcampo.digital" target="_blank" class="about-featured-item"><div class="af-icon icon-green"><i class="fas fa-tractor"></i></div><div class="af-info"><div class="af-name">ConectCampo</div><div class="af-desc">#1 Rural Credit Marketplace in Brazil</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                    <a href="https://fundflow.money" target="_blank" class="about-featured-item"><div class="af-icon icon-blue"><i class="fas fa-hand-holding-usd"></i></div><div class="af-info"><div class="af-name">FundFlow</div><div class="af-desc">Resource fundraising with AI · R$ 247M+ raised</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                    <a href="https://linkora.vip" target="_blank" class="about-featured-item"><div class="af-icon icon-cyan"><i class="fas fa-link"></i></div><div class="af-info"><div class="af-name">Linkora</div><div class="af-desc">Link-in-Bio SaaS for creators and brands</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                    <a href="https://agdigital.ag" target="_blank" class="about-featured-item"><div class="af-icon icon-blue"><i class="fas fa-shield-alt"></i></div><div class="af-info"><div class="af-name">AG Digital</div><div class="af-desc">Insurtech · Fintech · SaaS</div></div><i class="fas fa-arrow-right af-arrow"></i></a>
-                </div>
-            </div>
+    <button class="mob-toggle"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="fade-in">
+        <div class="avail-tag"><span class="avail-dot"></span>Available for projects</div>
+        <div class="hero-badge"><div class="hero-badge-dot"></div>AI-powered · Delivery in days, not months</div>
+        <h1>We build with<br><em>Artificial</em><br>Intelligence.</h1>
+        <p class="hero-sub">Websites in <strong>up to 5 days</strong>. Systems in <strong>up to 3 weeks</strong>. Real speed, quality code, AI at every step.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5554993031264?text=Hi%20Giovanne!%20I'd%20like%20a%20quote." target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Get a Quote Now</a>
+          <a href="#portfolio" class="btn-ghost">View Portfolio <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section section-muted" id="services">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint badge-dot">What We Do</span>
-                <h2>Our Services</h2>
-                <p>From concept to final product — architecture, development, AI and continuous operation.</p>
-            </div>
-            <div class="services-bento">
-                <div class="service-card large fade-in" data-modal="modal-desenvolvimento">
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Full Stack Development</h3>
-                    <p>Complete web solutions, from modern front-end to robust back-end, ensuring performance, security and scalability for products that grow with your business.</p>
-                    <button class="btn btn-ghost" data-modal="modal-desenvolvimento"><i class="fas fa-arrow-right"></i> Read More</button>
-                </div>
-                <div class="service-card fade-in" data-modal="modal-ia">
-                    <div class="service-icon"><i class="fas fa-robot"></i></div>
-                    <h3>AI Integration & Automation</h3>
-                    <p>Implementation of artificial intelligence solutions to automate processes and improve business decisions.</p>
-                    <button class="btn btn-ghost" data-modal="modal-ia"><i class="fas fa-arrow-right"></i> Read More</button>
-                </div>
-                <div class="service-card fade-in" data-modal="modal-sites">
-                    <div class="service-icon"><i class="fas fa-globe-americas"></i></div>
-                    <h3>Premium Corporate Websites</h3>
-                    <p>Modern, responsive and SEO-optimized corporate websites that convert visitors into clients.</p>
-                    <button class="btn btn-ghost" data-modal="modal-sites"><i class="fas fa-arrow-right"></i> Read More</button>
-                </div>
-                <div class="service-card fade-in" data-modal="modal-captacao">
-                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Strategic Lead Capture</h3>
-                    <p>Complete digital ecosystems with landing pages, automation and analytics to capture and convert leads.</p>
-                    <button class="btn btn-ghost" data-modal="modal-captacao"><i class="fas fa-arrow-right"></i> Read More</button>
-                </div>
-                <div class="service-card fade-in" data-modal="modal-sistemas">
-                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Intelligent Systems</h3>
-                    <p>Custom ERPs, CRMs and SaaS platforms with integrated AI to optimize operations and create competitive advantages.</p>
-                    <button class="btn btn-ghost" data-modal="modal-sistemas"><i class="fas fa-arrow-right"></i> Read More</button>
-                </div>
-                <div class="service-card fade-in" data-modal="modal-suporte">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Maintenance & Support</h3>
-                    <p>24/7 monitoring, automated backups and technical support to ensure optimal performance of your solutions.</p>
-                    <button class="btn btn-ghost" data-modal="modal-suporte"><i class="fas fa-arrow-right"></i> Read More</button>
-                </div>
-            </div>
-            <div class="services-cta fade-in">
-                <a href="services.html" class="btn btn-secondary"><i class="fas fa-list-alt"></i> View All Detailed Services</a>
-            </div>
+        <div class="hero-strip">
+          <span class="strip-item"><i class="fas fa-bolt"></i> Websites in up to 5 days</span>
+          <span class="strip-item"><i class="fas fa-code"></i> Systems in up to 3 weeks</span>
+          <span class="strip-item"><i class="fas fa-wand-magic-sparkles"></i> 3× faster with AI</span>
         </div>
-    </section>
-
-    <!-- CTA Strip -->
-    <div class="cta-strip">
-        <div class="container">
-            <div class="cta-inner">
-                <div>
-                    <h3>Your next digital product starts here.</h3>
-                    <p>Solid architecture, integrated AI and on-time delivery. Let's talk.</p>
-                </div>
-                <div class="cta-btns">
-                    <a href="https://wa.me/5554993031264?text=Hello!%20I'd%20like%20information%20about%20Sartor%20Digital%20services." target="_blank" class="btn btn-mint"><i class="fab fa-whatsapp"></i> Talk on WhatsApp</a>
-                    <a href="#portfolio" class="btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.15);"><i class="fas fa-eye"></i> View Portfolio</a>
-                </div>
-            </div>
+      </div>
+      <div class="hero-visual fade-in" style="transition-delay:.2s">
+        <div class="hero-photo-wrap">
+          <div class="photo-ring"></div>
+          <div class="photo-inner"><img src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor"></div>
+          <div class="photo-glow"></div>
         </div>
+        <div class="hero-chip chip-1"><div class="chip-icon g"><i class="fas fa-globe"></i></div><div class="chip-text">100% remote<span>Brazil & worldwide</span></div></div>
+        <div class="hero-chip chip-2"><div class="chip-icon b"><i class="fas fa-bolt"></i></div><div class="chip-text">+3× Faster<span>vs. traditional agencies</span></div></div>
+        <div class="hero-chip chip-3"><div class="chip-icon g"><i class="fas fa-shield-alt"></i></div><div class="chip-text">90-day Warranty<span>support included</span></div></div>
+        <div class="hero-chip chip-4"><div class="chip-icon v"><i class="fas fa-chart-line"></i></div><div class="chip-text">12+ projects<span>delivered</span></div></div>
+      </div>
     </div>
-
-    <!-- Why Choose Us -->
-    <section class="section section-muted" id="why-us">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint badge-dot">Differentiators</span>
-                <h2>Why Choose Us</h2>
-                <p>Real reasons our clients trust Sartor Digital to grow their online presence.</p>
-            </div>
-            <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:48px;">
-                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
-                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-robot"></i></div>
-                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Applied AI &amp; Workflows</h3>
-                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Architectures with LLMs, automations and intelligent layers integrated into your product — to accelerate delivery and reduce costs without sacrificing quality.</p>
-                </div>
-                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
-                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-shield-halved"></i></div>
-                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">90-Day Technical Warranty</h3>
-                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">90 days of post-delivery warranty covering bug fixes, stability and small adjustments. New features are handled as a separate scope.</p>
-                </div>
-                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
-                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-chart-line"></i></div>
-                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Repeat Clients</h3>
-                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">More than 90% of our clients come back for new demands — products live in production, long-term partnerships and a relationship of trust.</p>
-                </div>
-                <div class="card fade-in" style="padding:32px;border-radius:16px;background:var(--bg-white);border:1px solid var(--border);text-align:center;">
-                    <div style="width:56px;height:56px;border-radius:14px;background:var(--mint-bg-strong);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--mint-dark);"><i class="fas fa-bolt"></i></div>
-                    <h3 style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;margin-bottom:8px;color:var(--text);">Agile Delivery</h3>
-                    <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.6;">Weekly sprints with partial deliveries. Track progress in real time.</p>
-                </div>
-            </div>
+    <div class="stats-row fade-in">
+      <div class="stat-box"><div class="stat-num" data-count="12">0</div><div class="stat-label">Projects Delivered</div></div>
+      <div class="stat-box"><div class="stat-num">90%+</div><div class="stat-label">Recurring Clients</div></div>
+      <div class="stat-box"><div class="stat-num" data-count="4">0</div><div class="stat-label">Years of Experience</div></div>
+      <div class="stat-box"><div class="stat-num">&le;4h</div><div class="stat-label">Quote Time</div></div>
+    </div>
+  </div>
+</section>
+<hr class="sec-divider">
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head fade-in"><div class="section-tag">// services</div><h2 class="section-title">What we build</h2><p class="section-sub">Complete digital solutions, from idea to deploy — with AI at every step.</p></div>
+    <div class="services-grid">
+      <div class="g-card svc-card fade-in"><div class="svc-icon g"><i class="fas fa-layer-group"></i></div><h3>Full Stack Development</h3><p>Complete web applications end-to-end — front-end, back-end, databases, APIs and cloud deployment.</p><span class="svc-link">Learn more <i class="fas fa-arrow-right"></i></span></div>
+      <div class="g-card svc-card fade-in"><div class="svc-icon v"><i class="fas fa-brain"></i></div><h3>AI Integration &amp; Automation</h3><p>ChatGPT, Claude, Gemini connected to your business. Workflows, chatbots and data analysis with LLMs.</p><span class="svc-link">Learn more <i class="fas fa-arrow-right"></i></span></div>
+      <div class="g-card svc-card fade-in"><div class="svc-icon b"><i class="fas fa-globe-americas"></i></div><h3>Premium Institutional Websites</h3><p>Websites that convert visitors into clients. Modern design, technical SEO and maximum loading speed.</p><span class="svc-link">Learn more <i class="fas fa-arrow-right"></i></span></div>
+      <div class="g-card svc-card fade-in"><div class="svc-icon g"><i class="fas fa-bullhorn"></i></div><h3>Strategic Lead Generation</h3><p>High-conversion landing pages, email automation, integrated CRM and intelligent sales funnel.</p><span class="svc-link">Learn more <i class="fas fa-arrow-right"></i></span></div>
+      <div class="g-card svc-card fade-in"><div class="svc-icon v"><i class="fas fa-microchip"></i></div><h3>Intelligent Systems</h3><p>SaaS, custom platforms, dashboards and systems that scale with your business growth.</p><span class="svc-link">Learn more <i class="fas fa-arrow-right"></i></span></div>
+      <div class="g-card svc-card fade-in"><div class="svc-icon b"><i class="fas fa-headset"></i></div><h3>Maintenance &amp; Support</h3><p>90-day technical warranty and ongoing support plans. Your project always evolving and secure.</p><span class="svc-link">Learn more <i class="fas fa-arrow-right"></i></span></div>
+      <div class="g-card svc-promo fade-in"><div><h3>Your next digital product starts <span>here</span>.</h3><p style="color:var(--text-2);margin-top:10px;font-size:.9rem;max-width:360px">Quote in up to 4h. Briefing → Contract → Delivery. No runaround.</p></div><a href="https://wa.me/5554993031264?text=Hi%20Giovanne!%20I'd%20like%20to%20discuss%20a%20project." target="_blank" class="btn-primary" style="white-space:nowrap;flex-shrink:0"><i class="fab fa-whatsapp"></i> Start Project</a></div>
+    </div>
+  </div>
+</section>
+<hr class="sec-divider">
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <div class="section-tag">// about</div>
+        <h2>Code with purpose<br>and measurable results.</h2>
+        <p>I'm Giovanne Sartor — full stack developer and AI specialist with over 4 years of experience building digital products that deliver real results for businesses of all sizes.</p>
+        <p>I develop with speed and precision using AI as a co-pilot. Websites in up to 5 days, systems in up to 3 weeks. Active partner in startups like AG Digital, ConectCampo, FundFlow and Valuora.</p>
+        <div class="about-tags"><span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Docker</span><span class="tech-tag">AWS</span><span class="tech-tag">GPT-4</span><span class="tech-tag">Claude API</span><span class="tech-tag">LangChain</span><span class="tech-tag">Stripe</span><span class="tech-tag">TailwindCSS</span><span class="tech-tag">MongoDB</span></div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+          <a href="https://www.linkedin.com/in/giovannesartor/" target="_blank" class="btn-ghost" style="font-size:.85rem;padding:10px 20px"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.instagram.com/sartordigital" target="_blank" class="btn-ghost" style="font-size:.85rem;padding:10px 20px"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="mailto:contato@sartordigital.online" class="btn-ghost" style="font-size:.85rem;padding:10px 20px"><i class="fas fa-envelope"></i> Email</a>
         </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section section-white" id="portfolio">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="badge badge-mint badge-dot">Our Work</span>
-                <h2>Project Portfolio</h2>
-                <p>Real products, in production, with active users. 11+ projects delivered in Fintech, AgTech, Healthcare, MarTech, Web3 and SaaS.</p>
-            </div>
-            <div class="portfolio-filters fade-in">
-                <button class="filter-pill active" data-filter="all">All</button>
-                <button class="filter-pill" data-filter="fintech">Fintech</button>
-                <button class="filter-pill" data-filter="agtech">AgTech</button>
-                <button class="filter-pill" data-filter="martech">MarTech</button>
-                <button class="filter-pill" data-filter="web3">Web3</button>
-                <button class="filter-pill" data-filter="servicos">Services</button>
-                <button class="filter-pill" data-filter="saude">Healthcare</button>
-                <button class="filter-pill" data-filter="saas">SaaS</button>
-                <button class="filter-pill" data-filter="esg">ESG</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-capital"><i class="fas fa-chart-line"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Investments</div><h3>Buffalo Capital</h3><p>Corporate website for investment firm, with interactive dashboard and real-time financial API integration.</p><div class="pf-techs"><span class="pf-tech">Dashboard</span><span class="pf-tech">Financial APIs</span><span class="pf-tech">Chart.js</span></div><a href="https://buffalocapital.com.br" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="servicos"><div class="pf-img c-services"><i class="fas fa-tools"></i></div><div class="pf-body"><div class="pf-tag">Services · CRM · Scheduling</div><h3>SRT Brasil</h3><p>Complete platform for technical services, with online scheduling system, client management and payment integration.</p><div class="pf-techs"><span class="pf-tech">CRM</span><span class="pf-tech">Scheduling</span><span class="pf-tech">Payments</span></div><a href="http://srtbrasil.com" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="web3"><div class="pf-img c-web3"><i class="fas fa-cubes"></i></div><div class="pf-body"><div class="pf-tag">Web3 · Digital Tokenization</div><h3>Valsa Digital</h3><p>Complete digital platform focused on digital tokenization. Active contribution in frontend development (25%).</p><div class="pf-techs"><span class="pf-tech">Frontend</span><span class="pf-tech">Web3</span><span class="pf-tech">Blockchain</span></div><a href="https://valsadigital.com.br" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-insurtech"><i class="fas fa-shield-alt"></i></div><div class="pf-body"><div class="pf-tag">Insurtech · Fintech · SaaS</div><h3>AG Digital</h3><p>Premium intelligent management platform for insurance, benefits and financial plans. Partner and developer (~25%).</p><div class="pf-techs"><span class="pf-tech">Insurance</span><span class="pf-tech">Benefits</span><span class="pf-tech">SaaS</span></div><a href="https://agdigital.ag" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fintech"><i class="fas fa-calculator"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation SaaS</div><h3>Quanto Vale</h3><p>Valuation SaaS platform with DCF Engine + proprietary AI. Reports up to 25 pages — 30x cheaper than consulting firms.</p><div class="pf-techs"><span class="pf-tech">DCF Engine</span><span class="pf-tech">Generative AI</span><span class="pf-tech">LGPD</span></div><a href="https://quantovale.online" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-crypto"><i class="fas fa-robot"></i></div><div class="pf-body"><div class="pf-tag">FinTech · Crypto · AI</div><h3>Vexium</h3><p>Proprietary VEX Engine for cryptocurrencies. Consolidates 7+ technical indicators with generative AI and live Binance data.</p><div class="pf-techs"><span class="pf-tech">VEX Engine</span><span class="pf-tech">Binance API</span><span class="pf-tech">Hybrid AI</span></div><a href="https://vexium.pro" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="agtech"><div class="pf-img c-agro"><i class="fas fa-tractor"></i></div><div class="pf-body"><div class="pf-tag">AgTech · Marketplace · Fintech</div><h3>ConectCampo</h3><p>#1 Rural credit marketplace in Brazil. Connects producers to banks, FIDCs and cooperatives with AI and banking data room.</p><div class="pf-techs"><span class="pf-tech">AI Matching</span><span class="pf-tech">Risk Score</span><span class="pf-tech">LGPD</span></div><a href="https://conectcampo.digital" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-fundflow"><i class="fas fa-hand-holding-usd"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Fundraising · AI</div><h3>FundFlow</h3><p>Resource fundraising platform with AI and C.A.P.T.A.R. Method. R$ 247M+ raised connecting companies to investors.</p><div class="pf-techs"><span class="pf-tech">C.A.P.T.A.R. Method</span><span class="pf-tech">Proprietary AI</span><span class="pf-tech">LGPD</span></div><a href="https://fundflow.money" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="saas"><div class="pf-img c-linkora"><i class="fas fa-link"></i></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio · Creator Economy</div><h3>Linkora</h3><p>Link-in-Bio for creators, influencers and brands. Links, digital products, VIP content and real-time analytics.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="fintech"><div class="pf-img c-valuora"><i class="fas fa-balance-scale"></i></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Valuation with DCF Engine v7.1, AI and sector benchmarks. Reports up to 42 pages with 14+ methods — M&A standard at a fraction of the cost.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="saude"><div class="pf-img c-prosorrir"><i class="fas fa-tooth"></i></div><div class="pf-body"><div class="pf-tag">Healthcare · Dental · Multi-location</div><h3>Pró Sorrir Dental Clinic</h3><p>Modern institutional website for a dental clinic with 19+ years and 2 locations in Serra Gaúcha. WhatsApp scheduling, interactive FAQ, treatment quiz and case gallery.</p><div class="pf-techs"><span class="pf-tech">WhatsApp API</span><span class="pf-tech">Local SEO</span><span class="pf-tech">Interactive Quiz</span></div><a href="https://prosorrirodontologia.com.br" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-                <div class="portfolio-card fade-in" data-category="esg"><div class="pf-img c-esg"><i class="fas fa-leaf"></i></div><div class="pf-body"><div class="pf-tag">ESG · Sustainability · AI</div><h3>ESG360</h3><p>Intelligent ESG platform powered by AI — takes your data from zero to a finished report. ESG score translated into credit spread, WACC delta and enterprise value impact.</p><div class="pf-techs"><span class="pf-tech">NLP Extraction</span><span class="pf-tech">GRI · SASB · TCFD</span><span class="pf-tech">Financial Score</span></div><a href="https://esg360.digital" target="_blank" class="pf-link">View Project <i class="fas fa-arrow-right"></i></a></div></div>
-            </div>
+      </div>
+      <div class="about-photo-col fade-in">
+        <div class="about-photo-frame g-card"><img src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor"></div>
+        <div class="about-name-card">
+          <div><div class="aname">Giovanne Sartor</div><div class="arole">Full Stack Dev · AI Specialist</div></div>
+          <div class="asocials"><a class="asocial" href="https://www.linkedin.com/in/giovannesartor/" target="_blank"><i class="fab fa-linkedin"></i></a><a class="asocial" href="https://www.instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i></a><a class="asocial" href="https://wa.me/5554993031264" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
         </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section section-muted" id="process">
-        <div class="container">
-            <div class="section-header centered fade-in">
-                <span class="badge badge-mint badge-dot">Our Process</span>
-                <h2>How We Work</h2>
-                <p>A clear, fast and transparent process — from briefing to launch.</p>
-            </div>
-            <div class="processo-grid">
-                <div class="processo-card fade-in">
-                    <div class="processo-num">1</div>
-                    <div class="processo-step-badge">01</div>
-                    <div class="processo-icon"><i class="fas fa-comments"></i></div>
-                    <h4>Briefing</h4>
-                    <p>We understand your business, goals, audience and expectations before writing a single line of code.</p>
-                    <div class="processo-badge">Day 1</div>
-                </div>
-                <div class="processo-card fade-in">
-                    <div class="processo-num">2</div>
-                    <div class="processo-step-badge">02</div>
-                    <div class="processo-icon"><i class="fas fa-pencil-ruler"></i></div>
-                    <h4>Prototyping</h4>
-                    <p>We create wireframes and visual prototypes to validate the design and flow with you before dev.</p>
-                    <div class="processo-badge">Days 2–5</div>
-                </div>
-                <div class="processo-card fade-in">
-                    <div class="processo-num">3</div>
-                    <div class="processo-step-badge">03</div>
-                    <div class="processo-icon"><i class="fas fa-code"></i></div>
-                    <h4>Development</h4>
-                    <p>Production code, with integrated AI, premium design and performance from the first line.</p>
-                    <div class="processo-badge">Weeks 1–4</div>
-                </div>
-                <div class="processo-card fade-in">
-                    <div class="processo-num">4</div>
-                    <div class="processo-step-badge">04</div>
-                    <div class="processo-icon"><i class="fas fa-rocket"></i></div>
-                    <h4>Delivery & Support</h4>
-                    <p>Complete launch with deploy, testing, documentation and 90 days of post-delivery technical warranty (fixes and adjustments).</p>
-                    <div class="processo-badge">Go-live</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section-white" id="faq">
-        <div class="container">
-            <div class="section-header centered fade-in">
-                <span class="badge badge-mint badge-dot">FAQ</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Get answers about our services, timelines and processes.</p>
-            </div>
-            <div class="faq-list fade-in">
-                <div class="faq-item">
-                    <button class="faq-question">How long does it take to develop a project?<i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">The timeline varies according to complexity. Corporate websites take up to 1 week. More complex systems and platforms take 3 to 6 weeks. We work with agile sprints and frequent demos to ensure timeline transparency.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you work with clients outside Brazil?<i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Yes! We serve international clients with support in Portuguese, English and Spanish. All communication and delivery is done remotely with professional project management tools.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What technologies do you use?<i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">We use the most modern technologies available: React, Next.js, Node.js, Python, FastAPI, PostgreSQL, Docker, AWS, plus AI API integrations like OpenAI. We choose the ideal stack for each project.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How does the quoting process work?<i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">We conduct a free discovery meeting to understand your needs. Then we prepare a detailed proposal with scope, timeline and investment. The budget is divided into phases, allowing greater control and flexibility.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you offer support after delivery?<i class="fas fa-chevron-down faq-chevron"></i></button>
-                <div class="faq-answer"><div class="faq-answer-inner">Yes, all projects include <strong>90 days of post-delivery technical warranty</strong>, covering bug fixes, stability and small adjustments within the delivered scope. New features are not included and are handled as a separate scope. After this period, we offer monthly maintenance plans with 24/7 monitoring, automated backups and security updates.</div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Can artificial intelligence really help my business?<i class="fas fa-chevron-down faq-chevron"></i></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Absolutely! AI can automate customer service with 24/7 chatbots, analyze data for more accurate decisions, reduce operational costs by up to 70% and create personalized experiences. We offer a free assessment of how AI can impact your business.</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contato-section" id="contact">
-        <div class="container">
-            <div class="section-header centered fade-in">
-                <span class="badge badge-mint">Get in Touch</span>
-                <h2>Let's Talk</h2>
-                <p>Tell us about your project. We provide a free initial analysis and respond within 24h with a personalized proposal.</p>
-            </div>
-            <div class="contato-grid fade-in">
-                <div class="contato-items">
-                    <a href="https://wa.me/5554993031264" target="_blank" class="contato-item"><div class="contato-item-icon"><i class="fab fa-whatsapp"></i></div><div><div class="contato-item-label">WhatsApp</div><div class="contato-item-text">+55 54 99303-1264</div></div></a>
-                    <a href="https://www.instagram.com/sartordigital" target="_blank" class="contato-item"><div class="contato-item-icon"><i class="fab fa-instagram"></i></div><div><div class="contato-item-label">Instagram</div><div class="contato-item-text">@sartordigital</div></div></a>
-                    <a href="mailto:contato@sartordigital.online" class="contato-item"><div class="contato-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contato-item-label">Email</div><div class="contato-item-text">contato@sartordigital.online</div></div></a>
-                    <a href="https://sartordigital.online" class="contato-item"><div class="contato-item-icon"><i class="fas fa-globe"></i></div><div><div class="contato-item-label">Website</div><div class="contato-item-text">sartordigital.online</div></div></a>
-                </div>
-                <div class="contato-card">
-                    <div class="contato-card-icon"><i class="fas fa-comment-dots"></i></div>
-                    <h3>Talk directly with us</h3>
-                    <p>Click the button below to start a conversation on WhatsApp and receive detailed information about our services.</p>
-                    <a href="https://wa.me/5554993031264?text=Hello!%20I'd%20like%20information%20about%20Sartor%20Digital%20services." target="_blank" class="btn btn-mint"><i class="fab fa-whatsapp"></i> Request Information</a>
-                    <div class="contato-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M13 1L3 14h8l-2 10L21 11h-8l2-10z"/></svg> We respond within 15 minutes during business hours.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#home" class="logo">
-                        <div class="logo-mark"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital"></div>
-                        Sartor Digital
-                    </a>
-                    <p>Software engineering, applied AI and high-performance digital products for companies that want to grow.</p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/sartordigital" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5554993031264" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/giovannesartor/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="services.html">All Services</a>
-                    <a href="services.html">Full Stack Development</a>
-                    <a href="services.html">Lead Capture</a>
-                    <a href="services.html">AI Integration</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#portfolio">Portfolio</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="https://wa.me/5554993031264">+55 54 99303-1264</a>
-                    <a href="mailto:contato@sartordigital.online">contato@sartordigital.online</a>
-                    <a href="https://www.instagram.com/sartordigital">@sartordigital</a>
-                    <a href="https://sartordigital.online">sartordigital.online</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 sartordigital.online — All rights reserved.</span>
-                <span style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:0.8125rem;"><i class="fas fa-shield-halved" style="color:#86EFAC;"></i> LGPD Compliant</span>
-                <span>Developed with <span class="heart"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span> por Sartor Digital</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modals -->
-    <div class="modal-overlay" id="modal-desenvolvimento"><div class="modal-content"><div class="modal-header"><i class="fas fa-layer-group modal-header-icon"></i><div><h3>Full Stack Development</h3><p>Complete end-to-end web solutions.</p></div></div><button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="modal-body"><p>We offer complete end-to-end web solutions, from modern front-end development to robust and scalable back-end construction.</p><h4>What we include</h4><ul><li>Responsive web application development</li><li>RESTful API creation for integrations</li><li>Optimized and secure databases</li><li>Authentication system implementation</li><li>Third-party service integration</li><li>Performance and SEO optimization</li></ul><h4>Technologies used</h4><p>HTML5, CSS3, JavaScript, React, Next.js, Node.js, Python, FastAPI, PostgreSQL, MongoDB, Docker, AWS and much more.</p><h4>Benefits</h4><ul><li>Custom solutions for your needs</li><li>Clean and well-documented code</li><li>Scalability for future growth</li><li>Data security implemented</li><li>Post-launch technical support</li></ul></div></div></div>
-
-    <div class="modal-overlay" id="modal-sites"><div class="modal-content"><div class="modal-header"><i class="fas fa-globe-americas modal-header-icon"></i><div><h3>Premium Corporate Websites</h3><p>Websites that convert visitors into clients.</p></div></div><button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="modal-body"><p>We create corporate websites that not only showcase your brand, but also convert visitors into qualified clients.</p><h4>Features</h4><ul><li>Responsive design adaptable to all devices</li><li>Search engine optimization (SEO)</li><li>High loading speed</li><li>Content management systems (CMS)</li><li>Social media integration</li><li>Smart contact forms</li><li>Data analysis with Google Analytics</li></ul><h4>Website types</h4><ul><li>Corporate institutional websites</li><li>Campaign landing pages</li><li>Professional portfolios</li><li>Product/service catalogs</li><li>Corporate blogs</li></ul></div></div></div>
-
-    <div class="modal-overlay" id="modal-captacao"><div class="modal-content"><div class="modal-header"><i class="fas fa-bullhorn modal-header-icon"></i><div><h3>Strategic Lead Capture</h3><p>Digital ecosystems that convert.</p></div></div><button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="modal-body"><p>We develop complete digital marketing systems that convert visitors into qualified leads and clients.</p><h4>Components</h4><ul><li>High-Conversion Landing Pages</li><li>Premium Strategic Content (Ebooks, whitepapers)</li><li>Email Automation Systems</li><li>CRM Integration</li><li>Performance Metrics Dashboard</li></ul><h4>Expected results</h4><ul><li>Conversion rates from 3% to 15%</li><li>30% to 60% reduction in cost per lead</li><li>Measurable ROI in 60 to 90 days</li><li>More efficient and scalable sales process</li></ul></div></div></div>
-
-    <div class="modal-overlay" id="modal-ia"><div class="modal-content"><div class="modal-header"><i class="fas fa-robot modal-header-icon"></i><div><h3>AI Integration & Automation</h3><p>Artificial intelligence applied to your business.</p></div></div><button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="modal-body"><p>We implement artificial intelligence solutions that automate processes, analyze data and improve decision-making.</p><h4>Solutions</h4><ul><li>Intelligent chatbots for customer service</li><li>Predictive analysis for trend forecasting</li><li>Business workflow automation</li><li>Natural language processing (NLP)</li><li>Personalized recommendation systems</li></ul><h4>Benefits</h4><ul><li>Operational cost reduction of up to 70%</li><li>24/7 service without human intervention</li><li>More accurate data-driven decisions</li><li>Unlimited scalability</li><li>Personalized customer experiences</li></ul></div></div></div>
-
-    <div class="modal-overlay" id="modal-sistemas"><div class="modal-content"><div class="modal-header"><i class="fas fa-cogs modal-header-icon"></i><div><h3>Custom Intelligent Systems</h3><p>Tailored software with integrated AI.</p></div></div><button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="modal-body"><p>We develop customized systems with integrated artificial intelligence to optimize operations and create competitive advantages.</p><h4>System types</h4><ul><li>Enterprise resource planning (ERP)</li><li>Customer Relationship Management (CRM)</li><li>Inventory control systems</li><li>E-commerce platforms</li><li>Online scheduling systems</li><li>Real-time analytical dashboards</li></ul><h4>Features</h4><ul><li>Fully customized for your business</li><li>Integrated AI for intelligent automation</li><li>Intuitive and user-friendly interface</li><li>Advanced reports and analytics</li><li>Scalable for future growth</li></ul></div></div></div>
-
-    <div class="modal-overlay" id="modal-suporte"><div class="modal-content"><div class="modal-header"><i class="fas fa-shield-alt modal-header-icon"></i><div><h3>Continuous Maintenance & Support</h3><p>Your systems always running perfectly.</p></div></div><button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="modal-body"><p>We offer maintenance, update and technical support services to ensure optimal performance of all your digital solutions.</p><h4>What we include</h4><ul><li>24/7 performance monitoring</li><li>Automated backups and restoration</li><li>Regular security updates</li><li>Bug fixes and technical issues</li><li>Continuous performance optimization</li><li>Monthly performance reports</li></ul><h4>Plans</h4><ul><li>Basic — Business hours support</li><li>Professional — Extended support + monitoring</li><li>Enterprise — 24/7 support + priority updates</li></ul></div></div></div>
-
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-
-    <script>
-    (function() {
-        'use strict';
-
-        // ─── Config: change only this number to update the entire site ───
-        const PROJECT_COUNT = 12;
-
-        // Automatically update all elements with the project count
-        document.querySelectorAll('[data-count="21"]').forEach(el => el.dataset.count = PROJECT_COUNT);
-        document.querySelectorAll('.hb-bg-number').forEach(el => { if(el.textContent.trim()==='21') el.textContent = PROJECT_COUNT; });
-
-        // Mobile toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const i = mobileToggle.querySelector('i');
-            i.classList.toggle('fa-bars');
-            i.classList.toggle('fa-times');
-        });
-        navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            const i = mobileToggle.querySelector('i');
-            i.classList.add('fa-bars');
-            i.classList.remove('fa-times');
-        }));
-
-        // Header scroll + progress
-        const header = document.getElementById('header');
-        const scrollProgress = document.getElementById('scrollProgress');
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-            const total = document.documentElement.scrollHeight - window.innerHeight;
-            scrollProgress.style.width = (window.scrollY / total * 100) + '%';
-            scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-        });
-        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) {
-            const t = document.querySelector(this.getAttribute('href'));
-            if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
-        }));
-
-        // Dark mode
-        const darkToggle = document.getElementById('darkToggle');
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-            darkToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
-        }
-        darkToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const i = darkToggle.querySelector('i');
-            i.classList.toggle('fa-moon');
-            i.classList.toggle('fa-sun');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-        });
-
-        // Language switcher
-        document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', function() {
-            const l = this.dataset.lang;
-            if (l === 'pt') window.location.href = '../index.html';
-            else if (l === 'en') window.location.href = 'index.html';
-            else if (l === 'es') window.location.href = '../es/index.html';
-        }));
-
-        // Fade in
-        const observer = new IntersectionObserver((entries) => entries.forEach(e => {
-            if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-        }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Counter animation
-        function animateCounter(el, target) {
-            const dur = 2000, start = performance.now();
-            function step(now) {
-                const p = Math.min((now - start) / dur, 1);
-                const e = 1 - Math.pow(1 - p, 3);
-                el.textContent = Math.floor(e * target) + (p >= 1 ? '+' : '');
-                if (p < 1) requestAnimationFrame(step);
-            }
-            requestAnimationFrame(step);
-        }
-        document.querySelectorAll('[data-count]').forEach(el => {
-            const t = parseInt(el.dataset.count);
-            const co = new IntersectionObserver(entries => entries.forEach(e => {
-                if (e.isIntersecting) { animateCounter(el, t); co.unobserve(el); }
-            }), { threshold: 0.5 });
-            co.observe(el);
-        });
-
-        // Portfolio filter
-        document.querySelectorAll('.filter-pill').forEach(b => b.addEventListener('click', function() {
-            document.querySelectorAll('.filter-pill').forEach(x => x.classList.remove('active'));
-            this.classList.add('active');
-            const f = this.dataset.filter;
-            document.querySelectorAll('.portfolio-card').forEach(c => {
-                c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f);
-            });
-        }));
-
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(b => b.addEventListener('click', function() {
-            const item = this.parentElement, was = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-            if (!was) item.classList.add('active');
-        }));
-
-        // Modals
-        document.querySelectorAll('[data-modal]').forEach(t => t.addEventListener('click', function(e) {
-            e.preventDefault();
-            const m = document.getElementById(this.dataset.modal);
-            if (m) m.classList.add('active');
-        }));
-        document.querySelectorAll('.modal-close').forEach(b => b.addEventListener('click', function() {
-            this.closest('.modal-overlay').classList.remove('active');
-        }));
-        document.querySelectorAll('.modal-overlay').forEach(o => o.addEventListener('click', function(e) {
-            if (e.target === this) this.classList.remove('active');
-        }));
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active'));
-        });
-
-        // Prefetch services page
-        setTimeout(() => {
-            const l = document.createElement('link'); l.rel = 'prefetch'; l.href = 'services.html';
-            document.head.appendChild(l);
-        }, 1000);
-    })();
-    </script>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="sec-divider">
+<section class="section" id="portfolio">
+  <div class="wrap">
+    <div class="section-head center fade-in"><div class="section-tag">// portfolio</div><h2 class="section-title">Projects we've delivered</h2><p class="section-sub">12+ digital products built with AI, from zero to market.</p></div>
+    <div class="portfolio-filters fade-in"><span class="pf-pill active" data-filter="all">All</span><span class="pf-pill" data-filter="fintech">Fintech</span><span class="pf-pill" data-filter="saas">SaaS</span><span class="pf-pill" data-filter="agtech">AgTech</span><span class="pf-pill" data-filter="saude">Health</span><span class="pf-pill" data-filter="esg">ESG</span></div>
+    <div class="portfolio-grid">
+      <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-img"><div class="pf-icon"><i class="fas fa-chart-line"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://buffalocapital.com.br" alt="Buffalo Capital" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Investments</div><h3>Buffalo Capital</h3><p>Institutional site with interactive dashboard and real-time financial API integration.</p><div class="pf-techs"><span class="pf-tech">Dashboard</span><span class="pf-tech">Financial APIs</span><span class="pf-tech">Chart.js</span></div><a href="https://buffalocapital.com.br" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-img"><div class="pf-icon"><i class="fas fa-robot"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://vexium.pro" alt="Vexium" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">FinTech · Crypto · AI</div><h3>Vexium</h3><p>Proprietary VEX engine — 7+ technical indicators with generative AI and live Binance data.</p><div class="pf-techs"><span class="pf-tech">VEX Engine</span><span class="pf-tech">Binance API</span><span class="pf-tech">Hybrid AI</span></div><a href="https://vexium.pro" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-img"><div class="pf-icon"><i class="fas fa-balance-scale"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://valuora.online" alt="Valuora" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>DCF v7.1 + AI + sector benchmarks. 42-page report — M&amp;A standard quality.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">Damodaran</span></div><a href="https://valuora.online" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="agtech"><div class="pf-img"><div class="pf-icon"><i class="fas fa-tractor"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://conectcampo.digital" alt="ConectCampo" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">AgTech · Marketplace · Fintech</div><h3>ConectCampo</h3><p>Brazil's #1 rural credit marketplace. Connects farmers to banks and FIDCs with AI.</p><div class="pf-techs"><span class="pf-tech">AI Matching</span><span class="pf-tech">Risk Score</span><span class="pf-tech">LGPD</span></div><a href="https://conectcampo.digital" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-img"><div class="pf-icon"><i class="fas fa-hand-holding-usd"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://fundflow.money" alt="FundFlow" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">Fintech · Fundraising · AI</div><h3>FundFlow</h3><p>Fundraising platform with AI and C.A.P.T.A.R. Method. R$247M+ raised connecting companies to investors.</p><div class="pf-techs"><span class="pf-tech">C.A.P.T.A.R.</span><span class="pf-tech">Proprietary AI</span></div><a href="https://fundflow.money" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="saas"><div class="pf-img"><div class="pf-icon"><i class="fas fa-link"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://linkora.vip" alt="Linkora" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">SaaS · Link-in-Bio</div><h3>Linkora</h3><p>Link-in-Bio for creators and brands. Links, digital products and real-time analytics.</p><div class="pf-techs"><span class="pf-tech">Link-in-Bio</span><span class="pf-tech">Analytics</span><span class="pf-tech">Stripe</span></div><a href="https://linkora.vip" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="esg"><div class="pf-img"><div class="pf-icon"><i class="fas fa-leaf"></i></div><img src="https://image.thum.io/get/width/640/crop/400/https://esg360.digital" alt="ESG360" loading="lazy" onerror="this.style.display='none'"></div><div class="pf-body"><div class="pf-tag">ESG · Sustainability · AI</div><h3>ESG360</h3><p>AI-powered ESG platform — score translated to credit spread, WACC and enterprise value impact.</p><div class="pf-techs"><span class="pf-tech">NLP</span><span class="pf-tech">GRI · SASB</span><span class="pf-tech">Financial Score</span></div><a href="https://esg360.digital" target="_blank" class="pf-link">View project <i class="fas fa-arrow-right"></i></a></div></div>
+    </div>
+  </div>
+</section>
+<hr class="sec-divider">
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head center fade-in"><div class="section-tag">// process</div><h2 class="section-title">How we work</h2><p class="section-sub">From briefing to deployment in days. Every step with full transparency.</p></div>
+    <div class="process-grid">
+      <div class="g-card proc-card fade-in"><div class="proc-num">01</div><h3>Briefing &amp; Diagnosis</h3><p>Alignment meeting to understand the business, objectives and full project scope.</p><span class="proc-time">day 1</span></div>
+      <div class="g-card proc-card fade-in"><div class="proc-num">02</div><h3>Proposal &amp; Contract</h3><p>Detailed quote in up to 4h. Clear contract, no fine print or surprises.</p><span class="proc-time">day 1–2</span></div>
+      <div class="g-card proc-card fade-in"><div class="proc-num">03</div><h3>Design &amp; Dev with AI</h3><p>Prototyping, UI/UX and development with AI accelerating every step.</p><span class="proc-time">days 2–5 (websites)</span></div>
+      <div class="g-card proc-card fade-in"><div class="proc-num">04</div><h3>Delivery &amp; Support</h3><p>Deploy, team training and 90-day technical warranty included. Project live.</p><span class="proc-time">90-day warranty</span></div>
+    </div>
+  </div>
+</section>
+<hr class="sec-divider">
+<section class="section" id="differentials">
+  <div class="wrap">
+    <div class="section-head fade-in"><div class="section-tag">// differentials</div><h2 class="section-title">Why choose us</h2><p class="section-sub">We're not an agency. We're a lean, fast, AI-powered operation.</p></div>
+    <div class="diff-grid">
+      <div class="g-card diff-card fade-in"><div class="diff-icon" style="color:var(--green)"><i class="fas fa-wand-magic-sparkles"></i></div><div><h3>AI at every step</h3><p>We use AI in design, code, testing and deploys — 3× faster than traditional agencies, without compromising quality.</p></div></div>
+      <div class="g-card diff-card fade-in"><div class="diff-icon" style="color:var(--violet)"><i class="fas fa-shield-alt"></i></div><div><h3>90-Day Technical Warranty</h3><p>Any bug, adjustment or issue — we fix it at no extra cost within the first 90 days after launch.</p></div></div>
+      <div class="g-card diff-card fade-in"><div class="diff-icon" style="color:var(--blue)"><i class="fas fa-repeat"></i></div><div><h3>90%+ Recurring Clients</h3><p>Our retention rate speaks for itself. Those who hire once come back for the next project. Long-term relationships.</p></div></div>
+      <div class="g-card diff-card fade-in"><div class="diff-icon" style="color:var(--green)"><i class="fas fa-bolt"></i></div><div><h3>Real Speed</h3><p>Websites in up to 5 days. Systems in up to 3 weeks. While others are still planning, we've already delivered.</p></div></div>
+    </div>
+  </div>
+</section>
+<hr class="sec-divider">
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="cta-card fade-in">
+      <div class="section-tag" style="display:inline-flex;margin-bottom:24px">// let's talk</div>
+      <h2>Ready to build your<br>next product?</h2>
+      <p>Quote in up to 4h. No bureaucracy, no runaround. From briefing to deploy, we handle everything.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/5554993031264?text=Hi%20Giovanne!%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
+        <a href="mailto:contato@sartordigital.online" class="btn-ghost"><i class="fas fa-envelope"></i> contato@sartordigital.online</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital"><span>Sartor Digital</span></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <div class="footer-socials"><a class="f-social" href="https://www.instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i></a><a class="f-social" href="https://www.linkedin.com/in/giovannesartor/" target="_blank"><i class="fab fa-linkedin"></i></a><a class="f-social" href="https://wa.me/5554993031264" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+      <p class="footer-copy">&copy; 2025 Sartor Digital. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/5554993031264?text=Hi%20Giovanne!%20I%20visited%20your%20site%20and%20I'd%20like%20a%20quote." target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+<script>
+  window.addEventListener('scroll',()=>{const pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;document.getElementById('scrollFill').style.width=Math.min(pct,100)+'%';document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);});
+  const html=document.documentElement,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon'),saved=localStorage.getItem('sd-theme')||'light';
+  html.setAttribute('data-theme',saved);icon.className=saved==='dark'?'fas fa-sun':'fas fa-moon';
+  btn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);icon.className=next==='dark'?'fas fa-sun':'fas fa-moon';localStorage.setItem('sd-theme',next);});
+  const obs=new IntersectionObserver((e)=>{e.forEach((el,i)=>{if(el.isIntersecting)setTimeout(()=>el.target.classList.add('visible'),i*70);});},{threshold:.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  const cntObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const t=parseInt(el.dataset.count);let c=0;const iv=setInterval(()=>{c=Math.min(c+Math.ceil(t/40),t);el.textContent=c+'+';if(c>=t){el.textContent=t+'+';clearInterval(iv);}},40);cntObs.unobserve(el);}});},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cntObs.observe(el));
+  document.querySelectorAll('.pf-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.pf-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');const f=pill.dataset.filter;document.querySelectorAll('.pf-card').forEach(card=>{card.style.display=(f==='all'||card.dataset.cat===f)?'':'none';});});});
+</script>
 </body>
 </html>
