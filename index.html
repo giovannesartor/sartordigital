@@ -83,6 +83,31 @@
   .photo-ring{position:absolute;inset:-2px;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--green),var(--violet),var(--blue),transparent);padding:2px}
   .photo-inner{width:100%;height:100%;background:var(--bg-3);border-radius:var(--radius-xl);overflow:hidden;position:relative}
   .photo-inner img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block;padding:10px 6px 0}
+  /* Workspace visual */
+  .ws-wrap{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px 18px}
+  .ws-logo-area{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .ws-logo-ring{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center}
+  .ws-logo-ring::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(var(--green),var(--blue),var(--violet),var(--green));animation:spinRing 4s linear infinite;z-index:0}
+  .ws-logo-ring::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--bg-3);z-index:1}
+  @keyframes spinRing{to{transform:rotate(360deg)}}
+  .ws-logo-img{width:44px;height:44px;border-radius:10px;position:relative;z-index:2;object-fit:contain}
+  .ws-brand{font-family:var(--font-head);font-weight:700;font-size:.85rem;color:var(--text);letter-spacing:-.02em}
+  .ws-brand span{color:var(--green)}
+  .ws-terminal{width:100%;background:#0d0d14;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;font-family:var(--font-mono);font-size:.7rem}
+  .ws-term-bar{display:flex;align-items:center;gap:6px;padding:7px 10px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+  .ws-dot{width:8px;height:8px;border-radius:50%}
+  .ws-dot.r{background:#ff5f56}.ws-dot.y{background:#ffbd2e}.ws-dot.g{background:#27c93f}
+  .ws-term-title{margin-left:auto;color:rgba(255,255,255,.3);font-size:.65rem}
+  .ws-term-body{padding:10px 12px;display:flex;flex-direction:column;gap:3px;line-height:1.6}
+  .ws-line{color:rgba(255,255,255,.6)}
+  .ws-indent{padding-left:14px}
+  .c-kw{color:#c792ea}.c-var{color:#82aaff}.c-str{color:#c3e88d}.c-key{color:#80cbc4}
+  .ws-cursor::after{content:'█';color:var(--green);animation:blink 1s step-end infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .ws-metrics{display:flex;gap:8px;width:100%}
+  .ws-metric{flex:1;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);border-radius:8px;padding:8px 4px;text-align:center}
+  .ws-num{display:block;font-family:var(--font-head);font-weight:700;font-size:.95rem;color:var(--green)}
+  .ws-lbl{display:block;font-size:.6rem;color:var(--text-2);margin-top:1px}
   .photo-glow{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:220px;height:50px;background:radial-gradient(ellipse,var(--green-dim),transparent 70%);filter:blur(16px);pointer-events:none}
   .hero-chip{position:absolute;z-index:10;background:var(--bg-2);border:1px solid var(--border);box-shadow:var(--shadow-md);border-radius:var(--radius-sm);padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:.75rem;font-weight:600;animation:chipFloat 4s ease-in-out infinite;color:var(--text)}
   .chip-1{top:40px;left:-70px;animation-delay:0s}.chip-2{bottom:100px;left:-80px;animation-delay:1.5s}.chip-3{top:120px;right:-70px;animation-delay:3s}.chip-4{bottom:50px;right:-60px;animation-delay:1s}
@@ -277,7 +302,33 @@
       <div class="hero-visual fade-in" style="transition-delay:.2s">
         <div class="hero-photo-wrap">
           <div class="photo-ring"></div>
-          <div class="photo-inner"><img src="giovannecaricatura_transparente.png" alt="Giovanne Sartor"></div>
+          <div class="photo-inner">
+            <div class="ws-wrap">
+              <div class="ws-logo-area">
+                <div class="ws-logo-ring"><img class="ws-logo-img" src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital"></div>
+                <div class="ws-brand">Sartor<span>Digital</span></div>
+              </div>
+              <div class="ws-terminal">
+                <div class="ws-term-bar">
+                  <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
+                  <span class="ws-term-title">sartor.dev ~ zsh</span>
+                </div>
+                <div class="ws-term-body">
+                  <div class="ws-line"><span class="c-kw">const</span> <span class="c-var">stack</span> = {</div>
+                  <div class="ws-line ws-indent"><span class="c-key">ai</span>: <span class="c-str">"Claude + GPT-4"</span>,</div>
+                  <div class="ws-line ws-indent"><span class="c-key">infra</span>: <span class="c-str">"Cloudflare"</span>,</div>
+                  <div class="ws-line ws-indent"><span class="c-key">entrega</span>: <span class="c-str">"5 dias"</span></div>
+                  <div class="ws-line">}</div>
+                  <div class="ws-line ws-cursor"> </div>
+                </div>
+              </div>
+              <div class="ws-metrics">
+                <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">projetos</span></div>
+                <div class="ws-metric"><span class="ws-num">5d</span><span class="ws-lbl">entrega</span></div>
+                <div class="ws-metric"><span class="ws-num">90d</span><span class="ws-lbl">garantia</span></div>
+              </div>
+            </div>
+          </div>
           <div class="photo-glow"></div>
         </div>
         <div class="hero-chip chip-1"><div class="chip-icon g"><i class="fas fa-globe"></i></div><div class="chip-text">100% remoto<span>Atendo Brasil e mundo</span></div></div>
@@ -328,7 +379,32 @@
         </div>
       </div>
       <div class="about-photo-col fade-in">
-        <div class="about-photo-frame g-card"><img src="giovannecaricatura_transparente.png" alt="Giovanne Sartor"></div>
+        <div class="about-photo-frame g-card" style="padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:20px;min-height:320px;justify-content:center">
+          <div class="ws-logo-ring" style="width:88px;height:88px"><img class="ws-logo-img" style="width:54px;height:54px" src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital"></div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-head);font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:-.02em">Sartor<span style="color:var(--green)">Digital</span></div>
+            <div style="font-size:.8rem;color:var(--text-2);margin-top:4px;font-family:var(--font-mono)">Dev Full Stack · IA Specialist</div>
+          </div>
+          <div class="ws-terminal" style="width:100%;max-width:280px">
+            <div class="ws-term-bar">
+              <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
+              <span class="ws-term-title">sobre.md</span>
+            </div>
+            <div class="ws-term-body">
+              <div class="ws-line"><span class="c-kw">##</span> <span class="c-var">Giovanne Sartor</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">12 anos dev</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">12 produtos lançados</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">IA na prática</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">100% remoto</span></div>
+              <div class="ws-line ws-cursor"> </div>
+            </div>
+          </div>
+          <div class="ws-metrics" style="max-width:280px">
+            <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">anos</span></div>
+            <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">produtos</span></div>
+            <div class="ws-metric"><span class="ws-num">∞</span><span class="ws-lbl">café</span></div>
+          </div>
+        </div>
         <div class="about-name-card">
           <div><div class="aname">Giovanne Sartor</div><div class="arole">Dev Full Stack · IA Specialist</div></div>
           <div class="asocials"><a class="asocial" href="https://www.linkedin.com/in/giovannesartor/" target="_blank"><i class="fab fa-linkedin"></i></a><a class="asocial" href="https://www.instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i></a><a class="asocial" href="https://wa.me/5554993031264" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
