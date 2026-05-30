@@ -74,9 +74,32 @@
   .photo-ring{position:absolute;inset:-2px;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--green),var(--violet),var(--blue),transparent);padding:2px}
   .photo-inner{width:100%;height:100%;background:var(--bg-3);border-radius:var(--radius-xl);overflow:hidden;position:relative}
   .photo-inner img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block;padding:10px 6px 0}
+  /* Workspace visual */
+  .ws-wrap{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px 18px}
+  .ws-logo-area{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .ws-logo-ring{position:relative;width:72px;height:72px;display:flex;align-items:center;justify-content:center}
+  .ws-logo-ring::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(var(--green),var(--blue),var(--violet),var(--green));animation:spinRing 4s linear infinite;z-index:0}
+  .ws-logo-ring::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--bg-3);z-index:1}
+  @keyframes spinRing{to{transform:rotate(360deg)}}
+  .ws-logo-img{width:44px;height:44px;border-radius:10px;position:relative;z-index:2;object-fit:contain}
+  .ws-terminal{width:100%;background:#0d0d14;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;font-family:var(--font-mono);font-size:.7rem}
+  .ws-term-bar{display:flex;align-items:center;gap:6px;padding:7px 10px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+  .ws-dot{width:8px;height:8px;border-radius:50%}
+  .ws-dot.r{background:#ff5f56}.ws-dot.y{background:#ffbd2e}.ws-dot.g{background:#27c93f}
+  .ws-term-title{margin-left:auto;color:rgba(255,255,255,.3);font-size:.65rem}
+  .ws-term-body{padding:10px 12px;display:flex;flex-direction:column;gap:3px;line-height:1.6}
+  .ws-line{color:rgba(255,255,255,.6)}
+  .ws-indent{padding-left:14px}
+  .c-kw{color:#c792ea}.c-var{color:#82aaff}.c-str{color:#c3e88d}.c-key{color:#80cbc4}
+  .ws-cursor::after{content:'█';color:var(--green);animation:blink 1s step-end infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .ws-metrics{display:flex;gap:8px;width:100%}
+  .ws-metric{flex:1;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);border-radius:8px;padding:8px 4px;text-align:center}
+  .ws-num{display:block;font-family:var(--font-head);font-weight:700;font-size:.95rem;color:var(--green)}
+  .ws-lbl{display:block;font-size:.6rem;color:var(--text-2);margin-top:1px}
   .photo-glow{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:220px;height:50px;background:radial-gradient(ellipse,var(--green-dim),transparent 70%);filter:blur(16px);pointer-events:none}
   .hero-chip{position:absolute;z-index:10;background:var(--bg-2);border:1px solid var(--border);box-shadow:var(--shadow-md);border-radius:var(--radius-sm);padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:.75rem;font-weight:600;animation:chipFloat 4s ease-in-out infinite;color:var(--text)}
-  .chip-1{top:40px;left:-70px}.chip-2{bottom:100px;left:-80px;animation-delay:1.5s}.chip-3{top:120px;right:-70px;animation-delay:3s}.chip-4{bottom:50px;right:-60px;animation-delay:1s}
+  .chip-1{top:30px;left:-75px;animation-delay:0s}.chip-2{bottom:80px;left:-75px;animation-delay:1.5s}.chip-3{top:60px;right:-75px;animation-delay:3s}.chip-4{bottom:120px;right:-75px;animation-delay:1s}
   @keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
   .chip-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.875rem}
   .chip-icon.g{background:var(--green-dim);color:var(--green)}.chip-icon.v{background:var(--violet-dim);color:var(--violet)}.chip-icon.b{background:var(--blue-dim);color:var(--blue)}
@@ -241,13 +264,38 @@
       <div class="hero-visual fade-in" style="transition-delay:.2s">
         <div class="hero-photo-wrap">
           <div class="photo-ring"></div>
-          <div class="photo-inner"><img src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor"></div>
+          <div class="photo-inner">
+            <div class="ws-wrap">
+              <div class="ws-logo-area">
+                <div class="ws-logo-ring" style="width:120px;height:120px"><img class="ws-logo-img" src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor" style="width:112px;height:112px;border-radius:50%;object-fit:contain;object-position:center top;background:transparent"></div>
+              </div>
+              <div class="ws-terminal">
+                <div class="ws-term-bar">
+                  <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
+                  <span class="ws-term-title">sartordigital.online ~ zsh</span>
+                </div>
+                <div class="ws-term-body">
+                  <div class="ws-line"><span class="c-kw">const</span> <span class="c-var">stack</span> = {</div>
+                  <div class="ws-line ws-indent"><span class="c-key">front</span>: <span class="c-str">"React + Next.js"</span>,</div>
+                  <div class="ws-line ws-indent"><span class="c-key">back</span>: <span class="c-str">"Node · Python"</span>,</div>
+                  <div class="ws-line ws-indent"><span class="c-key">db</span>: <span class="c-str">"Postgres · Redis"</span></div>
+                  <div class="ws-line">}</div>
+                  <div class="ws-line ws-cursor"> </div>
+                </div>
+              </div>
+              <div class="ws-metrics">
+                <div class="ws-metric"><span class="ws-num">3w</span><span class="ws-lbl">systems</span></div>
+                <div class="ws-metric"><span class="ws-num">5d</span><span class="ws-lbl">delivery</span></div>
+                <div class="ws-metric"><span class="ws-num">90d</span><span class="ws-lbl">warranty</span></div>
+              </div>
+            </div>
+          </div>
           <div class="photo-glow"></div>
         </div>
-        <div class="hero-chip chip-1"><div class="chip-icon g"><i class="fas fa-globe"></i></div><div class="chip-text">100% remote<span>Clients worldwide</span></div></div>
-        <div class="hero-chip chip-2"><div class="chip-icon b"><i class="fas fa-bolt"></i></div><div class="chip-text">+3× Faster<span>vs. traditional agencies</span></div></div>
-        <div class="hero-chip chip-3"><div class="chip-icon g"><i class="fas fa-shield-alt"></i></div><div class="chip-text">90-day Warranty<span>support included</span></div></div>
-        <div class="hero-chip chip-4"><div class="chip-icon v"><i class="fas fa-chart-line"></i></div><div class="chip-text">12+ projects<span>delivered</span></div></div>
+        <div class="hero-chip chip-1"><div class="chip-icon g"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="chip-text">No agency<span>Direct with the dev</span></div></div>
+        <div class="hero-chip chip-2"><div class="chip-icon b"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="chip-text">+3× Faster<span>vs. traditional agencies</span></div></div>
+        <div class="hero-chip chip-3"><div class="chip-icon g"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="chip-text">Active support<span>Direct WhatsApp</span></div></div>
+        <div class="hero-chip chip-4"><div class="chip-icon v"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="chip-text">Real project<span>No templates</span></div></div>
       </div>
     </div>
     <div class="stats-row fade-in">
@@ -290,7 +338,32 @@
         </div>
       </div>
       <div class="about-photo-col fade-in">
-        <div class="about-photo-frame g-card"><img src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor"></div>
+        <div class="about-photo-frame g-card" style="padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:20px;min-height:320px;justify-content:center">
+          <div class="ws-logo-ring" style="width:120px;height:120px"><img class="ws-logo-img" src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor" style="width:112px;height:112px;border-radius:50%;object-fit:contain;object-position:center top;background:transparent"></div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-head);font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:-.02em">Sartor<span style="color:var(--green)">Digital</span></div>
+            <div style="font-size:.8rem;color:var(--text-2);margin-top:4px;font-family:var(--font-mono)">Dev Full Stack · AI Specialist</div>
+          </div>
+          <div class="ws-terminal" style="width:100%;max-width:280px">
+            <div class="ws-term-bar">
+              <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
+              <span class="ws-term-title">about.md</span>
+            </div>
+            <div class="ws-term-body">
+              <div class="ws-line"><span class="c-kw">##</span> <span class="c-var">Giovanne Sartor</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">Full Stack for real</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">12+ products launched</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">AI in practice</span></div>
+              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">100% remote</span></div>
+              <div class="ws-line ws-cursor"> </div>
+            </div>
+          </div>
+          <div class="ws-metrics" style="max-width:280px">
+            <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">years</span></div>
+            <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">products</span></div>
+            <div class="ws-metric"><span class="ws-num">∞</span><span class="ws-lbl">coffee</span></div>
+          </div>
+        </div>
         <div class="about-name-card">
           <div><div class="aname">Giovanne Sartor</div><div class="arole">Full Stack Dev · AI Specialist</div></div>
           <div class="asocials"><a class="asocial" href="https://www.linkedin.com/in/giovannesartor/" target="_blank"><i class="fab fa-linkedin"></i></a><a class="asocial" href="https://www.instagram.com/sartordigital" target="_blank"><i class="fab fa-instagram"></i></a><a class="asocial" href="https://wa.me/5554993031264" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
