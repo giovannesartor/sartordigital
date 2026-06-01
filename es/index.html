@@ -97,6 +97,34 @@
   .ws-metric{flex:1;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);border-radius:8px;padding:8px 4px;text-align:center}
   .ws-num{display:block;font-family:var(--font-head);font-weight:700;font-size:.95rem;color:var(--green)}
   .ws-lbl{display:block;font-size:.6rem;color:var(--text-2);margin-top:1px}
+  /* Dashboard card */
+  .dash-wrap{width:100%;height:100%;display:flex;flex-direction:column;background:var(--bg-3);font-size:.7rem}
+  .dash-hdr{display:flex;align-items:center;gap:5px;padding:8px 12px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+  .dash-hdr-dots{display:flex;gap:4px}
+  .dash-hdr-dot{width:7px;height:7px;border-radius:50%}
+  .dash-hdr-dot.r{background:#ff5f56}.dash-hdr-dot.y{background:#ffbd2e}.dash-hdr-dot.g{background:#27c93f}
+  .dash-hdr-title{margin-left:6px;font-family:var(--font-mono);font-size:.65rem;color:rgba(255,255,255,.35);flex:1}
+  .dash-live{font-size:.6rem;color:var(--green);font-weight:700;display:flex;align-items:center;gap:4px}
+  .dash-live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+  .dash-kpis{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06);flex-shrink:0}
+  .dash-kpi{padding:12px 14px;background:var(--bg-3)}
+  .dash-kpi-val{font-family:var(--font-head);font-size:1.5rem;font-weight:700;color:var(--text);line-height:1}
+  .dash-kpi-val small{font-size:.8rem;font-weight:500;color:var(--text-2)}
+  .dash-kpi-lbl{font-size:.6rem;color:var(--text-2);margin-top:3px;font-family:var(--font-mono)}
+  .dash-kpi-delta{font-size:.6rem;color:var(--green);margin-top:5px;font-weight:600}
+  .dash-chart-area{padding:12px 14px;flex:1;min-height:0}
+  .dash-chart-lbl{font-size:.6rem;color:var(--text-2);margin-bottom:6px;font-family:var(--font-mono)}
+  .dash-svg{width:100%;height:56px;overflow:visible}
+  .dash-line{stroke-dasharray:500;stroke-dashoffset:500;animation:drawLine 1.8s cubic-bezier(.4,0,.2,1) forwards .3s}
+  .dash-area{opacity:0;animation:fadeIn .5s ease forwards 1.8s}
+  @keyframes drawLine{to{stroke-dashoffset:0}}
+  @keyframes fadeIn{to{opacity:1}}
+  .dash-activity{border-top:1px solid rgba(255,255,255,.06);flex-shrink:0}
+  .dash-ai{display:flex;align-items:center;justify-content:space-between;padding:7px 14px;border-bottom:1px solid rgba(255,255,255,.04)}
+  .dash-ai:last-child{border-bottom:none}
+  .dash-ai-name{display:flex;align-items:center;gap:7px;color:var(--text);font-family:var(--font-mono);font-size:.68rem}
+  .dash-ai-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+  .dash-ai-time{color:var(--text-2);font-size:.6rem}
   .photo-glow{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:220px;height:50px;background:radial-gradient(ellipse,var(--green-dim),transparent 70%);filter:blur(16px);pointer-events:none}
   .hero-chip{position:absolute;z-index:10;background:var(--bg-2);border:1px solid var(--border);box-shadow:var(--shadow-md);border-radius:var(--radius-sm);padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:.75rem;font-weight:600;animation:chipFloat 4s ease-in-out infinite;color:var(--text)}
   .chip-1{top:30px;left:-75px;animation-delay:0s}.chip-2{bottom:80px;left:-75px;animation-delay:1.5s}.chip-3{top:60px;right:-75px;animation-delay:3s}.chip-4{bottom:120px;right:-75px;animation-delay:1s}
@@ -265,16 +293,25 @@
         <div class="hero-photo-wrap">
           <div class="photo-ring"></div>
           <div class="photo-inner">
-            <div class="ws-wrap">
-              <div class="ws-logo-area">
-                <div class="ws-logo-ring" style="width:120px;height:120px"><img class="ws-logo-img" src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor" style="width:112px;height:112px;border-radius:50%;object-fit:contain;object-position:center top;background:transparent"></div>
-              </div>
-              <div class="ws-terminal">
-                <div class="ws-term-bar">
-                  <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
-                  <span class="ws-term-title">sartordigital.online ~ zsh</span>
+            <div class="sc-wrap">
+              <div class="sc-top">
+                <div class="sc-status"><span class="sc-dot"></span><span class="sc-status-txt">Disponible ahora</span></div>
+                <div>
+                  <div class="sc-name">Giovanne Sartor</div>
+                  <div class="sc-role">Dev Full Stack · Especialista IA</div>
                 </div>
-                <div class="ws-term-body">
+                <a href="https://wa.me/5554993031264" target="_blank" class="sc-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  Hablar ahora
+                </a>
+              </div>
+              <hr class="sc-divider">
+              <div class="sc-terminal">
+                <div class="sc-term-bar">
+                  <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
+                  <span class="sc-term-title">sartordigital.online ~ zsh</span>
+                </div>
+                <div class="sc-term-body">
                   <div class="ws-line"><span class="c-kw">const</span> <span class="c-var">stack</span> = {</div>
                   <div class="ws-line ws-indent"><span class="c-key">front</span>: <span class="c-str">"React + Next.js"</span>,</div>
                   <div class="ws-line ws-indent"><span class="c-key">back</span>: <span class="c-str">"Node · Python"</span>,</div>
@@ -282,11 +319,6 @@
                   <div class="ws-line">}</div>
                   <div class="ws-line ws-cursor"> </div>
                 </div>
-              </div>
-              <div class="ws-metrics">
-                <div class="ws-metric"><span class="ws-num">3sem</span><span class="ws-lbl">sistemas</span></div>
-                <div class="ws-metric"><span class="ws-num">5d</span><span class="ws-lbl">entrega</span></div>
-                <div class="ws-metric"><span class="ws-num">90d</span><span class="ws-lbl">garantía</span></div>
               </div>
             </div>
           </div>
@@ -338,30 +370,34 @@
         </div>
       </div>
       <div class="about-photo-col fade-in">
-        <div class="about-photo-frame g-card" style="padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:20px;min-height:320px;justify-content:center">
-          <div class="ws-logo-ring" style="width:120px;height:120px"><img class="ws-logo-img" src="../giovannecaricatura_transparente.png" alt="Giovanne Sartor" style="width:112px;height:112px;border-radius:50%;object-fit:contain;object-position:center top;background:transparent"></div>
-          <div style="text-align:center">
-            <div style="font-family:var(--font-head);font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:-.02em">Sartor<span style="color:var(--green)">Digital</span></div>
-            <div style="font-size:.8rem;color:var(--text-2);margin-top:4px;font-family:var(--font-mono)">Dev Full Stack · Especialista en IA</div>
-          </div>
-          <div class="ws-terminal" style="width:100%;max-width:280px">
-            <div class="ws-term-bar">
-              <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
-              <span class="ws-term-title">sobre.md</span>
+        <div class="about-photo-frame g-card" style="overflow:hidden;min-height:360px">
+          <div class="sc-wrap">
+            <div class="sc-top">
+              <div class="sc-status"><span class="sc-dot"></span><span class="sc-status-txt">Disponible ahora</span></div>
+              <div>
+                <div class="sc-name">Giovanne Sartor</div>
+                <div class="sc-role">Dev Full Stack · Especialista IA</div>
+              </div>
+              <a href="https://wa.me/5554993031264" target="_blank" class="sc-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Hablar ahora
+              </a>
             </div>
-            <div class="ws-term-body">
-              <div class="ws-line"><span class="c-kw">##</span> <span class="c-var">Giovanne Sartor</span></div>
-              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">Full Stack de verdad</span></div>
-              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">12+ productos lanzados</span></div>
-              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">IA en la práctica</span></div>
-              <div class="ws-line ws-indent"><span class="c-key">+</span> <span class="c-str">100% remoto</span></div>
-              <div class="ws-line ws-cursor"> </div>
+            <hr class="sc-divider">
+            <div class="sc-terminal">
+              <div class="sc-term-bar">
+                <span class="ws-dot r"></span><span class="ws-dot y"></span><span class="ws-dot g"></span>
+                <span class="sc-term-title">sobre.sartor ~ zsh</span>
+              </div>
+              <div class="sc-term-body">
+                <div class="ws-line"><span class="c-kw">const</span> <span class="c-var">yo</span> = {</div>
+                <div class="ws-line ws-indent"><span class="c-key">stack</span>: <span class="c-str">"Full Stack de verdad"</span>,</div>
+                <div class="ws-line ws-indent"><span class="c-key">productos</span>: <span class="c-str">"12+ lanzados"</span>,</div>
+                <div class="ws-line ws-indent"><span class="c-key">modelo</span>: <span class="c-str">"sin agencia de por medio"</span></div>
+                <div class="ws-line">}</div>
+                <div class="ws-line ws-cursor"> </div>
+              </div>
             </div>
-          </div>
-          <div class="ws-metrics" style="max-width:280px">
-            <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">años</span></div>
-            <div class="ws-metric"><span class="ws-num">12+</span><span class="ws-lbl">productos</span></div>
-            <div class="ws-metric"><span class="ws-num">∞</span><span class="ws-lbl">café</span></div>
           </div>
         </div>
         <div class="about-name-card">
