@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Leve 30D | Emagreça em 30 dias sem dietas extremas</title>
+<meta name="description" content="Perca peso, reduza medidas e recupere sua energia em 30 dias com um método simples, prático e sustentável. Ebook completo: plano alimentar, 150+ receitas, treinos em casa e mais.">
+<link rel="canonical" href="https://leve30d.sartordigital.online/">
+<meta name="robots" content="index,follow">
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projeto Leve 30D — Transforme seu corpo em 30 dias">
+<meta property="og:description" content="Método simples, prático e sustentável para emagrecer sem dietas extremas. Plano de 30 dias, 150+ receitas e treinos em casa.">
+<meta property="og:url" content="https://leve30d.sartordigital.online/">
+<meta property="og:image" content="https://leve30d.sartordigital.online/assets/mockup-3d.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!--
+  ====== COMO CONFIGURAR O CHECKOUT ======
+  Troque os href="#comprar" abaixo pelo link do seu checkout
+  (Hotmart, Kiwify, Cakto, Stripe, Mercado Pago, etc.).
+  O botão de WhatsApp já está funcionando como alternativa de pedido.
+  Para mudar o preço, procure por "PREÇO" no HTML.
+-->
+
+<style>
+:root{
+  --g900:#0f3d2e; --g800:#16513c; --g700:#1f6b4f; --g600:#2e8b62; --g500:#3ca579;
+  --g300:#7fc8a6; --g100:#e3f3ea; --g50:#f1f9f4; --gold:#b8975a;
+  --ink:#16221d; --muted:#5d6b64; --line:#e2e8e4; --bg:#ffffff; --soft:#f5f8f6;
+  --head:'Poppins',sans-serif; --body:'Inter',sans-serif;
+  --shadow:0 18px 50px rgba(15,61,46,.16); --shadow-sm:0 6px 20px rgba(15,61,46,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,.brand{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.center{text-align:center}
+
+/* ICON SYSTEM */
+.ic{display:inline-block;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;width:24px;height:24px;flex:none}
+.ic-sm{width:20px;height:20px;stroke-width:1.8}
+.ic-xs{width:16px;height:16px;stroke-width:2}
+
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;
+  font-size:1.02rem;padding:16px 34px;border-radius:14px;cursor:pointer;border:none;transition:.2s;
+  background:linear-gradient(135deg,var(--g600),var(--g500));color:#fff;box-shadow:0 10px 26px rgba(46,139,98,.4)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(46,139,98,.5)}
+.btn-lg{font-size:1.15rem;padding:19px 44px}
+.btn-gold{background:linear-gradient(135deg,#c9a86a,#b8975a);box-shadow:0 10px 26px rgba(184,151,90,.4)}
+.btn-ghost{background:transparent;color:var(--g700);border:2px solid var(--g300);box-shadow:none}
+.btn-ghost:hover{background:var(--g50)}
+.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  font-size:.74rem;color:var(--g600)}
+.sec{padding:84px 0}
+.sec-t{font-size:2.1rem;font-weight:800;color:var(--g900);margin:10px 0 14px}
+.sec-s{color:var(--muted);font-size:1.08rem;max-width:680px;margin:0 auto}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.86);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--head);font-weight:700;font-size:1.05rem;color:var(--g900)}
+.logo img{width:30px;height:30px;border-radius:7px}
+.logo .dot{color:var(--g500)}
+.nav .btn{padding:11px 22px;font-size:.9rem}
+@media(max-width:720px){.nav .btn span.full{display:none}}
+
+/* HERO */
+.hero{padding:118px 0 70px;background:
+  radial-gradient(900px 500px at 85% -10%,rgba(127,200,166,.22),transparent 60%),
+  linear-gradient(180deg,#fff,var(--g50))}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:3rem;font-weight:800;color:var(--g900);margin:16px 0 18px}
+.hero h1 .hl{color:var(--g600)}
+.hero p.sub{font-size:1.18rem;color:var(--muted);max-width:540px;margin-bottom:26px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:.9rem}
+.hero-trust b{color:var(--g800)}
+.hero-trust .ti{display:flex;align-items:center;gap:9px}
+.hero-trust .ti .ic{color:var(--g600)}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art img{filter:drop-shadow(0 30px 50px rgba(15,61,46,.28));max-height:560px;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.badge-float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:10px 14px;box-shadow:var(--shadow-sm);font-family:var(--head);font-weight:600;font-size:.82rem;
+  color:var(--g800);display:flex;align-items:center;gap:8px}
+.badge-float .ic{color:var(--gold)}
+.bf1{top:6%;left:0}
+.bf2{bottom:12%;right:0}
+.badge-float .n{color:var(--g600);font-weight:800}
+
+/* strip */
+.strip{background:var(--g900);color:#dff0e6;padding:18px 0}
+.strip .wrap{display:flex;gap:14px 30px;justify-content:center;flex-wrap:wrap;text-align:center}
+.strip .si{font-family:var(--head);font-size:.92rem;display:flex;align-items:center;gap:9px}
+.strip .si .ic{color:var(--g300)}
+.strip .si b{color:#fff}
+
+/* PAIN */
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+.pain{display:flex;gap:14px;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.pain .ic-w{flex:0 0 44px;width:44px;height:44px;border-radius:11px;background:#fff;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--g600)}
+.pain h4{font-size:1.02rem;color:var(--g900);margin-bottom:3px}
+.pain p{font-size:.94rem;color:var(--muted)}
+
+/* what you get / modules */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s;box-shadow:var(--shadow-sm)}
+.card:hover{transform:translateY(-4px);border-color:var(--g300);box-shadow:var(--shadow)}
+.card .num{font-family:var(--head);font-weight:800;font-size:.8rem;color:var(--gold);letter-spacing:.05em}
+.card .ic-w{width:48px;height:48px;border-radius:13px;background:var(--g50);display:flex;align-items:center;
+  justify-content:center;color:var(--g600);margin:8px 0 14px}
+.card .ic-w .ic{width:26px;height:26px}
+.card h3{font-size:1.12rem;color:var(--g900);margin-bottom:7px}
+.card p{font-size:.93rem;color:var(--muted)}
+
+/* bonus */
+.bonus{background:linear-gradient(135deg,var(--g900),var(--g700));color:#fff}
+.bonus .sec-t{color:#fff}.bonus .sec-s{color:#cfe7da}
+.bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+.bcard{display:flex;gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;padding:22px;align-items:flex-start}
+.bcard .ic-w{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;color:#bdeccf}
+.bcard .tag{font-family:var(--head);font-weight:800;font-size:.68rem;letter-spacing:.1em;
+  background:var(--gold);color:#3a2e12;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:7px}
+.bcard h4{font-size:1.08rem;margin-bottom:4px}
+.bcard p{font-size:.92rem;color:#cfe7da}
+
+/* preview */
+.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.preview-list{list-style:none}
+.preview-list li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:1.02rem;align-items:flex-start}
+.preview-list li .ic{flex:none;color:var(--g600);margin-top:3px}
+.preview-list li b{color:var(--g900)}
+
+/* offer / pricing */
+.offer{background:var(--g50)}
+.price-card{max-width:560px;margin:36px auto 0;background:#fff;border:2px solid var(--g300);border-radius:24px;
+  padding:40px 34px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.price-card .ribbon{position:absolute;top:18px;right:-42px;background:var(--gold);color:#3a2e12;
+  font-family:var(--head);font-weight:700;font-size:.78rem;padding:6px 52px;transform:rotate(45deg)}
+.price-card h3{font-size:1.5rem;color:var(--g900);margin-bottom:8px}
+.incl{list-style:none;text-align:left;max-width:430px;margin:22px auto;display:grid;gap:10px}
+.incl li{display:flex;gap:11px;font-size:.97rem;align-items:flex-start}
+.incl li .ic{color:var(--g600);flex:none;margin-top:2px}
+.price-old{color:var(--muted);text-decoration:line-through;font-size:1.1rem}
+.price-now{font-family:var(--head);font-weight:800;font-size:3.2rem;color:var(--g700);line-height:1;margin:6px 0}
+.price-now small{font-size:1.1rem;color:var(--muted);font-weight:600}
+.price-note{font-size:.86rem;color:var(--muted);margin-top:4px}
+.pay-icons{margin-top:14px;color:var(--muted);font-size:.82rem;display:flex;align-items:center;justify-content:center;gap:8px}
+.pay-icons .ic{color:var(--g600)}
+
+/* guarantee */
+.guar{display:flex;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);
+  border-radius:20px;padding:30px;max-width:760px;margin:0 auto;box-shadow:var(--shadow-sm)}
+.guar .seal{flex:0 0 100px;width:100px;height:100px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--g500),var(--g800));color:#fff;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+.guar .seal .ic{position:absolute;opacity:.25;width:80px;height:80px}
+.guar .seal .n{font-family:var(--head);font-weight:800;font-size:1.7rem;position:relative}
+.guar .seal .d{font-family:var(--head);font-size:.6rem;letter-spacing:.12em;margin-top:1px;position:relative}
+.guar h3{color:var(--g900);font-size:1.25rem;margin-bottom:6px}
+.guar p{color:var(--muted);font-size:.96rem}
+
+/* faq */
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:#fff;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;cursor:pointer;
+  font-family:var(--head);font-weight:600;color:var(--g900);font-size:1.02rem;list-style:none}
+.faq-q::-webkit-details-marker{display:none}
+.faq-item[open] .faq-q{background:var(--g50)}
+.faq-q .pl{color:var(--g600);transition:.25s;flex:none}
+.faq-item[open] .faq-q .pl{transform:rotate(180deg)}
+.faq-a{padding:4px 20px 20px;color:var(--muted);font-size:.96rem}
+
+/* final cta */
+.final{background:linear-gradient(135deg,var(--g800),var(--g600));color:#fff;text-align:center}
+.final h2{font-size:2.3rem;color:#fff;margin-bottom:12px}
+.final p{color:#dff0e6;max-width:600px;margin:0 auto 26px;font-size:1.1rem}
+
+/* footer */
+footer{background:#0c2f23;color:#a9c6b8;padding:46px 0 30px;font-size:.9rem}
+.foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.foot-links a{display:flex;align-items:center;gap:7px}
+.foot-links a:hover{color:#fff}
+.foot-links a .ic{color:#7fa091}
+.disclaimer{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;color:#7fa091;line-height:1.6}
+
+/* whatsapp float */
+.wa{position:fixed;bottom:22px;right:22px;z-index:120;width:58px;height:58px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.2s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:32px;height:32px;fill:#fff;stroke:none}
+
+@media(max-width:880px){
+  .hero-grid,.preview-grid{grid-template-columns:1fr}
+  .hero-art{order:-1}
+  .cards{grid-template-columns:1fr 1fr}
+  .pain-grid,.bonus-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.3rem}.sec-t{font-size:1.7rem}
+}
+@media(max-width:560px){
+  .cards{grid-template-columns:1fr}.sec{padding:60px 0}
+  .guar{flex-direction:column;text-align:center}
+  .price-now{font-size:2.6rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ====== SPRITE DE ÍCONES SVG PREMIUM ====== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-check-plain" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M6 4h9a2 2 0 0 1 2 2v14H8a2 2 0 0 1-2-2z"/><path d="M6 18a2 2 0 0 1 2-2h9"/><path d="M10 8h4"/></symbol>
+  <symbol id="i-food" viewBox="0 0 24 24"><path d="M5 3v8a2 2 0 0 0 4 0V3M7 3v18"/><path d="M16 3c-1.6 0-2.6 2-2.6 5s1 4 2.6 4 2.6-1 2.6-4-1-5-2.6-5zM16 12v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></symbol>
+  <symbol id="i-cycle" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0 1 13.3-3.3L20 8"/><path d="M20 4v4h-4"/><path d="M20 15a8 8 0 0 1-13.3 3.3L4 16"/><path d="M4 20v-4h4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/></symbol>
+  <symbol id="i-frown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 15.5c1-1.4 6-1.4 7 0"/><path d="M9 10h.01M15 10h.01"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4A2.5 2.5 0 0 0 7 6.5 2.6 2.6 0 0 0 6 11.5 2.6 2.6 0 0 0 7.5 16 2.5 2.5 0 0 0 12 18V5.5A2.5 2.5 0 0 0 9.5 4z"/><path d="M14.5 4A2.5 2.5 0 0 1 17 6.5 2.6 2.6 0 0 1 18 11.5 2.6 2.6 0 0 1 16.5 16 2.5 2.5 0 0 1 12 18"/></symbol>
+  <symbol id="i-salad" viewBox="0 0 24 24"><path d="M3.5 11h17a8.5 8.5 0 0 1-17 0z"/><path d="M12 11c-1-3-3.5-4.5-6-4.5M12 11c.5-3.5 3-5 6-5M12 11c0-2 1-3.5 2.5-4.5"/><path d="M7 17.5h10"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2.5"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4"/><path d="M8 14h3M8 17.5h6"/></symbol>
+  <symbol id="i-pan" viewBox="0 0 24 24"><path d="M3 11h15v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M18 12h3v3h-3"/><path d="M7.5 8c0-1.5 1-1.7 1-3M11.5 8c0-1.5 1-1.7 1-3"/></symbol>
+  <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 3.2s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9 14a3 3 0 0 0 2 2.6"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 3c1 3-1 4-1 6a2 2 0 0 0 4 0c0-1 .5-2 .5-2 1.6 1.6 2.5 3.6 2.5 6a6 6 0 0 1-12 0c0-3 2-5 3-7 .9-1.6 2-2 3-3z"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/><path d="M2.5 3.5H5l2.4 12.5h10l1.9-9H6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-7"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 6.8h.01"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+</defs></svg>
+
+<!-- NAV -->
+<nav class="nav"><div class="wrap nav-in">
+  <a class="logo" href="https://sartordigital.online"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">Projeto Leve<span class="dot">30D</span></a>
+  <a class="btn" href="#comprar"><span class="full">Quero meu ebook</span><svg class="ic ic-sm"><use href="#i-arrow"/></svg></a>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">Método de transformação em 30 dias</span>
+    <h1>Emagreça de verdade em <span class="hl">30 dias</span> — sem dietas extremas e sem academia</h1>
+    <p class="sub">Perca peso, reduza medidas e recupere sua energia com um método simples, prático e sustentável. Feito para quem tem rotina corrida e já cansou de tentar.</p>
+    <div class="hero-cta">
+      <a class="btn btn-lg" href="#comprar">Quero começar agora</a>
+      <a class="btn btn-ghost btn-lg" href="#conteudo">Ver o que tem dentro</a>
+    </div>
+    <div class="hero-trust">
+      <div class="ti"><svg class="ic ic-sm"><use href="#i-book"/></svg><span><b>150+ páginas</b> de conteúdo real</span></div>
+      <div class="ti"><svg class="ic ic-sm"><use href="#i-food"/></svg><span><b>180+ receitas</b> e marmitas</span></div>
+      <div class="ti"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span>Acesso <b>imediato</b> em PDF</span></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="assets/mockup-3d.png" alt="Ebook Projeto Leve 30D">
+    <div class="badge-float bf1"><svg class="ic ic-sm"><use href="#i-star"/></svg><span><span class="n">9</span> módulos completos</span></div>
+    <div class="badge-float bf2"><svg class="ic ic-sm" style="color:var(--g600)"><use href="#i-spark"/></svg><span><span class="n">+4</span> bônus exclusivos</span></div>
+  </div>
+</div></header>
+
+<!-- STRIP -->
+<div class="strip"><div class="wrap">
+  <div class="si"><svg class="ic ic-sm"><use href="#i-calendar"/></svg><span><b>30 dias</b> de plano alimentar</span></div>
+  <div class="si"><svg class="ic ic-sm"><use href="#i-dumbbell"/></svg><span><b>Treinos</b> em casa, sem equipamento</span></div>
+  <div class="si"><svg class="ic ic-sm"><use href="#i-shield"/></svg><span><b>Sem</b> promessas milagrosas</span></div>
+  <div class="si"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span><b>100%</b> digital e prático</span></div>
+</div></div>
+
+<!-- PAIN -->
+<section class="sec"><div class="wrap center">
+  <span class="eyebrow">Você se identifica?</span>
+  <h2 class="sec-t">Emagrecer parece impossível com a rotina que você tem</h2>
+  <p class="sec-s">Se você já tentou de tudo e nada durou, o problema provavelmente não é você — é o método. Veja se isso soa familiar:</p>
+  <div class="pain-grid" style="text-align:left">
+    <div class="pain"><div class="ic-w"><svg class="ic"><use href="#i-cycle"/></svg></div><div><h4>Dietas que você não consegue manter</h4><p>Começa na segunda, desiste na quarta. O efeito sanfona virou rotina.</p></div></div>
+    <div class="pain"><div class="ic-w"><svg class="ic"><use href="#i-clock"/></svg></div><div><h4>Falta de tempo para cozinhar e treinar</h4><p>Entre trabalho e casa, parece não sobrar energia para se cuidar.</p></div></div>
+    <div class="pain"><div class="ic-w"><svg class="ic"><use href="#i-dumbbell"/></svg></div><div><h4>Não gosta (ou não pode) ir à academia</h4><p>Você quer resultado, mas não no meio de uma multidão suando.</p></div></div>
+    <div class="pain"><div class="ic-w"><svg class="ic"><use href="#i-frown"/></svg></div><div><h4>Cansaço, inchaço e baixa autoestima</h4><p>A disposição sumiu e a roupa não veste como antes.</p></div></div>
+  </div>
+</div></section>
+
+<!-- SOLUTION / CONTEÚDO -->
+<section class="sec" id="conteudo" style="background:var(--soft)"><div class="wrap">
+  <div class="center">
+    <span class="eyebrow">A solução completa</span>
+    <h2 class="sec-t">Tudo o que você precisa em um só lugar</h2>
+    <p class="sec-s">9 módulos que cuidam de cada frente do emagrecimento — da cabeça ao prato, do treino à manutenção.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="num">MÓDULO 1</div><div class="ic-w"><svg class="ic"><use href="#i-brain"/></svg></div><h3>Mentalidade do Emagrecimento</h3><p>Por que as dietas falham, como criar hábitos, vencer a procrastinação e evitar recaídas.</p></div>
+    <div class="card"><div class="num">MÓDULO 2</div><div class="ic-w"><svg class="ic"><use href="#i-salad"/></svg></div><h3>Alimentação Inteligente</h3><p>Macronutrientes, índice glicêmico, o método do prato e como comer fora sem engordar.</p></div>
+    <div class="card"><div class="num">MÓDULO 3</div><div class="ic-w"><svg class="ic"><use href="#i-calendar"/></svg></div><h3>Plano Alimentar de 30 Dias</h3><p>Cardápio completo, refeição por refeição, com calorias e lista de compras semanal.</p></div>
+    <div class="card"><div class="num">MÓDULO 4</div><div class="ic-w"><svg class="ic"><use href="#i-pan"/></svg></div><h3>50 Receitas Fit</h3><p>Café, almoço, jantar, lanches e sobremesas — práticas, baratas e saborosas.</p></div>
+    <div class="card"><div class="num">MÓDULO 5</div><div class="ic-w"><svg class="ic"><use href="#i-dumbbell"/></svg></div><h3>Treinos em Casa</h3><p>Iniciante, intermediário e avançado, sem equipamento, com séries e descanso definidos.</p></div>
+    <div class="card"><div class="num">MÓDULO 6</div><div class="ic-w"><svg class="ic"><use href="#i-water"/></svg></div><h3>Desafio da Água</h3><p>Cálculo de consumo, benefícios e tabelas de acompanhamento para criar o hábito.</p></div>
+    <div class="card"><div class="num">MÓDULO 7</div><div class="ic-w"><svg class="ic"><use href="#i-fire"/></svg></div><h3>Termogênicos Naturais</h3><p>Chá verde, hibisco, canela, gengibre e café — como usar a favor do seu metabolismo.</p></div>
+    <div class="card"><div class="num">MÓDULO 8</div><div class="ic-w"><svg class="ic"><use href="#i-cart"/></svg></div><h3>Guia de Compras</h3><p>Listas organizadas por categoria para abastecer a cozinha com o que importa.</p></div>
+    <div class="card"><div class="num">MÓDULO 9</div><div class="ic-w"><svg class="ic"><use href="#i-chart"/></svg></div><h3>Acompanhamento</h3><p>Controle de peso, medidas, água e diário dos 30 dias — tudo imprimível.</p></div>
+  </div>
+</div></section>
+
+<!-- BONUS -->
+<section class="sec bonus"><div class="wrap">
+  <div class="center">
+    <span class="eyebrow" style="color:var(--g300)">Conteúdo extra</span>
+    <h2 class="sec-t">+ 4 bônus exclusivos inclusos</h2>
+    <p class="sec-s">Para acelerar e sustentar seus resultados muito além do dia 30.</p>
+  </div>
+  <div class="bonus-grid">
+    <div class="bcard"><div class="ic-w"><svg class="ic"><use href="#i-food"/></svg></div><div><span class="tag">BÔNUS 1</span><h4>30 Marmitas Fitness para Congelar</h4><p>Cozinhe uma vez, coma a semana inteira. Praticidade para a rotina corrida.</p></div></div>
+    <div class="bcard"><div class="ic-w"><svg class="ic"><use href="#i-salad"/></svg></div><div><span class="tag">BÔNUS 2</span><h4>50 Lanches Saudáveis até 200 kcal</h4><p>Opções rápidas para nunca mais cair em besteira entre as refeições.</p></div></div>
+    <div class="bcard"><div class="ic-w"><svg class="ic"><use href="#i-fire"/></svg></div><div><span class="tag">BÔNUS 3</span><h4>Desafio Seca Barriga — 21 Dias</h4><p>Missões diárias para reduzir o inchaço e fortalecer o abdômen.</p></div></div>
+    <div class="bcard"><div class="ic-w"><svg class="ic"><use href="#i-pan"/></svg></div><div><span class="tag">BÔNUS 4</span><h4>100 Receitas Extras</h4><p>Variedade para nunca enjoar — mais de 180 preparos no total.</p></div></div>
+  </div>
+</div></section>
+
+<!-- PREVIEW -->
+<section class="sec"><div class="wrap preview-grid">
+  <div>
+    <img src="assets/capa.png" alt="Capa do ebook Projeto Leve 30D" style="border-radius:16px;box-shadow:var(--shadow)">
+  </div>
+  <div>
+    <span class="eyebrow">Por dentro do material</span>
+    <h2 class="sec-t">Um ebook profissional, não um PDF qualquer</h2>
+    <ul class="preview-list">
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span><b>150+ páginas</b> com design premium e conteúdo aprofundado</span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Tabelas, checklists e <b>quadros de acompanhamento</b></span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Plano de <b>30 dias</b> com 6 refeições por dia e calorias</span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Treinos ilustrados para fazer <b>em casa</b></span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Linguagem <b>simples e motivadora</b>, sem enrolação</span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Acesso <b>imediato</b> e vitalício, leia onde quiser</span></li>
+    </ul>
+    <a class="btn btn-lg" href="#comprar" style="margin-top:18px">Quero meu acesso</a>
+  </div>
+</div></section>
+
+<!-- OFFER -->
+<section class="sec offer" id="comprar"><div class="wrap center">
+  <span class="eyebrow">Oferta de lançamento</span>
+  <h2 class="sec-t">Comece sua transformação hoje</h2>
+  <p class="sec-s">Acesso imediato a todo o conteúdo + bônus. Pagamento único, sem mensalidade.</p>
+
+  <div class="price-card">
+    <div class="ribbon">OFERTA</div>
+    <h3>Projeto Leve 30D — Completo</h3>
+    <ul class="incl">
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> 9 módulos + plano alimentar de 30 dias</li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> 150+ receitas, marmitas e lanches</li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> Treinos em casa para todos os níveis</li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> 4 bônus exclusivos</li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> Acesso imediato e vitalício em PDF</li>
+    </ul>
+    <!-- PREÇO: ajuste os valores abaixo conforme sua oferta -->
+    <div class="price-old">De R$197,00</div>
+    <div class="price-now"><small>por</small> R$47<small>,00</small></div>
+    <div class="price-note">ou em até 12x no cartão</div>
+    <a class="btn btn-gold btn-lg" href="#comprar" style="margin-top:20px;width:100%;justify-content:center">QUERO MEU EBOOK AGORA</a>
+    <div class="pay-icons"><svg class="ic ic-xs"><use href="#i-lock"/></svg> Compra 100% segura · Pix, cartão e boleto</div>
+  </div>
+</div></section>
+
+<!-- GUARANTEE -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="guar">
+    <div class="seal"><svg class="ic"><use href="#i-shield"/></svg><span class="n">7</span><span class="d">DIAS</span></div>
+    <div>
+      <h3>Garantia incondicional de 7 dias</h3>
+      <p>Se em 7 dias você sentir que o material não é para você, basta solicitar e devolvemos 100% do seu investimento. O risco é todo nosso.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="sec" style="background:var(--soft)"><div class="wrap" style="max-width:780px">
+  <div class="center" style="margin-bottom:30px">
+    <span class="eyebrow">Dúvidas frequentes</span>
+    <h2 class="sec-t">Perguntas que talvez você tenha</h2>
+  </div>
+  <details class="faq-item" open><summary class="faq-q">Como recebo o ebook?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Logo após a confirmação do pagamento, você recebe o acesso ao PDF para baixar e ler no celular, tablet ou computador — quando e onde quiser.</div></details>
+  <details class="faq-item"><summary class="faq-q">Preciso de academia ou equipamentos?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Não. Os treinos usam o peso do próprio corpo e foram pensados para fazer em casa, em 20 a 35 minutos.</div></details>
+  <details class="faq-item"><summary class="faq-q">Funciona para iniciantes?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Sim. O método é progressivo e didático, ideal para quem está começando ou já tentou antes e não conseguiu manter.</div></details>
+  <details class="faq-item"><summary class="faq-q">Serve para vegetarianos?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Sim. O material traz adaptações vegetarianas e um cardápio vegetariano completo de 7 dias.</div></details>
+  <details class="faq-item"><summary class="faq-q">E se eu não gostar?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Você tem 7 dias de garantia incondicional. Se não for para você, devolvemos todo o valor.</div></details>
+  <details class="faq-item"><summary class="faq-q">Em quanto tempo vejo resultados?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Disposição e menos inchaço costumam aparecer já na primeira semana. Mudanças na balança e nas roupas ficam visíveis entre a 2ª e a 3ª semana, seguindo o método com constância.</div></details>
+</div></section>
+
+<!-- FINAL CTA -->
+<section class="sec final"><div class="wrap">
+  <h2>Os próximos 30 dias vão passar de qualquer jeito.</h2>
+  <p>A pergunta é: você quer chegar lá do mesmo jeito, ou mais leve, com mais energia e orgulhoso de você mesmo?</p>
+  <a class="btn btn-gold btn-lg" href="#comprar">Começar minha transformação</a>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <a class="logo" style="color:#fff" href="https://sartordigital.online"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">Projeto Leve<span class="dot">30D</span></a>
+    <div class="foot-links">
+      <a href="https://sartordigital.online">Sartor Digital</a>
+      <a href="https://instagram.com/sartordigital" target="_blank" rel="noopener"><svg class="ic ic-sm"><use href="#i-instagram"/></svg>Instagram</a>
+      <a href="https://wa.me/5554993031264" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contato@sartordigital.online"><svg class="ic ic-sm"><use href="#i-mail"/></svg>Contato</a>
+    </div>
+  </div>
+  <div class="disclaimer">
+    © 2026 Sartor Digital · Projeto Leve 30D. Todos os direitos reservados.<br>
+    Aviso: este material tem caráter educativo e não substitui o acompanhamento de um nutricionista, médico ou profissional de educação física. Resultados variam de pessoa para pessoa e dependem de fatores individuais e da aplicação do método. Antes de iniciar qualquer programa alimentar ou de exercícios, consulte um profissional de saúde.
+  </div>
+</div></footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wa" href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Tenho%20interesse%20no%20ebook%20Projeto%20Leve%2030D." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3c1.8 1 3.8 1.5 5.8 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3 1.4 1.4-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C6.5 9.8 10.8 5.5 16 5.5s9.5 4.3 9.5 9.5-4.3 9.7-9.5 9.7zm5.4-7.1c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6 2 .9 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+</body>
+</html>
