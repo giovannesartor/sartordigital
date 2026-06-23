@@ -156,6 +156,19 @@ a{color:inherit;text-decoration:none}
 .incl{list-style:none;text-align:left;max-width:430px;margin:22px auto;display:grid;gap:10px}
 .incl li{display:flex;gap:11px;font-size:.97rem;align-items:flex-start}
 .incl li .ic{color:var(--g600);flex:none;margin-top:2px}
+/* value stack */
+.vstack{max-width:440px;margin:6px auto 20px;text-align:left}
+.vstack-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.vstack-row span:first-child{color:var(--ink)}
+.vstack-row .vv{font-family:var(--head);font-weight:600;color:var(--g700);white-space:nowrap}
+.vstack-row .vv.free{color:var(--g500);font-size:.78rem;letter-spacing:.05em;text-transform:uppercase}
+.vstack-total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;margin-top:2px;
+  font-family:var(--head);font-weight:700;color:var(--g900);font-size:1.02rem}
+.vstack-total .vv{color:var(--muted);text-decoration:line-through;font-weight:700}
+/* launch banner */
+.launch{display:inline-flex;align-items:center;gap:8px;background:#fff5ec;border:1px solid #f3dcc2;color:#b5651d;
+  font-family:var(--head);font-weight:600;font-size:.84rem;padding:8px 16px;border-radius:30px;margin-bottom:6px}
+.launch .ic{color:var(--warm)}
 .price-old{color:var(--muted);text-decoration:line-through;font-size:1.1rem}
 .price-now{font-family:var(--head);font-weight:800;font-size:3.2rem;color:var(--g700);line-height:1;margin:6px 0}
 .price-now small{font-size:1.1rem;color:var(--muted);font-weight:600}
@@ -394,17 +407,22 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
   <div class="price-card">
     <div class="ribbon">OFERTA</div>
     <h3>Projeto Leve 30D — Completo</h3>
-    <ul class="incl">
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> 9 módulos + plano alimentar de 30 dias</li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> 150+ receitas, marmitas e lanches</li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> Treinos em casa para todos os níveis</li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> 4 bônus exclusivos</li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> Acesso imediato e vitalício em PDF</li>
-    </ul>
+    <!-- VALUE STACK: ajuste os itens e valores conforme sua oferta -->
+    <div class="vstack">
+      <div class="vstack-row"><span>Programa completo (9 módulos + plano de 30 dias)</span><span class="vv">R$127</span></div>
+      <div class="vstack-row"><span>Biblioteca de 50 receitas fit</span><span class="vv">R$37</span></div>
+      <div class="vstack-row"><span>Treinos em casa (3 níveis)</span><span class="vv">R$33</span></div>
+      <div class="vstack-row"><span>Bônus 1 — 30 Marmitas para congelar</span><span class="vv free">Grátis</span></div>
+      <div class="vstack-row"><span>Bônus 2 — 50 Lanches até 200 kcal</span><span class="vv free">Grátis</span></div>
+      <div class="vstack-row"><span>Bônus 3 — Desafio Seca Barriga 21 dias</span><span class="vv free">Grátis</span></div>
+      <div class="vstack-row"><span>Bônus 4 — 100 Receitas extras</span><span class="vv free">Grátis</span></div>
+      <div class="vstack-total"><span>Valor total</span><span class="vv">R$197</span></div>
+    </div>
     <!-- PREÇO: ajuste os valores abaixo conforme sua oferta -->
+    <div class="launch"><svg class="ic ic-xs"><use href="#i-fire"/></svg> Preço de lançamento — aproveite antes de subir</div>
     <div class="price-old">De R$197,00</div>
-    <div class="price-now"><small>por</small> R$47<small>,00</small></div>
-    <div class="price-note">ou em até 12x no cartão</div>
+    <div class="price-now"><small>hoje por</small> R$47<small>,00</small></div>
+    <div class="price-note">ou em até 12x no cartão · acesso imediato e vitalício</div>
     <a class="btn btn-gold btn-lg" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener" style="margin-top:20px;width:100%;justify-content:center">QUERO MEU EBOOK AGORA</a>
     <div class="pay-icons"><svg class="ic ic-xs"><use href="#i-lock"/></svg> <b>Compra 100% segura</b> e criptografada</div>
     <div class="pay-methods" style="display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:12px">
