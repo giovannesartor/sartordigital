@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta Exclusiva — 100 Receitas Fit Extras</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!--
+  ====== PÁGINA DE UPSELL (CAKTO) ======
+  Esta página deve ser hospedada e a sua URL informada na configuração
+  do UPSELL dentro da Cakto (campo de página/redirecionamento do upsell).
+  Os botões abaixo são componentes oficiais da Cakto (não altere os atributos
+  offer-id / app-base-url / urls). O script no final é obrigatório.
+-->
+
+<style>
+:root{
+  --g900:#0f3d2e;--g800:#16513c;--g700:#1f6b4f;--g600:#2e8b62;--g500:#3ca579;
+  --g300:#7fc8a6;--g100:#e3f3ea;--g50:#f1f9f4;--gold:#b8975a;--warm:#e08a3c;
+  --ink:#16221d;--muted:#5d6b64;--line:#e2e8e4;
+  --head:'Poppins',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--body);color:var(--ink);line-height:1.6;
+  background:radial-gradient(900px 500px at 80% -10%,rgba(127,200,166,.18),transparent 60%),linear-gradient(180deg,#fff,var(--g50));
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:34px 22px 60px}
+h1,h2,h3{font-family:var(--head);line-height:1.14;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+.top-alert{background:var(--g900);color:#eafff3;text-align:center;font-family:var(--head);
+  font-weight:600;font-size:.92rem;padding:11px 16px;letter-spacing:.02em}
+.top-alert b{color:var(--warm)}
+.eyebrow{font-family:var(--head);font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  font-size:.72rem;color:var(--g600);text-align:center;display:block;margin-bottom:10px}
+.h-title{text-align:center;font-size:2rem;font-weight:800;color:var(--g900);margin-bottom:8px}
+.h-title .hl{color:var(--warm)}
+.h-sub{text-align:center;color:var(--muted);font-size:1.06rem;max-width:560px;margin:0 auto 6px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 50px rgba(15,61,46,.12);
+  padding:30px;margin-top:24px}
+.show{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:center}
+.show img{filter:drop-shadow(0 18px 30px rgba(15,61,46,.25))}
+.benefits{list-style:none;margin:6px 0 0}
+.benefits li{display:flex;gap:10px;padding:6px 0;font-size:1rem}
+.benefits li svg{flex:none;width:22px;height:22px;stroke:var(--g600);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.benefits b{color:var(--g900)}
+.price{text-align:center;margin:26px 0 6px}
+.price .old{color:var(--muted);text-decoration:line-through;font-size:1.05rem}
+.price .now{font-family:var(--head);font-weight:800;font-size:2.8rem;color:var(--g700);line-height:1}
+.price .now small{font-size:1rem;color:var(--muted);font-weight:600}
+.price .tag{display:inline-block;background:var(--g100);color:var(--g800);font-family:var(--head);
+  font-weight:700;font-size:.78rem;padding:4px 12px;border-radius:20px;margin-bottom:8px}
+.divider-soft{height:1px;background:var(--line);margin:22px 0}
+.note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:14px}
+
+/* ===== Estilo dos botões oficiais da Cakto ===== */
+cakto-upsell-buttons{display:block;margin-top:8px}
+cakto-upsell-accept::part(button){
+  width:100%;background:linear-gradient(135deg,var(--g600),var(--g500));color:#fff;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:1.12rem;border:none;cursor:pointer;
+  padding:18px 24px;border-radius:14px;box-shadow:0 12px 28px rgba(46,139,98,.4);transition:.2s;line-height:1.3}
+cakto-upsell-accept::part(button):hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(46,139,98,.5)}
+cakto-upsell-reject::part(button){
+  width:100%;background:transparent;color:var(--muted);font-family:'Inter',sans-serif;font-weight:500;
+  font-size:.92rem;border:none;cursor:pointer;padding:14px 12px;margin-top:12px;text-decoration:underline;line-height:1.4}
+cakto-upsell-reject::part(button):hover{color:var(--ink)}
+
+@media(max-width:600px){
+  .show{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .h-title{font-size:1.55rem}.price .now{font-size:2.3rem}.card{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="top-alert">⚠ <b>ESPERE!</b> Sua compra ainda não terminou — leia a oferta única abaixo</div>
+
+<div class="wrap">
+  <span class="eyebrow">Oferta única para quem acabou de garantir o Projeto Leve 30D</span>
+  <h1 class="h-title">Adicione <span class="hl">100 Receitas Fit Extras</span> ao seu pedido</h1>
+  <p class="h-sub">A maior causa de desistência é o tédio. Com mais 100 receitas, você nunca enjoa — e mantém o resultado por muito mais tempo.</p>
+
+  <div class="card">
+    <div class="show">
+      <img src="assets/mockup-100.png" alt="100 Receitas Fit Extras">
+      <div>
+        <ul class="benefits">
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span><b>100 receitas</b>: 20 cafés, 20 almoços, 20 jantares, 20 lanches e 20 sobremesas</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Cada uma com <b>ingredientes, preparo, tempo e substituição</b></span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Bônus: guia de substituições + <b>planejador semanal</b></span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Acesso <b>imediato</b>, junto com o seu Projeto Leve 30D</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price">
+      <span class="tag">SÓ AGORA, NESTA PÁGINA</span>
+      <div class="old">De R$19,90</div>
+      <div class="now"><small>por apenas</small> R$14<small>,90</small></div>
+    </div>
+
+    <!-- ====== BOTÕES OFICIAIS DA CAKTO (não altere os atributos) ====== -->
+    <cakto-upsell-buttons>
+      <cakto-upsell-accept
+        bg-color="#0f7865"
+        text-color="#ffffff"
+        upsell-accept-url="members_area"
+        offer-id="pok8o9j"
+        app-base-url="https://app.cakto.com.br"
+        offer-type="upsell"
+        upsell-reject-url="members_area"
+      >
+        ✅ Sim! Quero as 100 Receitas Fit Extras por apenas R$14,90
+      </cakto-upsell-accept>
+      <cakto-upsell-reject
+        upsell-reject-url="members_area"
+      >
+        ❌ Não, quero correr o risco de enjoar das mesmas refeições
+      </cakto-upsell-reject>
+    </cakto-upsell-buttons>
+
+    <div class="note">Pagamento com 1 clique, no mesmo cartão. Oferta exclusiva desta página.</div>
+  </div>
+</div>
+
+<!-- Script obrigatório da Cakto (mantenha no final) -->
+<script type="text/javascript" src="https://caktoscripts.nyc3.cdn.digitaloceanspaces.com/upsell.js"></script>
+</body>
+</html>
