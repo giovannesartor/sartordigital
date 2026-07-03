@@ -306,15 +306,15 @@ input{font-family:inherit}
 .switch.on::after{left:24px}
 .cfg-btn{width:100%;padding:14px;border-radius:13px;font-family:var(--head);font-weight:700;background:var(--g50);color:var(--g700);border:1px solid var(--line);margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px}
 
-/* bottom nav — pill flutuante */
-.tabbar{position:fixed;bottom:calc(12px + var(--safe-b));left:50%;transform:translateX(-50%);z-index:40;
-  width:calc(100% - 26px);max-width:440px;background:var(--card);border:1px solid var(--line);border-radius:24px;
-  display:flex;padding:7px;box-shadow:0 14px 34px rgba(15,61,46,.20),0 2px 6px rgba(15,61,46,.08)}
-[data-theme="dark"] .tabbar{background:#102019;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+/* bottom nav — barra fixa embaixo */
+.tabbar{position:fixed;bottom:0;left:0;right:0;z-index:40;background:var(--card);border-top:1px solid var(--line);
+  display:flex;gap:4px;padding:8px 8px calc(8px + var(--safe-b));max-width:520px;margin:0 auto;
+  border-radius:20px 20px 0 0;box-shadow:0 -8px 26px rgba(15,61,46,.12)}
+[data-theme="dark"] .tabbar{background:#102019;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted);font-family:var(--head);
-  font-weight:600;font-size:.62rem;padding:8px 0 6px;border-radius:18px;transition:.2s;position:relative}
+  font-weight:600;font-size:.62rem;padding:8px 0 6px;border-radius:16px;transition:.2s;position:relative}
 .tab .ic{width:22px;height:22px;transition:.2s}
-.tab.active{color:#fff;background:linear-gradient(135deg,var(--g600),var(--g500));box-shadow:0 8px 18px rgba(46,139,98,.4)}
+.tab.active{color:#fff;background:linear-gradient(135deg,var(--g600),var(--g500));box-shadow:0 6px 16px rgba(46,139,98,.38)}
 .tab.active .ic{transform:translateY(-1px) scale(1.05)}
 .tab:not(.active):active{background:var(--g50)}
 

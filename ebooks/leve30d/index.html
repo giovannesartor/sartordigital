@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto Leve 30D | Emagreça em 30 dias sem dietas extremas</title>
-<meta name="description" content="Perca peso, reduza medidas e recupere sua energia em 30 dias com um método simples, prático e sustentável. Ebook completo: plano alimentar, 150+ receitas, treinos em casa e mais.">
+<title>Projeto Leve 30D | Ebook + App para emagrecer em 30 dias</title>
+<meta name="description" content="Emagreça em 30 dias com um método simples e sustentável — agora com Ebook completo + App instalável no celular. Plano alimentar, 180+ receitas, treinos com timer, progresso e cardápio na palma da mão.">
 <link rel="canonical" href="https://leve30d.sartordigital.online/">
 <meta name="robots" content="index,follow">
 
 <!-- Open Graph / redes sociais -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Projeto Leve 30D — Transforme seu corpo em 30 dias">
-<meta property="og:description" content="Método simples, prático e sustentável para emagrecer sem dietas extremas. Plano de 30 dias, 150+ receitas e treinos em casa.">
+<meta property="og:title" content="Projeto Leve 30D — Ebook + App para transformar seu corpo em 30 dias">
+<meta property="og:description" content="Método simples e sustentável para emagrecer sem dietas extremas. Ebook completo + App instalável no celular: plano de 30 dias, 180+ receitas, treinos e progresso na palma da mão.">
 <meta property="og:url" content="https://leve30d.sartordigital.online/">
 <meta property="og:image" content="https://leve30d.sartordigital.online/assets/mockup-3d.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -226,8 +226,28 @@ footer{background:#0c2f23;color:#a9c6b8;padding:46px 0 30px;font-size:.9rem}
 .wa:hover{transform:scale(1.08)}
 .wa svg{width:32px;height:32px;fill:#fff;stroke:none}
 
+/* APP SHOWCASE */
+.app-sec{background:linear-gradient(180deg,#fff,var(--g50))}
+.app-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.app-feats{list-style:none;margin-top:22px;display:grid;gap:14px}
+.app-feats li{display:flex;gap:13px;align-items:flex-start}
+.app-feats li .ic-w{flex:0 0 42px;width:42px;height:42px;border-radius:11px;background:var(--g50);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--g600)}
+.app-feats li h4{font-family:var(--head);font-size:1.02rem;color:var(--g900);margin-bottom:2px}
+.app-feats li p{font-size:.92rem;color:var(--muted)}
+.app-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.app-badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 15px;box-shadow:var(--shadow-sm);font-family:var(--head);font-weight:600;font-size:.85rem;color:var(--g800)}
+.app-badge .ic{color:var(--g600)}
+.phone-wrap{display:flex;justify-content:center;position:relative}
+.phone{width:278px;height:566px;border-radius:42px;background:#0f3d2e;padding:12px;box-shadow:0 40px 70px rgba(15,61,46,.32);position:relative}
+.phone-screen{width:100%;height:100%;border-radius:32px;overflow:hidden;background:linear-gradient(180deg,#eef5f0,#e5f0e9);position:relative;display:flex;flex-direction:column}
+.ps-img{width:100%;height:100%;object-fit:cover;object-position:top}
+.app-badge-float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:13px;padding:9px 13px;box-shadow:var(--shadow-sm);font-family:var(--head);font-weight:600;font-size:.8rem;color:var(--g800);display:flex;align-items:center;gap:8px;z-index:4}
+.app-badge-float .ic{color:var(--gold)}
+
 @media(max-width:880px){
   .hero-grid,.preview-grid{grid-template-columns:1fr}
+  .app-grid{grid-template-columns:1fr;gap:36px}
+  .phone-wrap{order:-1}
   .hero-art{order:-1}
   .cards{grid-template-columns:1fr 1fr}
   .pain-grid,.bonus-grid{grid-template-columns:1fr}
@@ -296,28 +316,28 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
 <!-- NAV -->
 <nav class="nav"><div class="wrap nav-in">
   <a class="logo" href="https://sartordigital.online"><img src="https://i.postimg.cc/25tgbP7P/LOGO-ICO.png" alt="Sartor Digital">Projeto Leve<span class="dot">30D</span></a>
-  <a class="btn" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener"><span class="full">Quero meu ebook</span><svg class="ic ic-sm"><use href="#i-cart"/></svg></a>
+  <a class="btn" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener"><span class="full">Quero o Ebook + App</span><svg class="ic ic-sm"><use href="#i-cart"/></svg></a>
 </div></nav>
 
 <!-- HERO -->
 <header class="hero"><div class="wrap hero-grid">
   <div>
-    <span class="eyebrow">Método de transformação em 30 dias</span>
-    <h1>Emagreça de verdade em <span class="hl">30 dias</span> — sem dietas extremas e sem academia</h1>
-    <p class="sub">Perca peso, reduza medidas e recupere sua energia com um método simples, prático e sustentável. Feito para quem tem rotina corrida e já cansou de tentar.</p>
+    <span class="eyebrow">Ebook + App · Método de 30 dias</span>
+    <h1>Emagreça de verdade em <span class="hl">30 dias</span> — com o método na palma da sua mão</h1>
+    <p class="sub">Perca peso, reduza medidas e recupere sua energia com um método simples e sustentável. Agora com <b>ebook completo + app instalável no celular</b>, feito para quem tem rotina corrida e já cansou de tentar.</p>
     <div class="hero-cta">
       <a class="btn btn-lg" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener">Quero começar agora</a>
-      <a class="btn btn-ghost btn-lg" href="#conteudo">Ver o que tem dentro</a>
+      <a class="btn btn-ghost btn-lg" href="#app">Conhecer o app</a>
     </div>
     <div class="hero-trust">
-      <div class="ti"><svg class="ic ic-sm"><use href="#i-book"/></svg><span><b>150+ páginas</b> de conteúdo real</span></div>
+      <div class="ti"><svg class="ic ic-sm"><use href="#i-book"/></svg><span><b>Ebook 150+ páginas</b> + app</span></div>
       <div class="ti"><svg class="ic ic-sm"><use href="#i-food"/></svg><span><b>180+ receitas</b> e marmitas</span></div>
-      <div class="ti"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span>Acesso <b>imediato</b> em PDF</span></div>
+      <div class="ti"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span>App <b>instalável</b> no celular</span></div>
     </div>
   </div>
   <div class="hero-art">
-    <img src="assets/mockup-3d.png" alt="Ebook Projeto Leve 30D">
-    <div class="badge-float bf1"><svg class="ic ic-sm"><use href="#i-star"/></svg><span><span class="n">9</span> módulos completos</span></div>
+    <img src="assets/mockup-3d.png" alt="Ebook e App Projeto Leve 30D">
+    <div class="badge-float bf1"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span>App <span class="n">na palma</span> da mão</span></div>
     <div class="badge-float bf2"><svg class="ic ic-sm" style="color:var(--g600)"><use href="#i-spark"/></svg><span><span class="n">+4</span> bônus exclusivos</span></div>
   </div>
 </div></header>
@@ -327,7 +347,7 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
   <div class="si"><svg class="ic ic-sm"><use href="#i-calendar"/></svg><span><b>30 dias</b> de plano alimentar</span></div>
   <div class="si"><svg class="ic ic-sm"><use href="#i-dumbbell"/></svg><span><b>Treinos</b> em casa, sem equipamento</span></div>
   <div class="si"><svg class="ic ic-sm"><use href="#i-shield"/></svg><span><b>Sem</b> promessas milagrosas</span></div>
-  <div class="si"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span><b>100%</b> digital e prático</span></div>
+  <div class="si"><svg class="ic ic-sm"><use href="#i-phone"/></svg><span><b>App</b> na palma da mão</span></div>
 </div></div>
 
 <!-- PAIN -->
@@ -348,7 +368,7 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
   <div class="center">
     <span class="eyebrow">A solução completa</span>
     <h2 class="sec-t">Tudo o que você precisa em um só lugar</h2>
-    <p class="sec-s">9 módulos que cuidam de cada frente do emagrecimento — da cabeça ao prato, do treino à manutenção.</p>
+    <p class="sec-s">9 módulos que cuidam de cada frente do emagrecimento — da cabeça ao prato, do treino à manutenção. E você acompanha tudo pelo app, na palma da mão.</p>
   </div>
   <div class="cards">
     <div class="card"><div class="num">MÓDULO 1</div><div class="ic-w"><svg class="ic"><use href="#i-brain"/></svg></div><h3>Mentalidade do Emagrecimento</h3><p>Por que as dietas falham, como criar hábitos, vencer a procrastinação e evitar recaídas.</p></div>
@@ -385,16 +405,43 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
   </div>
   <div>
     <span class="eyebrow">Por dentro do material</span>
-    <h2 class="sec-t">Um ebook profissional, não um PDF qualquer</h2>
+    <h2 class="sec-t">Um ebook profissional — e agora com app</h2>
     <ul class="preview-list">
       <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span><b>150+ páginas</b> com design premium e conteúdo aprofundado</span></li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Tabelas, checklists e <b>quadros de acompanhamento</b></span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span><b>App instalável</b> no celular para seguir o método dia a dia</span></li>
       <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Plano de <b>30 dias</b> com 6 refeições por dia e calorias</span></li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Treinos ilustrados para fazer <b>em casa</b></span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Treinos ilustrados para fazer <b>em casa</b>, com timer no app</span></li>
       <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Linguagem <b>simples e motivadora</b>, sem enrolação</span></li>
-      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Acesso <b>imediato</b> e vitalício, leia onde quiser</span></li>
+      <li><svg class="ic ic-sm"><use href="#i-check"/></svg> <span>Acesso <b>imediato</b> e vitalício, leia e use onde quiser</span></li>
     </ul>
     <a class="btn btn-lg" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener" style="margin-top:18px">Quero meu acesso</a>
+  </div>
+</div></section>
+
+<!-- APP -->
+<section class="sec app-sec" id="app"><div class="wrap app-grid">
+  <div class="phone-wrap">
+    <div class="phone"><div class="phone-screen">
+      <img class="ps-img" src="assets/app-preview.png" alt="Tela inicial do App do Projeto Leve 30D com progresso, cardápio do dia e menu" loading="lazy">
+    </div></div>
+    <div class="app-badge-float" style="top:7%;left:0"><svg class="ic ic-sm"><use href="#i-phone"/></svg> Instala em 1 toque</div>
+    <div class="app-badge-float" style="bottom:9%;right:0"><svg class="ic ic-sm" style="color:var(--g600)"><use href="#i-check-plain"/></svg> Funciona offline</div>
+  </div>
+  <div class="app-copy">
+    <span class="eyebrow">Novidade · Agora é Ebook + App</span>
+    <h2 class="sec-t">Todo o método na palma da sua mão</h2>
+    <p class="sec-s" style="margin:0">Além do ebook completo em PDF, você recebe o <b>App do Projeto Leve 30D</b> — instalável direto no celular, sem loja de aplicativos. É só tocar em “Instalar” e o ícone aparece na tela inicial, como qualquer outro app.</p>
+    <ul class="app-feats">
+      <li><div class="ic-w"><svg class="ic"><use href="#i-calendar"/></svg></div><div><h4>Seu dia a dia guiado</h4><p>Cardápio dos 30 dias, refeição por refeição, com calorias e lista de compras.</p></div></li>
+      <li><div class="ic-w"><svg class="ic"><use href="#i-chart"/></svg></div><div><h4>Acompanhe seu progresso</h4><p>Marque os dias concluídos, registre peso, medidas e fotos e veja sua evolução.</p></div></li>
+      <li><div class="ic-w"><svg class="ic"><use href="#i-dumbbell"/></svg></div><div><h4>Treinos com timer</h4><p>3 níveis, sem equipamento, com cronômetro de séries e descanso.</p></div></li>
+      <li><div class="ic-w"><svg class="ic"><use href="#i-phone"/></svg></div><div><h4>Funciona offline</h4><p>Depois de instalado, abre rápido e funciona mesmo sem internet.</p></div></li>
+    </ul>
+    <div class="app-badges">
+      <span class="app-badge"><svg class="ic ic-sm"><use href="#i-check-plain"/></svg> Android e iPhone</span>
+      <span class="app-badge"><svg class="ic ic-sm"><use href="#i-lock"/></svg> Sem loja de apps</span>
+      <span class="app-badge"><svg class="ic ic-sm"><use href="#i-spark"/></svg> Atualizações incluídas</span>
+    </div>
   </div>
 </div></section>
 
@@ -402,35 +449,36 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
 <section class="sec offer" id="comprar"><div class="wrap center">
   <span class="eyebrow">Oferta de lançamento</span>
   <h2 class="sec-t">Comece sua transformação hoje</h2>
-  <p class="sec-s">Acesso imediato a todo o conteúdo + bônus. Pagamento único, sem mensalidade.</p>
+  <p class="sec-s">Acesso imediato ao ebook completo + app instalável + bônus. Pagamento único, sem mensalidade.</p>
 
   <div class="price-card">
     <div class="ribbon">OFERTA</div>
-    <h3>Projeto Leve 30D — Completo</h3>
+    <h3>Projeto Leve 30D — Ebook + App</h3>
     <!-- VALUE STACK: ajuste os itens e valores conforme sua oferta -->
     <div class="vstack">
-      <div class="vstack-row"><span>Programa completo (9 módulos + plano de 30 dias)</span><span class="vv">R$127</span></div>
+      <div class="vstack-row"><span>Ebook completo (9 módulos + plano de 30 dias)</span><span class="vv">R$127</span></div>
+      <div class="vstack-row"><span>App instalável no celular (cardápio, treinos, progresso)</span><span class="vv">R$67</span></div>
       <div class="vstack-row"><span>Biblioteca de 50 receitas fit</span><span class="vv">R$37</span></div>
       <div class="vstack-row"><span>Treinos em casa (3 níveis)</span><span class="vv">R$33</span></div>
       <div class="vstack-row"><span>Bônus 1 — 30 Marmitas para congelar</span><span class="vv free">Grátis</span></div>
       <div class="vstack-row"><span>Bônus 2 — 50 Lanches até 200 kcal</span><span class="vv free">Grátis</span></div>
       <div class="vstack-row"><span>Bônus 3 — Desafio Seca Barriga 21 dias</span><span class="vv free">Grátis</span></div>
       <div class="vstack-row"><span>Bônus 4 — 100 Receitas extras</span><span class="vv free">Grátis</span></div>
-      <div class="vstack-total"><span>Valor total</span><span class="vv">R$197</span></div>
+      <div class="vstack-total"><span>Valor total</span><span class="vv">R$264</span></div>
     </div>
     <!-- PREÇO: ajuste os valores abaixo conforme sua oferta -->
     <div class="launch"><svg class="ic ic-xs"><use href="#i-fire"/></svg> Preço de lançamento — aproveite antes de subir</div>
-    <div class="price-old">De R$197,00</div>
+    <div class="price-old">De R$264,00</div>
     <div class="price-now"><small>hoje por</small> R$47<small>,90</small></div>
-    <div class="price-note">ou em até 12x no cartão · acesso imediato e vitalício</div>
-    <a class="btn btn-gold btn-lg" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener" style="margin-top:20px;width:100%;justify-content:center">QUERO MEU EBOOK AGORA</a>
+    <div class="price-note">ou em até 12x no cartão · ebook + app com acesso imediato e vitalício</div>
+    <a class="btn btn-gold btn-lg" href="https://pay.cakto.com.br/3f8ssw8_938194" target="_blank" rel="noopener" style="margin-top:20px;width:100%;justify-content:center">QUERO O EBOOK + APP AGORA</a>
     <div class="pay-icons"><svg class="ic ic-xs"><use href="#i-lock"/></svg> <b>Compra 100% segura</b> e criptografada</div>
     <div class="pay-methods" style="display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:12px">
       <span style="display:inline-flex;align-items:center;gap:6px"><svg class="ic ic-sm"><use href="#i-pix"/></svg> Pix</span>
       <span style="display:inline-flex;align-items:center;gap:6px"><svg class="ic ic-sm"><use href="#i-card"/></svg> Cartão em até 12x</span>
       <span style="display:inline-flex;align-items:center;gap:6px"><svg class="ic ic-sm"><use href="#i-barcode"/></svg> Boleto</span>
     </div>
-    <p class="cakto-note"><b>Pagamento processado pela Cakto</b>, uma das plataformas mais seguras do Brasil. Seus dados são protegidos com criptografia e o acesso ao ebook é liberado automaticamente após a confirmação.</p>
+    <p class="cakto-note"><b>Pagamento processado pela Cakto</b>, uma das plataformas mais seguras do Brasil. Seus dados são protegidos com criptografia e o acesso ao ebook e ao app é liberado automaticamente após a confirmação.</p>
   </div>
 
   <div class="trust-row">
@@ -458,8 +506,10 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
     <span class="eyebrow">Dúvidas frequentes</span>
     <h2 class="sec-t">Perguntas que talvez você tenha</h2>
   </div>
-  <details class="faq-item" open><summary class="faq-q">Como recebo o ebook?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
-    <div class="faq-a">Logo após a confirmação do pagamento, você recebe o acesso ao PDF para baixar e ler no celular, tablet ou computador — quando e onde quiser.</div></details>
+  <details class="faq-item" open><summary class="faq-q">Como recebo o ebook e o app?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Logo após a confirmação do pagamento, você recebe o acesso ao PDF para baixar e o link do app. O app abre no navegador do celular e, com um toque em “Instalar / Adicionar à tela inicial”, o ícone fica na sua tela — sem passar por loja de aplicativos.</div></details>
+  <details class="faq-item"><summary class="faq-q">Preciso baixar na App Store ou Play Store?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
+    <div class="faq-a">Não. O app do Projeto Leve 30D é um aplicativo web (PWA): funciona em Android e iPhone direto pelo link, sem loja, sem ocupar espaço e com atualizações automáticas. Depois de instalado, ele funciona até offline.</div></details>
   <details class="faq-item"><summary class="faq-q">Preciso de academia ou equipamentos?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
     <div class="faq-a">Não. Os treinos usam o peso do próprio corpo e foram pensados para fazer em casa, em 20 a 35 minutos.</div></details>
   <details class="faq-item"><summary class="faq-q">Funciona para iniciantes?<svg class="ic ic-sm pl"><use href="#i-chevron"/></svg></summary>
@@ -500,7 +550,7 @@ src="https://www.facebook.com/tr?id=280875004763756&ev=PageView&noscript=1"
 </div></footer>
 
 <!-- WhatsApp flutuante -->
-<a class="wa" href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Tenho%20interesse%20no%20ebook%20Projeto%20Leve%2030D." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a class="wa" href="https://wa.me/5554993031264?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Ebook%20%2B%20App%20Projeto%20Leve%2030D." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3c1.8 1 3.8 1.5 5.8 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3 1.4 1.4-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C6.5 9.8 10.8 5.5 16 5.5s9.5 4.3 9.5 9.5-4.3 9.7-9.5 9.7zm5.4-7.1c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6 2 .9 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
 
