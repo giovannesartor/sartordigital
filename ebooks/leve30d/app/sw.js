@@ -1,5 +1,5 @@
 /* Service Worker — Projeto Leve 30D PWA */
-const CACHE = 'leve30d-v2';
+const CACHE = 'leve30d-v3';
 const ASSETS = [
   './',
   './index.html',
