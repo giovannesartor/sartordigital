@@ -1,77 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Página Principal -->
+
+  <!-- ============ HOME ============ -->
   <url>
-    <loc>https://sartordigital.online/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/index.html"/>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://sartordigital.online/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/"/>
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/"/>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Serviços PT -->
+  <url>
+    <loc>https://sartordigital.online/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/"/>
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sartordigital.online/es/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/"/>
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============ SERVIÇOS / SERVICES / SERVICIOS ============ -->
   <url>
     <loc>https://sartordigital.online/servicos.html</loc>
     <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/servicos.html"/>
     <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/servicos.html"/>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Home EN -->
-  <url>
-    <loc>https://sartordigital.online/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/index.html"/>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Services EN -->
   <url>
     <loc>https://sartordigital.online/en/services.html</loc>
     <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/servicos.html"/>
     <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/servicos.html"/>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Inicio ES -->
-  <url>
-    <loc>https://sartordigital.online/es/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/index.html"/>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Servicios ES -->
   <url>
     <loc>https://sartordigital.online/es/servicios.html</loc>
     <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/servicos.html"/>
     <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/servicos.html"/>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
+  <!-- ============ SUPORTE / SUPPORT / SOPORTE ============ -->
+  <url>
+    <loc>https://sartordigital.online/suporte.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/suporte.html"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sartordigital.online/en/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/suporte.html"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sartordigital.online/es/soporte.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://sartordigital.online/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://sartordigital.online/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sartordigital.online/suporte.html"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
