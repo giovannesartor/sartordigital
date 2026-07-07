@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){var t=localStorage.getItem('sd-theme')||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sartor Digital — Software engineering & applied AI for teams that can't fail</title>
   <meta name="description" content="I design, architect and build custom systems — fintech, healthtech, agtech and SaaS. Scalable architecture, AI on your own data and security by default. 12+ products in production.">
@@ -718,7 +719,7 @@
     document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);
   });
   const html=document.documentElement,btn=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon');
-  const saved=localStorage.getItem('sd-theme')||'light';
+  const saved=localStorage.getItem('sd-theme')||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
   html.setAttribute('data-theme',saved);icon.className=saved==='dark'?'fas fa-sun':'fas fa-moon';
   btn.addEventListener('click',()=>{const next=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',next);icon.className=next==='dark'?'fas fa-sun':'fas fa-moon';localStorage.setItem('sd-theme',next);});
   const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),Math.min(i*50,300));obs.unobserve(e.target);}});},{threshold:.12});
