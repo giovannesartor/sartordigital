@@ -5,7 +5,7 @@
   <script>(function(){var t=localStorage.getItem('sd-theme')||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sartor Digital — Engenharia de software e IA aplicada para empresas que não podem falhar</title>
-  <meta name="description" content="Projeto, arquiteto e construo sistemas sob medida — fintech, healthtech, agtech e SaaS. Arquitetura escalável, IA aplicada aos seus dados e segurança LGPD por padrão. 13+ produtos em produção.">
+  <meta name="description" content="Projeto, arquiteto e construo sistemas sob medida — fintech, healthtech, agtech e SaaS. Arquitetura escalável, IA aplicada aos seus dados e segurança LGPD por padrão. 16+ produtos em produção.">
   <meta name="theme-color" content="#F7F8FA">
   <meta name="author" content="Giovanne Sartor">
   <link rel="canonical" href="https://sartordigital.online">
@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="es-es" href="https://sartordigital.online/es/">
   <link rel="alternate" hreflang="x-default" href="https://sartordigital.online/">
   <meta property="og:title" content="Sartor Digital — Software sob medida para quem não pode falhar">
-  <meta property="og:description" content="Engenharia de software e IA aplicada. Arquitetura escalável, segurança LGPD por padrão. 13+ produtos em produção.">
+  <meta property="og:description" content="Engenharia de software e IA aplicada. Arquitetura escalável, segurança LGPD por padrão. 16+ produtos em produção.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sartordigital.online">
   <meta property="og:image" content="https://sartordigital.online/og-image.png">
@@ -218,6 +218,15 @@
   .pf-pill{background:var(--bg-2);border:1px solid var(--border);border-radius:100px;padding:7px 16px;font-size:.8rem;font-weight:500;color:var(--text-2);cursor:pointer;transition:all .2s}
   .pf-pill.active,.pf-pill:hover{background:var(--green);color:#04120C;border-color:var(--green);font-weight:600}
   .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .featured-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .featured-case{padding:0;overflow:hidden;display:flex;flex-direction:column}
+  .case-browser{margin:10px 10px 0;border:1px solid var(--border);border-radius:10px 10px 0 0;overflow:hidden;background:var(--bg-3)}
+  .case-browser-bar{height:25px;display:flex;align-items:center;gap:5px;padding:0 9px;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:.57rem;color:var(--text-3)}
+  .case-browser-bar i{width:5px;height:5px;border-radius:50%;background:var(--text-3);opacity:.55}.case-browser-bar span{margin-left:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .case-shot{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:transform .35s var(--ease)}
+  .featured-case:hover .case-shot{transform:scale(1.025)}
+  .featured-body{padding:20px}.featured-body h3{font-family:var(--font-head);font-size:1.15rem;letter-spacing:-.02em;margin:6px 0 9px}.featured-body p{font-size:.85rem;color:var(--text-2);line-height:1.6;margin-bottom:15px}
+  .other-cases-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin:56px 0 18px}
   .pf-card{padding:0;cursor:pointer}
   .pf-cover{height:150px;position:relative;overflow:hidden;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
   .pf-cover .glyph{font-size:2.4rem;color:var(--green);opacity:.9;position:relative;z-index:2}
@@ -298,7 +307,7 @@
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade-in{opacity:1;transform:none}}
   .mob-toggle{display:none;background:var(--bg-2);border:1px solid var(--border);width:36px;height:36px;border-radius:var(--radius-sm);cursor:pointer;color:var(--text);font-size:.9rem;align-items:center;justify-content:center}
   @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;gap:48px}.hero-visual{max-width:420px}.about-grid{grid-template-columns:1fr;gap:48px}.about-photo-col{max-width:420px}.cta-inner{grid-template-columns:1fr;gap:36px}.footer-top{grid-template-columns:1fr 1fr}}
-  @media(max-width:768px){.services-grid{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.sec-grid{grid-template-columns:1fr 1fr}.stats-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.mob-toggle{display:flex}.nav-cta{display:none}.compare-row{grid-template-columns:1fr}.compare-cell{border-top:1px solid var(--border)}.footer-top{grid-template-columns:1fr}}
+  @media(max-width:768px){.services-grid{grid-template-columns:1fr}.portfolio-grid,.featured-cases{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.sec-grid{grid-template-columns:1fr 1fr}.stats-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.mob-toggle{display:flex}.nav-cta{display:none}.compare-row{grid-template-columns:1fr}.compare-cell{border-top:1px solid var(--border)}.footer-top{grid-template-columns:1fr}}
   @media(max-width:480px){.section{padding:64px 0}.wrap{padding:0 18px}.cta-card{padding:40px 24px}.process-grid{grid-template-columns:1fr}}
   .nav-open .nav-links{display:flex;flex-direction:column;position:absolute;top:66px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--border);padding:8px 24px;z-index:100;box-shadow:var(--shadow-md)}
   .nav-open .nav-links a{padding:12px 8px;border-bottom:1px solid var(--border);font-size:.95rem}
@@ -354,7 +363,7 @@
       <div class="fade-in">
         <div class="eyebrow"><span class="eyebrow-dot"></span>Engenharia de software · IA aplicada · Produção-ready</div>
         <h1>Software sob medida<br>para quem <em>não pode falhar</em>.</h1>
-        <p class="hero-sub">Projeto e construo sistemas completos — <strong>arquitetura escalável</strong>, IA integrada aos seus dados e <strong>segurança LGPD por padrão</strong>. Já entreguei produtos para fintechs, agtechs e SaaS — incluindo a plataforma da <strong>FundFlow</strong>, que apoia mais de <strong>R$ 247M</strong> em captação.</p>
+        <p class="hero-sub">Engenharia de produtos digitais e operações com IA para <strong>empresas B2B, fintechs e negócios com dados, processos críticos ou escala</strong>. Arquitetura escalável, IA integrada aos seus dados e segurança LGPD por padrão.</p>
         <div class="hero-btns">
           <a href="https://calendly.com/giovannesartor" target="_blank" rel="noopener" class="btn-primary"><i class="far fa-calendar-check"></i> Agendar call técnica</a>
           <a href="#cases" class="btn-ghost">Ver cases <i class="fas fa-arrow-right"></i></a>
@@ -389,7 +398,7 @@
       </div>
     </div>
     <div class="stats-row fade-in">
-      <div class="stat-box"><div class="stat-num"><span data-count="13">0</span><span class="u">+</span></div><div class="stat-label">Produtos em produção</div></div>
+      <div class="stat-box"><div class="stat-num"><span data-count="16">0</span><span class="u">+</span></div><div class="stat-label">Produtos em produção</div></div>
       <div class="stat-box"><div class="stat-num">R$ <span data-count="247">0</span><span class="u">M+</span></div><div class="stat-label">Captação apoiada · FundFlow</div></div>
       <div class="stat-box"><div class="stat-num"><span data-count="6">0</span></div><div class="stat-label">Verticais: fintech, agtech, health, ESG, SaaS, insurtech</div></div>
       <div class="stat-box"><div class="stat-num"><span data-count="90">0</span> <span class="u">dias</span></div><div class="stat-label">Garantia técnica inclusa</div></div>
@@ -419,6 +428,7 @@
     <p class="logowall-lead fade-in">Produtos em produção que projetei e construí</p>
     <div class="logowall fade-in" style="margin-bottom:60px">
       <span class="lw-item"><i class="fas fa-balance-scale"></i> Valuora</span>
+      <span class="lw-item"><i class="fas fa-chart-pie"></i> Quanto Vale</span>
       <span class="lw-item"><i class="fas fa-tractor"></i> ConectCampo</span>
       <span class="lw-item"><i class="fas fa-robot"></i> Vexium</span>
       <span class="lw-item"><i class="fas fa-hand-holding-usd"></i> FundFlow</span>
@@ -429,12 +439,16 @@
       <span class="lw-item"><i class="fas fa-comments"></i> AgentCore</span>
       <span class="lw-item"><i class="fas fa-vault"></i> RuntimeVault</span>
     </div>
-    <div class="section-head center fade-in"><div class="section-tag">cases</div><h2 class="section-title">Cases em produção</h2><p class="section-sub">Produtos reais movimentando dinheiro, dados e decisões — em fintech, agtech, valuation, ESG e SaaS.</p></div>
+    <div class="section-head center fade-in"><div class="section-tag">cases selecionados</div><h2 class="section-title">Produtos que mostram o nível da engenharia</h2><p class="section-sub">Três produtos recentes que combinam IA, operações críticas e experiências digitais completas.</p></div>
+    <div class="featured-cases">
+      <article class="g-card featured-case fade-in"><div class="case-browser"><div class="case-browser-bar"><i></i><i></i><i></i><span>runtimevault.dev</span></div><img class="case-shot" src="assets/cases/runtimevault.png" alt="Interface do RuntimeVault" loading="lazy"></div><div class="featured-body"><div class="pf-tag">DevTools · IA · Infra</div><h3>RuntimeVault</h3><p>Camada de evidência de runtime para agentes de IA depurarem falhas com contexto real de produção.</p><a href="https://runtimevault.dev" target="_blank" rel="noopener" class="pf-link">Ver produto <i class="fas fa-arrow-right"></i></a></div></article>
+      <article class="g-card featured-case fade-in"><div class="case-browser"><div class="case-browser-bar"><i></i><i></i><i></i><span>agentcore.digital</span></div><img class="case-shot" src="assets/cases/agentcore.png" alt="Interface do AgentCore" loading="lazy"></div><div class="featured-body"><div class="pf-tag">SaaS · IA · Atendimento</div><h3>AgentCore</h3><p>Central API-first para WhatsApp, equipe e automações, com IA por conversa e controle humano.</p><a href="https://agentcore.digital/" target="_blank" rel="noopener" class="pf-link">Ver produto <i class="fas fa-arrow-right"></i></a></div></article>
+      <article class="g-card featured-case fade-in"><div class="case-browser"><div class="case-browser-bar"><i></i><i></i><i></i><span>fe360.online</span></div><img class="case-shot" src="assets/cases/fe360.png" alt="Interface do Fé360" loading="lazy"></div><div class="featured-body"><div class="pf-tag">SaaS · Comunidade · IA</div><h3>Fé360</h3><p>Uma jornada espiritual digital que une oração, comunidade, diário e IA fundamentada nas Escrituras.</p><a href="https://fe360.online/" target="_blank" rel="noopener" class="pf-link">Ver produto <i class="fas fa-arrow-right"></i></a></div></article>
+    </div>
+    <p class="other-cases-label">Outros produtos em produção</p>
     <div class="portfolio-filters fade-in"><span class="pf-pill active" data-filter="all">Todos</span><span class="pf-pill" data-filter="fintech">Fintech</span><span class="pf-pill" data-filter="saas">SaaS</span><span class="pf-pill" data-filter="devtools">DevTools</span><span class="pf-pill" data-filter="agtech">AgTech</span><span class="pf-pill" data-filter="saude">Saúde</span><span class="pf-pill" data-filter="esg">ESG</span></div>
     <div class="portfolio-grid">
-      <div class="g-card pf-card fade-in" data-cat="devtools"><div class="pf-cover"><span class="glyph"><i class="fas fa-vault"></i></span><span class="pf-name-badge">RuntimeVault</span></div><div class="pf-body"><div class="pf-tag">DevTools · IA · Infra</div><h3>RuntimeVault</h3><p>Runtime Evidence Layer — captura o estado completo da aplicação no momento da falha e entrega, via MCP, a evidência que agentes de IA precisam para depurar e reproduzir bugs.</p><div class="pf-techs"><span class="pf-tech">MCP</span><span class="pf-tech">SDK</span><span class="pf-tech">Replay</span></div><a href="https://runtimevault.dev" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="g-card pf-card fade-in" data-cat="saas"><div class="pf-cover"><span class="glyph"><i class="fas fa-heart"></i></span><span class="pf-name-badge">Fé360</span></div><div class="pf-body"><div class="pf-tag">SaaS · Comunidade · IA</div><h3>Fé360</h3><p>Plataforma de jornada espiritual que reúne oração, comunidade, diário e o Calebe — assistente de IA fundamentado nas Escrituras.</p><div class="pf-techs"><span class="pf-tech">IA</span><span class="pf-tech">PWA</span><span class="pf-tech">Comunidade</span></div><a href="https://fe360.online/" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
-      <div class="g-card pf-card fade-in" data-cat="saas"><div class="pf-cover"><span class="glyph"><i class="fas fa-comments"></i></span><span class="pf-name-badge">AgentCore</span></div><div class="pf-body"><div class="pf-tag">SaaS · IA · Atendimento</div><h3>AgentCore</h3><p>Central API-first para WhatsApp, equipe e automações: agentes de IA atuam por conversa, com controle humano, auditoria e base de conhecimento.</p><div class="pf-techs"><span class="pf-tech">WhatsApp</span><span class="pf-tech">API-first</span><span class="pf-tech">SSE</span></div><a href="https://agentcore.digital/" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
+      <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-cover"><span class="glyph"><i class="fas fa-chart-pie"></i></span><span class="pf-name-badge">Quanto Vale</span></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Quanto Vale®</h3><p>Plataforma de valuation com motor DCF v7, benchmarks por setor CNAE, Monte Carlo e laudo auditável com memória de cálculo completa.</p><div class="pf-techs"><span class="pf-tech">DCF v7</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">API</span></div><a href="https://quantovale.online/" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
       <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-cover"><span class="glyph"><i class="fas fa-balance-scale"></i></span><span class="pf-name-badge">Valuora</span></div><div class="pf-body"><div class="pf-tag">Fintech · Valuation · SaaS</div><h3>Valuora</h3><p>Motor de valuation DCF v7.1 com simulação de Monte Carlo, benchmarks setoriais e IA. Relatório de 42 páginas em padrão M&amp;A.</p><div class="pf-techs"><span class="pf-tech">DCF v7.1</span><span class="pf-tech">Monte Carlo</span><span class="pf-tech">IA</span></div><a href="https://valuora.online" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
       <div class="g-card pf-card fade-in" data-cat="agtech"><div class="pf-cover"><span class="glyph"><i class="fas fa-tractor"></i></span><span class="pf-name-badge">ConectCampo</span></div><div class="pf-body"><div class="pf-tag">AgTech · Marketplace · Fintech</div><h3>ConectCampo</h3><p>Marketplace de crédito rural que conecta produtores a bancos e FIDCs, com matching por IA, score de risco e conformidade LGPD.</p><div class="pf-techs"><span class="pf-tech">AI Matching</span><span class="pf-tech">Risk Score</span><span class="pf-tech">LGPD</span></div><a href="https://conectcampo.digital" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
       <div class="g-card pf-card fade-in" data-cat="fintech"><div class="pf-cover"><span class="glyph"><i class="fas fa-robot"></i></span><span class="pf-name-badge">Vexium</span></div><div class="pf-body"><div class="pf-tag">Fintech · Crypto · IA</div><h3>Vexium</h3><p>Motor VEX proprietário — 7+ indicadores combinando IA e dados ao vivo da Binance para leitura de mercado em tempo real.</p><div class="pf-techs"><span class="pf-tech">Motor VEX</span><span class="pf-tech">Binance API</span><span class="pf-tech">Streaming</span></div><a href="https://vexium.pro" target="_blank" rel="noopener" class="pf-link">Ver projeto <i class="fas fa-arrow-right"></i></a></div></div>
@@ -501,7 +515,8 @@
       <div class="about-text fade-in">
         <div class="section-tag">sobre</div>
         <h2>Engenharia de verdade,<br>não improviso.</h2>
-        <p>Sou <strong>Giovanne Sartor</strong>. Projeto e construo sistemas que rodam em produção movimentando dinheiro real — de motores de valuation (Valuora) a marketplaces de crédito rural (ConectCampo) e plataformas de análise ESG (ESG360).</p>
+        <p>A <strong>Sartor Digital</strong> é uma prática independente de engenharia liderada por <strong>Giovanne Sartor</strong>, com parceiros especializados acionados conforme a necessidade de cada projeto.</p>
+        <p>Projeto e construo sistemas que rodam em produção movimentando dinheiro real — de motores de valuation (Valuora) a marketplaces de crédito rural (ConectCampo) e plataformas de análise ESG (ESG360).</p>
         <p>Uso IA como acelerador, mas o que sustenta um produto é <strong>arquitetura, testes e observabilidade</strong>. É aí que está meu foco — e é o que separa um sistema que aguenta crescer de um que quebra no primeiro pico.</p>
         <div class="principles">
           <div class="principle"><i class="fas fa-sitemap"></i><div><b>Arquitetura primeiro</b><p>Decisões documentadas (ADRs), não improviso na hora do deploy.</p></div></div>
@@ -526,7 +541,7 @@
             <div class="term-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span class="term-title">whoami</span></div>
             <div class="term-body">
               <div class="tl"><span class="c-kw">const</span> <span class="c-var">giovanne</span> = {</div>
-              <div class="tl ti"><span class="c-key">produtos</span>: <span class="c-str">"13+ em produção"</span>,</div>
+              <div class="tl ti"><span class="c-key">produtos</span>: <span class="c-str">"16+ em produção"</span>,</div>
               <div class="tl ti"><span class="c-key">verticais</span>: <span class="c-str">"fintech · agtech · saas"</span>,</div>
               <div class="tl ti"><span class="c-key">idiomas</span>: <span class="c-str">"pt · en · es"</span>,</div>
               <div class="tl ti"><span class="c-key">modelo</span>: <span class="c-str">"100% remoto"</span></div>
