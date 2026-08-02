@@ -321,6 +321,7 @@
   .pf-modal-techs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
   .pf-modal-link{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#04120C;padding:11px 22px;border-radius:var(--radius-sm);font-weight:600;font-size:.86rem}
   </style>
+  <link rel="stylesheet" href="../assets/site-v2.css">
 </head>
 <body>
 <div class="bg-grid"></div>
@@ -757,5 +758,6 @@
   document.getElementById('briefForm').addEventListener('submit',(e)=>{e.preventDefault();const f=e.target;const nome=f.nome.value.trim(),empresa=f.empresa.value.trim(),tipo=f.tipo.value,proj=f.projeto.value.trim();let msg='Olá, Giovanne! Sou '+nome;if(empresa)msg+=' ('+empresa+')';msg+='.\nProjeto: '+tipo+'.\n'+proj;window.open('https://wa.me/5554993031264?text='+encodeURIComponent(msg),'_blank');});
   (function(){if(sessionStorage.getItem('lang-dismissed'))return;const lang=navigator.language.toLowerCase();let msg='',link='',lt='';if(lang.startsWith('pt')){msg='Este site também está em português.';link='/';lt='Ver em português';}else if(lang.startsWith('es')){msg='Tenemos una versión en español de este sitio.';link='/es/';lt='Ver en español';}else return;const b=document.createElement('div');b.className='lang-banner';b.innerHTML='<span>'+msg+'</span><a href="'+link+'" class="lang-banner-link">'+lt+'</a><button class="lang-banner-close" aria-label="Close" onclick="this.closest(\'.lang-banner\').remove();sessionStorage.setItem(\'lang-dismissed\',\'1\')"><i class="fas fa-times"></i></button>';document.getElementById('nav').insertAdjacentElement('afterend',b);})();
 </script>
+<script src="../assets/site-v2.js"></script>
 </body>
 </html>

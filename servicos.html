@@ -138,6 +138,7 @@
   @media(max-width:768px){.nav-links{display:none}.mob-toggle{display:flex}.nav-cta{display:none}.svc-detail-card{padding:26px}.svc-detail-header{flex-direction:column;gap:12px}.svc-detail-footer{flex-direction:column;align-items:flex-start}.footer-top{grid-template-columns:1fr}.cta-card{padding:44px 22px}.page-hero{padding:120px 0 56px}}
   @media(max-width:480px){.page-hero h1{font-size:2rem}}
   </style>
+  <link rel="stylesheet" href="assets/site-v2.css">
 </head>
 <body>
 <div class="bg-grid"></div>
@@ -408,5 +409,6 @@
   document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const item=b.parentElement,ans=item.querySelector('.faq-answer'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').style.maxHeight=null;});if(!was){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}});});
   const mobBtn=document.getElementById('mobToggle'),navEl=document.getElementById('nav');mobBtn.addEventListener('click',()=>navEl.classList.toggle('nav-open'));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navEl.classList.remove('nav-open')));
 </script>
+<script src="assets/site-v2.js"></script>
 </body>
 </html>
