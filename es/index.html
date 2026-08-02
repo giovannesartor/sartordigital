@@ -226,6 +226,7 @@
   .pf-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--green-dim),transparent 70%);opacity:.8}
   .pf-cover::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:22px 22px;opacity:.5}
   .pf-cover .pf-name-badge{position:absolute;bottom:12px;left:14px;z-index:3;font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--text);letter-spacing:-.02em}
+  .pf-cover.has-shot{display:block;background:var(--bg-3)}.pf-cover.has-shot::before,.pf-cover.has-shot::after{display:none}.pf-cover.has-shot .glyph,.pf-cover.has-shot .pf-name-badge{display:none}.pf-cover-image{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .35s var(--ease)}.pf-card:hover .pf-cover-image{transform:scale(1.025)}
   .pf-body{padding:18px 20px 20px}
   .pf-tag{font-family:var(--font-mono);font-size:.68rem;font-weight:500;color:var(--green);margin-bottom:8px;letter-spacing:.02em}
   .pf-body h3{font-family:var(--font-head);font-size:1rem;font-weight:600;margin-bottom:8px;color:var(--text)}
@@ -739,6 +740,9 @@
   document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
   const cntObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,t=parseInt(el.dataset.count);let c=0;const step=Math.max(1,Math.ceil(t/40));const iv=setInterval(()=>{c=Math.min(c+step,t);el.textContent=c;if(c>=t)clearInterval(iv);},34);cntObs.unobserve(el);}});},{threshold:.6});
   document.querySelectorAll('[data-count]').forEach(el=>cntObs.observe(el));
+  const caseScreenshotBase='../assets/cases/';
+  const caseScreenshotMap={'notchops.app':'notchops.png','quantovale.online':'quantovale.png','valuora.online':'valuora.png','conectcampo.digital':'conectcampo.png','vexium.pro':'vexium.png','fundflow.money':'fundflow.png','esg360.digital':'esg360.png','linkora.vip':'linkora.png','agdigital.ag':'agdigital.png','buffalo.capital':'buffalo-capital.png','buffalocapital.com.br':'buffalo-capital.png','prosorrirodontologia.com.br':'pro-sorrir.png'};
+  document.querySelectorAll('.pf-card').forEach(card=>{const link=card.querySelector('.pf-link');if(!link)return;const file=caseScreenshotMap[new URL(link.href).hostname.replace('www.','')];if(!file)return;const cover=card.querySelector('.pf-cover'),img=document.createElement('img');cover.classList.add('has-shot');img.className='pf-cover-image';img.src=caseScreenshotBase+file;img.alt=card.querySelector('h3').textContent+' — interfaz del producto';img.loading='lazy';cover.prepend(img);});
   document.querySelectorAll('.pf-pill').forEach(p=>{p.addEventListener('click',()=>{document.querySelectorAll('.pf-pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');const f=p.dataset.filter;document.querySelectorAll('.pf-card').forEach(c=>{c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';});});});
   const mobBtn=document.getElementById('mobToggle'),navEl=document.getElementById('nav');
   mobBtn.addEventListener('click',()=>navEl.classList.toggle('nav-open'));
