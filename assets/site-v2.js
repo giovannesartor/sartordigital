@@ -16,6 +16,22 @@
     mark.replaceWith(img);
   });
 
+  document.querySelectorAll('.arch-diagram').forEach(diagram=>{
+    diagram.querySelectorAll('.arch-flow').forEach((flow,index)=>{
+      flow.style.setProperty('--flow-order',index);
+    });
+    diagram.querySelectorAll('.arch-node').forEach((node,index)=>{
+      node.style.setProperty('--node-order',index);
+    });
+  });
+
+  document.querySelectorAll('.stack-layer').forEach((layer,layerIndex)=>{
+    layer.style.setProperty('--stack-order',layerIndex);
+    layer.querySelectorAll('.stack-tag').forEach((tag,tagIndex)=>{
+      tag.style.setProperty('--chip-order',tagIndex);
+    });
+  });
+
   const spotlightSelector='.g-card,.svc-detail-card,.plan-card';
   document.querySelectorAll(spotlightSelector).forEach(card=>{
     card.addEventListener('pointermove',event=>{
