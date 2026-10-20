@@ -41,6 +41,68 @@
     },{passive:true});
   });
 
+
+  // Carry reading progress between translated pages, whose text heights differ.
+  const languagePositionKey='sd-language-position';
+  const readingSections=()=>Array.from(document.querySelectorAll('section,footer'));
+  const readingInset=()=>Math.max(0,document.querySelector('.nav')?.getBoundingClientRect().bottom||0)+16;
+  const pagePath=path=>path.replace(/index\.html$/,'');
+  document.querySelectorAll('.lang-pill a,.lang-banner-link').forEach(link=>{
+    link.addEventListener('click',event=>{
+      if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+      const target=new URL(link.href);
+      if(target.origin!==location.origin)return;
+      event.preventDefault();
+      if(pagePath(target.pathname)===pagePath(location.pathname))return;
+      const sections=readingSections(),inset=readingInset();
+      const section=sections.filter(el=>el.getBoundingClientRect().top<=inset).pop()||sections[0];
+      if(section){
+        const rect=section.getBoundingClientRect();
+        const position={
+          path:pagePath(target.pathname),time:Date.now(),id:section.id,
+          index:sections.indexOf(section),progress:Math.max(0,Math.min(1,(inset-rect.top)/rect.height)),
+          top:window.scrollY<1
+        };
+        // The section hash still works if browser storage is unavailable.
+        if(section.id&&!position.top)target.hash=section.id;
+        try{sessionStorage.setItem(languagePositionKey,JSON.stringify(position));}catch{}
+      }
+      location.assign(target.href);
+    });
+  });
+
+  let languagePosition;
+  try{
+    languagePosition=JSON.parse(sessionStorage.getItem(languagePositionKey));
+    sessionStorage.removeItem(languagePositionKey);
+  }catch{}
+  if(languagePosition&&languagePosition.path===pagePath(location.pathname)&&Date.now()-languagePosition.time<30000){
+    const section=document.getElementById(languagePosition.id)||readingSections()[languagePosition.index];
+    if(section){
+      let restoring=true;
+      const restore=()=>{
+        if(!restoring)return;
+        const rect=section.getBoundingClientRect();
+        const top=languagePosition.top?0:window.scrollY+rect.top+rect.height*languagePosition.progress-readingInset();
+        window.scrollTo({top:Math.max(0,top),behavior:'instant'});
+      };
+      const stop=()=>{
+        restoring=false;
+        observer.disconnect();
+        ['wheel','touchstart','pointerdown','keydown'].forEach(type=>window.removeEventListener(type,stop));
+      };
+      // Fonts and lazy-loaded images can change section positions after parsing.
+      const observer=new ResizeObserver(restore);
+      observer.observe(document.body);
+      ['wheel','touchstart','pointerdown','keydown'].forEach(type=>window.addEventListener(type,stop,{passive:true}));
+      restore();
+      requestAnimationFrame(restore);
+      window.addEventListener('load',restore,{once:true});
+      document.fonts?.ready.then(restore);
+      setTimeout(stop,3000);
+    }
+  }
+
   const themeMeta=document.querySelector('meta[name="theme-color"]');
   const syncThemeColor=()=>{
     if(themeMeta)themeMeta.content=document.documentElement.dataset.theme==='dark'?'#0A100D':'#F6F7F4';
