@@ -94,7 +94,7 @@ body.design-v2::after{content:"";position:fixed;inset:0;z-index:9999;pointer-eve
 @media(max-width:600px){.support-page .trust-bar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;padding:18px;gap:16px}.support-page .trust-item{align-items:flex-start;font-size:.76rem}.support-page .trust-item i{margin-top:3px}}
 @media(max-width:360px){.support-page .trust-bar{grid-template-columns:1fr}}
 
-.featured-cases.case-studies{grid-template-columns:repeat(2,minmax(0,1fr))}
+.featured-cases.case-studies{grid-template-columns:repeat(3,minmax(0,1fr))}
 .case-studies .featured-case{min-width:0}.case-studies .featured-body{display:flex;flex-direction:column;flex:1}.case-studies .pf-link{margin-top:auto;align-self:flex-start}
 .case-story{margin:8px 0 22px}.case-story>div{padding:12px 0;border-top:1px solid var(--border)}.case-story dt{font-size:.68rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--green);margin-bottom:5px}.case-story dd{margin:0;color:var(--text-2);font-size:.88rem;line-height:1.7}
 .case-evidence-note{max-width:780px;margin:20px 0 36px;color:var(--text-2);font-size:.78rem;line-height:1.65}
