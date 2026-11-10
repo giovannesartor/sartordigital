@@ -1,7 +1,7 @@
 (function(){
   document.body.classList.add('design-v2');
   const script=document.currentScript;
-  const markUrl=new URL('sartor-mark.svg',script.src).href;
+  const markUrl=new URL('sartor-mark.svg?v=signature',script.src).href;
   document.querySelectorAll('link[rel~="icon"]').forEach(icon=>{
     icon.href=markUrl;
     icon.type='image/svg+xml';
