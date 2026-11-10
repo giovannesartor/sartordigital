@@ -1,0 +1,45 @@
+/* Sartor / interior systems. Same visual language, distinct information rhythm. */
+.studio-skip{position:fixed;top:-100px;left:20px;z-index:9999;background:#b9f77a;color:#101514;padding:14px 20px}.studio-skip:focus{top:12px}
+body.interior-page .page-hero{padding:160px 0 80px!important;text-align:left!important;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+body.interior-page .interior-hero-wrap{position:relative;isolation:isolate}
+body.interior-page .page-hero h1{font-size:clamp(42px,6.2vw,88px)!important;line-height:1.04!important;letter-spacing:-.065em!important;max-width:900px!important;margin:24px 0 30px!important;font-weight:500!important;position:relative;z-index:1}
+body.interior-page .page-hero h1 em{font-style:normal;color:var(--green)!important}
+body.interior-page .page-hero p{max-width:640px!important;font-size:17px!important;margin:0 0 28px!important;text-align:left!important}
+body.interior-page .hero-btns{justify-content:flex-start!important}
+body.interior-page .eyebrow{letter-spacing:.14em!important;font-family:var(--font-mono);text-transform:uppercase;font-size:11px!important}
+.interior-signal{position:absolute;width:380px;right:-70px;top:30px;opacity:.23;z-index:-1;pointer-events:none}
+.interior-signal svg{width:100%;stroke:var(--green);stroke-width:1}.interior-signal span{display:block;text-align:right;font:10px var(--font-mono);letter-spacing:.3em;margin-top:20px}.signal-orbit{opacity:.3}.signal-path{stroke-dasharray:35 850;animation:signalTrace 10s linear infinite}.signal-cross{opacity:.2}.interior-signal .signal-mark{stroke-width:4}.interior-signal circle{stroke-dasharray:3 5;animation:signalRotate 40s linear infinite;transform-origin:250px 150px}
+@keyframes signalTrace{to{stroke-dashoffset:-885}}@keyframes signalRotate{to{transform:rotate(360deg)}}
+.solution-index-nav{display:flex;gap:28px;flex-wrap:wrap;padding:28px max(6vw,24px);border-bottom:1px solid var(--border);font:12px var(--font-mono)}.solution-index-nav a{display:flex;align-items:center;gap:14px;color:var(--text-2)}.solution-index-nav a::after{content:'↘';color:var(--green)}.solution-index-nav a:hover{color:var(--green)}
+body.interior-page .svc-detail-grid{gap:0!important}
+body.interior-page .svc-detail-card{border:0!important;border-top:1px solid var(--border)!important;border-radius:0!important;padding:58px 0!important;background:transparent!important;box-shadow:none!important;display:grid;grid-template-columns:80px 1fr 1fr;gap:24px 40px;scroll-margin-top:110px}
+.solution-index{grid-column:1;grid-row:1/6;font:14px var(--font-mono);color:var(--green)}
+body.interior-page .svc-detail-header{grid-column:2/4;align-items:flex-start!important;margin:0!important}
+body.interior-page .svc-detail-icon{display:none!important}
+body.interior-page .svc-detail-title{font-size:clamp(28px,3.5vw,48px)!important;letter-spacing:-.045em!important;line-height:1.1!important;font-weight:500!important}
+body.interior-page .svc-detail-sub{margin-top:15px!important;max-width:660px;line-height:1.7!important}
+body.interior-page .svc-detail-desc{grid-column:2;grid-row:2/4;font-size:16px!important;line-height:1.85!important;margin:0!important;max-width:440px}
+body.interior-page .offer-includes{grid-column:3;font:11px var(--font-mono);text-transform:uppercase;letter-spacing:.1em;margin:0!important}
+body.interior-page .svc-features-grid{grid-column:3;grid-template-columns:1fr!important;gap:0!important}
+body.interior-page .svc-feature{border-radius:0!important;border:0!important;border-bottom:1px solid var(--border)!important;background:none!important;padding:12px 0!important;font-size:13px!important}
+body.interior-page .offer-start{grid-column:2/4;padding:24px!important;border:1px solid var(--border);background:var(--bg-2);display:grid;grid-template-columns:160px 1fr;gap:20px}
+.offer-start h3{font-size:13px!important;font-weight:500}.offer-start p{font-size:14px;line-height:1.8;color:var(--text-2)}
+body.interior-page .svc-detail-footer{grid-column:2/4;border:0!important;padding:0!important;margin:0!important}
+body.interior-page .capability-note{border-top:1px solid var(--border);padding:60px 0 0;margin-top:20px}
+body.interior-page .section-head.center{text-align:left!important;align-items:flex-start!important}.interior-page .section-head.center p{margin-left:0!important}
+body.interior-page .trust-bar{margin-top:65px!important;border:0!important;border-top:1px solid var(--border)!important;border-radius:0!important;padding:25px 0 0!important;background:transparent!important;justify-content:space-between!important}
+body.interior-page .plans-grid{gap:1px!important;background:var(--border);border:1px solid var(--border)}
+body.interior-page .plan-card{border:0!important;border-radius:0!important;padding:38px 28px!important;background:var(--bg)!important;box-shadow:none!important;transform:none!important}
+body.interior-page .plan-card.featured{background:var(--bg-2)!important;border-top:3px solid var(--green)!important}
+.plan-index{display:block;font:12px var(--font-mono);color:var(--text-3);margin-bottom:35px}
+body.interior-page .plan-name{font-size:24px!important;letter-spacing:-.03em!important}.interior-page .plan-price{margin:24px 0!important;font-size:48px!important;letter-spacing:-.04em!important}
+body.interior-page .plan-badge{top:20px!important;right:20px!important;left:auto!important;transform:none!important;font-size:10px!important}
+body.interior-page .plan-features li{padding:11px 0!important;line-height:1.65!important;border-bottom:1px solid var(--border)}
+body.interior-page .plan-desc{min-height:85px;font-size:14px!important;line-height:1.7!important}
+body.interior-page .compare-table{border-radius:0!important}
+body.interior-page .faq-list{max-width:none!important}.interior-page .faq-item{border-radius:0!important;border:0!important;border-bottom:1px solid var(--border)!important;background:none!important;margin-bottom:0!important}.interior-page .faq-question{padding:25px 0!important;font-size:18px!important;gap:20px}.interior-page .faq-answer-inner{padding:0 0 25px!important;max-width:800px;font-size:15px!important}
+body.interior-page .cta-card{border-radius:0!important;text-align:left!important;padding:65px!important}.interior-page .cta-card h2{max-width:900px;font-size:clamp(32px,4.6vw,64px)!important;line-height:1.07!important;letter-spacing:-.05em!important}.interior-page .cta-card p{margin-left:0!important}.interior-page .cta-btns{justify-content:flex-start!important}
+body.error-page{display:block!important;padding:0!important;min-height:100vh}.error-page main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:70px 25px}.error-page .container{max-width:900px;text-align:left;position:relative}.error-page .error-code{font-size:clamp(100px,22vw,260px);line-height:1.1;letter-spacing:-.08em;font-weight:500;color:var(--green);opacity:.9}.error-page h1{font-size:clamp(32px,5vw,60px)!important;letter-spacing:-.05em!important}.error-page h1 em{font-style:normal;color:var(--text-2)}.error-page .btns,.error-page .links{justify-content:flex-start!important}.error-page .nav-logo{justify-content:flex-start!important}
+@media(max-width:900px){.interior-signal{right:-140px;opacity:.12}.solution-index-nav{gap:16px}.interior-page .plan-price{font-size:36px!important}body.interior-page .svc-detail-card{grid-template-columns:45px 1fr;gap:20px}.interior-page .solution-index{grid-row:1/8}body.interior-page .svc-detail-header,body.interior-page .svc-detail-desc,body.interior-page .offer-includes,body.interior-page .svc-features-grid,body.interior-page .offer-start,body.interior-page .svc-detail-footer{grid-column:2;grid-row:auto}body.interior-page .offer-start{grid-template-columns:1fr}.interior-page .plan-desc{min-height:0}}
+@media(max-width:600px){body.interior-page .page-hero{padding:125px 0 55px!important}body.interior-page .page-hero h1{font-size:44px!important;overflow-wrap:normal}body.interior-page .page-hero p{font-size:15px!important}body.interior-page .svc-detail-card{padding:35px 0!important;gap:20px 12px;grid-template-columns:26px 1fr}body.interior-page .plans-grid{grid-template-columns:1fr!important}body.interior-page .plan-card{padding:30px 24px!important}body.interior-page .cta-card{padding:32px 22px!important}.interior-page .plan-index{margin-bottom:20px}.solution-index-nav{font-size:11px;flex-direction:column}.interior-page .trust-bar{gap:20px!important}.interior-page .faq-question{font-size:16px!important}.interior-page .plan-price{font-size:44px!important}}
+@media(prefers-reduced-motion:reduce){.interior-signal *{animation:none!important}}

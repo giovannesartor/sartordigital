@@ -1,0 +1,71 @@
+/* Complete dual palette for the Sartor signature system. */
+:root[data-theme="dark"]{--bg:#111715;--bg-2:#19221e;--bg-3:#232e28;--text:#f2f2e9;--text-2:#bbc5bc;--text-3:#a0aea3;--green:#b9f77a;--green-2:#d0ff9e;--green-dim:rgba(185,247,122,.08);--border:rgba(222,239,222,.16);--border-hi:rgba(185,247,122,.5);color-scheme:dark}
+:root[data-theme="light"]{--bg:#f0f0e8;--bg-2:#e7eade;--bg-3:#dce2d3;--text:#15241c;--text-2:#435747;--text-3:#5c705d;--green:#316a36;--green-2:#23582b;--green-dim:rgba(49,106,54,.08);--border:rgba(31,59,33,.2);--border-hi:rgba(49,106,54,.5);--card-hover:rgba(31,59,33,.05);color-scheme:light}
+:root .theme-toggle{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex-shrink:0!important;width:34px!important;height:34px!important;border:1px solid var(--border)!important;background:transparent!important;color:var(--text)!important;border-radius:3px!important;cursor:pointer}
+:root .theme-toggle:hover{background:var(--green-dim)!important;border-color:var(--green)!important}
+:root .theme-toggle:focus-visible{outline:2px solid var(--green)!important;outline-offset:4px}
+:root .error-theme-toggle{position:fixed;right:26px;top:26px;z-index:100}
+:root .pf-modal-box{color:var(--text)!important;background:var(--bg-2)!important;border-color:var(--border)!important}
+:root .pf-modal-close{background:var(--bg-3)!important;color:var(--text)!important;border-color:var(--border)!important}
+:root .pf-modal-tag,:root .pf-modal-title{color:var(--text)!important}
+:root .pf-modal-desc{color:var(--text-2)!important}
+:root .pf-modal-techs .pf-tech{background:var(--bg-3)!important;color:var(--text-2)!important;border-color:var(--border)!important}
+:root #cases{--bg:inherit;--bg-2:inherit;--bg-3:inherit;--text:inherit;--text-2:inherit;--text-3:inherit;--green:inherit;--border:inherit;--green-dim:inherit;background:var(--bg)!important;color:var(--text)!important}
+:root .case-browser,:root .pf-cover{background:var(--bg-3)!important}
+:root .pf-tech{background:var(--bg-3)!important;color:var(--text-2)!important;border-color:var(--border)!important}
+:root .pf-pill.active{background:var(--green)!important;color:var(--bg)!important;border-color:var(--green)!important}
+:root .hero,:root .page-hero{background:var(--bg)!important}
+:root .eyebrow,:root .hero-sub,:root .hero-index,:root .hero-bottom{color:var(--text-2)!important}
+:root .hero h1 em{color:var(--green)!important;-webkit-text-fill-color:var(--green)!important}
+:root .hero-work,:root .nav-logo{color:var(--text)!important}
+:root .nav-links a,:root .lang-btn{color:var(--text-2)!important}
+:root .nav-cta{border-color:var(--border-hi)!important;color:var(--text)!important}
+:root .lang-btn.active{background:var(--green)!important;color:var(--bg)!important}
+:root .mob-toggle{color:var(--text)!important}
+:root .art-coordinate,:root .art-footer{color:var(--text-3)!important}
+:root .proc-num{color:var(--green)!important}
+:root .motion-control{background:var(--bg-2)!important;color:var(--text)!important;border-color:var(--border-hi)!important}
+:root .scroll-fill{background:var(--green)!important}
+:root .footer{background:var(--bg-2)!important;color:var(--text)!important}
+:root .footer:after{color:var(--border)!important}
+:root .footer-brand p,:root .footer-col a,:root .footer-copy{color:var(--text-2)!important}
+:root .footer-col h5{color:var(--text-3)!important}
+:root .plan-card,:root body.interior-page .plan-card,:root .svc-detail-card{color:var(--text)!important;background:var(--bg)!important}
+:root .plan-card.featured,:root body.interior-page .plan-card.featured{background:var(--bg-2)!important;border-color:var(--green)!important}
+:root .plan-cta.ghost{background:transparent!important;border-color:var(--border-hi)!important;color:var(--text)!important}
+:root .plan-cta.solid{background:var(--green)!important;border-color:var(--green)!important;color:var(--bg)!important}
+:root .plan-badge{background:var(--green)!important;color:var(--bg)!important}
+:root .trust-bar,:root .svc-feature,:root .compare-table{color:var(--text)!important;border-color:var(--border)!important}
+:root .compare-table th,:root .compare-table td{border-color:var(--border)!important}
+:root .compare-table th{background:var(--bg-2)!important;color:var(--text)!important}
+:root .compare-table td{background:var(--bg)!important;color:var(--text-2)!important}
+:root .compare-table .hi{background:var(--green-dim)!important;color:var(--text)!important}
+:root .term{background:var(--bg-2)!important;color:var(--text)!important}
+:root .term-bar{background:var(--bg-3)!important;border-color:var(--border)!important}
+:root .term-title{color:var(--text-2)!important}
+:root .cta-card input,:root .cta-card textarea,:root .cta-card select{color-scheme:light}
+:root[data-theme="light"] .nav{background:rgba(240,240,232,.95)!important}
+:root[data-theme="light"] .nav-open .nav-links{background:#e7eade!important}
+:root[data-theme="light"] .signature-line{stroke:#3c7337!important;filter:none!important}
+:root[data-theme="light"] .orbit{stroke:#627c52!important;opacity:.5!important}
+:root[data-theme="light"] .signal{fill:#204f25!important;filter:drop-shadow(0 0 4px #76b75c)!important}
+:root[data-theme="light"] .signature:before{background:radial-gradient(ellipse,#b0d78d50,transparent 65%)!important}
+:root[data-theme="light"] .eyebrow-dot{background:#316a36!important;box-shadow:0 0 10px #316a3633!important}
+:root[data-theme="light"] .arch-diagram{background:#e5eadc!important}
+:root[data-theme="light"] .arch-flow{stroke:#316a36!important}
+:root[data-theme="light"] .arch-node rect{fill:#f5f6ef!important;stroke:#8c9f7a!important}
+:root[data-theme="light"] .arch-node text{fill:#1d3423!important}
+:root[data-theme="light"] .arch-node .sub{fill:#506347!important}
+:root[data-theme="light"] .c-kw{color:#70469c!important}
+:root[data-theme="light"] .c-key{color:#316a36!important}
+:root[data-theme="light"] .c-str{color:#476b28!important}
+:root[data-theme="light"] .c-var{color:#315e76!important}
+:root[data-theme="light"] .compare-col-hi{background:#e0e9d6!important}
+:root[data-theme="light"] .pf-modal-link{background:#316a36!important;color:#f5f8ed!important}
+:root[data-theme="light"] .error-code{color:#316a36!important}
+:root[data-theme="light"] .btn-primary{background:#316a36!important;color:#f6faed!important;border-color:#316a36!important}
+:root[data-theme="light"] .btn-primary:hover{background:#24532a!important}
+:root[data-theme="light"] .wa-float{background:#316a36!important;color:#f6faed!important}
+:root[data-theme="light"] .skip-link,:root[data-theme="light"] .studio-skip{background:#316a36!important;color:#f6faed!important}
+:root[data-theme="light"] .cta-card .btn-primary{background:#17291b!important;color:#efffe2!important;border-color:#17291b!important}
+@media(max-width:480px){:root .nav-inner{gap:5px!important}:root .nav-actions{gap:5px!important}:root .theme-toggle{width:29px!important;height:29px!important}:root .lang-btn{padding:5px!important}}
