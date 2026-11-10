@@ -16,7 +16,7 @@
 <meta content="website" property="og:type"/>
 <meta content="https://sartordigital.online/en/services.html" property="og:url"/>
 <meta content="https://sartordigital.online/en/og-image.png" property="og:image"/>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2309090e'/%3E%3Crect x='12' y='12' width='76' height='76' rx='18' fill='none' stroke='%2334D399' stroke-width='5'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='52' font-weight='700' fill='%2334D399' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link href="../assets/signature-mark.svg" rel="icon" type="image/svg+xml"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -167,8 +167,7 @@
   @media(max-width:768px){.nav-links{display:none}.mob-toggle{display:flex}.nav-cta{display:none}.svc-detail-card{padding:26px}.svc-detail-header{flex-direction:column;gap:12px}.svc-detail-footer{flex-direction:column;align-items:flex-start}.footer-top{grid-template-columns:1fr}.cta-card{padding:44px 22px}.page-hero{padding:120px 0 56px}}
   @media(max-width:480px){.page-hero h1{font-size:2rem}}
   </style>
-
-<link href="../assets/studio.css?v=3" rel="stylesheet"/><link href="../assets/interior.css?v=3" rel="stylesheet"/><link rel="stylesheet" href="../assets/themes.css?v=3">
+<link href="../assets/studio.css?v=3" rel="stylesheet"/><link href="../assets/interior.css?v=3" rel="stylesheet"/><link href="../assets/themes.css?v=3" rel="stylesheet"/>
 </head>
 <body class="interior-page services-page"><a class="studio-skip" href="#main-content">Skip to content</a>
 <div class="bg-grid"></div>
@@ -176,7 +175,7 @@
 <div class="scroll-bar"><div class="scroll-fill" id="scrollFill"></div></div>
 <nav class="nav" id="nav">
 <div class="nav-inner">
-<a class="nav-logo" href="index.html"><svg class="logo-mark" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect height="88" rx="22" stroke="var(--green)" stroke-width="6" width="88" x="6" y="6"></rect><text fill="var(--green)" font-family="Space Grotesk,sans-serif" font-size="54" font-weight="700" text-anchor="middle" x="50" y="68">S</text></svg> Sartor Digital</a>
+<a class="nav-logo" href="index.html"><img alt="" class="logo-mark" height="34" src="../assets/signature-mark.svg" width="34"/> Sartor Digital</a>
 <div class="nav-links">
 <a class="active" href="services.html">Services</a>
 <a href="index.html#arquitetura">Architecture</a>
@@ -224,7 +223,7 @@
 <div class="wrap">
 <div class="footer-top">
 <div class="footer-brand">
-<a class="nav-logo" href="index.html"><svg class="logo-mark" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect height="88" rx="22" stroke="var(--green)" stroke-width="6" width="88" x="6" y="6"></rect><text fill="var(--green)" font-family="Space Grotesk,sans-serif" font-size="54" font-weight="700" text-anchor="middle" x="50" y="68">S</text></svg> Sartor Digital</a>
+<a class="nav-logo" href="index.html"><img alt="" class="logo-mark" height="34" src="../assets/signature-mark.svg" width="34"/> Sartor Digital</a>
 <p>AI, custom systems and software evolution for B2B operations. Remote service throughout Brazil, in Portuguese, English and Spanish.</p>
 </div>
 <div class="footer-col"><h5>Company</h5><a href="index.html#servicos">Services</a><a href="index.html#cases">Cases</a><a href="index.html#sobre">About</a><a href="index.html#processo">Process</a></div>
@@ -252,7 +251,7 @@
   document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const item=b.parentElement,ans=item.querySelector('.faq-answer'),was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').style.maxHeight=null;});if(!was){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}});});
   const mobBtn=document.getElementById('mobToggle'),navEl=document.getElementById('nav');mobBtn.addEventListener('click',()=>navEl.classList.toggle('nav-open'));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navEl.classList.remove('nav-open')));
 </script>
-<script src="../assets/site-v2.js"></script>
+<script src="../assets/site-v2.js?v=signature-2"></script>
 <script src="../assets/studio.js?v=3"></script><script>document.querySelectorAll('.faq-item').forEach(item=>{const button=item.querySelector('.faq-question');new MutationObserver(()=>button.setAttribute('aria-expanded',String(item.classList.contains('open')))).observe(item,{attributes:true,attributeFilter:['class']});});</script><script>(()=>{const b=document.getElementById('themeToggle');if(!b)return;const sync=()=>{const dark=document.documentElement.dataset.theme==='dark';b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');b.title=b.getAttribute('aria-label');b.setAttribute('aria-pressed',String(dark));const i=document.getElementById('themeIcon');if(i)i.className=dark?'fas fa-sun':'fas fa-moon';};sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});})();</script>
 </body>
 </html>

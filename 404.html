@@ -8,7 +8,7 @@
 <title>Página não encontrada — Sartor Digital</title>
 <meta content="noindex" name="robots"/>
 <meta content="#F7F8FA" name="theme-color"/>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2309090e'/%3E%3Crect x='12' y='12' width='76' height='76' rx='18' fill='none' stroke='%2334D399' stroke-width='5'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='52' font-weight='700' fill='%2334D399' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link href="assets/signature-mark.svg" rel="icon" type="image/svg+xml"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -37,15 +37,14 @@
     .links a:hover{color:var(--green);background:var(--card-hover)}
     .links span{color:var(--text-3);opacity:.4}
   </style>
-
-<link href="assets/studio.css?v=3" rel="stylesheet"/><link href="assets/interior.css?v=3" rel="stylesheet"/><link rel="stylesheet" href="assets/themes.css?v=3">
+<link href="assets/studio.css?v=3" rel="stylesheet"/><link href="assets/interior.css?v=3" rel="stylesheet"/><link href="assets/themes.css?v=3" rel="stylesheet"/>
 </head>
 <body class="interior-page services-page error-page"><a class="studio-skip" href="#main-content">Pular para o conteúdo</a>
 <div class="bg-grid"></div>
 <div class="bg-halo"></div>
 <main id="main-content" tabindex="-1"><div class="container">
 <a class="nav-logo" href="/">
-<svg class="logo-mark" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect height="88" rx="22" stroke="var(--green)" stroke-width="6" width="88" x="6" y="6"></rect><text fill="var(--green)" font-family="Space Grotesk,sans-serif" font-size="54" font-weight="700" text-anchor="middle" x="50" y="68">S</text></svg>
+<img alt="" class="logo-mark" height="34" src="assets/signature-mark.svg" width="34"/>
       Sartor Digital
     </a>
 <div class="error-tag"><i class="fas fa-triangle-exclamation"></i> Erro 404</div>
@@ -63,7 +62,7 @@
 <a href="/es/">Español</a>
 </div>
 </div></main>
-<script src="assets/site-v2.js"></script>
-<script src="assets/studio.js?v=3"></script><button class="theme-toggle error-theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema"><i id="themeIcon" class="fas fa-moon" aria-hidden="true"></i></button><script>document.getElementById('themeToggle').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('sd-theme',next);});</script><script>(()=>{const b=document.getElementById('themeToggle');if(!b)return;const sync=()=>{const dark=document.documentElement.dataset.theme==='dark';b.setAttribute('aria-label',dark?'Ativar tema claro':'Ativar tema escuro');b.title=b.getAttribute('aria-label');b.setAttribute('aria-pressed',String(dark));const i=document.getElementById('themeIcon');if(i)i.className=dark?'fas fa-sun':'fas fa-moon';};sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});})();</script>
+<script src="assets/site-v2.js?v=signature-2"></script>
+<script src="assets/studio.js?v=3"></script><button aria-label="Alternar tema" class="theme-toggle error-theme-toggle" id="themeToggle" type="button"><i aria-hidden="true" class="fas fa-moon" id="themeIcon"></i></button><script>document.getElementById('themeToggle').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('sd-theme',next);});</script><script>(()=>{const b=document.getElementById('themeToggle');if(!b)return;const sync=()=>{const dark=document.documentElement.dataset.theme==='dark';b.setAttribute('aria-label',dark?'Ativar tema claro':'Ativar tema escuro');b.title=b.getAttribute('aria-label');b.setAttribute('aria-pressed',String(dark));const i=document.getElementById('themeIcon');if(i)i.className=dark?'fas fa-sun':'fas fa-moon';};sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});})();</script>
 </body>
 </html>
