@@ -21,3 +21,8 @@ Custom SVG stroke reveal, orbit and path signal; pointer response on precise dev
 
 ## Publishing
 Commit to main uses the existing publishing setup. Confirm both the GitHub Pages deployment and the canonical domain https://sartordigital.online/ before announcing production availability.
+
+## Interactive portfolio
+The portfolio now uses `assets/explorer.css` and `assets/explorer.js`, with localized static initial markup and project data in each home page. Seventeen projects share one preview stage; selectors, sector filters and previous/next controls keep the catalog compact. Details and full-resolution interface captures open in a native dialog. Real images, descriptions, links and the three detailed case narratives are preserved.
+
+Motion uses CSS and the Web Animations API: entrance depth, interface transitions and bounded pointer tilt. It stops under the shared pause preference and OS reduced-motion. Keyboard navigation, focus restoration and a no-JavaScript list are provided. On mobile, the selector becomes a horizontal rail; the preview remains within the viewport.
