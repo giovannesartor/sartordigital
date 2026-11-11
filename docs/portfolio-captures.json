@@ -1,0 +1,192 @@
+{
+  "captured_at": "2026-11-11T02:50:18.916442+00:00",
+  "projects": [
+    {
+      "project": "AgentCore",
+      "requested_url": "https://agentcore.digital/",
+      "captured_url": "https://www.agentcore.digital/",
+      "http_status": 200,
+      "image": "assets/cases/agentcore-3723d83724.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Trilha Livre",
+      "requested_url": "https://trilhalivre.digital/",
+      "captured_url": "https://trilhalivre.digital/",
+      "http_status": 200,
+      "image": "assets/cases/trilhalivre-0be88f0551.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "UseAvalIA",
+      "requested_url": "https://useavalia.com/",
+      "captured_url": "https://useavalia.com/",
+      "http_status": 200,
+      "image": "assets/cases/useavalia-792bde4913.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "RuntimeVault",
+      "requested_url": "https://runtimevault.dev",
+      "captured_url": "https://runtimevault.dev/",
+      "http_status": 200,
+      "image": "assets/cases/runtimevault-11726c45de.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Quanto Vale®",
+      "requested_url": "https://quantovale.online/",
+      "captured_url": "https://quantovale.online/",
+      "http_status": 200,
+      "image": "assets/cases/quantovale-453b8088f4.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Linkora",
+      "requested_url": "https://linkora.vip",
+      "captured_url": "https://linkora.vip/",
+      "http_status": 200,
+      "image": "assets/cases/linkora-19eb073b17.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Fé360",
+      "requested_url": "https://fe360.online/",
+      "captured_url": "https://fe360.online/",
+      "http_status": 200,
+      "image": "assets/cases/fe360-69ddeb680c.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "NotchOps",
+      "requested_url": "https://notchops.app/",
+      "captured_url": "https://notchops.app/",
+      "http_status": 200,
+      "image": "assets/cases/notchops-b8c077c3d8.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Valuora",
+      "requested_url": "https://valuora.online",
+      "captured_url": "https://valuora.online/",
+      "http_status": 200,
+      "image": "assets/cases/valuora-b280d972cf.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "ConectCampo",
+      "requested_url": "https://conectcampo.digital",
+      "captured_url": "https://conectcampo.digital/",
+      "http_status": 200,
+      "image": "assets/cases/conectcampo-e6b0308512.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Vexium",
+      "requested_url": "https://vexium.pro",
+      "captured_url": "https://vexium.pro/",
+      "http_status": 200,
+      "image": "assets/cases/vexium-c546d690ce.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "FundFlow",
+      "requested_url": "https://fundflow.money",
+      "captured_url": "https://fundflow.money/",
+      "http_status": 200,
+      "image": "assets/cases/fundflow-c95fd524cb.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "ESG360",
+      "requested_url": "https://esg360.digital",
+      "captured_url": "https://esg360.digital/pt",
+      "http_status": 200,
+      "image": "assets/cases/esg360-61fd369e35.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "AG Digital",
+      "requested_url": "https://agdigital.ag",
+      "captured_url": "https://agdigital.ag/",
+      "http_status": 200,
+      "image": "assets/cases/agdigital-edec2e3976.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Buffalo Capital",
+      "requested_url": "https://buffalocapital.com.br",
+      "captured_url": "https://buffalo.capital/pt",
+      "http_status": 200,
+      "image": "assets/cases/buffalo-capital-63bf5297b9.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Urus Agro e Urbano",
+      "requested_url": "https://www.urusagroeurbano.com.br/",
+      "captured_url": "https://www.urusagroeurbano.com.br/",
+      "http_status": 200,
+      "image": "assets/cases/urus-agro-urbano-f301f0f8b2.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "project": "Pró Sorrir Odontologia",
+      "requested_url": "https://prosorrirodontologia.com.br",
+      "captured_url": "https://prosorrirodontologia.com.br/",
+      "http_status": 200,
+      "image": "assets/cases/pro-sorrir-0b50270cf8.webp",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    }
+  ]
+}
