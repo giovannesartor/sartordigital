@@ -68,8 +68,22 @@
 .immersive-hero{--opening-alpha:1;--scene-alpha:0;--signal-x:0px;--signal-y:0px}
 #immersive-canvas,.immersive-fallback{opacity:var(--scene-alpha)}
 .immersive-opening{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:var(--opening-alpha);background:radial-gradient(ellipse at 15% 20%,#95d65028,transparent 48%),radial-gradient(ellipse at 95% 85%,#42bf9026,transparent 48%),var(--bg)}
-.immersive-opening:after{content:'';position:absolute;inset:-2%;background:url('hero-signal.svg') center/cover no-repeat;transform:translate(var(--signal-x),var(--signal-y));will-change:transform}
+
 .immersive-static .immersive-opening,.immersive-failed .immersive-opening{opacity:1}
 .immersive-static #immersive-canvas,.immersive-static .immersive-fallback{opacity:0}
-@media(max-width:600px){.immersive-opening:after{background-image:url('hero-signal-mobile.svg')}}
+
 @media(prefers-reduced-motion:reduce){.immersive-opening{opacity:1!important}.immersive-opening:after{transform:none}#immersive-canvas,.immersive-fallback{opacity:0!important}}
+
+/* Signals follow the pointer at separate depths; the project camera is untouched. */
+.signal-art{position:absolute;inset:-2%;width:104%;height:104%;max-width:none;overflow:visible;pointer-events:none}
+.signal-art-mobile{display:none}
+.signal-lines,.signal-traces,.signal-nodes,.signal-code{transform-box:view-box;transform-origin:center;will-change:transform}
+.signal-lines,.signal-traces{transform:translate(var(--signal-x),var(--signal-y)) rotate(var(--signal-tilt,0deg))}
+.signal-nodes{transform:translate(calc(var(--signal-x)*1.3),calc(var(--signal-y)*1.3))}
+.signal-code{transform:translate(calc(var(--signal-x)*2),calc(var(--signal-y)*2));transition:transform .18s ease-out}
+.signal-traces path{stroke-dasharray:16 900;stroke-linecap:round;opacity:.36;animation:signal-flow 18s linear infinite;animation-delay:calc(var(--trace-order)*-4.5s);animation-play-state:var(--signal-play,paused)}
+@keyframes signal-flow{to{stroke-dashoffset:-916}}
+@media(max-width:600px){.signal-art-desktop{display:none}.signal-art-mobile{display:block}}
+.motion-paused .signal-traces path,.immersive-static .signal-traces path,.immersive-failed .signal-traces path{animation-play-state:paused!important}
+.motion-paused .signal-code,.immersive-static .signal-code{transition:none}
+@media(prefers-reduced-motion:reduce){.signal-traces path{animation:none}.signal-lines,.signal-traces,.signal-nodes,.signal-code{transform:none!important;transition:none!important}}
