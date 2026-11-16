@@ -28,3 +28,9 @@ Reduced-motion preference and the existing pause control switch to a compact sta
 - `experience-interior.css`: services and support layouts.
 - `immersive.css` / `immersive.js`: spatial hero and pointer-following project previews.
 - `explorer.js`: existing catalog behavior, with revised project transitions.
+
+## Code-to-work opening refinement
+
+The first viewport now uses original vector signal paths and code/AI motifs at the edges. `hero-signal.svg` and `hero-signal-mobile.svg` provide separately composed desktop and portrait artwork, avoiding random-looking screenshot rectangles behind the opening headline.
+
+Native scroll crossfades this composition into the existing project tunnel from 0.8% to 9% of the hero journey. Camera path, project ordering, geometry, timings and project content are unchanged. The artwork responds subtly to the existing pointer camera and stays static when motion is paused or reduced. WebGL failure retains the vector opening and normal catalog navigation.

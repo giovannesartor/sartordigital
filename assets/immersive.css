@@ -63,3 +63,13 @@
 .immersive-hero>.hero-bottom{display:none}
 /* Center the message within the opening, between navigation and scroll cue. */
 .experience-home .immersive-intro{top:50%}
+
+/* Code flows into real work: an intentional opening, then the existing tunnel. */
+.immersive-hero{--opening-alpha:1;--scene-alpha:0;--signal-x:0px;--signal-y:0px}
+#immersive-canvas,.immersive-fallback{opacity:var(--scene-alpha)}
+.immersive-opening{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:var(--opening-alpha);background:radial-gradient(ellipse at 15% 20%,#95d65028,transparent 48%),radial-gradient(ellipse at 95% 85%,#42bf9026,transparent 48%),var(--bg)}
+.immersive-opening:after{content:'';position:absolute;inset:-2%;background:url('hero-signal.svg') center/cover no-repeat;transform:translate(var(--signal-x),var(--signal-y));will-change:transform}
+.immersive-static .immersive-opening,.immersive-failed .immersive-opening{opacity:1}
+.immersive-static #immersive-canvas,.immersive-static .immersive-fallback{opacity:0}
+@media(max-width:600px){.immersive-opening:after{background-image:url('hero-signal-mobile.svg')}}
+@media(prefers-reduced-motion:reduce){.immersive-opening{opacity:1!important}.immersive-opening:after{transform:none}#immersive-canvas,.immersive-fallback{opacity:0!important}}
