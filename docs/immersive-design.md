@@ -38,3 +38,5 @@ Native scroll crossfades this composition into the existing project tunnel from 
 ## Subtle signal motion
 
 The desktop and mobile vector sources are embedded inline in each localized homepage, with unique gradient IDs. Lines, nodes and code occupy separate pointer-responsive layers; four low-opacity light traces travel slowly along existing paths. Pointer input and smoothing reuse the existing camera values, without changing the project renderer, camera path or scroll timing. CSS animation pauses after the opening, offscreen, in hidden tabs, with the motion control, and under reduced-motion preference. No extra animation-frame loop or dependency was added.
+
+The light reading theme now uses a distinct sage opening (`#d2e3be`) with dark forest text (`#163923`), including the 3D scene background and the services/support headers. The dark theme retains its deep green opening. Vector signals are toned darker in light mode for visual continuity and contrast.

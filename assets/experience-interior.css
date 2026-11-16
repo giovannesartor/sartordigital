@@ -121,3 +121,6 @@ body.experience-interior .ei-hero{--bg:#193b2a;--bg-2:#204b35;--text:#f2f5ec;--t
 body.experience-interior .ei-hero:before{inset:0;background:radial-gradient(ellipse at 5% 20%,#91df4333,transparent 58%),radial-gradient(ellipse at 95% 85%,#168a6644,transparent 58%)}
 :root body.experience-interior .ei-hero .btn-primary{background:var(--green)!important;border-color:var(--green)!important;color:var(--bg)!important}
 :root body.experience-interior .ei-hero .btn-ghost{background:transparent!important;border-color:var(--border)!important;color:var(--text)!important}
+
+/* Match the homepage's light sage opening across service and support routes. */
+:root[data-theme="light"] body.experience-interior .ei-hero{--bg:#d2e3be;--bg-2:#c2d8ac;--text:#163923;--text-2:#3d5944;--text-3:#4d6651;--green:#2e663b;--green-2:#234f2d;--green-dim:#386d3020;--border:#2e583b33}
