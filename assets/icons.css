@@ -1,0 +1,13 @@
+/* Sartor / vector controls. Never dependent on platform emoji fonts. */
+svg.sd-icon{display:inline-block;width:1em;height:1em;min-width:1em;flex:0 0 auto;vertical-align:-.14em;overflow:visible;color:inherit;pointer-events:none}
+.hero-btns .sd-icon,.hero-bottom>a>.sd-icon{width:22px;height:22px}
+.hero-index .sd-icon,.art-footer .sd-icon{width:1em;height:1em;margin:0 .2em;vertical-align:-.1em}
+.explorer-zoom,.explorer-prev,.explorer-next,.explorer-close{display:inline-flex;align-items:center;justify-content:center}
+.screen-dots .sd-icon{width:5px;height:5px;margin:0 1px}.screen-dots{display:inline-flex;align-items:center;gap:2px}
+.explorer-detail .sd-icon,.explorer-visit .sd-icon,.dialog-visit .sd-icon{vertical-align:-.15em}
+.motion-control{display:inline-flex;align-items:center;gap:6px}.motion-control .sd-icon{width:12px;height:12px}
+#themeIcon{display:none!important}.theme-toggle .sd-icon,.mob-toggle .sd-icon{width:18px;height:18px}
+.theme-toggle .sd-theme-sun{display:none}.theme-toggle .sd-theme-moon{display:inline-block}
+[data-theme="dark"] .theme-toggle .sd-theme-sun{display:inline-block}[data-theme="dark"] .theme-toggle .sd-theme-moon{display:none}
+.btn-primary>.sd-icon,.btn-ghost>.sd-icon,.pf-link>.sd-icon{width:1.1em;height:1.1em}
+.faq-q .sd-icon,.faq-question .sd-icon{transition:transform .2s}.faq-item.open .sd-icon[data-icon="plus"]{transform:rotate(45deg)}.faq-item.open .sd-icon[data-icon="chevron-down"]{transform:rotate(180deg)}

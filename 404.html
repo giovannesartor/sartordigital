@@ -37,8 +37,8 @@
     .links a:hover{color:var(--green);background:var(--card-hover)}
     .links span{color:var(--text-3);opacity:.4}
   </style>
-<link href="assets/studio.css?v=3" rel="stylesheet"/><link href="assets/interior.css?v=3" rel="stylesheet"/><link href="assets/themes.css?v=3" rel="stylesheet"/>
-</head>
+<link href="assets/studio.css?v=3" rel="stylesheet"/><link href="assets/interior.css?v=icons-20261116" rel="stylesheet"/><link href="assets/themes.css?v=3" rel="stylesheet"/>
+<link href="assets/icons.css?v=20261116" rel="stylesheet"/></head>
 <body class="interior-page services-page error-page"><a class="studio-skip" href="#main-content">Pular para o conteúdo</a>
 <div class="bg-grid"></div>
 <div class="bg-halo"></div>
@@ -63,6 +63,6 @@
 </div>
 </div></main>
 <script src="assets/site-v2.js?v=signature-2"></script>
-<script src="assets/studio.js?v=3"></script><button aria-label="Alternar tema" class="theme-toggle error-theme-toggle" id="themeToggle" type="button"><i aria-hidden="true" class="fas fa-moon" id="themeIcon"></i></button><script>document.getElementById('themeToggle').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('sd-theme',next);});</script><script>(()=>{const b=document.getElementById('themeToggle');if(!b)return;const sync=()=>{const dark=document.documentElement.dataset.theme==='dark';b.setAttribute('aria-label',dark?'Ativar tema claro':'Ativar tema escuro');b.title=b.getAttribute('aria-label');b.setAttribute('aria-pressed',String(dark));const i=document.getElementById('themeIcon');if(i)i.className=dark?'fas fa-sun':'fas fa-moon';};sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});})();</script>
+<script src="assets/studio.js?v=icons-20261116"></script><button aria-label="Alternar tema" class="theme-toggle error-theme-toggle" id="themeToggle" type="button"><i aria-hidden="true" class="fas fa-moon" id="themeIcon"></i><svg aria-hidden="true" class="sd-icon sd-theme-sun" data-icon="sun" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg><svg aria-hidden="true" class="sd-icon sd-theme-moon" data-icon="moon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.65" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"></path></svg></button><script>document.getElementById('themeToggle').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('sd-theme',next);});</script><script>(()=>{const b=document.getElementById('themeToggle');if(!b)return;const sync=()=>{const dark=document.documentElement.dataset.theme==='dark';b.setAttribute('aria-label',dark?'Ativar tema claro':'Ativar tema escuro');b.title=b.getAttribute('aria-label');b.setAttribute('aria-pressed',String(dark));const i=document.getElementById('themeIcon');if(i)i.className=dark?'fas fa-sun':'fas fa-moon';};sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});})();</script>
 </body>
 </html>
